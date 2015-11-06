@@ -60,7 +60,7 @@ mrb_SDL_SDLTestRandomContext_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLTestRandomContext_a_FIELD
+#if BIND_SDLTestRandomContext_a_FIELD_READER
 /* get_a
  *
  * Return Type: unsigned int
@@ -79,7 +79,9 @@ mrb_SDL_SDLTestRandomContext_get_a(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTestRandomContext_a_FIELD_WRITER
 /* set_a
  *
  * Parameters:
@@ -106,7 +108,7 @@ mrb_SDL_SDLTestRandomContext_set_a(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLTestRandomContext_x_FIELD
+#if BIND_SDLTestRandomContext_x_FIELD_READER
 /* get_x
  *
  * Return Type: unsigned int
@@ -125,7 +127,9 @@ mrb_SDL_SDLTestRandomContext_get_x(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTestRandomContext_x_FIELD_WRITER
 /* set_x
  *
  * Parameters:
@@ -152,7 +156,7 @@ mrb_SDL_SDLTestRandomContext_set_x(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLTestRandomContext_c_FIELD
+#if BIND_SDLTestRandomContext_c_FIELD_READER
 /* get_c
  *
  * Return Type: unsigned int
@@ -171,7 +175,9 @@ mrb_SDL_SDLTestRandomContext_get_c(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTestRandomContext_c_FIELD_WRITER
 /* set_c
  *
  * Parameters:
@@ -198,7 +204,7 @@ mrb_SDL_SDLTestRandomContext_set_c(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLTestRandomContext_ah_FIELD
+#if BIND_SDLTestRandomContext_ah_FIELD_READER
 /* get_ah
  *
  * Return Type: unsigned int
@@ -217,7 +223,9 @@ mrb_SDL_SDLTestRandomContext_get_ah(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTestRandomContext_ah_FIELD_WRITER
 /* set_ah
  *
  * Parameters:
@@ -244,7 +252,7 @@ mrb_SDL_SDLTestRandomContext_set_ah(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLTestRandomContext_al_FIELD
+#if BIND_SDLTestRandomContext_al_FIELD_READER
 /* get_al
  *
  * Return Type: unsigned int
@@ -263,7 +271,9 @@ mrb_SDL_SDLTestRandomContext_get_al(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTestRandomContext_al_FIELD_WRITER
 /* set_al
  *
  * Parameters:
@@ -304,24 +314,34 @@ void mrb_SDL_SDLTestRandomContext_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLTestRandomContext_a_FIELD
+#if BIND_SDLTestRandomContext_a_FIELD_READER
   mrb_define_method(mrb, SDLTestRandomContext_class, "a", mrb_SDL_SDLTestRandomContext_get_a, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTestRandomContext_a_FIELD_WRITER
   mrb_define_method(mrb, SDLTestRandomContext_class, "a=", mrb_SDL_SDLTestRandomContext_set_a, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTestRandomContext_x_FIELD
+#if BIND_SDLTestRandomContext_x_FIELD_READER
   mrb_define_method(mrb, SDLTestRandomContext_class, "x", mrb_SDL_SDLTestRandomContext_get_x, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTestRandomContext_x_FIELD_WRITER
   mrb_define_method(mrb, SDLTestRandomContext_class, "x=", mrb_SDL_SDLTestRandomContext_set_x, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTestRandomContext_c_FIELD
+#if BIND_SDLTestRandomContext_c_FIELD_READER
   mrb_define_method(mrb, SDLTestRandomContext_class, "c", mrb_SDL_SDLTestRandomContext_get_c, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTestRandomContext_c_FIELD_WRITER
   mrb_define_method(mrb, SDLTestRandomContext_class, "c=", mrb_SDL_SDLTestRandomContext_set_c, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTestRandomContext_ah_FIELD
+#if BIND_SDLTestRandomContext_ah_FIELD_READER
   mrb_define_method(mrb, SDLTestRandomContext_class, "ah", mrb_SDL_SDLTestRandomContext_get_ah, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTestRandomContext_ah_FIELD_WRITER
   mrb_define_method(mrb, SDLTestRandomContext_class, "ah=", mrb_SDL_SDLTestRandomContext_set_ah, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTestRandomContext_al_FIELD
+#if BIND_SDLTestRandomContext_al_FIELD_READER
   mrb_define_method(mrb, SDLTestRandomContext_class, "al", mrb_SDL_SDLTestRandomContext_get_al, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTestRandomContext_al_FIELD_WRITER
   mrb_define_method(mrb, SDLTestRandomContext_class, "al=", mrb_SDL_SDLTestRandomContext_set_al, MRB_ARGS_ARG(1, 0));
 #endif
 

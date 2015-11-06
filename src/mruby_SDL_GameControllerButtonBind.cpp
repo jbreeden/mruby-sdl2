@@ -60,7 +60,7 @@ mrb_SDL_SDLGameControllerButtonBind_belongs_to_ruby(mrb_state* mrb, mrb_value se
  * Fields
  */
 
-#if BIND_SDLGameControllerButtonBind_bindType_FIELD
+#if BIND_SDLGameControllerButtonBind_bindType_FIELD_READER
 /* get_bindType
  *
  * Return Type: SDL_GameControllerBindType
@@ -75,7 +75,9 @@ mrb_SDL_SDLGameControllerButtonBind_get_bindType(mrb_state* mrb, mrb_value self)
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLGameControllerButtonBind_bindType_FIELD_WRITER
 /* set_bindType
  *
  * Parameters:
@@ -99,26 +101,28 @@ mrb_SDL_SDLGameControllerButtonBind_set_bindType(mrb_state* mrb, mrb_value self)
 }
 #endif
 
-#if BIND_SDLGameControllerButtonBind_value_FIELD
+#if BIND_SDLGameControllerButtonBind_value_FIELD_READER
 /* get_value
  *
- * Return Type: union (anonymous union at ./headers/SDL_gamecontroller.h:73:5)
+ * Return Type: union (anonymous union at ./sdl/SDL2-2.0.3/include//SDL_gamecontroller.h:73:5)
  */
 mrb_value
 mrb_SDL_SDLGameControllerButtonBind_get_value(mrb_state* mrb, mrb_value self) {
   struct SDL_GameControllerButtonBind * native_self = mruby_unbox_struct SDL_GameControllerButtonBind(self);
 
-  union (anonymous union at ./headers/SDL_gamecontroller.h:73:5) native_field = native_self->value;
+  union (anonymous union at ./sdl/SDL2-2.0.3/include//SDL_gamecontroller.h:73:5) native_field = native_self->value;
 
-  mrb_value ruby_field = TODO_mruby_box_union_LPAREN_anonymous_union_at_./headers/SDL_gamecontroller.h:73:5_RPAREN(mrb, native_field);
+  mrb_value ruby_field = TODO_mruby_box_union_LPAREN_anonymous_union_at_./sdl/SDL2-2.0.3/include//SDL_gamecontroller.h:73:5_RPAREN(mrb, native_field);
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLGameControllerButtonBind_value_FIELD_WRITER
 /* set_value
  *
  * Parameters:
- * - value: union (anonymous union at ./headers/SDL_gamecontroller.h:73:5)
+ * - value: union (anonymous union at ./sdl/SDL2-2.0.3/include//SDL_gamecontroller.h:73:5)
  */
 mrb_value
 mrb_SDL_SDLGameControllerButtonBind_set_value(mrb_state* mrb, mrb_value self) {
@@ -128,9 +132,9 @@ mrb_SDL_SDLGameControllerButtonBind_set_value(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_union_LPAREN_anonymous_union_at_./headers/SDL_gamecontroller.h:73:5_RPAREN(ruby_field);
+  TODO_type_check_union_LPAREN_anonymous_union_at_./sdl/SDL2-2.0.3/include//SDL_gamecontroller.h:73:5_RPAREN(ruby_field);
 
-  union (anonymous union at ./headers/SDL_gamecontroller.h:73:5) native_field = TODO_mruby_unbox_union_LPAREN_anonymous_union_at_./headers/SDL_gamecontroller.h:73:5_RPAREN(ruby_field);
+  union (anonymous union at ./sdl/SDL2-2.0.3/include//SDL_gamecontroller.h:73:5) native_field = TODO_mruby_unbox_union_LPAREN_anonymous_union_at_./sdl/SDL2-2.0.3/include//SDL_gamecontroller.h:73:5_RPAREN(ruby_field);
 
   native_self->value = native_field;
 
@@ -152,12 +156,16 @@ void mrb_SDL_SDLGameControllerButtonBind_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLGameControllerButtonBind_bindType_FIELD
+#if BIND_SDLGameControllerButtonBind_bindType_FIELD_READER
   mrb_define_method(mrb, SDLGameControllerButtonBind_class, "bindType", mrb_SDL_SDLGameControllerButtonBind_get_bindType, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLGameControllerButtonBind_bindType_FIELD_WRITER
   mrb_define_method(mrb, SDLGameControllerButtonBind_class, "bindType=", mrb_SDL_SDLGameControllerButtonBind_set_bindType, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLGameControllerButtonBind_value_FIELD
+#if BIND_SDLGameControllerButtonBind_value_FIELD_READER
   mrb_define_method(mrb, SDLGameControllerButtonBind_class, "value", mrb_SDL_SDLGameControllerButtonBind_get_value, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLGameControllerButtonBind_value_FIELD_WRITER
   mrb_define_method(mrb, SDLGameControllerButtonBind_class, "value=", mrb_SDL_SDLGameControllerButtonBind_set_value, MRB_ARGS_ARG(1, 0));
 #endif
 

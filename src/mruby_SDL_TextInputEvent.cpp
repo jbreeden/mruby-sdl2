@@ -60,7 +60,7 @@ mrb_SDL_SDLTextInputEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLTextInputEvent_type_FIELD
+#if BIND_SDLTextInputEvent_type_FIELD_READER
 /* get_type
  *
  * Return Type: Uint32
@@ -75,7 +75,9 @@ mrb_SDL_SDLTextInputEvent_get_type(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTextInputEvent_type_FIELD_WRITER
 /* set_type
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLTextInputEvent_set_type(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLTextInputEvent_timestamp_FIELD
+#if BIND_SDLTextInputEvent_timestamp_FIELD_READER
 /* get_timestamp
  *
  * Return Type: Uint32
@@ -114,7 +116,9 @@ mrb_SDL_SDLTextInputEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTextInputEvent_timestamp_FIELD_WRITER
 /* set_timestamp
  *
  * Parameters:
@@ -138,7 +142,7 @@ mrb_SDL_SDLTextInputEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLTextInputEvent_windowID_FIELD
+#if BIND_SDLTextInputEvent_windowID_FIELD_READER
 /* get_windowID
  *
  * Return Type: Uint32
@@ -153,7 +157,9 @@ mrb_SDL_SDLTextInputEvent_get_windowID(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTextInputEvent_windowID_FIELD_WRITER
 /* set_windowID
  *
  * Parameters:
@@ -177,7 +183,7 @@ mrb_SDL_SDLTextInputEvent_set_windowID(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLTextInputEvent_text_FIELD
+#if BIND_SDLTextInputEvent_text_FIELD_READER
 /* get_text
  *
  * Return Type: char [32]
@@ -192,7 +198,9 @@ mrb_SDL_SDLTextInputEvent_get_text(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTextInputEvent_text_FIELD_WRITER
 /* set_text
  *
  * Parameters:
@@ -230,20 +238,28 @@ void mrb_SDL_SDLTextInputEvent_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLTextInputEvent_type_FIELD
+#if BIND_SDLTextInputEvent_type_FIELD_READER
   mrb_define_method(mrb, SDLTextInputEvent_class, "type", mrb_SDL_SDLTextInputEvent_get_type, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTextInputEvent_type_FIELD_WRITER
   mrb_define_method(mrb, SDLTextInputEvent_class, "type=", mrb_SDL_SDLTextInputEvent_set_type, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTextInputEvent_timestamp_FIELD
+#if BIND_SDLTextInputEvent_timestamp_FIELD_READER
   mrb_define_method(mrb, SDLTextInputEvent_class, "timestamp", mrb_SDL_SDLTextInputEvent_get_timestamp, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTextInputEvent_timestamp_FIELD_WRITER
   mrb_define_method(mrb, SDLTextInputEvent_class, "timestamp=", mrb_SDL_SDLTextInputEvent_set_timestamp, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTextInputEvent_windowID_FIELD
+#if BIND_SDLTextInputEvent_windowID_FIELD_READER
   mrb_define_method(mrb, SDLTextInputEvent_class, "windowID", mrb_SDL_SDLTextInputEvent_get_windowID, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTextInputEvent_windowID_FIELD_WRITER
   mrb_define_method(mrb, SDLTextInputEvent_class, "windowID=", mrb_SDL_SDLTextInputEvent_set_windowID, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTextInputEvent_text_FIELD
+#if BIND_SDLTextInputEvent_text_FIELD_READER
   mrb_define_method(mrb, SDLTextInputEvent_class, "text", mrb_SDL_SDLTextInputEvent_get_text, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTextInputEvent_text_FIELD_WRITER
   mrb_define_method(mrb, SDLTextInputEvent_class, "text=", mrb_SDL_SDLTextInputEvent_set_text, MRB_ARGS_ARG(1, 0));
 #endif
 

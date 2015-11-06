@@ -60,7 +60,7 @@ mrb_SDL_SDLMessageBoxButtonData_belongs_to_ruby(mrb_state* mrb, mrb_value self) 
  * Fields
  */
 
-#if BIND_SDLMessageBoxButtonData_flags_FIELD
+#if BIND_SDLMessageBoxButtonData_flags_FIELD_READER
 /* get_flags
  *
  * Return Type: Uint32
@@ -75,7 +75,9 @@ mrb_SDL_SDLMessageBoxButtonData_get_flags(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLMessageBoxButtonData_flags_FIELD_WRITER
 /* set_flags
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLMessageBoxButtonData_set_flags(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLMessageBoxButtonData_buttonid_FIELD
+#if BIND_SDLMessageBoxButtonData_buttonid_FIELD_READER
 /* get_buttonid
  *
  * Return Type: int
@@ -118,7 +120,9 @@ mrb_SDL_SDLMessageBoxButtonData_get_buttonid(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLMessageBoxButtonData_buttonid_FIELD_WRITER
 /* set_buttonid
  *
  * Parameters:
@@ -145,7 +149,7 @@ mrb_SDL_SDLMessageBoxButtonData_set_buttonid(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLMessageBoxButtonData_text_FIELD
+#if BIND_SDLMessageBoxButtonData_text_FIELD_READER
 /* get_text
  *
  * Return Type: const char *
@@ -160,7 +164,9 @@ mrb_SDL_SDLMessageBoxButtonData_get_text(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLMessageBoxButtonData_text_FIELD_WRITER
 /* set_text
  *
  * Parameters:
@@ -201,16 +207,22 @@ void mrb_SDL_SDLMessageBoxButtonData_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLMessageBoxButtonData_flags_FIELD
+#if BIND_SDLMessageBoxButtonData_flags_FIELD_READER
   mrb_define_method(mrb, SDLMessageBoxButtonData_class, "flags", mrb_SDL_SDLMessageBoxButtonData_get_flags, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLMessageBoxButtonData_flags_FIELD_WRITER
   mrb_define_method(mrb, SDLMessageBoxButtonData_class, "flags=", mrb_SDL_SDLMessageBoxButtonData_set_flags, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLMessageBoxButtonData_buttonid_FIELD
+#if BIND_SDLMessageBoxButtonData_buttonid_FIELD_READER
   mrb_define_method(mrb, SDLMessageBoxButtonData_class, "buttonid", mrb_SDL_SDLMessageBoxButtonData_get_buttonid, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLMessageBoxButtonData_buttonid_FIELD_WRITER
   mrb_define_method(mrb, SDLMessageBoxButtonData_class, "buttonid=", mrb_SDL_SDLMessageBoxButtonData_set_buttonid, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLMessageBoxButtonData_text_FIELD
+#if BIND_SDLMessageBoxButtonData_text_FIELD_READER
   mrb_define_method(mrb, SDLMessageBoxButtonData_class, "text", mrb_SDL_SDLMessageBoxButtonData_get_text, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLMessageBoxButtonData_text_FIELD_WRITER
   mrb_define_method(mrb, SDLMessageBoxButtonData_class, "text=", mrb_SDL_SDLMessageBoxButtonData_set_text, MRB_ARGS_ARG(1, 0));
 #endif
 

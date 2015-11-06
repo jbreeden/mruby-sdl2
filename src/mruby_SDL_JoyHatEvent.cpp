@@ -60,7 +60,7 @@ mrb_SDL_SDLJoyHatEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLJoyHatEvent_type_FIELD
+#if BIND_SDLJoyHatEvent_type_FIELD_READER
 /* get_type
  *
  * Return Type: Uint32
@@ -75,7 +75,9 @@ mrb_SDL_SDLJoyHatEvent_get_type(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyHatEvent_type_FIELD_WRITER
 /* set_type
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLJoyHatEvent_set_type(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLJoyHatEvent_timestamp_FIELD
+#if BIND_SDLJoyHatEvent_timestamp_FIELD_READER
 /* get_timestamp
  *
  * Return Type: Uint32
@@ -114,7 +116,9 @@ mrb_SDL_SDLJoyHatEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyHatEvent_timestamp_FIELD_WRITER
 /* set_timestamp
  *
  * Parameters:
@@ -138,7 +142,7 @@ mrb_SDL_SDLJoyHatEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLJoyHatEvent_which_FIELD
+#if BIND_SDLJoyHatEvent_which_FIELD_READER
 /* get_which
  *
  * Return Type: SDL_JoystickID
@@ -153,7 +157,9 @@ mrb_SDL_SDLJoyHatEvent_get_which(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyHatEvent_which_FIELD_WRITER
 /* set_which
  *
  * Parameters:
@@ -177,7 +183,7 @@ mrb_SDL_SDLJoyHatEvent_set_which(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLJoyHatEvent_hat_FIELD
+#if BIND_SDLJoyHatEvent_hat_FIELD_READER
 /* get_hat
  *
  * Return Type: Uint8
@@ -192,7 +198,9 @@ mrb_SDL_SDLJoyHatEvent_get_hat(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyHatEvent_hat_FIELD_WRITER
 /* set_hat
  *
  * Parameters:
@@ -216,7 +224,7 @@ mrb_SDL_SDLJoyHatEvent_set_hat(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLJoyHatEvent_value_FIELD
+#if BIND_SDLJoyHatEvent_value_FIELD_READER
 /* get_value
  *
  * Return Type: Uint8
@@ -231,7 +239,9 @@ mrb_SDL_SDLJoyHatEvent_get_value(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyHatEvent_value_FIELD_WRITER
 /* set_value
  *
  * Parameters:
@@ -255,7 +265,7 @@ mrb_SDL_SDLJoyHatEvent_set_value(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLJoyHatEvent_padding1_FIELD
+#if BIND_SDLJoyHatEvent_padding1_FIELD_READER
 /* get_padding1
  *
  * Return Type: Uint8
@@ -270,7 +280,9 @@ mrb_SDL_SDLJoyHatEvent_get_padding1(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyHatEvent_padding1_FIELD_WRITER
 /* set_padding1
  *
  * Parameters:
@@ -294,7 +306,7 @@ mrb_SDL_SDLJoyHatEvent_set_padding1(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLJoyHatEvent_padding2_FIELD
+#if BIND_SDLJoyHatEvent_padding2_FIELD_READER
 /* get_padding2
  *
  * Return Type: Uint8
@@ -309,7 +321,9 @@ mrb_SDL_SDLJoyHatEvent_get_padding2(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyHatEvent_padding2_FIELD_WRITER
 /* set_padding2
  *
  * Parameters:
@@ -347,32 +361,46 @@ void mrb_SDL_SDLJoyHatEvent_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLJoyHatEvent_type_FIELD
+#if BIND_SDLJoyHatEvent_type_FIELD_READER
   mrb_define_method(mrb, SDLJoyHatEvent_class, "type", mrb_SDL_SDLJoyHatEvent_get_type, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyHatEvent_type_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyHatEvent_class, "type=", mrb_SDL_SDLJoyHatEvent_set_type, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLJoyHatEvent_timestamp_FIELD
+#if BIND_SDLJoyHatEvent_timestamp_FIELD_READER
   mrb_define_method(mrb, SDLJoyHatEvent_class, "timestamp", mrb_SDL_SDLJoyHatEvent_get_timestamp, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyHatEvent_timestamp_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyHatEvent_class, "timestamp=", mrb_SDL_SDLJoyHatEvent_set_timestamp, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLJoyHatEvent_which_FIELD
+#if BIND_SDLJoyHatEvent_which_FIELD_READER
   mrb_define_method(mrb, SDLJoyHatEvent_class, "which", mrb_SDL_SDLJoyHatEvent_get_which, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyHatEvent_which_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyHatEvent_class, "which=", mrb_SDL_SDLJoyHatEvent_set_which, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLJoyHatEvent_hat_FIELD
+#if BIND_SDLJoyHatEvent_hat_FIELD_READER
   mrb_define_method(mrb, SDLJoyHatEvent_class, "hat", mrb_SDL_SDLJoyHatEvent_get_hat, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyHatEvent_hat_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyHatEvent_class, "hat=", mrb_SDL_SDLJoyHatEvent_set_hat, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLJoyHatEvent_value_FIELD
+#if BIND_SDLJoyHatEvent_value_FIELD_READER
   mrb_define_method(mrb, SDLJoyHatEvent_class, "value", mrb_SDL_SDLJoyHatEvent_get_value, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyHatEvent_value_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyHatEvent_class, "value=", mrb_SDL_SDLJoyHatEvent_set_value, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLJoyHatEvent_padding1_FIELD
+#if BIND_SDLJoyHatEvent_padding1_FIELD_READER
   mrb_define_method(mrb, SDLJoyHatEvent_class, "padding1", mrb_SDL_SDLJoyHatEvent_get_padding1, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyHatEvent_padding1_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyHatEvent_class, "padding1=", mrb_SDL_SDLJoyHatEvent_set_padding1, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLJoyHatEvent_padding2_FIELD
+#if BIND_SDLJoyHatEvent_padding2_FIELD_READER
   mrb_define_method(mrb, SDLJoyHatEvent_class, "padding2", mrb_SDL_SDLJoyHatEvent_get_padding2, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyHatEvent_padding2_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyHatEvent_class, "padding2=", mrb_SDL_SDLJoyHatEvent_set_padding2, MRB_ARGS_ARG(1, 0));
 #endif
 

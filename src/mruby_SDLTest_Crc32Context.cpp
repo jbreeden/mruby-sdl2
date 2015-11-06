@@ -60,7 +60,7 @@ mrb_SDL_SDLTestCrc32Context_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLTestCrc32Context_crc32_table_FIELD
+#if BIND_SDLTestCrc32Context_crc32_table_FIELD_READER
 /* get_crc32_table
  *
  * Return Type: unsigned int [256]
@@ -75,7 +75,9 @@ mrb_SDL_SDLTestCrc32Context_get_crc32_table(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTestCrc32Context_crc32_table_FIELD_WRITER
 /* set_crc32_table
  *
  * Parameters:
@@ -113,8 +115,10 @@ void mrb_SDL_SDLTestCrc32Context_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLTestCrc32Context_crc32_table_FIELD
+#if BIND_SDLTestCrc32Context_crc32_table_FIELD_READER
   mrb_define_method(mrb, SDLTestCrc32Context_class, "crc32_table", mrb_SDL_SDLTestCrc32Context_get_crc32_table, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTestCrc32Context_crc32_table_FIELD_WRITER
   mrb_define_method(mrb, SDLTestCrc32Context_class, "crc32_table=", mrb_SDL_SDLTestCrc32Context_set_crc32_table, MRB_ARGS_ARG(1, 0));
 #endif
 

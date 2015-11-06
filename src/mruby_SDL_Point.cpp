@@ -60,7 +60,7 @@ mrb_SDL_SDLPoint_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLPoint_x_FIELD
+#if BIND_SDLPoint_x_FIELD_READER
 /* get_x
  *
  * Return Type: int
@@ -79,7 +79,9 @@ mrb_SDL_SDLPoint_get_x(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPoint_x_FIELD_WRITER
 /* set_x
  *
  * Parameters:
@@ -106,7 +108,7 @@ mrb_SDL_SDLPoint_set_x(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLPoint_y_FIELD
+#if BIND_SDLPoint_y_FIELD_READER
 /* get_y
  *
  * Return Type: int
@@ -125,7 +127,9 @@ mrb_SDL_SDLPoint_get_y(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPoint_y_FIELD_WRITER
 /* set_y
  *
  * Parameters:
@@ -166,12 +170,16 @@ void mrb_SDL_SDLPoint_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLPoint_x_FIELD
+#if BIND_SDLPoint_x_FIELD_READER
   mrb_define_method(mrb, SDLPoint_class, "x", mrb_SDL_SDLPoint_get_x, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPoint_x_FIELD_WRITER
   mrb_define_method(mrb, SDLPoint_class, "x=", mrb_SDL_SDLPoint_set_x, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLPoint_y_FIELD
+#if BIND_SDLPoint_y_FIELD_READER
   mrb_define_method(mrb, SDLPoint_class, "y", mrb_SDL_SDLPoint_get_y, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPoint_y_FIELD_WRITER
   mrb_define_method(mrb, SDLPoint_class, "y=", mrb_SDL_SDLPoint_set_y, MRB_ARGS_ARG(1, 0));
 #endif
 

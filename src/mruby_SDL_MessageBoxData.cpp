@@ -60,7 +60,7 @@ mrb_SDL_SDLMessageBoxData_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLMessageBoxData_flags_FIELD
+#if BIND_SDLMessageBoxData_flags_FIELD_READER
 /* get_flags
  *
  * Return Type: Uint32
@@ -75,7 +75,9 @@ mrb_SDL_SDLMessageBoxData_get_flags(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLMessageBoxData_flags_FIELD_WRITER
 /* set_flags
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLMessageBoxData_set_flags(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLMessageBoxData_window_FIELD
+#if BIND_SDLMessageBoxData_window_FIELD_READER
 /* get_window
  *
  * Return Type: SDL_Window *
@@ -114,7 +116,9 @@ mrb_SDL_SDLMessageBoxData_get_window(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLMessageBoxData_window_FIELD_WRITER
 /* set_window
  *
  * Parameters:
@@ -141,7 +145,7 @@ mrb_SDL_SDLMessageBoxData_set_window(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLMessageBoxData_title_FIELD
+#if BIND_SDLMessageBoxData_title_FIELD_READER
 /* get_title
  *
  * Return Type: const char *
@@ -156,7 +160,9 @@ mrb_SDL_SDLMessageBoxData_get_title(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLMessageBoxData_title_FIELD_WRITER
 /* set_title
  *
  * Parameters:
@@ -183,7 +189,7 @@ mrb_SDL_SDLMessageBoxData_set_title(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLMessageBoxData_message_FIELD
+#if BIND_SDLMessageBoxData_message_FIELD_READER
 /* get_message
  *
  * Return Type: const char *
@@ -198,7 +204,9 @@ mrb_SDL_SDLMessageBoxData_get_message(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLMessageBoxData_message_FIELD_WRITER
 /* set_message
  *
  * Parameters:
@@ -225,7 +233,7 @@ mrb_SDL_SDLMessageBoxData_set_message(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLMessageBoxData_numbuttons_FIELD
+#if BIND_SDLMessageBoxData_numbuttons_FIELD_READER
 /* get_numbuttons
  *
  * Return Type: int
@@ -244,7 +252,9 @@ mrb_SDL_SDLMessageBoxData_get_numbuttons(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLMessageBoxData_numbuttons_FIELD_WRITER
 /* set_numbuttons
  *
  * Parameters:
@@ -271,7 +281,7 @@ mrb_SDL_SDLMessageBoxData_set_numbuttons(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLMessageBoxData_buttons_FIELD
+#if BIND_SDLMessageBoxData_buttons_FIELD_READER
 /* get_buttons
  *
  * Return Type: const SDL_MessageBoxButtonData *
@@ -286,7 +296,9 @@ mrb_SDL_SDLMessageBoxData_get_buttons(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLMessageBoxData_buttons_FIELD_WRITER
 /* set_buttons
  *
  * Parameters:
@@ -313,7 +325,7 @@ mrb_SDL_SDLMessageBoxData_set_buttons(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLMessageBoxData_colorScheme_FIELD
+#if BIND_SDLMessageBoxData_colorScheme_FIELD_READER
 /* get_colorScheme
  *
  * Return Type: const SDL_MessageBoxColorScheme *
@@ -328,7 +340,9 @@ mrb_SDL_SDLMessageBoxData_get_colorScheme(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLMessageBoxData_colorScheme_FIELD_WRITER
 /* set_colorScheme
  *
  * Parameters:
@@ -369,32 +383,46 @@ void mrb_SDL_SDLMessageBoxData_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLMessageBoxData_flags_FIELD
+#if BIND_SDLMessageBoxData_flags_FIELD_READER
   mrb_define_method(mrb, SDLMessageBoxData_class, "flags", mrb_SDL_SDLMessageBoxData_get_flags, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLMessageBoxData_flags_FIELD_WRITER
   mrb_define_method(mrb, SDLMessageBoxData_class, "flags=", mrb_SDL_SDLMessageBoxData_set_flags, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLMessageBoxData_window_FIELD
+#if BIND_SDLMessageBoxData_window_FIELD_READER
   mrb_define_method(mrb, SDLMessageBoxData_class, "window", mrb_SDL_SDLMessageBoxData_get_window, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLMessageBoxData_window_FIELD_WRITER
   mrb_define_method(mrb, SDLMessageBoxData_class, "window=", mrb_SDL_SDLMessageBoxData_set_window, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLMessageBoxData_title_FIELD
+#if BIND_SDLMessageBoxData_title_FIELD_READER
   mrb_define_method(mrb, SDLMessageBoxData_class, "title", mrb_SDL_SDLMessageBoxData_get_title, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLMessageBoxData_title_FIELD_WRITER
   mrb_define_method(mrb, SDLMessageBoxData_class, "title=", mrb_SDL_SDLMessageBoxData_set_title, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLMessageBoxData_message_FIELD
+#if BIND_SDLMessageBoxData_message_FIELD_READER
   mrb_define_method(mrb, SDLMessageBoxData_class, "message", mrb_SDL_SDLMessageBoxData_get_message, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLMessageBoxData_message_FIELD_WRITER
   mrb_define_method(mrb, SDLMessageBoxData_class, "message=", mrb_SDL_SDLMessageBoxData_set_message, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLMessageBoxData_numbuttons_FIELD
+#if BIND_SDLMessageBoxData_numbuttons_FIELD_READER
   mrb_define_method(mrb, SDLMessageBoxData_class, "numbuttons", mrb_SDL_SDLMessageBoxData_get_numbuttons, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLMessageBoxData_numbuttons_FIELD_WRITER
   mrb_define_method(mrb, SDLMessageBoxData_class, "numbuttons=", mrb_SDL_SDLMessageBoxData_set_numbuttons, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLMessageBoxData_buttons_FIELD
+#if BIND_SDLMessageBoxData_buttons_FIELD_READER
   mrb_define_method(mrb, SDLMessageBoxData_class, "buttons", mrb_SDL_SDLMessageBoxData_get_buttons, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLMessageBoxData_buttons_FIELD_WRITER
   mrb_define_method(mrb, SDLMessageBoxData_class, "buttons=", mrb_SDL_SDLMessageBoxData_set_buttons, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLMessageBoxData_colorScheme_FIELD
+#if BIND_SDLMessageBoxData_colorScheme_FIELD_READER
   mrb_define_method(mrb, SDLMessageBoxData_class, "colorScheme", mrb_SDL_SDLMessageBoxData_get_colorScheme, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLMessageBoxData_colorScheme_FIELD_WRITER
   mrb_define_method(mrb, SDLMessageBoxData_class, "colorScheme=", mrb_SDL_SDLMessageBoxData_set_colorScheme, MRB_ARGS_ARG(1, 0));
 #endif
 

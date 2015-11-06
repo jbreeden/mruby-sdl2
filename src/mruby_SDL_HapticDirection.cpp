@@ -60,7 +60,7 @@ mrb_SDL_SDLHapticDirection_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLHapticDirection_type_FIELD
+#if BIND_SDLHapticDirection_type_FIELD_READER
 /* get_type
  *
  * Return Type: Uint8
@@ -75,7 +75,9 @@ mrb_SDL_SDLHapticDirection_get_type(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticDirection_type_FIELD_WRITER
 /* set_type
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLHapticDirection_set_type(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticDirection_dir_FIELD
+#if BIND_SDLHapticDirection_dir_FIELD_READER
 /* get_dir
  *
  * Return Type: Sint32 [3]
@@ -114,7 +116,9 @@ mrb_SDL_SDLHapticDirection_get_dir(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticDirection_dir_FIELD_WRITER
 /* set_dir
  *
  * Parameters:
@@ -152,12 +156,16 @@ void mrb_SDL_SDLHapticDirection_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLHapticDirection_type_FIELD
+#if BIND_SDLHapticDirection_type_FIELD_READER
   mrb_define_method(mrb, SDLHapticDirection_class, "type", mrb_SDL_SDLHapticDirection_get_type, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticDirection_type_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticDirection_class, "type=", mrb_SDL_SDLHapticDirection_set_type, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticDirection_dir_FIELD
+#if BIND_SDLHapticDirection_dir_FIELD_READER
   mrb_define_method(mrb, SDLHapticDirection_class, "dir", mrb_SDL_SDLHapticDirection_get_dir, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticDirection_dir_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticDirection_class, "dir=", mrb_SDL_SDLHapticDirection_set_dir, MRB_ARGS_ARG(1, 0));
 #endif
 

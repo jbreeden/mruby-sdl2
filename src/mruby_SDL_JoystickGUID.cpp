@@ -60,7 +60,7 @@ mrb_SDL_SDLJoystickGUID_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLJoystickGUID_data_FIELD
+#if BIND_SDLJoystickGUID_data_FIELD_READER
 /* get_data
  *
  * Return Type: Uint8 [16]
@@ -75,7 +75,9 @@ mrb_SDL_SDLJoystickGUID_get_data(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoystickGUID_data_FIELD_WRITER
 /* set_data
  *
  * Parameters:
@@ -113,8 +115,10 @@ void mrb_SDL_SDLJoystickGUID_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLJoystickGUID_data_FIELD
+#if BIND_SDLJoystickGUID_data_FIELD_READER
   mrb_define_method(mrb, SDLJoystickGUID_class, "data", mrb_SDL_SDLJoystickGUID_get_data, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoystickGUID_data_FIELD_WRITER
   mrb_define_method(mrb, SDLJoystickGUID_class, "data=", mrb_SDL_SDLJoystickGUID_set_data, MRB_ARGS_ARG(1, 0));
 #endif
 

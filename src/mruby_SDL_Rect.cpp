@@ -60,7 +60,7 @@ mrb_SDL_SDLRect_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLRect_x_FIELD
+#if BIND_SDLRect_x_FIELD_READER
 /* get_x
  *
  * Return Type: int
@@ -79,7 +79,9 @@ mrb_SDL_SDLRect_get_x(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLRect_x_FIELD_WRITER
 /* set_x
  *
  * Parameters:
@@ -106,7 +108,7 @@ mrb_SDL_SDLRect_set_x(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLRect_y_FIELD
+#if BIND_SDLRect_y_FIELD_READER
 /* get_y
  *
  * Return Type: int
@@ -125,7 +127,9 @@ mrb_SDL_SDLRect_get_y(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLRect_y_FIELD_WRITER
 /* set_y
  *
  * Parameters:
@@ -152,7 +156,7 @@ mrb_SDL_SDLRect_set_y(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLRect_w_FIELD
+#if BIND_SDLRect_w_FIELD_READER
 /* get_w
  *
  * Return Type: int
@@ -171,7 +175,9 @@ mrb_SDL_SDLRect_get_w(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLRect_w_FIELD_WRITER
 /* set_w
  *
  * Parameters:
@@ -198,7 +204,7 @@ mrb_SDL_SDLRect_set_w(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLRect_h_FIELD
+#if BIND_SDLRect_h_FIELD_READER
 /* get_h
  *
  * Return Type: int
@@ -217,7 +223,9 @@ mrb_SDL_SDLRect_get_h(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLRect_h_FIELD_WRITER
 /* set_h
  *
  * Parameters:
@@ -258,20 +266,28 @@ void mrb_SDL_SDLRect_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLRect_x_FIELD
+#if BIND_SDLRect_x_FIELD_READER
   mrb_define_method(mrb, SDLRect_class, "x", mrb_SDL_SDLRect_get_x, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLRect_x_FIELD_WRITER
   mrb_define_method(mrb, SDLRect_class, "x=", mrb_SDL_SDLRect_set_x, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLRect_y_FIELD
+#if BIND_SDLRect_y_FIELD_READER
   mrb_define_method(mrb, SDLRect_class, "y", mrb_SDL_SDLRect_get_y, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLRect_y_FIELD_WRITER
   mrb_define_method(mrb, SDLRect_class, "y=", mrb_SDL_SDLRect_set_y, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLRect_w_FIELD
+#if BIND_SDLRect_w_FIELD_READER
   mrb_define_method(mrb, SDLRect_class, "w", mrb_SDL_SDLRect_get_w, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLRect_w_FIELD_WRITER
   mrb_define_method(mrb, SDLRect_class, "w=", mrb_SDL_SDLRect_set_w, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLRect_h_FIELD
+#if BIND_SDLRect_h_FIELD_READER
   mrb_define_method(mrb, SDLRect_class, "h", mrb_SDL_SDLRect_get_h, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLRect_h_FIELD_WRITER
   mrb_define_method(mrb, SDLRect_class, "h=", mrb_SDL_SDLRect_set_h, MRB_ARGS_ARG(1, 0));
 #endif
 

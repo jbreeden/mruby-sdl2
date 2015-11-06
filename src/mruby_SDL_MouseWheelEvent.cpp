@@ -60,7 +60,7 @@ mrb_SDL_SDLMouseWheelEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLMouseWheelEvent_type_FIELD
+#if BIND_SDLMouseWheelEvent_type_FIELD_READER
 /* get_type
  *
  * Return Type: Uint32
@@ -75,7 +75,9 @@ mrb_SDL_SDLMouseWheelEvent_get_type(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLMouseWheelEvent_type_FIELD_WRITER
 /* set_type
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLMouseWheelEvent_set_type(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLMouseWheelEvent_timestamp_FIELD
+#if BIND_SDLMouseWheelEvent_timestamp_FIELD_READER
 /* get_timestamp
  *
  * Return Type: Uint32
@@ -114,7 +116,9 @@ mrb_SDL_SDLMouseWheelEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLMouseWheelEvent_timestamp_FIELD_WRITER
 /* set_timestamp
  *
  * Parameters:
@@ -138,7 +142,7 @@ mrb_SDL_SDLMouseWheelEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLMouseWheelEvent_windowID_FIELD
+#if BIND_SDLMouseWheelEvent_windowID_FIELD_READER
 /* get_windowID
  *
  * Return Type: Uint32
@@ -153,7 +157,9 @@ mrb_SDL_SDLMouseWheelEvent_get_windowID(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLMouseWheelEvent_windowID_FIELD_WRITER
 /* set_windowID
  *
  * Parameters:
@@ -177,7 +183,7 @@ mrb_SDL_SDLMouseWheelEvent_set_windowID(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLMouseWheelEvent_which_FIELD
+#if BIND_SDLMouseWheelEvent_which_FIELD_READER
 /* get_which
  *
  * Return Type: Uint32
@@ -192,7 +198,9 @@ mrb_SDL_SDLMouseWheelEvent_get_which(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLMouseWheelEvent_which_FIELD_WRITER
 /* set_which
  *
  * Parameters:
@@ -216,7 +224,7 @@ mrb_SDL_SDLMouseWheelEvent_set_which(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLMouseWheelEvent_x_FIELD
+#if BIND_SDLMouseWheelEvent_x_FIELD_READER
 /* get_x
  *
  * Return Type: Sint32
@@ -231,7 +239,9 @@ mrb_SDL_SDLMouseWheelEvent_get_x(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLMouseWheelEvent_x_FIELD_WRITER
 /* set_x
  *
  * Parameters:
@@ -255,7 +265,7 @@ mrb_SDL_SDLMouseWheelEvent_set_x(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLMouseWheelEvent_y_FIELD
+#if BIND_SDLMouseWheelEvent_y_FIELD_READER
 /* get_y
  *
  * Return Type: Sint32
@@ -270,7 +280,9 @@ mrb_SDL_SDLMouseWheelEvent_get_y(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLMouseWheelEvent_y_FIELD_WRITER
 /* set_y
  *
  * Parameters:
@@ -308,28 +320,40 @@ void mrb_SDL_SDLMouseWheelEvent_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLMouseWheelEvent_type_FIELD
+#if BIND_SDLMouseWheelEvent_type_FIELD_READER
   mrb_define_method(mrb, SDLMouseWheelEvent_class, "type", mrb_SDL_SDLMouseWheelEvent_get_type, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLMouseWheelEvent_type_FIELD_WRITER
   mrb_define_method(mrb, SDLMouseWheelEvent_class, "type=", mrb_SDL_SDLMouseWheelEvent_set_type, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLMouseWheelEvent_timestamp_FIELD
+#if BIND_SDLMouseWheelEvent_timestamp_FIELD_READER
   mrb_define_method(mrb, SDLMouseWheelEvent_class, "timestamp", mrb_SDL_SDLMouseWheelEvent_get_timestamp, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLMouseWheelEvent_timestamp_FIELD_WRITER
   mrb_define_method(mrb, SDLMouseWheelEvent_class, "timestamp=", mrb_SDL_SDLMouseWheelEvent_set_timestamp, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLMouseWheelEvent_windowID_FIELD
+#if BIND_SDLMouseWheelEvent_windowID_FIELD_READER
   mrb_define_method(mrb, SDLMouseWheelEvent_class, "windowID", mrb_SDL_SDLMouseWheelEvent_get_windowID, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLMouseWheelEvent_windowID_FIELD_WRITER
   mrb_define_method(mrb, SDLMouseWheelEvent_class, "windowID=", mrb_SDL_SDLMouseWheelEvent_set_windowID, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLMouseWheelEvent_which_FIELD
+#if BIND_SDLMouseWheelEvent_which_FIELD_READER
   mrb_define_method(mrb, SDLMouseWheelEvent_class, "which", mrb_SDL_SDLMouseWheelEvent_get_which, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLMouseWheelEvent_which_FIELD_WRITER
   mrb_define_method(mrb, SDLMouseWheelEvent_class, "which=", mrb_SDL_SDLMouseWheelEvent_set_which, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLMouseWheelEvent_x_FIELD
+#if BIND_SDLMouseWheelEvent_x_FIELD_READER
   mrb_define_method(mrb, SDLMouseWheelEvent_class, "x", mrb_SDL_SDLMouseWheelEvent_get_x, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLMouseWheelEvent_x_FIELD_WRITER
   mrb_define_method(mrb, SDLMouseWheelEvent_class, "x=", mrb_SDL_SDLMouseWheelEvent_set_x, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLMouseWheelEvent_y_FIELD
+#if BIND_SDLMouseWheelEvent_y_FIELD_READER
   mrb_define_method(mrb, SDLMouseWheelEvent_class, "y", mrb_SDL_SDLMouseWheelEvent_get_y, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLMouseWheelEvent_y_FIELD_WRITER
   mrb_define_method(mrb, SDLMouseWheelEvent_class, "y=", mrb_SDL_SDLMouseWheelEvent_set_y, MRB_ARGS_ARG(1, 0));
 #endif
 

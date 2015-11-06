@@ -60,7 +60,7 @@ mrb_SDL_SDLPixelFormat_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLPixelFormat_format_FIELD
+#if BIND_SDLPixelFormat_format_FIELD_READER
 /* get_format
  *
  * Return Type: Uint32
@@ -75,7 +75,9 @@ mrb_SDL_SDLPixelFormat_get_format(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPixelFormat_format_FIELD_WRITER
 /* set_format
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLPixelFormat_set_format(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLPixelFormat_palette_FIELD
+#if BIND_SDLPixelFormat_palette_FIELD_READER
 /* get_palette
  *
  * Return Type: SDL_Palette *
@@ -114,7 +116,9 @@ mrb_SDL_SDLPixelFormat_get_palette(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPixelFormat_palette_FIELD_WRITER
 /* set_palette
  *
  * Parameters:
@@ -141,7 +145,7 @@ mrb_SDL_SDLPixelFormat_set_palette(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLPixelFormat_BitsPerPixel_FIELD
+#if BIND_SDLPixelFormat_BitsPerPixel_FIELD_READER
 /* get_BitsPerPixel
  *
  * Return Type: Uint8
@@ -156,7 +160,9 @@ mrb_SDL_SDLPixelFormat_get_BitsPerPixel(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPixelFormat_BitsPerPixel_FIELD_WRITER
 /* set_BitsPerPixel
  *
  * Parameters:
@@ -180,7 +186,7 @@ mrb_SDL_SDLPixelFormat_set_BitsPerPixel(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLPixelFormat_BytesPerPixel_FIELD
+#if BIND_SDLPixelFormat_BytesPerPixel_FIELD_READER
 /* get_BytesPerPixel
  *
  * Return Type: Uint8
@@ -195,7 +201,9 @@ mrb_SDL_SDLPixelFormat_get_BytesPerPixel(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPixelFormat_BytesPerPixel_FIELD_WRITER
 /* set_BytesPerPixel
  *
  * Parameters:
@@ -219,7 +227,7 @@ mrb_SDL_SDLPixelFormat_set_BytesPerPixel(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLPixelFormat_padding_FIELD
+#if BIND_SDLPixelFormat_padding_FIELD_READER
 /* get_padding
  *
  * Return Type: Uint8 [2]
@@ -234,7 +242,9 @@ mrb_SDL_SDLPixelFormat_get_padding(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPixelFormat_padding_FIELD_WRITER
 /* set_padding
  *
  * Parameters:
@@ -258,7 +268,7 @@ mrb_SDL_SDLPixelFormat_set_padding(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLPixelFormat_Rmask_FIELD
+#if BIND_SDLPixelFormat_Rmask_FIELD_READER
 /* get_Rmask
  *
  * Return Type: Uint32
@@ -273,7 +283,9 @@ mrb_SDL_SDLPixelFormat_get_Rmask(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPixelFormat_Rmask_FIELD_WRITER
 /* set_Rmask
  *
  * Parameters:
@@ -297,7 +309,7 @@ mrb_SDL_SDLPixelFormat_set_Rmask(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLPixelFormat_Gmask_FIELD
+#if BIND_SDLPixelFormat_Gmask_FIELD_READER
 /* get_Gmask
  *
  * Return Type: Uint32
@@ -312,7 +324,9 @@ mrb_SDL_SDLPixelFormat_get_Gmask(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPixelFormat_Gmask_FIELD_WRITER
 /* set_Gmask
  *
  * Parameters:
@@ -336,7 +350,7 @@ mrb_SDL_SDLPixelFormat_set_Gmask(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLPixelFormat_Bmask_FIELD
+#if BIND_SDLPixelFormat_Bmask_FIELD_READER
 /* get_Bmask
  *
  * Return Type: Uint32
@@ -351,7 +365,9 @@ mrb_SDL_SDLPixelFormat_get_Bmask(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPixelFormat_Bmask_FIELD_WRITER
 /* set_Bmask
  *
  * Parameters:
@@ -375,7 +391,7 @@ mrb_SDL_SDLPixelFormat_set_Bmask(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLPixelFormat_Amask_FIELD
+#if BIND_SDLPixelFormat_Amask_FIELD_READER
 /* get_Amask
  *
  * Return Type: Uint32
@@ -390,7 +406,9 @@ mrb_SDL_SDLPixelFormat_get_Amask(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPixelFormat_Amask_FIELD_WRITER
 /* set_Amask
  *
  * Parameters:
@@ -414,7 +432,7 @@ mrb_SDL_SDLPixelFormat_set_Amask(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLPixelFormat_Rloss_FIELD
+#if BIND_SDLPixelFormat_Rloss_FIELD_READER
 /* get_Rloss
  *
  * Return Type: Uint8
@@ -429,7 +447,9 @@ mrb_SDL_SDLPixelFormat_get_Rloss(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPixelFormat_Rloss_FIELD_WRITER
 /* set_Rloss
  *
  * Parameters:
@@ -453,7 +473,7 @@ mrb_SDL_SDLPixelFormat_set_Rloss(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLPixelFormat_Gloss_FIELD
+#if BIND_SDLPixelFormat_Gloss_FIELD_READER
 /* get_Gloss
  *
  * Return Type: Uint8
@@ -468,7 +488,9 @@ mrb_SDL_SDLPixelFormat_get_Gloss(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPixelFormat_Gloss_FIELD_WRITER
 /* set_Gloss
  *
  * Parameters:
@@ -492,7 +514,7 @@ mrb_SDL_SDLPixelFormat_set_Gloss(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLPixelFormat_Bloss_FIELD
+#if BIND_SDLPixelFormat_Bloss_FIELD_READER
 /* get_Bloss
  *
  * Return Type: Uint8
@@ -507,7 +529,9 @@ mrb_SDL_SDLPixelFormat_get_Bloss(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPixelFormat_Bloss_FIELD_WRITER
 /* set_Bloss
  *
  * Parameters:
@@ -531,7 +555,7 @@ mrb_SDL_SDLPixelFormat_set_Bloss(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLPixelFormat_Aloss_FIELD
+#if BIND_SDLPixelFormat_Aloss_FIELD_READER
 /* get_Aloss
  *
  * Return Type: Uint8
@@ -546,7 +570,9 @@ mrb_SDL_SDLPixelFormat_get_Aloss(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPixelFormat_Aloss_FIELD_WRITER
 /* set_Aloss
  *
  * Parameters:
@@ -570,7 +596,7 @@ mrb_SDL_SDLPixelFormat_set_Aloss(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLPixelFormat_Rshift_FIELD
+#if BIND_SDLPixelFormat_Rshift_FIELD_READER
 /* get_Rshift
  *
  * Return Type: Uint8
@@ -585,7 +611,9 @@ mrb_SDL_SDLPixelFormat_get_Rshift(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPixelFormat_Rshift_FIELD_WRITER
 /* set_Rshift
  *
  * Parameters:
@@ -609,7 +637,7 @@ mrb_SDL_SDLPixelFormat_set_Rshift(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLPixelFormat_Gshift_FIELD
+#if BIND_SDLPixelFormat_Gshift_FIELD_READER
 /* get_Gshift
  *
  * Return Type: Uint8
@@ -624,7 +652,9 @@ mrb_SDL_SDLPixelFormat_get_Gshift(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPixelFormat_Gshift_FIELD_WRITER
 /* set_Gshift
  *
  * Parameters:
@@ -648,7 +678,7 @@ mrb_SDL_SDLPixelFormat_set_Gshift(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLPixelFormat_Bshift_FIELD
+#if BIND_SDLPixelFormat_Bshift_FIELD_READER
 /* get_Bshift
  *
  * Return Type: Uint8
@@ -663,7 +693,9 @@ mrb_SDL_SDLPixelFormat_get_Bshift(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPixelFormat_Bshift_FIELD_WRITER
 /* set_Bshift
  *
  * Parameters:
@@ -687,7 +719,7 @@ mrb_SDL_SDLPixelFormat_set_Bshift(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLPixelFormat_Ashift_FIELD
+#if BIND_SDLPixelFormat_Ashift_FIELD_READER
 /* get_Ashift
  *
  * Return Type: Uint8
@@ -702,7 +734,9 @@ mrb_SDL_SDLPixelFormat_get_Ashift(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPixelFormat_Ashift_FIELD_WRITER
 /* set_Ashift
  *
  * Parameters:
@@ -726,7 +760,7 @@ mrb_SDL_SDLPixelFormat_set_Ashift(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLPixelFormat_refcount_FIELD
+#if BIND_SDLPixelFormat_refcount_FIELD_READER
 /* get_refcount
  *
  * Return Type: int
@@ -745,7 +779,9 @@ mrb_SDL_SDLPixelFormat_get_refcount(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPixelFormat_refcount_FIELD_WRITER
 /* set_refcount
  *
  * Parameters:
@@ -772,7 +808,7 @@ mrb_SDL_SDLPixelFormat_set_refcount(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLPixelFormat_next_FIELD
+#if BIND_SDLPixelFormat_next_FIELD_READER
 /* get_next
  *
  * Return Type: struct SDL_PixelFormat *
@@ -787,7 +823,9 @@ mrb_SDL_SDLPixelFormat_get_next(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPixelFormat_next_FIELD_WRITER
 /* set_next
  *
  * Parameters:
@@ -828,80 +866,118 @@ void mrb_SDL_SDLPixelFormat_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLPixelFormat_format_FIELD
+#if BIND_SDLPixelFormat_format_FIELD_READER
   mrb_define_method(mrb, SDLPixelFormat_class, "format", mrb_SDL_SDLPixelFormat_get_format, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPixelFormat_format_FIELD_WRITER
   mrb_define_method(mrb, SDLPixelFormat_class, "format=", mrb_SDL_SDLPixelFormat_set_format, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLPixelFormat_palette_FIELD
+#if BIND_SDLPixelFormat_palette_FIELD_READER
   mrb_define_method(mrb, SDLPixelFormat_class, "palette", mrb_SDL_SDLPixelFormat_get_palette, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPixelFormat_palette_FIELD_WRITER
   mrb_define_method(mrb, SDLPixelFormat_class, "palette=", mrb_SDL_SDLPixelFormat_set_palette, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLPixelFormat_BitsPerPixel_FIELD
+#if BIND_SDLPixelFormat_BitsPerPixel_FIELD_READER
   mrb_define_method(mrb, SDLPixelFormat_class, "BitsPerPixel", mrb_SDL_SDLPixelFormat_get_BitsPerPixel, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPixelFormat_BitsPerPixel_FIELD_WRITER
   mrb_define_method(mrb, SDLPixelFormat_class, "BitsPerPixel=", mrb_SDL_SDLPixelFormat_set_BitsPerPixel, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLPixelFormat_BytesPerPixel_FIELD
+#if BIND_SDLPixelFormat_BytesPerPixel_FIELD_READER
   mrb_define_method(mrb, SDLPixelFormat_class, "BytesPerPixel", mrb_SDL_SDLPixelFormat_get_BytesPerPixel, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPixelFormat_BytesPerPixel_FIELD_WRITER
   mrb_define_method(mrb, SDLPixelFormat_class, "BytesPerPixel=", mrb_SDL_SDLPixelFormat_set_BytesPerPixel, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLPixelFormat_padding_FIELD
+#if BIND_SDLPixelFormat_padding_FIELD_READER
   mrb_define_method(mrb, SDLPixelFormat_class, "padding", mrb_SDL_SDLPixelFormat_get_padding, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPixelFormat_padding_FIELD_WRITER
   mrb_define_method(mrb, SDLPixelFormat_class, "padding=", mrb_SDL_SDLPixelFormat_set_padding, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLPixelFormat_Rmask_FIELD
+#if BIND_SDLPixelFormat_Rmask_FIELD_READER
   mrb_define_method(mrb, SDLPixelFormat_class, "Rmask", mrb_SDL_SDLPixelFormat_get_Rmask, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPixelFormat_Rmask_FIELD_WRITER
   mrb_define_method(mrb, SDLPixelFormat_class, "Rmask=", mrb_SDL_SDLPixelFormat_set_Rmask, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLPixelFormat_Gmask_FIELD
+#if BIND_SDLPixelFormat_Gmask_FIELD_READER
   mrb_define_method(mrb, SDLPixelFormat_class, "Gmask", mrb_SDL_SDLPixelFormat_get_Gmask, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPixelFormat_Gmask_FIELD_WRITER
   mrb_define_method(mrb, SDLPixelFormat_class, "Gmask=", mrb_SDL_SDLPixelFormat_set_Gmask, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLPixelFormat_Bmask_FIELD
+#if BIND_SDLPixelFormat_Bmask_FIELD_READER
   mrb_define_method(mrb, SDLPixelFormat_class, "Bmask", mrb_SDL_SDLPixelFormat_get_Bmask, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPixelFormat_Bmask_FIELD_WRITER
   mrb_define_method(mrb, SDLPixelFormat_class, "Bmask=", mrb_SDL_SDLPixelFormat_set_Bmask, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLPixelFormat_Amask_FIELD
+#if BIND_SDLPixelFormat_Amask_FIELD_READER
   mrb_define_method(mrb, SDLPixelFormat_class, "Amask", mrb_SDL_SDLPixelFormat_get_Amask, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPixelFormat_Amask_FIELD_WRITER
   mrb_define_method(mrb, SDLPixelFormat_class, "Amask=", mrb_SDL_SDLPixelFormat_set_Amask, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLPixelFormat_Rloss_FIELD
+#if BIND_SDLPixelFormat_Rloss_FIELD_READER
   mrb_define_method(mrb, SDLPixelFormat_class, "Rloss", mrb_SDL_SDLPixelFormat_get_Rloss, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPixelFormat_Rloss_FIELD_WRITER
   mrb_define_method(mrb, SDLPixelFormat_class, "Rloss=", mrb_SDL_SDLPixelFormat_set_Rloss, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLPixelFormat_Gloss_FIELD
+#if BIND_SDLPixelFormat_Gloss_FIELD_READER
   mrb_define_method(mrb, SDLPixelFormat_class, "Gloss", mrb_SDL_SDLPixelFormat_get_Gloss, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPixelFormat_Gloss_FIELD_WRITER
   mrb_define_method(mrb, SDLPixelFormat_class, "Gloss=", mrb_SDL_SDLPixelFormat_set_Gloss, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLPixelFormat_Bloss_FIELD
+#if BIND_SDLPixelFormat_Bloss_FIELD_READER
   mrb_define_method(mrb, SDLPixelFormat_class, "Bloss", mrb_SDL_SDLPixelFormat_get_Bloss, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPixelFormat_Bloss_FIELD_WRITER
   mrb_define_method(mrb, SDLPixelFormat_class, "Bloss=", mrb_SDL_SDLPixelFormat_set_Bloss, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLPixelFormat_Aloss_FIELD
+#if BIND_SDLPixelFormat_Aloss_FIELD_READER
   mrb_define_method(mrb, SDLPixelFormat_class, "Aloss", mrb_SDL_SDLPixelFormat_get_Aloss, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPixelFormat_Aloss_FIELD_WRITER
   mrb_define_method(mrb, SDLPixelFormat_class, "Aloss=", mrb_SDL_SDLPixelFormat_set_Aloss, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLPixelFormat_Rshift_FIELD
+#if BIND_SDLPixelFormat_Rshift_FIELD_READER
   mrb_define_method(mrb, SDLPixelFormat_class, "Rshift", mrb_SDL_SDLPixelFormat_get_Rshift, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPixelFormat_Rshift_FIELD_WRITER
   mrb_define_method(mrb, SDLPixelFormat_class, "Rshift=", mrb_SDL_SDLPixelFormat_set_Rshift, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLPixelFormat_Gshift_FIELD
+#if BIND_SDLPixelFormat_Gshift_FIELD_READER
   mrb_define_method(mrb, SDLPixelFormat_class, "Gshift", mrb_SDL_SDLPixelFormat_get_Gshift, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPixelFormat_Gshift_FIELD_WRITER
   mrb_define_method(mrb, SDLPixelFormat_class, "Gshift=", mrb_SDL_SDLPixelFormat_set_Gshift, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLPixelFormat_Bshift_FIELD
+#if BIND_SDLPixelFormat_Bshift_FIELD_READER
   mrb_define_method(mrb, SDLPixelFormat_class, "Bshift", mrb_SDL_SDLPixelFormat_get_Bshift, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPixelFormat_Bshift_FIELD_WRITER
   mrb_define_method(mrb, SDLPixelFormat_class, "Bshift=", mrb_SDL_SDLPixelFormat_set_Bshift, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLPixelFormat_Ashift_FIELD
+#if BIND_SDLPixelFormat_Ashift_FIELD_READER
   mrb_define_method(mrb, SDLPixelFormat_class, "Ashift", mrb_SDL_SDLPixelFormat_get_Ashift, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPixelFormat_Ashift_FIELD_WRITER
   mrb_define_method(mrb, SDLPixelFormat_class, "Ashift=", mrb_SDL_SDLPixelFormat_set_Ashift, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLPixelFormat_refcount_FIELD
+#if BIND_SDLPixelFormat_refcount_FIELD_READER
   mrb_define_method(mrb, SDLPixelFormat_class, "refcount", mrb_SDL_SDLPixelFormat_get_refcount, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPixelFormat_refcount_FIELD_WRITER
   mrb_define_method(mrb, SDLPixelFormat_class, "refcount=", mrb_SDL_SDLPixelFormat_set_refcount, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLPixelFormat_next_FIELD
+#if BIND_SDLPixelFormat_next_FIELD_READER
   mrb_define_method(mrb, SDLPixelFormat_class, "next", mrb_SDL_SDLPixelFormat_get_next, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPixelFormat_next_FIELD_WRITER
   mrb_define_method(mrb, SDLPixelFormat_class, "next=", mrb_SDL_SDLPixelFormat_set_next, MRB_ARGS_ARG(1, 0));
 #endif
 

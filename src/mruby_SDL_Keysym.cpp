@@ -60,7 +60,7 @@ mrb_SDL_SDLKeysym_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLKeysym_scancode_FIELD
+#if BIND_SDLKeysym_scancode_FIELD_READER
 /* get_scancode
  *
  * Return Type: SDL_Scancode
@@ -75,7 +75,9 @@ mrb_SDL_SDLKeysym_get_scancode(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLKeysym_scancode_FIELD_WRITER
 /* set_scancode
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLKeysym_set_scancode(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLKeysym_sym_FIELD
+#if BIND_SDLKeysym_sym_FIELD_READER
 /* get_sym
  *
  * Return Type: SDL_Keycode
@@ -114,7 +116,9 @@ mrb_SDL_SDLKeysym_get_sym(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLKeysym_sym_FIELD_WRITER
 /* set_sym
  *
  * Parameters:
@@ -138,7 +142,7 @@ mrb_SDL_SDLKeysym_set_sym(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLKeysym_mod_FIELD
+#if BIND_SDLKeysym_mod_FIELD_READER
 /* get_mod
  *
  * Return Type: Uint16
@@ -153,7 +157,9 @@ mrb_SDL_SDLKeysym_get_mod(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLKeysym_mod_FIELD_WRITER
 /* set_mod
  *
  * Parameters:
@@ -177,7 +183,7 @@ mrb_SDL_SDLKeysym_set_mod(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLKeysym_unused_FIELD
+#if BIND_SDLKeysym_unused_FIELD_READER
 /* get_unused
  *
  * Return Type: Uint32
@@ -192,7 +198,9 @@ mrb_SDL_SDLKeysym_get_unused(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLKeysym_unused_FIELD_WRITER
 /* set_unused
  *
  * Parameters:
@@ -230,20 +238,28 @@ void mrb_SDL_SDLKeysym_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLKeysym_scancode_FIELD
+#if BIND_SDLKeysym_scancode_FIELD_READER
   mrb_define_method(mrb, SDLKeysym_class, "scancode", mrb_SDL_SDLKeysym_get_scancode, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLKeysym_scancode_FIELD_WRITER
   mrb_define_method(mrb, SDLKeysym_class, "scancode=", mrb_SDL_SDLKeysym_set_scancode, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLKeysym_sym_FIELD
+#if BIND_SDLKeysym_sym_FIELD_READER
   mrb_define_method(mrb, SDLKeysym_class, "sym", mrb_SDL_SDLKeysym_get_sym, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLKeysym_sym_FIELD_WRITER
   mrb_define_method(mrb, SDLKeysym_class, "sym=", mrb_SDL_SDLKeysym_set_sym, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLKeysym_mod_FIELD
+#if BIND_SDLKeysym_mod_FIELD_READER
   mrb_define_method(mrb, SDLKeysym_class, "mod", mrb_SDL_SDLKeysym_get_mod, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLKeysym_mod_FIELD_WRITER
   mrb_define_method(mrb, SDLKeysym_class, "mod=", mrb_SDL_SDLKeysym_set_mod, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLKeysym_unused_FIELD
+#if BIND_SDLKeysym_unused_FIELD_READER
   mrb_define_method(mrb, SDLKeysym_class, "unused", mrb_SDL_SDLKeysym_get_unused, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLKeysym_unused_FIELD_WRITER
   mrb_define_method(mrb, SDLKeysym_class, "unused=", mrb_SDL_SDLKeysym_set_unused, MRB_ARGS_ARG(1, 0));
 #endif
 

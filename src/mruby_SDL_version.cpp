@@ -60,7 +60,7 @@ mrb_SDL_SDLVersion_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLVersion_major_FIELD
+#if BIND_SDLVersion_major_FIELD_READER
 /* get_major
  *
  * Return Type: Uint8
@@ -75,7 +75,9 @@ mrb_SDL_SDLVersion_get_major(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLVersion_major_FIELD_WRITER
 /* set_major
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLVersion_set_major(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLVersion_minor_FIELD
+#if BIND_SDLVersion_minor_FIELD_READER
 /* get_minor
  *
  * Return Type: Uint8
@@ -114,7 +116,9 @@ mrb_SDL_SDLVersion_get_minor(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLVersion_minor_FIELD_WRITER
 /* set_minor
  *
  * Parameters:
@@ -138,7 +142,7 @@ mrb_SDL_SDLVersion_set_minor(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLVersion_patch_FIELD
+#if BIND_SDLVersion_patch_FIELD_READER
 /* get_patch
  *
  * Return Type: Uint8
@@ -153,7 +157,9 @@ mrb_SDL_SDLVersion_get_patch(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLVersion_patch_FIELD_WRITER
 /* set_patch
  *
  * Parameters:
@@ -191,16 +197,22 @@ void mrb_SDL_SDLVersion_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLVersion_major_FIELD
+#if BIND_SDLVersion_major_FIELD_READER
   mrb_define_method(mrb, SDLVersion_class, "major", mrb_SDL_SDLVersion_get_major, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLVersion_major_FIELD_WRITER
   mrb_define_method(mrb, SDLVersion_class, "major=", mrb_SDL_SDLVersion_set_major, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLVersion_minor_FIELD
+#if BIND_SDLVersion_minor_FIELD_READER
   mrb_define_method(mrb, SDLVersion_class, "minor", mrb_SDL_SDLVersion_get_minor, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLVersion_minor_FIELD_WRITER
   mrb_define_method(mrb, SDLVersion_class, "minor=", mrb_SDL_SDLVersion_set_minor, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLVersion_patch_FIELD
+#if BIND_SDLVersion_patch_FIELD_READER
   mrb_define_method(mrb, SDLVersion_class, "patch", mrb_SDL_SDLVersion_get_patch, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLVersion_patch_FIELD_WRITER
   mrb_define_method(mrb, SDLVersion_class, "patch=", mrb_SDL_SDLVersion_set_patch, MRB_ARGS_ARG(1, 0));
 #endif
 

@@ -60,7 +60,7 @@ mrb_SDL_SDLDollarGestureEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLDollarGestureEvent_type_FIELD
+#if BIND_SDLDollarGestureEvent_type_FIELD_READER
 /* get_type
  *
  * Return Type: Uint32
@@ -75,7 +75,9 @@ mrb_SDL_SDLDollarGestureEvent_get_type(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLDollarGestureEvent_type_FIELD_WRITER
 /* set_type
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLDollarGestureEvent_set_type(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLDollarGestureEvent_timestamp_FIELD
+#if BIND_SDLDollarGestureEvent_timestamp_FIELD_READER
 /* get_timestamp
  *
  * Return Type: Uint32
@@ -114,7 +116,9 @@ mrb_SDL_SDLDollarGestureEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLDollarGestureEvent_timestamp_FIELD_WRITER
 /* set_timestamp
  *
  * Parameters:
@@ -138,7 +142,7 @@ mrb_SDL_SDLDollarGestureEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLDollarGestureEvent_touchId_FIELD
+#if BIND_SDLDollarGestureEvent_touchId_FIELD_READER
 /* get_touchId
  *
  * Return Type: SDL_TouchID
@@ -153,7 +157,9 @@ mrb_SDL_SDLDollarGestureEvent_get_touchId(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLDollarGestureEvent_touchId_FIELD_WRITER
 /* set_touchId
  *
  * Parameters:
@@ -177,7 +183,7 @@ mrb_SDL_SDLDollarGestureEvent_set_touchId(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLDollarGestureEvent_gestureId_FIELD
+#if BIND_SDLDollarGestureEvent_gestureId_FIELD_READER
 /* get_gestureId
  *
  * Return Type: SDL_GestureID
@@ -192,7 +198,9 @@ mrb_SDL_SDLDollarGestureEvent_get_gestureId(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLDollarGestureEvent_gestureId_FIELD_WRITER
 /* set_gestureId
  *
  * Parameters:
@@ -216,7 +224,7 @@ mrb_SDL_SDLDollarGestureEvent_set_gestureId(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLDollarGestureEvent_numFingers_FIELD
+#if BIND_SDLDollarGestureEvent_numFingers_FIELD_READER
 /* get_numFingers
  *
  * Return Type: Uint32
@@ -231,7 +239,9 @@ mrb_SDL_SDLDollarGestureEvent_get_numFingers(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLDollarGestureEvent_numFingers_FIELD_WRITER
 /* set_numFingers
  *
  * Parameters:
@@ -255,7 +265,7 @@ mrb_SDL_SDLDollarGestureEvent_set_numFingers(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLDollarGestureEvent_error_FIELD
+#if BIND_SDLDollarGestureEvent_error_FIELD_READER
 /* get_error
  *
  * Return Type: float
@@ -266,11 +276,13 @@ mrb_SDL_SDLDollarGestureEvent_get_error(mrb_state* mrb, mrb_value self) {
 
   float native_field = native_self->error;
 
-  mrb_value ruby_field = mrb_float_value(native_field);
+  mrb_value ruby_field = mrb_float_value(mrb, native_field);
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLDollarGestureEvent_error_FIELD_WRITER
 /* set_error
  *
  * Parameters:
@@ -297,7 +309,7 @@ mrb_SDL_SDLDollarGestureEvent_set_error(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLDollarGestureEvent_x_FIELD
+#if BIND_SDLDollarGestureEvent_x_FIELD_READER
 /* get_x
  *
  * Return Type: float
@@ -308,11 +320,13 @@ mrb_SDL_SDLDollarGestureEvent_get_x(mrb_state* mrb, mrb_value self) {
 
   float native_field = native_self->x;
 
-  mrb_value ruby_field = mrb_float_value(native_field);
+  mrb_value ruby_field = mrb_float_value(mrb, native_field);
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLDollarGestureEvent_x_FIELD_WRITER
 /* set_x
  *
  * Parameters:
@@ -339,7 +353,7 @@ mrb_SDL_SDLDollarGestureEvent_set_x(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLDollarGestureEvent_y_FIELD
+#if BIND_SDLDollarGestureEvent_y_FIELD_READER
 /* get_y
  *
  * Return Type: float
@@ -350,11 +364,13 @@ mrb_SDL_SDLDollarGestureEvent_get_y(mrb_state* mrb, mrb_value self) {
 
   float native_field = native_self->y;
 
-  mrb_value ruby_field = mrb_float_value(native_field);
+  mrb_value ruby_field = mrb_float_value(mrb, native_field);
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLDollarGestureEvent_y_FIELD_WRITER
 /* set_y
  *
  * Parameters:
@@ -395,36 +411,52 @@ void mrb_SDL_SDLDollarGestureEvent_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLDollarGestureEvent_type_FIELD
+#if BIND_SDLDollarGestureEvent_type_FIELD_READER
   mrb_define_method(mrb, SDLDollarGestureEvent_class, "type", mrb_SDL_SDLDollarGestureEvent_get_type, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLDollarGestureEvent_type_FIELD_WRITER
   mrb_define_method(mrb, SDLDollarGestureEvent_class, "type=", mrb_SDL_SDLDollarGestureEvent_set_type, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLDollarGestureEvent_timestamp_FIELD
+#if BIND_SDLDollarGestureEvent_timestamp_FIELD_READER
   mrb_define_method(mrb, SDLDollarGestureEvent_class, "timestamp", mrb_SDL_SDLDollarGestureEvent_get_timestamp, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLDollarGestureEvent_timestamp_FIELD_WRITER
   mrb_define_method(mrb, SDLDollarGestureEvent_class, "timestamp=", mrb_SDL_SDLDollarGestureEvent_set_timestamp, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLDollarGestureEvent_touchId_FIELD
+#if BIND_SDLDollarGestureEvent_touchId_FIELD_READER
   mrb_define_method(mrb, SDLDollarGestureEvent_class, "touchId", mrb_SDL_SDLDollarGestureEvent_get_touchId, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLDollarGestureEvent_touchId_FIELD_WRITER
   mrb_define_method(mrb, SDLDollarGestureEvent_class, "touchId=", mrb_SDL_SDLDollarGestureEvent_set_touchId, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLDollarGestureEvent_gestureId_FIELD
+#if BIND_SDLDollarGestureEvent_gestureId_FIELD_READER
   mrb_define_method(mrb, SDLDollarGestureEvent_class, "gestureId", mrb_SDL_SDLDollarGestureEvent_get_gestureId, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLDollarGestureEvent_gestureId_FIELD_WRITER
   mrb_define_method(mrb, SDLDollarGestureEvent_class, "gestureId=", mrb_SDL_SDLDollarGestureEvent_set_gestureId, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLDollarGestureEvent_numFingers_FIELD
+#if BIND_SDLDollarGestureEvent_numFingers_FIELD_READER
   mrb_define_method(mrb, SDLDollarGestureEvent_class, "numFingers", mrb_SDL_SDLDollarGestureEvent_get_numFingers, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLDollarGestureEvent_numFingers_FIELD_WRITER
   mrb_define_method(mrb, SDLDollarGestureEvent_class, "numFingers=", mrb_SDL_SDLDollarGestureEvent_set_numFingers, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLDollarGestureEvent_error_FIELD
+#if BIND_SDLDollarGestureEvent_error_FIELD_READER
   mrb_define_method(mrb, SDLDollarGestureEvent_class, "error", mrb_SDL_SDLDollarGestureEvent_get_error, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLDollarGestureEvent_error_FIELD_WRITER
   mrb_define_method(mrb, SDLDollarGestureEvent_class, "error=", mrb_SDL_SDLDollarGestureEvent_set_error, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLDollarGestureEvent_x_FIELD
+#if BIND_SDLDollarGestureEvent_x_FIELD_READER
   mrb_define_method(mrb, SDLDollarGestureEvent_class, "x", mrb_SDL_SDLDollarGestureEvent_get_x, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLDollarGestureEvent_x_FIELD_WRITER
   mrb_define_method(mrb, SDLDollarGestureEvent_class, "x=", mrb_SDL_SDLDollarGestureEvent_set_x, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLDollarGestureEvent_y_FIELD
+#if BIND_SDLDollarGestureEvent_y_FIELD_READER
   mrb_define_method(mrb, SDLDollarGestureEvent_class, "y", mrb_SDL_SDLDollarGestureEvent_get_y, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLDollarGestureEvent_y_FIELD_WRITER
   mrb_define_method(mrb, SDLDollarGestureEvent_class, "y=", mrb_SDL_SDLDollarGestureEvent_set_y, MRB_ARGS_ARG(1, 0));
 #endif
 

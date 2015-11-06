@@ -60,7 +60,7 @@ mrb_SDL_SDLJoyButtonEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLJoyButtonEvent_type_FIELD
+#if BIND_SDLJoyButtonEvent_type_FIELD_READER
 /* get_type
  *
  * Return Type: Uint32
@@ -75,7 +75,9 @@ mrb_SDL_SDLJoyButtonEvent_get_type(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyButtonEvent_type_FIELD_WRITER
 /* set_type
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLJoyButtonEvent_set_type(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLJoyButtonEvent_timestamp_FIELD
+#if BIND_SDLJoyButtonEvent_timestamp_FIELD_READER
 /* get_timestamp
  *
  * Return Type: Uint32
@@ -114,7 +116,9 @@ mrb_SDL_SDLJoyButtonEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyButtonEvent_timestamp_FIELD_WRITER
 /* set_timestamp
  *
  * Parameters:
@@ -138,7 +142,7 @@ mrb_SDL_SDLJoyButtonEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLJoyButtonEvent_which_FIELD
+#if BIND_SDLJoyButtonEvent_which_FIELD_READER
 /* get_which
  *
  * Return Type: SDL_JoystickID
@@ -153,7 +157,9 @@ mrb_SDL_SDLJoyButtonEvent_get_which(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyButtonEvent_which_FIELD_WRITER
 /* set_which
  *
  * Parameters:
@@ -177,7 +183,7 @@ mrb_SDL_SDLJoyButtonEvent_set_which(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLJoyButtonEvent_button_FIELD
+#if BIND_SDLJoyButtonEvent_button_FIELD_READER
 /* get_button
  *
  * Return Type: Uint8
@@ -192,7 +198,9 @@ mrb_SDL_SDLJoyButtonEvent_get_button(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyButtonEvent_button_FIELD_WRITER
 /* set_button
  *
  * Parameters:
@@ -216,7 +224,7 @@ mrb_SDL_SDLJoyButtonEvent_set_button(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLJoyButtonEvent_state_FIELD
+#if BIND_SDLJoyButtonEvent_state_FIELD_READER
 /* get_state
  *
  * Return Type: Uint8
@@ -231,7 +239,9 @@ mrb_SDL_SDLJoyButtonEvent_get_state(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyButtonEvent_state_FIELD_WRITER
 /* set_state
  *
  * Parameters:
@@ -255,7 +265,7 @@ mrb_SDL_SDLJoyButtonEvent_set_state(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLJoyButtonEvent_padding1_FIELD
+#if BIND_SDLJoyButtonEvent_padding1_FIELD_READER
 /* get_padding1
  *
  * Return Type: Uint8
@@ -270,7 +280,9 @@ mrb_SDL_SDLJoyButtonEvent_get_padding1(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyButtonEvent_padding1_FIELD_WRITER
 /* set_padding1
  *
  * Parameters:
@@ -294,7 +306,7 @@ mrb_SDL_SDLJoyButtonEvent_set_padding1(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLJoyButtonEvent_padding2_FIELD
+#if BIND_SDLJoyButtonEvent_padding2_FIELD_READER
 /* get_padding2
  *
  * Return Type: Uint8
@@ -309,7 +321,9 @@ mrb_SDL_SDLJoyButtonEvent_get_padding2(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyButtonEvent_padding2_FIELD_WRITER
 /* set_padding2
  *
  * Parameters:
@@ -347,32 +361,46 @@ void mrb_SDL_SDLJoyButtonEvent_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLJoyButtonEvent_type_FIELD
+#if BIND_SDLJoyButtonEvent_type_FIELD_READER
   mrb_define_method(mrb, SDLJoyButtonEvent_class, "type", mrb_SDL_SDLJoyButtonEvent_get_type, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyButtonEvent_type_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyButtonEvent_class, "type=", mrb_SDL_SDLJoyButtonEvent_set_type, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLJoyButtonEvent_timestamp_FIELD
+#if BIND_SDLJoyButtonEvent_timestamp_FIELD_READER
   mrb_define_method(mrb, SDLJoyButtonEvent_class, "timestamp", mrb_SDL_SDLJoyButtonEvent_get_timestamp, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyButtonEvent_timestamp_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyButtonEvent_class, "timestamp=", mrb_SDL_SDLJoyButtonEvent_set_timestamp, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLJoyButtonEvent_which_FIELD
+#if BIND_SDLJoyButtonEvent_which_FIELD_READER
   mrb_define_method(mrb, SDLJoyButtonEvent_class, "which", mrb_SDL_SDLJoyButtonEvent_get_which, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyButtonEvent_which_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyButtonEvent_class, "which=", mrb_SDL_SDLJoyButtonEvent_set_which, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLJoyButtonEvent_button_FIELD
+#if BIND_SDLJoyButtonEvent_button_FIELD_READER
   mrb_define_method(mrb, SDLJoyButtonEvent_class, "button", mrb_SDL_SDLJoyButtonEvent_get_button, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyButtonEvent_button_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyButtonEvent_class, "button=", mrb_SDL_SDLJoyButtonEvent_set_button, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLJoyButtonEvent_state_FIELD
+#if BIND_SDLJoyButtonEvent_state_FIELD_READER
   mrb_define_method(mrb, SDLJoyButtonEvent_class, "state", mrb_SDL_SDLJoyButtonEvent_get_state, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyButtonEvent_state_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyButtonEvent_class, "state=", mrb_SDL_SDLJoyButtonEvent_set_state, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLJoyButtonEvent_padding1_FIELD
+#if BIND_SDLJoyButtonEvent_padding1_FIELD_READER
   mrb_define_method(mrb, SDLJoyButtonEvent_class, "padding1", mrb_SDL_SDLJoyButtonEvent_get_padding1, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyButtonEvent_padding1_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyButtonEvent_class, "padding1=", mrb_SDL_SDLJoyButtonEvent_set_padding1, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLJoyButtonEvent_padding2_FIELD
+#if BIND_SDLJoyButtonEvent_padding2_FIELD_READER
   mrb_define_method(mrb, SDLJoyButtonEvent_class, "padding2", mrb_SDL_SDLJoyButtonEvent_get_padding2, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyButtonEvent_padding2_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyButtonEvent_class, "padding2=", mrb_SDL_SDLJoyButtonEvent_set_padding2, MRB_ARGS_ARG(1, 0));
 #endif
 

@@ -60,7 +60,7 @@ mrb_SDL_SDLTestMd5Context_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLTestMd5Context_i_FIELD
+#if BIND_SDLTestMd5Context_i_FIELD_READER
 /* get_i
  *
  * Return Type: MD5UINT4 [2]
@@ -75,7 +75,9 @@ mrb_SDL_SDLTestMd5Context_get_i(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTestMd5Context_i_FIELD_WRITER
 /* set_i
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLTestMd5Context_set_i(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLTestMd5Context_buf_FIELD
+#if BIND_SDLTestMd5Context_buf_FIELD_READER
 /* get_buf
  *
  * Return Type: MD5UINT4 [4]
@@ -114,7 +116,9 @@ mrb_SDL_SDLTestMd5Context_get_buf(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTestMd5Context_buf_FIELD_WRITER
 /* set_buf
  *
  * Parameters:
@@ -138,7 +142,7 @@ mrb_SDL_SDLTestMd5Context_set_buf(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLTestMd5Context_in_FIELD
+#if BIND_SDLTestMd5Context_in_FIELD_READER
 /* get_in
  *
  * Return Type: unsigned char [64]
@@ -153,7 +157,9 @@ mrb_SDL_SDLTestMd5Context_get_in(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTestMd5Context_in_FIELD_WRITER
 /* set_in
  *
  * Parameters:
@@ -177,7 +183,7 @@ mrb_SDL_SDLTestMd5Context_set_in(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLTestMd5Context_digest_FIELD
+#if BIND_SDLTestMd5Context_digest_FIELD_READER
 /* get_digest
  *
  * Return Type: unsigned char [16]
@@ -192,7 +198,9 @@ mrb_SDL_SDLTestMd5Context_get_digest(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTestMd5Context_digest_FIELD_WRITER
 /* set_digest
  *
  * Parameters:
@@ -230,20 +238,28 @@ void mrb_SDL_SDLTestMd5Context_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLTestMd5Context_i_FIELD
+#if BIND_SDLTestMd5Context_i_FIELD_READER
   mrb_define_method(mrb, SDLTestMd5Context_class, "i", mrb_SDL_SDLTestMd5Context_get_i, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTestMd5Context_i_FIELD_WRITER
   mrb_define_method(mrb, SDLTestMd5Context_class, "i=", mrb_SDL_SDLTestMd5Context_set_i, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTestMd5Context_buf_FIELD
+#if BIND_SDLTestMd5Context_buf_FIELD_READER
   mrb_define_method(mrb, SDLTestMd5Context_class, "buf", mrb_SDL_SDLTestMd5Context_get_buf, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTestMd5Context_buf_FIELD_WRITER
   mrb_define_method(mrb, SDLTestMd5Context_class, "buf=", mrb_SDL_SDLTestMd5Context_set_buf, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTestMd5Context_in_FIELD
+#if BIND_SDLTestMd5Context_in_FIELD_READER
   mrb_define_method(mrb, SDLTestMd5Context_class, "in", mrb_SDL_SDLTestMd5Context_get_in, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTestMd5Context_in_FIELD_WRITER
   mrb_define_method(mrb, SDLTestMd5Context_class, "in=", mrb_SDL_SDLTestMd5Context_set_in, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTestMd5Context_digest_FIELD
+#if BIND_SDLTestMd5Context_digest_FIELD_READER
   mrb_define_method(mrb, SDLTestMd5Context_class, "digest", mrb_SDL_SDLTestMd5Context_get_digest, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTestMd5Context_digest_FIELD_WRITER
   mrb_define_method(mrb, SDLTestMd5Context_class, "digest=", mrb_SDL_SDLTestMd5Context_set_digest, MRB_ARGS_ARG(1, 0));
 #endif
 

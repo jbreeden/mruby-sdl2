@@ -60,7 +60,7 @@ mrb_SDL_SDLColor_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLColor_r_FIELD
+#if BIND_SDLColor_r_FIELD_READER
 /* get_r
  *
  * Return Type: Uint8
@@ -75,7 +75,9 @@ mrb_SDL_SDLColor_get_r(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLColor_r_FIELD_WRITER
 /* set_r
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLColor_set_r(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLColor_g_FIELD
+#if BIND_SDLColor_g_FIELD_READER
 /* get_g
  *
  * Return Type: Uint8
@@ -114,7 +116,9 @@ mrb_SDL_SDLColor_get_g(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLColor_g_FIELD_WRITER
 /* set_g
  *
  * Parameters:
@@ -138,7 +142,7 @@ mrb_SDL_SDLColor_set_g(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLColor_b_FIELD
+#if BIND_SDLColor_b_FIELD_READER
 /* get_b
  *
  * Return Type: Uint8
@@ -153,7 +157,9 @@ mrb_SDL_SDLColor_get_b(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLColor_b_FIELD_WRITER
 /* set_b
  *
  * Parameters:
@@ -177,7 +183,7 @@ mrb_SDL_SDLColor_set_b(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLColor_a_FIELD
+#if BIND_SDLColor_a_FIELD_READER
 /* get_a
  *
  * Return Type: Uint8
@@ -192,7 +198,9 @@ mrb_SDL_SDLColor_get_a(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLColor_a_FIELD_WRITER
 /* set_a
  *
  * Parameters:
@@ -230,20 +238,28 @@ void mrb_SDL_SDLColor_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLColor_r_FIELD
+#if BIND_SDLColor_r_FIELD_READER
   mrb_define_method(mrb, SDLColor_class, "r", mrb_SDL_SDLColor_get_r, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLColor_r_FIELD_WRITER
   mrb_define_method(mrb, SDLColor_class, "r=", mrb_SDL_SDLColor_set_r, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLColor_g_FIELD
+#if BIND_SDLColor_g_FIELD_READER
   mrb_define_method(mrb, SDLColor_class, "g", mrb_SDL_SDLColor_get_g, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLColor_g_FIELD_WRITER
   mrb_define_method(mrb, SDLColor_class, "g=", mrb_SDL_SDLColor_set_g, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLColor_b_FIELD
+#if BIND_SDLColor_b_FIELD_READER
   mrb_define_method(mrb, SDLColor_class, "b", mrb_SDL_SDLColor_get_b, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLColor_b_FIELD_WRITER
   mrb_define_method(mrb, SDLColor_class, "b=", mrb_SDL_SDLColor_set_b, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLColor_a_FIELD
+#if BIND_SDLColor_a_FIELD_READER
   mrb_define_method(mrb, SDLColor_class, "a", mrb_SDL_SDLColor_get_a, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLColor_a_FIELD_WRITER
   mrb_define_method(mrb, SDLColor_class, "a=", mrb_SDL_SDLColor_set_a, MRB_ARGS_ARG(1, 0));
 #endif
 

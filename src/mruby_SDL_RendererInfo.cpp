@@ -60,7 +60,7 @@ mrb_SDL_SDLRendererInfo_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLRendererInfo_name_FIELD
+#if BIND_SDLRendererInfo_name_FIELD_READER
 /* get_name
  *
  * Return Type: const char *
@@ -75,7 +75,9 @@ mrb_SDL_SDLRendererInfo_get_name(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLRendererInfo_name_FIELD_WRITER
 /* set_name
  *
  * Parameters:
@@ -102,7 +104,7 @@ mrb_SDL_SDLRendererInfo_set_name(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLRendererInfo_flags_FIELD
+#if BIND_SDLRendererInfo_flags_FIELD_READER
 /* get_flags
  *
  * Return Type: Uint32
@@ -117,7 +119,9 @@ mrb_SDL_SDLRendererInfo_get_flags(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLRendererInfo_flags_FIELD_WRITER
 /* set_flags
  *
  * Parameters:
@@ -141,7 +145,7 @@ mrb_SDL_SDLRendererInfo_set_flags(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLRendererInfo_num_texture_formats_FIELD
+#if BIND_SDLRendererInfo_num_texture_formats_FIELD_READER
 /* get_num_texture_formats
  *
  * Return Type: Uint32
@@ -156,7 +160,9 @@ mrb_SDL_SDLRendererInfo_get_num_texture_formats(mrb_state* mrb, mrb_value self) 
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLRendererInfo_num_texture_formats_FIELD_WRITER
 /* set_num_texture_formats
  *
  * Parameters:
@@ -180,7 +186,7 @@ mrb_SDL_SDLRendererInfo_set_num_texture_formats(mrb_state* mrb, mrb_value self) 
 }
 #endif
 
-#if BIND_SDLRendererInfo_texture_formats_FIELD
+#if BIND_SDLRendererInfo_texture_formats_FIELD_READER
 /* get_texture_formats
  *
  * Return Type: Uint32 [16]
@@ -195,7 +201,9 @@ mrb_SDL_SDLRendererInfo_get_texture_formats(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLRendererInfo_texture_formats_FIELD_WRITER
 /* set_texture_formats
  *
  * Parameters:
@@ -219,7 +227,7 @@ mrb_SDL_SDLRendererInfo_set_texture_formats(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLRendererInfo_max_texture_width_FIELD
+#if BIND_SDLRendererInfo_max_texture_width_FIELD_READER
 /* get_max_texture_width
  *
  * Return Type: int
@@ -238,7 +246,9 @@ mrb_SDL_SDLRendererInfo_get_max_texture_width(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLRendererInfo_max_texture_width_FIELD_WRITER
 /* set_max_texture_width
  *
  * Parameters:
@@ -265,7 +275,7 @@ mrb_SDL_SDLRendererInfo_set_max_texture_width(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLRendererInfo_max_texture_height_FIELD
+#if BIND_SDLRendererInfo_max_texture_height_FIELD_READER
 /* get_max_texture_height
  *
  * Return Type: int
@@ -284,7 +294,9 @@ mrb_SDL_SDLRendererInfo_get_max_texture_height(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLRendererInfo_max_texture_height_FIELD_WRITER
 /* set_max_texture_height
  *
  * Parameters:
@@ -325,28 +337,40 @@ void mrb_SDL_SDLRendererInfo_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLRendererInfo_name_FIELD
+#if BIND_SDLRendererInfo_name_FIELD_READER
   mrb_define_method(mrb, SDLRendererInfo_class, "name", mrb_SDL_SDLRendererInfo_get_name, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLRendererInfo_name_FIELD_WRITER
   mrb_define_method(mrb, SDLRendererInfo_class, "name=", mrb_SDL_SDLRendererInfo_set_name, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLRendererInfo_flags_FIELD
+#if BIND_SDLRendererInfo_flags_FIELD_READER
   mrb_define_method(mrb, SDLRendererInfo_class, "flags", mrb_SDL_SDLRendererInfo_get_flags, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLRendererInfo_flags_FIELD_WRITER
   mrb_define_method(mrb, SDLRendererInfo_class, "flags=", mrb_SDL_SDLRendererInfo_set_flags, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLRendererInfo_num_texture_formats_FIELD
+#if BIND_SDLRendererInfo_num_texture_formats_FIELD_READER
   mrb_define_method(mrb, SDLRendererInfo_class, "num_texture_formats", mrb_SDL_SDLRendererInfo_get_num_texture_formats, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLRendererInfo_num_texture_formats_FIELD_WRITER
   mrb_define_method(mrb, SDLRendererInfo_class, "num_texture_formats=", mrb_SDL_SDLRendererInfo_set_num_texture_formats, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLRendererInfo_texture_formats_FIELD
+#if BIND_SDLRendererInfo_texture_formats_FIELD_READER
   mrb_define_method(mrb, SDLRendererInfo_class, "texture_formats", mrb_SDL_SDLRendererInfo_get_texture_formats, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLRendererInfo_texture_formats_FIELD_WRITER
   mrb_define_method(mrb, SDLRendererInfo_class, "texture_formats=", mrb_SDL_SDLRendererInfo_set_texture_formats, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLRendererInfo_max_texture_width_FIELD
+#if BIND_SDLRendererInfo_max_texture_width_FIELD_READER
   mrb_define_method(mrb, SDLRendererInfo_class, "max_texture_width", mrb_SDL_SDLRendererInfo_get_max_texture_width, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLRendererInfo_max_texture_width_FIELD_WRITER
   mrb_define_method(mrb, SDLRendererInfo_class, "max_texture_width=", mrb_SDL_SDLRendererInfo_set_max_texture_width, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLRendererInfo_max_texture_height_FIELD
+#if BIND_SDLRendererInfo_max_texture_height_FIELD_READER
   mrb_define_method(mrb, SDLRendererInfo_class, "max_texture_height", mrb_SDL_SDLRendererInfo_get_max_texture_height, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLRendererInfo_max_texture_height_FIELD_WRITER
   mrb_define_method(mrb, SDLRendererInfo_class, "max_texture_height=", mrb_SDL_SDLRendererInfo_set_max_texture_height, MRB_ARGS_ARG(1, 0));
 #endif
 

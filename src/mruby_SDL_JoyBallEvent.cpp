@@ -60,7 +60,7 @@ mrb_SDL_SDLJoyBallEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLJoyBallEvent_type_FIELD
+#if BIND_SDLJoyBallEvent_type_FIELD_READER
 /* get_type
  *
  * Return Type: Uint32
@@ -75,7 +75,9 @@ mrb_SDL_SDLJoyBallEvent_get_type(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyBallEvent_type_FIELD_WRITER
 /* set_type
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLJoyBallEvent_set_type(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLJoyBallEvent_timestamp_FIELD
+#if BIND_SDLJoyBallEvent_timestamp_FIELD_READER
 /* get_timestamp
  *
  * Return Type: Uint32
@@ -114,7 +116,9 @@ mrb_SDL_SDLJoyBallEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyBallEvent_timestamp_FIELD_WRITER
 /* set_timestamp
  *
  * Parameters:
@@ -138,7 +142,7 @@ mrb_SDL_SDLJoyBallEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLJoyBallEvent_which_FIELD
+#if BIND_SDLJoyBallEvent_which_FIELD_READER
 /* get_which
  *
  * Return Type: SDL_JoystickID
@@ -153,7 +157,9 @@ mrb_SDL_SDLJoyBallEvent_get_which(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyBallEvent_which_FIELD_WRITER
 /* set_which
  *
  * Parameters:
@@ -177,7 +183,7 @@ mrb_SDL_SDLJoyBallEvent_set_which(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLJoyBallEvent_ball_FIELD
+#if BIND_SDLJoyBallEvent_ball_FIELD_READER
 /* get_ball
  *
  * Return Type: Uint8
@@ -192,7 +198,9 @@ mrb_SDL_SDLJoyBallEvent_get_ball(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyBallEvent_ball_FIELD_WRITER
 /* set_ball
  *
  * Parameters:
@@ -216,7 +224,7 @@ mrb_SDL_SDLJoyBallEvent_set_ball(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLJoyBallEvent_padding1_FIELD
+#if BIND_SDLJoyBallEvent_padding1_FIELD_READER
 /* get_padding1
  *
  * Return Type: Uint8
@@ -231,7 +239,9 @@ mrb_SDL_SDLJoyBallEvent_get_padding1(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyBallEvent_padding1_FIELD_WRITER
 /* set_padding1
  *
  * Parameters:
@@ -255,7 +265,7 @@ mrb_SDL_SDLJoyBallEvent_set_padding1(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLJoyBallEvent_padding2_FIELD
+#if BIND_SDLJoyBallEvent_padding2_FIELD_READER
 /* get_padding2
  *
  * Return Type: Uint8
@@ -270,7 +280,9 @@ mrb_SDL_SDLJoyBallEvent_get_padding2(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyBallEvent_padding2_FIELD_WRITER
 /* set_padding2
  *
  * Parameters:
@@ -294,7 +306,7 @@ mrb_SDL_SDLJoyBallEvent_set_padding2(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLJoyBallEvent_padding3_FIELD
+#if BIND_SDLJoyBallEvent_padding3_FIELD_READER
 /* get_padding3
  *
  * Return Type: Uint8
@@ -309,7 +321,9 @@ mrb_SDL_SDLJoyBallEvent_get_padding3(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyBallEvent_padding3_FIELD_WRITER
 /* set_padding3
  *
  * Parameters:
@@ -333,7 +347,7 @@ mrb_SDL_SDLJoyBallEvent_set_padding3(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLJoyBallEvent_xrel_FIELD
+#if BIND_SDLJoyBallEvent_xrel_FIELD_READER
 /* get_xrel
  *
  * Return Type: Sint16
@@ -348,7 +362,9 @@ mrb_SDL_SDLJoyBallEvent_get_xrel(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyBallEvent_xrel_FIELD_WRITER
 /* set_xrel
  *
  * Parameters:
@@ -372,7 +388,7 @@ mrb_SDL_SDLJoyBallEvent_set_xrel(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLJoyBallEvent_yrel_FIELD
+#if BIND_SDLJoyBallEvent_yrel_FIELD_READER
 /* get_yrel
  *
  * Return Type: Sint16
@@ -387,7 +403,9 @@ mrb_SDL_SDLJoyBallEvent_get_yrel(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLJoyBallEvent_yrel_FIELD_WRITER
 /* set_yrel
  *
  * Parameters:
@@ -425,40 +443,58 @@ void mrb_SDL_SDLJoyBallEvent_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLJoyBallEvent_type_FIELD
+#if BIND_SDLJoyBallEvent_type_FIELD_READER
   mrb_define_method(mrb, SDLJoyBallEvent_class, "type", mrb_SDL_SDLJoyBallEvent_get_type, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyBallEvent_type_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyBallEvent_class, "type=", mrb_SDL_SDLJoyBallEvent_set_type, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLJoyBallEvent_timestamp_FIELD
+#if BIND_SDLJoyBallEvent_timestamp_FIELD_READER
   mrb_define_method(mrb, SDLJoyBallEvent_class, "timestamp", mrb_SDL_SDLJoyBallEvent_get_timestamp, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyBallEvent_timestamp_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyBallEvent_class, "timestamp=", mrb_SDL_SDLJoyBallEvent_set_timestamp, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLJoyBallEvent_which_FIELD
+#if BIND_SDLJoyBallEvent_which_FIELD_READER
   mrb_define_method(mrb, SDLJoyBallEvent_class, "which", mrb_SDL_SDLJoyBallEvent_get_which, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyBallEvent_which_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyBallEvent_class, "which=", mrb_SDL_SDLJoyBallEvent_set_which, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLJoyBallEvent_ball_FIELD
+#if BIND_SDLJoyBallEvent_ball_FIELD_READER
   mrb_define_method(mrb, SDLJoyBallEvent_class, "ball", mrb_SDL_SDLJoyBallEvent_get_ball, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyBallEvent_ball_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyBallEvent_class, "ball=", mrb_SDL_SDLJoyBallEvent_set_ball, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLJoyBallEvent_padding1_FIELD
+#if BIND_SDLJoyBallEvent_padding1_FIELD_READER
   mrb_define_method(mrb, SDLJoyBallEvent_class, "padding1", mrb_SDL_SDLJoyBallEvent_get_padding1, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyBallEvent_padding1_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyBallEvent_class, "padding1=", mrb_SDL_SDLJoyBallEvent_set_padding1, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLJoyBallEvent_padding2_FIELD
+#if BIND_SDLJoyBallEvent_padding2_FIELD_READER
   mrb_define_method(mrb, SDLJoyBallEvent_class, "padding2", mrb_SDL_SDLJoyBallEvent_get_padding2, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyBallEvent_padding2_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyBallEvent_class, "padding2=", mrb_SDL_SDLJoyBallEvent_set_padding2, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLJoyBallEvent_padding3_FIELD
+#if BIND_SDLJoyBallEvent_padding3_FIELD_READER
   mrb_define_method(mrb, SDLJoyBallEvent_class, "padding3", mrb_SDL_SDLJoyBallEvent_get_padding3, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyBallEvent_padding3_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyBallEvent_class, "padding3=", mrb_SDL_SDLJoyBallEvent_set_padding3, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLJoyBallEvent_xrel_FIELD
+#if BIND_SDLJoyBallEvent_xrel_FIELD_READER
   mrb_define_method(mrb, SDLJoyBallEvent_class, "xrel", mrb_SDL_SDLJoyBallEvent_get_xrel, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyBallEvent_xrel_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyBallEvent_class, "xrel=", mrb_SDL_SDLJoyBallEvent_set_xrel, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLJoyBallEvent_yrel_FIELD
+#if BIND_SDLJoyBallEvent_yrel_FIELD_READER
   mrb_define_method(mrb, SDLJoyBallEvent_class, "yrel", mrb_SDL_SDLJoyBallEvent_get_yrel, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLJoyBallEvent_yrel_FIELD_WRITER
   mrb_define_method(mrb, SDLJoyBallEvent_class, "yrel=", mrb_SDL_SDLJoyBallEvent_set_yrel, MRB_ARGS_ARG(1, 0));
 #endif
 

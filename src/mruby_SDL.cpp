@@ -21596,7 +21596,7 @@ mrb_SDL_SDL_UpperBlit(mrb_state* mrb, mrb_value self) {
     mrb_raise(mrb, E_TYPE_ERROR, "SDLSurface expected");
     return mrb_nil_value();
   }
-  if (!mrb_obj_is_kind_of(mrb, srcrect, SDLRect_class(mrb))) {
+  if (!mrb_obj_is_kind_of(mrb, srcrect, SDLRect_class(mrb)) && !mrb_nil_p(srcrect)) {
     mrb_raise(mrb, E_TYPE_ERROR, "SDLRect expected");
     return mrb_nil_value();
   }
@@ -21604,7 +21604,7 @@ mrb_SDL_SDL_UpperBlit(mrb_state* mrb, mrb_value self) {
     mrb_raise(mrb, E_TYPE_ERROR, "SDLSurface expected");
     return mrb_nil_value();
   }
-  if (!mrb_obj_is_kind_of(mrb, dstrect, SDLRect_class(mrb))) {
+  if (!mrb_obj_is_kind_of(mrb, dstrect, SDLRect_class(mrb)) && !mrb_nil_p(srcrect)) {
     mrb_raise(mrb, E_TYPE_ERROR, "SDLRect expected");
     return mrb_nil_value();
   }

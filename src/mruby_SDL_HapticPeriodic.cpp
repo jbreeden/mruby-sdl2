@@ -60,7 +60,7 @@ mrb_SDL_SDLHapticPeriodic_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLHapticPeriodic_type_FIELD
+#if BIND_SDLHapticPeriodic_type_FIELD_READER
 /* get_type
  *
  * Return Type: Uint16
@@ -75,7 +75,9 @@ mrb_SDL_SDLHapticPeriodic_get_type(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticPeriodic_type_FIELD_WRITER
 /* set_type
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLHapticPeriodic_set_type(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticPeriodic_direction_FIELD
+#if BIND_SDLHapticPeriodic_direction_FIELD_READER
 /* get_direction
  *
  * Return Type: SDL_HapticDirection
@@ -114,7 +116,9 @@ mrb_SDL_SDLHapticPeriodic_get_direction(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticPeriodic_direction_FIELD_WRITER
 /* set_direction
  *
  * Parameters:
@@ -138,7 +142,7 @@ mrb_SDL_SDLHapticPeriodic_set_direction(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticPeriodic_length_FIELD
+#if BIND_SDLHapticPeriodic_length_FIELD_READER
 /* get_length
  *
  * Return Type: Uint32
@@ -153,7 +157,9 @@ mrb_SDL_SDLHapticPeriodic_get_length(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticPeriodic_length_FIELD_WRITER
 /* set_length
  *
  * Parameters:
@@ -177,7 +183,7 @@ mrb_SDL_SDLHapticPeriodic_set_length(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticPeriodic_delay_FIELD
+#if BIND_SDLHapticPeriodic_delay_FIELD_READER
 /* get_delay
  *
  * Return Type: Uint16
@@ -192,7 +198,9 @@ mrb_SDL_SDLHapticPeriodic_get_delay(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticPeriodic_delay_FIELD_WRITER
 /* set_delay
  *
  * Parameters:
@@ -216,7 +224,7 @@ mrb_SDL_SDLHapticPeriodic_set_delay(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticPeriodic_button_FIELD
+#if BIND_SDLHapticPeriodic_button_FIELD_READER
 /* get_button
  *
  * Return Type: Uint16
@@ -231,7 +239,9 @@ mrb_SDL_SDLHapticPeriodic_get_button(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticPeriodic_button_FIELD_WRITER
 /* set_button
  *
  * Parameters:
@@ -255,7 +265,7 @@ mrb_SDL_SDLHapticPeriodic_set_button(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticPeriodic_interval_FIELD
+#if BIND_SDLHapticPeriodic_interval_FIELD_READER
 /* get_interval
  *
  * Return Type: Uint16
@@ -270,7 +280,9 @@ mrb_SDL_SDLHapticPeriodic_get_interval(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticPeriodic_interval_FIELD_WRITER
 /* set_interval
  *
  * Parameters:
@@ -294,7 +306,7 @@ mrb_SDL_SDLHapticPeriodic_set_interval(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticPeriodic_period_FIELD
+#if BIND_SDLHapticPeriodic_period_FIELD_READER
 /* get_period
  *
  * Return Type: Uint16
@@ -309,7 +321,9 @@ mrb_SDL_SDLHapticPeriodic_get_period(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticPeriodic_period_FIELD_WRITER
 /* set_period
  *
  * Parameters:
@@ -333,7 +347,7 @@ mrb_SDL_SDLHapticPeriodic_set_period(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticPeriodic_magnitude_FIELD
+#if BIND_SDLHapticPeriodic_magnitude_FIELD_READER
 /* get_magnitude
  *
  * Return Type: Sint16
@@ -348,7 +362,9 @@ mrb_SDL_SDLHapticPeriodic_get_magnitude(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticPeriodic_magnitude_FIELD_WRITER
 /* set_magnitude
  *
  * Parameters:
@@ -372,7 +388,7 @@ mrb_SDL_SDLHapticPeriodic_set_magnitude(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticPeriodic_offset_FIELD
+#if BIND_SDLHapticPeriodic_offset_FIELD_READER
 /* get_offset
  *
  * Return Type: Sint16
@@ -387,7 +403,9 @@ mrb_SDL_SDLHapticPeriodic_get_offset(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticPeriodic_offset_FIELD_WRITER
 /* set_offset
  *
  * Parameters:
@@ -411,7 +429,7 @@ mrb_SDL_SDLHapticPeriodic_set_offset(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticPeriodic_phase_FIELD
+#if BIND_SDLHapticPeriodic_phase_FIELD_READER
 /* get_phase
  *
  * Return Type: Uint16
@@ -426,7 +444,9 @@ mrb_SDL_SDLHapticPeriodic_get_phase(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticPeriodic_phase_FIELD_WRITER
 /* set_phase
  *
  * Parameters:
@@ -450,7 +470,7 @@ mrb_SDL_SDLHapticPeriodic_set_phase(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticPeriodic_attack_length_FIELD
+#if BIND_SDLHapticPeriodic_attack_length_FIELD_READER
 /* get_attack_length
  *
  * Return Type: Uint16
@@ -465,7 +485,9 @@ mrb_SDL_SDLHapticPeriodic_get_attack_length(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticPeriodic_attack_length_FIELD_WRITER
 /* set_attack_length
  *
  * Parameters:
@@ -489,7 +511,7 @@ mrb_SDL_SDLHapticPeriodic_set_attack_length(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticPeriodic_attack_level_FIELD
+#if BIND_SDLHapticPeriodic_attack_level_FIELD_READER
 /* get_attack_level
  *
  * Return Type: Uint16
@@ -504,7 +526,9 @@ mrb_SDL_SDLHapticPeriodic_get_attack_level(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticPeriodic_attack_level_FIELD_WRITER
 /* set_attack_level
  *
  * Parameters:
@@ -528,7 +552,7 @@ mrb_SDL_SDLHapticPeriodic_set_attack_level(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticPeriodic_fade_length_FIELD
+#if BIND_SDLHapticPeriodic_fade_length_FIELD_READER
 /* get_fade_length
  *
  * Return Type: Uint16
@@ -543,7 +567,9 @@ mrb_SDL_SDLHapticPeriodic_get_fade_length(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticPeriodic_fade_length_FIELD_WRITER
 /* set_fade_length
  *
  * Parameters:
@@ -567,7 +593,7 @@ mrb_SDL_SDLHapticPeriodic_set_fade_length(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticPeriodic_fade_level_FIELD
+#if BIND_SDLHapticPeriodic_fade_level_FIELD_READER
 /* get_fade_level
  *
  * Return Type: Uint16
@@ -582,7 +608,9 @@ mrb_SDL_SDLHapticPeriodic_get_fade_level(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticPeriodic_fade_level_FIELD_WRITER
 /* set_fade_level
  *
  * Parameters:
@@ -620,60 +648,88 @@ void mrb_SDL_SDLHapticPeriodic_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLHapticPeriodic_type_FIELD
+#if BIND_SDLHapticPeriodic_type_FIELD_READER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "type", mrb_SDL_SDLHapticPeriodic_get_type, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticPeriodic_type_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "type=", mrb_SDL_SDLHapticPeriodic_set_type, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticPeriodic_direction_FIELD
+#if BIND_SDLHapticPeriodic_direction_FIELD_READER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "direction", mrb_SDL_SDLHapticPeriodic_get_direction, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticPeriodic_direction_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "direction=", mrb_SDL_SDLHapticPeriodic_set_direction, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticPeriodic_length_FIELD
+#if BIND_SDLHapticPeriodic_length_FIELD_READER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "length", mrb_SDL_SDLHapticPeriodic_get_length, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticPeriodic_length_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "length=", mrb_SDL_SDLHapticPeriodic_set_length, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticPeriodic_delay_FIELD
+#if BIND_SDLHapticPeriodic_delay_FIELD_READER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "delay", mrb_SDL_SDLHapticPeriodic_get_delay, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticPeriodic_delay_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "delay=", mrb_SDL_SDLHapticPeriodic_set_delay, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticPeriodic_button_FIELD
+#if BIND_SDLHapticPeriodic_button_FIELD_READER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "button", mrb_SDL_SDLHapticPeriodic_get_button, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticPeriodic_button_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "button=", mrb_SDL_SDLHapticPeriodic_set_button, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticPeriodic_interval_FIELD
+#if BIND_SDLHapticPeriodic_interval_FIELD_READER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "interval", mrb_SDL_SDLHapticPeriodic_get_interval, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticPeriodic_interval_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "interval=", mrb_SDL_SDLHapticPeriodic_set_interval, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticPeriodic_period_FIELD
+#if BIND_SDLHapticPeriodic_period_FIELD_READER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "period", mrb_SDL_SDLHapticPeriodic_get_period, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticPeriodic_period_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "period=", mrb_SDL_SDLHapticPeriodic_set_period, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticPeriodic_magnitude_FIELD
+#if BIND_SDLHapticPeriodic_magnitude_FIELD_READER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "magnitude", mrb_SDL_SDLHapticPeriodic_get_magnitude, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticPeriodic_magnitude_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "magnitude=", mrb_SDL_SDLHapticPeriodic_set_magnitude, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticPeriodic_offset_FIELD
+#if BIND_SDLHapticPeriodic_offset_FIELD_READER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "offset", mrb_SDL_SDLHapticPeriodic_get_offset, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticPeriodic_offset_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "offset=", mrb_SDL_SDLHapticPeriodic_set_offset, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticPeriodic_phase_FIELD
+#if BIND_SDLHapticPeriodic_phase_FIELD_READER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "phase", mrb_SDL_SDLHapticPeriodic_get_phase, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticPeriodic_phase_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "phase=", mrb_SDL_SDLHapticPeriodic_set_phase, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticPeriodic_attack_length_FIELD
+#if BIND_SDLHapticPeriodic_attack_length_FIELD_READER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "attack_length", mrb_SDL_SDLHapticPeriodic_get_attack_length, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticPeriodic_attack_length_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "attack_length=", mrb_SDL_SDLHapticPeriodic_set_attack_length, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticPeriodic_attack_level_FIELD
+#if BIND_SDLHapticPeriodic_attack_level_FIELD_READER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "attack_level", mrb_SDL_SDLHapticPeriodic_get_attack_level, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticPeriodic_attack_level_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "attack_level=", mrb_SDL_SDLHapticPeriodic_set_attack_level, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticPeriodic_fade_length_FIELD
+#if BIND_SDLHapticPeriodic_fade_length_FIELD_READER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "fade_length", mrb_SDL_SDLHapticPeriodic_get_fade_length, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticPeriodic_fade_length_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "fade_length=", mrb_SDL_SDLHapticPeriodic_set_fade_length, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticPeriodic_fade_level_FIELD
+#if BIND_SDLHapticPeriodic_fade_level_FIELD_READER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "fade_level", mrb_SDL_SDLHapticPeriodic_get_fade_level, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticPeriodic_fade_level_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticPeriodic_class, "fade_level=", mrb_SDL_SDLHapticPeriodic_set_fade_level, MRB_ARGS_ARG(1, 0));
 #endif
 

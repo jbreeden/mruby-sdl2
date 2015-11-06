@@ -60,7 +60,7 @@ mrb_SDL_SDLTestSurfaceImageS_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLTestSurfaceImageS_width_FIELD
+#if BIND_SDLTestSurfaceImageS_width_FIELD_READER
 /* get_width
  *
  * Return Type: int
@@ -79,7 +79,9 @@ mrb_SDL_SDLTestSurfaceImageS_get_width(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTestSurfaceImageS_width_FIELD_WRITER
 /* set_width
  *
  * Parameters:
@@ -106,7 +108,7 @@ mrb_SDL_SDLTestSurfaceImageS_set_width(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLTestSurfaceImageS_height_FIELD
+#if BIND_SDLTestSurfaceImageS_height_FIELD_READER
 /* get_height
  *
  * Return Type: int
@@ -125,7 +127,9 @@ mrb_SDL_SDLTestSurfaceImageS_get_height(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTestSurfaceImageS_height_FIELD_WRITER
 /* set_height
  *
  * Parameters:
@@ -152,7 +156,7 @@ mrb_SDL_SDLTestSurfaceImageS_set_height(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLTestSurfaceImageS_bytes_per_pixel_FIELD
+#if BIND_SDLTestSurfaceImageS_bytes_per_pixel_FIELD_READER
 /* get_bytes_per_pixel
  *
  * Return Type: unsigned int
@@ -171,7 +175,9 @@ mrb_SDL_SDLTestSurfaceImageS_get_bytes_per_pixel(mrb_state* mrb, mrb_value self)
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTestSurfaceImageS_bytes_per_pixel_FIELD_WRITER
 /* set_bytes_per_pixel
  *
  * Parameters:
@@ -198,7 +204,7 @@ mrb_SDL_SDLTestSurfaceImageS_set_bytes_per_pixel(mrb_state* mrb, mrb_value self)
 }
 #endif
 
-#if BIND_SDLTestSurfaceImageS_pixel_data_FIELD
+#if BIND_SDLTestSurfaceImageS_pixel_data_FIELD_READER
 /* get_pixel_data
  *
  * Return Type: const char *
@@ -213,7 +219,9 @@ mrb_SDL_SDLTestSurfaceImageS_get_pixel_data(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTestSurfaceImageS_pixel_data_FIELD_WRITER
 /* set_pixel_data
  *
  * Parameters:
@@ -254,20 +262,28 @@ void mrb_SDL_SDLTestSurfaceImageS_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLTestSurfaceImageS_width_FIELD
+#if BIND_SDLTestSurfaceImageS_width_FIELD_READER
   mrb_define_method(mrb, SDLTestSurfaceImageS_class, "width", mrb_SDL_SDLTestSurfaceImageS_get_width, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTestSurfaceImageS_width_FIELD_WRITER
   mrb_define_method(mrb, SDLTestSurfaceImageS_class, "width=", mrb_SDL_SDLTestSurfaceImageS_set_width, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTestSurfaceImageS_height_FIELD
+#if BIND_SDLTestSurfaceImageS_height_FIELD_READER
   mrb_define_method(mrb, SDLTestSurfaceImageS_class, "height", mrb_SDL_SDLTestSurfaceImageS_get_height, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTestSurfaceImageS_height_FIELD_WRITER
   mrb_define_method(mrb, SDLTestSurfaceImageS_class, "height=", mrb_SDL_SDLTestSurfaceImageS_set_height, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTestSurfaceImageS_bytes_per_pixel_FIELD
+#if BIND_SDLTestSurfaceImageS_bytes_per_pixel_FIELD_READER
   mrb_define_method(mrb, SDLTestSurfaceImageS_class, "bytes_per_pixel", mrb_SDL_SDLTestSurfaceImageS_get_bytes_per_pixel, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTestSurfaceImageS_bytes_per_pixel_FIELD_WRITER
   mrb_define_method(mrb, SDLTestSurfaceImageS_class, "bytes_per_pixel=", mrb_SDL_SDLTestSurfaceImageS_set_bytes_per_pixel, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTestSurfaceImageS_pixel_data_FIELD
+#if BIND_SDLTestSurfaceImageS_pixel_data_FIELD_READER
   mrb_define_method(mrb, SDLTestSurfaceImageS_class, "pixel_data", mrb_SDL_SDLTestSurfaceImageS_get_pixel_data, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTestSurfaceImageS_pixel_data_FIELD_WRITER
   mrb_define_method(mrb, SDLTestSurfaceImageS_class, "pixel_data=", mrb_SDL_SDLTestSurfaceImageS_set_pixel_data, MRB_ARGS_ARG(1, 0));
 #endif
 

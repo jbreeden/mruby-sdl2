@@ -60,7 +60,7 @@ mrb_SDL_SDLSurface_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLSurface_flags_FIELD
+#if BIND_SDLSurface_flags_FIELD_READER
 /* get_flags
  *
  * Return Type: Uint32
@@ -75,7 +75,9 @@ mrb_SDL_SDLSurface_get_flags(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLSurface_flags_FIELD_WRITER
 /* set_flags
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLSurface_set_flags(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLSurface_format_FIELD
+#if BIND_SDLSurface_format_FIELD_READER
 /* get_format
  *
  * Return Type: SDL_PixelFormat *
@@ -114,7 +116,9 @@ mrb_SDL_SDLSurface_get_format(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLSurface_format_FIELD_WRITER
 /* set_format
  *
  * Parameters:
@@ -141,7 +145,7 @@ mrb_SDL_SDLSurface_set_format(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLSurface_w_FIELD
+#if BIND_SDLSurface_w_FIELD_READER
 /* get_w
  *
  * Return Type: int
@@ -160,7 +164,9 @@ mrb_SDL_SDLSurface_get_w(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLSurface_w_FIELD_WRITER
 /* set_w
  *
  * Parameters:
@@ -187,7 +193,7 @@ mrb_SDL_SDLSurface_set_w(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLSurface_h_FIELD
+#if BIND_SDLSurface_h_FIELD_READER
 /* get_h
  *
  * Return Type: int
@@ -206,7 +212,9 @@ mrb_SDL_SDLSurface_get_h(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLSurface_h_FIELD_WRITER
 /* set_h
  *
  * Parameters:
@@ -233,7 +241,7 @@ mrb_SDL_SDLSurface_set_h(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLSurface_pitch_FIELD
+#if BIND_SDLSurface_pitch_FIELD_READER
 /* get_pitch
  *
  * Return Type: int
@@ -252,7 +260,9 @@ mrb_SDL_SDLSurface_get_pitch(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLSurface_pitch_FIELD_WRITER
 /* set_pitch
  *
  * Parameters:
@@ -279,7 +289,7 @@ mrb_SDL_SDLSurface_set_pitch(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLSurface_pixels_FIELD
+#if BIND_SDLSurface_pixels_FIELD_READER
 /* get_pixels
  *
  * Return Type: void *
@@ -294,7 +304,9 @@ mrb_SDL_SDLSurface_get_pixels(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLSurface_pixels_FIELD_WRITER
 /* set_pixels
  *
  * Parameters:
@@ -318,7 +330,7 @@ mrb_SDL_SDLSurface_set_pixels(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLSurface_userdata_FIELD
+#if BIND_SDLSurface_userdata_FIELD_READER
 /* get_userdata
  *
  * Return Type: void *
@@ -333,7 +345,9 @@ mrb_SDL_SDLSurface_get_userdata(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLSurface_userdata_FIELD_WRITER
 /* set_userdata
  *
  * Parameters:
@@ -357,7 +371,7 @@ mrb_SDL_SDLSurface_set_userdata(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLSurface_locked_FIELD
+#if BIND_SDLSurface_locked_FIELD_READER
 /* get_locked
  *
  * Return Type: int
@@ -376,7 +390,9 @@ mrb_SDL_SDLSurface_get_locked(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLSurface_locked_FIELD_WRITER
 /* set_locked
  *
  * Parameters:
@@ -403,7 +419,7 @@ mrb_SDL_SDLSurface_set_locked(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLSurface_lock_data_FIELD
+#if BIND_SDLSurface_lock_data_FIELD_READER
 /* get_lock_data
  *
  * Return Type: void *
@@ -418,7 +434,9 @@ mrb_SDL_SDLSurface_get_lock_data(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLSurface_lock_data_FIELD_WRITER
 /* set_lock_data
  *
  * Parameters:
@@ -442,7 +460,7 @@ mrb_SDL_SDLSurface_set_lock_data(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLSurface_clip_rect_FIELD
+#if BIND_SDLSurface_clip_rect_FIELD_READER
 /* get_clip_rect
  *
  * Return Type: SDL_Rect
@@ -457,7 +475,9 @@ mrb_SDL_SDLSurface_get_clip_rect(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLSurface_clip_rect_FIELD_WRITER
 /* set_clip_rect
  *
  * Parameters:
@@ -481,7 +501,7 @@ mrb_SDL_SDLSurface_set_clip_rect(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLSurface_map_FIELD
+#if BIND_SDLSurface_map_FIELD_READER
 /* get_map
  *
  * Return Type: struct SDL_BlitMap *
@@ -496,7 +516,9 @@ mrb_SDL_SDLSurface_get_map(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLSurface_map_FIELD_WRITER
 /* set_map
  *
  * Parameters:
@@ -523,7 +545,7 @@ mrb_SDL_SDLSurface_set_map(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLSurface_refcount_FIELD
+#if BIND_SDLSurface_refcount_FIELD_READER
 /* get_refcount
  *
  * Return Type: int
@@ -542,7 +564,9 @@ mrb_SDL_SDLSurface_get_refcount(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLSurface_refcount_FIELD_WRITER
 /* set_refcount
  *
  * Parameters:
@@ -583,52 +607,76 @@ void mrb_SDL_SDLSurface_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLSurface_flags_FIELD
+#if BIND_SDLSurface_flags_FIELD_READER
   mrb_define_method(mrb, SDLSurface_class, "flags", mrb_SDL_SDLSurface_get_flags, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLSurface_flags_FIELD_WRITER
   mrb_define_method(mrb, SDLSurface_class, "flags=", mrb_SDL_SDLSurface_set_flags, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLSurface_format_FIELD
+#if BIND_SDLSurface_format_FIELD_READER
   mrb_define_method(mrb, SDLSurface_class, "format", mrb_SDL_SDLSurface_get_format, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLSurface_format_FIELD_WRITER
   mrb_define_method(mrb, SDLSurface_class, "format=", mrb_SDL_SDLSurface_set_format, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLSurface_w_FIELD
+#if BIND_SDLSurface_w_FIELD_READER
   mrb_define_method(mrb, SDLSurface_class, "w", mrb_SDL_SDLSurface_get_w, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLSurface_w_FIELD_WRITER
   mrb_define_method(mrb, SDLSurface_class, "w=", mrb_SDL_SDLSurface_set_w, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLSurface_h_FIELD
+#if BIND_SDLSurface_h_FIELD_READER
   mrb_define_method(mrb, SDLSurface_class, "h", mrb_SDL_SDLSurface_get_h, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLSurface_h_FIELD_WRITER
   mrb_define_method(mrb, SDLSurface_class, "h=", mrb_SDL_SDLSurface_set_h, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLSurface_pitch_FIELD
+#if BIND_SDLSurface_pitch_FIELD_READER
   mrb_define_method(mrb, SDLSurface_class, "pitch", mrb_SDL_SDLSurface_get_pitch, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLSurface_pitch_FIELD_WRITER
   mrb_define_method(mrb, SDLSurface_class, "pitch=", mrb_SDL_SDLSurface_set_pitch, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLSurface_pixels_FIELD
+#if BIND_SDLSurface_pixels_FIELD_READER
   mrb_define_method(mrb, SDLSurface_class, "pixels", mrb_SDL_SDLSurface_get_pixels, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLSurface_pixels_FIELD_WRITER
   mrb_define_method(mrb, SDLSurface_class, "pixels=", mrb_SDL_SDLSurface_set_pixels, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLSurface_userdata_FIELD
+#if BIND_SDLSurface_userdata_FIELD_READER
   mrb_define_method(mrb, SDLSurface_class, "userdata", mrb_SDL_SDLSurface_get_userdata, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLSurface_userdata_FIELD_WRITER
   mrb_define_method(mrb, SDLSurface_class, "userdata=", mrb_SDL_SDLSurface_set_userdata, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLSurface_locked_FIELD
+#if BIND_SDLSurface_locked_FIELD_READER
   mrb_define_method(mrb, SDLSurface_class, "locked", mrb_SDL_SDLSurface_get_locked, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLSurface_locked_FIELD_WRITER
   mrb_define_method(mrb, SDLSurface_class, "locked=", mrb_SDL_SDLSurface_set_locked, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLSurface_lock_data_FIELD
+#if BIND_SDLSurface_lock_data_FIELD_READER
   mrb_define_method(mrb, SDLSurface_class, "lock_data", mrb_SDL_SDLSurface_get_lock_data, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLSurface_lock_data_FIELD_WRITER
   mrb_define_method(mrb, SDLSurface_class, "lock_data=", mrb_SDL_SDLSurface_set_lock_data, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLSurface_clip_rect_FIELD
+#if BIND_SDLSurface_clip_rect_FIELD_READER
   mrb_define_method(mrb, SDLSurface_class, "clip_rect", mrb_SDL_SDLSurface_get_clip_rect, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLSurface_clip_rect_FIELD_WRITER
   mrb_define_method(mrb, SDLSurface_class, "clip_rect=", mrb_SDL_SDLSurface_set_clip_rect, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLSurface_map_FIELD
+#if BIND_SDLSurface_map_FIELD_READER
   mrb_define_method(mrb, SDLSurface_class, "map", mrb_SDL_SDLSurface_get_map, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLSurface_map_FIELD_WRITER
   mrb_define_method(mrb, SDLSurface_class, "map=", mrb_SDL_SDLSurface_set_map, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLSurface_refcount_FIELD
+#if BIND_SDLSurface_refcount_FIELD_READER
   mrb_define_method(mrb, SDLSurface_class, "refcount", mrb_SDL_SDLSurface_get_refcount, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLSurface_refcount_FIELD_WRITER
   mrb_define_method(mrb, SDLSurface_class, "refcount=", mrb_SDL_SDLSurface_set_refcount, MRB_ARGS_ARG(1, 0));
 #endif
 

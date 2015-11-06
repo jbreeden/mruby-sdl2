@@ -60,7 +60,7 @@ mrb_SDL_SDLWindowShapeMode_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLWindowShapeMode_mode_FIELD
+#if BIND_SDLWindowShapeMode_mode_FIELD_READER
 /* get_mode
  *
  * Return Type: WindowShapeMode
@@ -75,7 +75,9 @@ mrb_SDL_SDLWindowShapeMode_get_mode(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLWindowShapeMode_mode_FIELD_WRITER
 /* set_mode
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLWindowShapeMode_set_mode(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLWindowShapeMode_parameters_FIELD
+#if BIND_SDLWindowShapeMode_parameters_FIELD_READER
 /* get_parameters
  *
  * Return Type: SDL_WindowShapeParams
@@ -114,7 +116,9 @@ mrb_SDL_SDLWindowShapeMode_get_parameters(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLWindowShapeMode_parameters_FIELD_WRITER
 /* set_parameters
  *
  * Parameters:
@@ -152,12 +156,16 @@ void mrb_SDL_SDLWindowShapeMode_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLWindowShapeMode_mode_FIELD
+#if BIND_SDLWindowShapeMode_mode_FIELD_READER
   mrb_define_method(mrb, SDLWindowShapeMode_class, "mode", mrb_SDL_SDLWindowShapeMode_get_mode, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLWindowShapeMode_mode_FIELD_WRITER
   mrb_define_method(mrb, SDLWindowShapeMode_class, "mode=", mrb_SDL_SDLWindowShapeMode_set_mode, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLWindowShapeMode_parameters_FIELD
+#if BIND_SDLWindowShapeMode_parameters_FIELD_READER
   mrb_define_method(mrb, SDLWindowShapeMode_class, "parameters", mrb_SDL_SDLWindowShapeMode_get_parameters, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLWindowShapeMode_parameters_FIELD_WRITER
   mrb_define_method(mrb, SDLWindowShapeMode_class, "parameters=", mrb_SDL_SDLWindowShapeMode_set_parameters, MRB_ARGS_ARG(1, 0));
 #endif
 

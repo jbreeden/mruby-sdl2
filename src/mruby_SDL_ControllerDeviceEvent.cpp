@@ -60,7 +60,7 @@ mrb_SDL_SDLControllerDeviceEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self)
  * Fields
  */
 
-#if BIND_SDLControllerDeviceEvent_type_FIELD
+#if BIND_SDLControllerDeviceEvent_type_FIELD_READER
 /* get_type
  *
  * Return Type: Uint32
@@ -75,7 +75,9 @@ mrb_SDL_SDLControllerDeviceEvent_get_type(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLControllerDeviceEvent_type_FIELD_WRITER
 /* set_type
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLControllerDeviceEvent_set_type(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLControllerDeviceEvent_timestamp_FIELD
+#if BIND_SDLControllerDeviceEvent_timestamp_FIELD_READER
 /* get_timestamp
  *
  * Return Type: Uint32
@@ -114,7 +116,9 @@ mrb_SDL_SDLControllerDeviceEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLControllerDeviceEvent_timestamp_FIELD_WRITER
 /* set_timestamp
  *
  * Parameters:
@@ -138,7 +142,7 @@ mrb_SDL_SDLControllerDeviceEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLControllerDeviceEvent_which_FIELD
+#if BIND_SDLControllerDeviceEvent_which_FIELD_READER
 /* get_which
  *
  * Return Type: Sint32
@@ -153,7 +157,9 @@ mrb_SDL_SDLControllerDeviceEvent_get_which(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLControllerDeviceEvent_which_FIELD_WRITER
 /* set_which
  *
  * Parameters:
@@ -191,16 +197,22 @@ void mrb_SDL_SDLControllerDeviceEvent_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLControllerDeviceEvent_type_FIELD
+#if BIND_SDLControllerDeviceEvent_type_FIELD_READER
   mrb_define_method(mrb, SDLControllerDeviceEvent_class, "type", mrb_SDL_SDLControllerDeviceEvent_get_type, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLControllerDeviceEvent_type_FIELD_WRITER
   mrb_define_method(mrb, SDLControllerDeviceEvent_class, "type=", mrb_SDL_SDLControllerDeviceEvent_set_type, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLControllerDeviceEvent_timestamp_FIELD
+#if BIND_SDLControllerDeviceEvent_timestamp_FIELD_READER
   mrb_define_method(mrb, SDLControllerDeviceEvent_class, "timestamp", mrb_SDL_SDLControllerDeviceEvent_get_timestamp, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLControllerDeviceEvent_timestamp_FIELD_WRITER
   mrb_define_method(mrb, SDLControllerDeviceEvent_class, "timestamp=", mrb_SDL_SDLControllerDeviceEvent_set_timestamp, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLControllerDeviceEvent_which_FIELD
+#if BIND_SDLControllerDeviceEvent_which_FIELD_READER
   mrb_define_method(mrb, SDLControllerDeviceEvent_class, "which", mrb_SDL_SDLControllerDeviceEvent_get_which, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLControllerDeviceEvent_which_FIELD_WRITER
   mrb_define_method(mrb, SDLControllerDeviceEvent_class, "which=", mrb_SDL_SDLControllerDeviceEvent_set_which, MRB_ARGS_ARG(1, 0));
 #endif
 

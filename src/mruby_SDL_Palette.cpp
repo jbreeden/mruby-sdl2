@@ -60,7 +60,7 @@ mrb_SDL_SDLPalette_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLPalette_ncolors_FIELD
+#if BIND_SDLPalette_ncolors_FIELD_READER
 /* get_ncolors
  *
  * Return Type: int
@@ -79,7 +79,9 @@ mrb_SDL_SDLPalette_get_ncolors(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPalette_ncolors_FIELD_WRITER
 /* set_ncolors
  *
  * Parameters:
@@ -106,7 +108,7 @@ mrb_SDL_SDLPalette_set_ncolors(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLPalette_colors_FIELD
+#if BIND_SDLPalette_colors_FIELD_READER
 /* get_colors
  *
  * Return Type: SDL_Color *
@@ -121,7 +123,9 @@ mrb_SDL_SDLPalette_get_colors(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPalette_colors_FIELD_WRITER
 /* set_colors
  *
  * Parameters:
@@ -148,7 +152,7 @@ mrb_SDL_SDLPalette_set_colors(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLPalette_version_FIELD
+#if BIND_SDLPalette_version_FIELD_READER
 /* get_version
  *
  * Return Type: Uint32
@@ -163,7 +167,9 @@ mrb_SDL_SDLPalette_get_version(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPalette_version_FIELD_WRITER
 /* set_version
  *
  * Parameters:
@@ -187,7 +193,7 @@ mrb_SDL_SDLPalette_set_version(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLPalette_refcount_FIELD
+#if BIND_SDLPalette_refcount_FIELD_READER
 /* get_refcount
  *
  * Return Type: int
@@ -206,7 +212,9 @@ mrb_SDL_SDLPalette_get_refcount(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLPalette_refcount_FIELD_WRITER
 /* set_refcount
  *
  * Parameters:
@@ -247,20 +255,28 @@ void mrb_SDL_SDLPalette_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLPalette_ncolors_FIELD
+#if BIND_SDLPalette_ncolors_FIELD_READER
   mrb_define_method(mrb, SDLPalette_class, "ncolors", mrb_SDL_SDLPalette_get_ncolors, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPalette_ncolors_FIELD_WRITER
   mrb_define_method(mrb, SDLPalette_class, "ncolors=", mrb_SDL_SDLPalette_set_ncolors, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLPalette_colors_FIELD
+#if BIND_SDLPalette_colors_FIELD_READER
   mrb_define_method(mrb, SDLPalette_class, "colors", mrb_SDL_SDLPalette_get_colors, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPalette_colors_FIELD_WRITER
   mrb_define_method(mrb, SDLPalette_class, "colors=", mrb_SDL_SDLPalette_set_colors, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLPalette_version_FIELD
+#if BIND_SDLPalette_version_FIELD_READER
   mrb_define_method(mrb, SDLPalette_class, "version", mrb_SDL_SDLPalette_get_version, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPalette_version_FIELD_WRITER
   mrb_define_method(mrb, SDLPalette_class, "version=", mrb_SDL_SDLPalette_set_version, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLPalette_refcount_FIELD
+#if BIND_SDLPalette_refcount_FIELD_READER
   mrb_define_method(mrb, SDLPalette_class, "refcount", mrb_SDL_SDLPalette_get_refcount, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLPalette_refcount_FIELD_WRITER
   mrb_define_method(mrb, SDLPalette_class, "refcount=", mrb_SDL_SDLPalette_set_refcount, MRB_ARGS_ARG(1, 0));
 #endif
 

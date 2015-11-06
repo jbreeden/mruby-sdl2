@@ -60,7 +60,7 @@ mrb_SDL_SDLTestTestCaseReference_belongs_to_ruby(mrb_state* mrb, mrb_value self)
  * Fields
  */
 
-#if BIND_SDLTestTestCaseReference_testCase_FIELD
+#if BIND_SDLTestTestCaseReference_testCase_FIELD_READER
 /* get_testCase
  *
  * Return Type: SDLTest_TestCaseFp
@@ -75,7 +75,9 @@ mrb_SDL_SDLTestTestCaseReference_get_testCase(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTestTestCaseReference_testCase_FIELD_WRITER
 /* set_testCase
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLTestTestCaseReference_set_testCase(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLTestTestCaseReference_name_FIELD
+#if BIND_SDLTestTestCaseReference_name_FIELD_READER
 /* get_name
  *
  * Return Type: char *
@@ -114,7 +116,9 @@ mrb_SDL_SDLTestTestCaseReference_get_name(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTestTestCaseReference_name_FIELD_WRITER
 /* set_name
  *
  * Parameters:
@@ -146,7 +150,7 @@ mrb_SDL_SDLTestTestCaseReference_set_name(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLTestTestCaseReference_description_FIELD
+#if BIND_SDLTestTestCaseReference_description_FIELD_READER
 /* get_description
  *
  * Return Type: char *
@@ -161,7 +165,9 @@ mrb_SDL_SDLTestTestCaseReference_get_description(mrb_state* mrb, mrb_value self)
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTestTestCaseReference_description_FIELD_WRITER
 /* set_description
  *
  * Parameters:
@@ -193,7 +199,7 @@ mrb_SDL_SDLTestTestCaseReference_set_description(mrb_state* mrb, mrb_value self)
 }
 #endif
 
-#if BIND_SDLTestTestCaseReference_enabled_FIELD
+#if BIND_SDLTestTestCaseReference_enabled_FIELD_READER
 /* get_enabled
  *
  * Return Type: int
@@ -212,7 +218,9 @@ mrb_SDL_SDLTestTestCaseReference_get_enabled(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTestTestCaseReference_enabled_FIELD_WRITER
 /* set_enabled
  *
  * Parameters:
@@ -253,20 +261,28 @@ void mrb_SDL_SDLTestTestCaseReference_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLTestTestCaseReference_testCase_FIELD
+#if BIND_SDLTestTestCaseReference_testCase_FIELD_READER
   mrb_define_method(mrb, SDLTestTestCaseReference_class, "testCase", mrb_SDL_SDLTestTestCaseReference_get_testCase, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTestTestCaseReference_testCase_FIELD_WRITER
   mrb_define_method(mrb, SDLTestTestCaseReference_class, "testCase=", mrb_SDL_SDLTestTestCaseReference_set_testCase, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTestTestCaseReference_name_FIELD
+#if BIND_SDLTestTestCaseReference_name_FIELD_READER
   mrb_define_method(mrb, SDLTestTestCaseReference_class, "name", mrb_SDL_SDLTestTestCaseReference_get_name, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTestTestCaseReference_name_FIELD_WRITER
   mrb_define_method(mrb, SDLTestTestCaseReference_class, "name=", mrb_SDL_SDLTestTestCaseReference_set_name, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTestTestCaseReference_description_FIELD
+#if BIND_SDLTestTestCaseReference_description_FIELD_READER
   mrb_define_method(mrb, SDLTestTestCaseReference_class, "description", mrb_SDL_SDLTestTestCaseReference_get_description, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTestTestCaseReference_description_FIELD_WRITER
   mrb_define_method(mrb, SDLTestTestCaseReference_class, "description=", mrb_SDL_SDLTestTestCaseReference_set_description, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTestTestCaseReference_enabled_FIELD
+#if BIND_SDLTestTestCaseReference_enabled_FIELD_READER
   mrb_define_method(mrb, SDLTestTestCaseReference_class, "enabled", mrb_SDL_SDLTestTestCaseReference_get_enabled, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTestTestCaseReference_enabled_FIELD_WRITER
   mrb_define_method(mrb, SDLTestTestCaseReference_class, "enabled=", mrb_SDL_SDLTestTestCaseReference_set_enabled, MRB_ARGS_ARG(1, 0));
 #endif
 

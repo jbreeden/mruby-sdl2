@@ -60,7 +60,7 @@ mrb_SDL_SDLRWops_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLRWops_size_FIELD
+#if BIND_SDLRWops_size_FIELD_READER
 /* get_size
  *
  * Return Type: Sint64 (*)(struct SDL_RWops *)
@@ -75,7 +75,9 @@ mrb_SDL_SDLRWops_get_size(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLRWops_size_FIELD_WRITER
 /* set_size
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLRWops_set_size(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLRWops_seek_FIELD
+#if BIND_SDLRWops_seek_FIELD_READER
 /* get_seek
  *
  * Return Type: Sint64 (*)(struct SDL_RWops *, Sint64, int)
@@ -114,7 +116,9 @@ mrb_SDL_SDLRWops_get_seek(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLRWops_seek_FIELD_WRITER
 /* set_seek
  *
  * Parameters:
@@ -138,7 +142,7 @@ mrb_SDL_SDLRWops_set_seek(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLRWops_read_FIELD
+#if BIND_SDLRWops_read_FIELD_READER
 /* get_read
  *
  * Return Type: size_t (*)(struct SDL_RWops *, void *, size_t, size_t)
@@ -153,7 +157,9 @@ mrb_SDL_SDLRWops_get_read(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLRWops_read_FIELD_WRITER
 /* set_read
  *
  * Parameters:
@@ -177,7 +183,7 @@ mrb_SDL_SDLRWops_set_read(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLRWops_write_FIELD
+#if BIND_SDLRWops_write_FIELD_READER
 /* get_write
  *
  * Return Type: size_t (*)(struct SDL_RWops *, const void *, size_t, size_t)
@@ -192,7 +198,9 @@ mrb_SDL_SDLRWops_get_write(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLRWops_write_FIELD_WRITER
 /* set_write
  *
  * Parameters:
@@ -216,7 +224,7 @@ mrb_SDL_SDLRWops_set_write(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLRWops_close_FIELD
+#if BIND_SDLRWops_close_FIELD_READER
 /* get_close
  *
  * Return Type: int (*)(struct SDL_RWops *)
@@ -231,7 +239,9 @@ mrb_SDL_SDLRWops_get_close(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLRWops_close_FIELD_WRITER
 /* set_close
  *
  * Parameters:
@@ -255,7 +265,7 @@ mrb_SDL_SDLRWops_set_close(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLRWops_type_FIELD
+#if BIND_SDLRWops_type_FIELD_READER
 /* get_type
  *
  * Return Type: Uint32
@@ -270,7 +280,9 @@ mrb_SDL_SDLRWops_get_type(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLRWops_type_FIELD_WRITER
 /* set_type
  *
  * Parameters:
@@ -294,26 +306,28 @@ mrb_SDL_SDLRWops_set_type(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLRWops_hidden_FIELD
+#if BIND_SDLRWops_hidden_FIELD_READER
 /* get_hidden
  *
- * Return Type: union (anonymous union at ./headers/SDL_rwops.h:94:5)
+ * Return Type: union (anonymous union at ./sdl/SDL2-2.0.3/include//SDL_rwops.h:94:5)
  */
 mrb_value
 mrb_SDL_SDLRWops_get_hidden(mrb_state* mrb, mrb_value self) {
   struct SDL_RWops * native_self = mruby_unbox_struct SDL_RWops(self);
 
-  union (anonymous union at ./headers/SDL_rwops.h:94:5) native_field = native_self->hidden;
+  union (anonymous union at ./sdl/SDL2-2.0.3/include//SDL_rwops.h:94:5) native_field = native_self->hidden;
 
-  mrb_value ruby_field = TODO_mruby_box_union_LPAREN_anonymous_union_at_./headers/SDL_rwops.h:94:5_RPAREN(mrb, native_field);
+  mrb_value ruby_field = TODO_mruby_box_union_LPAREN_anonymous_union_at_./sdl/SDL2-2.0.3/include//SDL_rwops.h:94:5_RPAREN(mrb, native_field);
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLRWops_hidden_FIELD_WRITER
 /* set_hidden
  *
  * Parameters:
- * - value: union (anonymous union at ./headers/SDL_rwops.h:94:5)
+ * - value: union (anonymous union at ./sdl/SDL2-2.0.3/include//SDL_rwops.h:94:5)
  */
 mrb_value
 mrb_SDL_SDLRWops_set_hidden(mrb_state* mrb, mrb_value self) {
@@ -323,9 +337,9 @@ mrb_SDL_SDLRWops_set_hidden(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_union_LPAREN_anonymous_union_at_./headers/SDL_rwops.h:94:5_RPAREN(ruby_field);
+  TODO_type_check_union_LPAREN_anonymous_union_at_./sdl/SDL2-2.0.3/include//SDL_rwops.h:94:5_RPAREN(ruby_field);
 
-  union (anonymous union at ./headers/SDL_rwops.h:94:5) native_field = TODO_mruby_unbox_union_LPAREN_anonymous_union_at_./headers/SDL_rwops.h:94:5_RPAREN(ruby_field);
+  union (anonymous union at ./sdl/SDL2-2.0.3/include//SDL_rwops.h:94:5) native_field = TODO_mruby_unbox_union_LPAREN_anonymous_union_at_./sdl/SDL2-2.0.3/include//SDL_rwops.h:94:5_RPAREN(ruby_field);
 
   native_self->hidden = native_field;
 
@@ -347,32 +361,46 @@ void mrb_SDL_SDLRWops_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLRWops_size_FIELD
+#if BIND_SDLRWops_size_FIELD_READER
   mrb_define_method(mrb, SDLRWops_class, "size", mrb_SDL_SDLRWops_get_size, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLRWops_size_FIELD_WRITER
   mrb_define_method(mrb, SDLRWops_class, "size=", mrb_SDL_SDLRWops_set_size, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLRWops_seek_FIELD
+#if BIND_SDLRWops_seek_FIELD_READER
   mrb_define_method(mrb, SDLRWops_class, "seek", mrb_SDL_SDLRWops_get_seek, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLRWops_seek_FIELD_WRITER
   mrb_define_method(mrb, SDLRWops_class, "seek=", mrb_SDL_SDLRWops_set_seek, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLRWops_read_FIELD
+#if BIND_SDLRWops_read_FIELD_READER
   mrb_define_method(mrb, SDLRWops_class, "read", mrb_SDL_SDLRWops_get_read, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLRWops_read_FIELD_WRITER
   mrb_define_method(mrb, SDLRWops_class, "read=", mrb_SDL_SDLRWops_set_read, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLRWops_write_FIELD
+#if BIND_SDLRWops_write_FIELD_READER
   mrb_define_method(mrb, SDLRWops_class, "write", mrb_SDL_SDLRWops_get_write, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLRWops_write_FIELD_WRITER
   mrb_define_method(mrb, SDLRWops_class, "write=", mrb_SDL_SDLRWops_set_write, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLRWops_close_FIELD
+#if BIND_SDLRWops_close_FIELD_READER
   mrb_define_method(mrb, SDLRWops_class, "close", mrb_SDL_SDLRWops_get_close, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLRWops_close_FIELD_WRITER
   mrb_define_method(mrb, SDLRWops_class, "close=", mrb_SDL_SDLRWops_set_close, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLRWops_type_FIELD
+#if BIND_SDLRWops_type_FIELD_READER
   mrb_define_method(mrb, SDLRWops_class, "type", mrb_SDL_SDLRWops_get_type, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLRWops_type_FIELD_WRITER
   mrb_define_method(mrb, SDLRWops_class, "type=", mrb_SDL_SDLRWops_set_type, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLRWops_hidden_FIELD
+#if BIND_SDLRWops_hidden_FIELD_READER
   mrb_define_method(mrb, SDLRWops_class, "hidden", mrb_SDL_SDLRWops_get_hidden, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLRWops_hidden_FIELD_WRITER
   mrb_define_method(mrb, SDLRWops_class, "hidden=", mrb_SDL_SDLRWops_set_hidden, MRB_ARGS_ARG(1, 0));
 #endif
 

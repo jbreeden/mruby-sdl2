@@ -60,7 +60,7 @@ mrb_SDL_SDLAtomicT_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLAtomicT_value_FIELD
+#if BIND_SDLAtomicT_value_FIELD_READER
 /* get_value
  *
  * Return Type: int
@@ -79,7 +79,9 @@ mrb_SDL_SDLAtomicT_get_value(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAtomicT_value_FIELD_WRITER
 /* set_value
  *
  * Parameters:
@@ -120,8 +122,10 @@ void mrb_SDL_SDLAtomicT_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLAtomicT_value_FIELD
+#if BIND_SDLAtomicT_value_FIELD_READER
   mrb_define_method(mrb, SDLAtomicT_class, "value", mrb_SDL_SDLAtomicT_get_value, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAtomicT_value_FIELD_WRITER
   mrb_define_method(mrb, SDLAtomicT_class, "value=", mrb_SDL_SDLAtomicT_set_value, MRB_ARGS_ARG(1, 0));
 #endif
 

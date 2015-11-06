@@ -60,7 +60,7 @@ mrb_SDL_SDLAudioSpec_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLAudioSpec_freq_FIELD
+#if BIND_SDLAudioSpec_freq_FIELD_READER
 /* get_freq
  *
  * Return Type: int
@@ -79,7 +79,9 @@ mrb_SDL_SDLAudioSpec_get_freq(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAudioSpec_freq_FIELD_WRITER
 /* set_freq
  *
  * Parameters:
@@ -106,7 +108,7 @@ mrb_SDL_SDLAudioSpec_set_freq(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAudioSpec_format_FIELD
+#if BIND_SDLAudioSpec_format_FIELD_READER
 /* get_format
  *
  * Return Type: SDL_AudioFormat
@@ -121,7 +123,9 @@ mrb_SDL_SDLAudioSpec_get_format(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAudioSpec_format_FIELD_WRITER
 /* set_format
  *
  * Parameters:
@@ -145,7 +149,7 @@ mrb_SDL_SDLAudioSpec_set_format(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAudioSpec_channels_FIELD
+#if BIND_SDLAudioSpec_channels_FIELD_READER
 /* get_channels
  *
  * Return Type: Uint8
@@ -160,7 +164,9 @@ mrb_SDL_SDLAudioSpec_get_channels(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAudioSpec_channels_FIELD_WRITER
 /* set_channels
  *
  * Parameters:
@@ -184,7 +190,7 @@ mrb_SDL_SDLAudioSpec_set_channels(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAudioSpec_silence_FIELD
+#if BIND_SDLAudioSpec_silence_FIELD_READER
 /* get_silence
  *
  * Return Type: Uint8
@@ -199,7 +205,9 @@ mrb_SDL_SDLAudioSpec_get_silence(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAudioSpec_silence_FIELD_WRITER
 /* set_silence
  *
  * Parameters:
@@ -223,7 +231,7 @@ mrb_SDL_SDLAudioSpec_set_silence(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAudioSpec_samples_FIELD
+#if BIND_SDLAudioSpec_samples_FIELD_READER
 /* get_samples
  *
  * Return Type: Uint16
@@ -238,7 +246,9 @@ mrb_SDL_SDLAudioSpec_get_samples(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAudioSpec_samples_FIELD_WRITER
 /* set_samples
  *
  * Parameters:
@@ -262,7 +272,7 @@ mrb_SDL_SDLAudioSpec_set_samples(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAudioSpec_padding_FIELD
+#if BIND_SDLAudioSpec_padding_FIELD_READER
 /* get_padding
  *
  * Return Type: Uint16
@@ -277,7 +287,9 @@ mrb_SDL_SDLAudioSpec_get_padding(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAudioSpec_padding_FIELD_WRITER
 /* set_padding
  *
  * Parameters:
@@ -301,7 +313,7 @@ mrb_SDL_SDLAudioSpec_set_padding(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAudioSpec_size_FIELD
+#if BIND_SDLAudioSpec_size_FIELD_READER
 /* get_size
  *
  * Return Type: Uint32
@@ -316,7 +328,9 @@ mrb_SDL_SDLAudioSpec_get_size(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAudioSpec_size_FIELD_WRITER
 /* set_size
  *
  * Parameters:
@@ -340,7 +354,7 @@ mrb_SDL_SDLAudioSpec_set_size(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAudioSpec_callback_FIELD
+#if BIND_SDLAudioSpec_callback_FIELD_READER
 /* get_callback
  *
  * Return Type: SDL_AudioCallback
@@ -355,7 +369,9 @@ mrb_SDL_SDLAudioSpec_get_callback(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAudioSpec_callback_FIELD_WRITER
 /* set_callback
  *
  * Parameters:
@@ -379,7 +395,7 @@ mrb_SDL_SDLAudioSpec_set_callback(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAudioSpec_userdata_FIELD
+#if BIND_SDLAudioSpec_userdata_FIELD_READER
 /* get_userdata
  *
  * Return Type: void *
@@ -394,7 +410,9 @@ mrb_SDL_SDLAudioSpec_get_userdata(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAudioSpec_userdata_FIELD_WRITER
 /* set_userdata
  *
  * Parameters:
@@ -432,40 +450,58 @@ void mrb_SDL_SDLAudioSpec_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLAudioSpec_freq_FIELD
+#if BIND_SDLAudioSpec_freq_FIELD_READER
   mrb_define_method(mrb, SDLAudioSpec_class, "freq", mrb_SDL_SDLAudioSpec_get_freq, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAudioSpec_freq_FIELD_WRITER
   mrb_define_method(mrb, SDLAudioSpec_class, "freq=", mrb_SDL_SDLAudioSpec_set_freq, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAudioSpec_format_FIELD
+#if BIND_SDLAudioSpec_format_FIELD_READER
   mrb_define_method(mrb, SDLAudioSpec_class, "format", mrb_SDL_SDLAudioSpec_get_format, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAudioSpec_format_FIELD_WRITER
   mrb_define_method(mrb, SDLAudioSpec_class, "format=", mrb_SDL_SDLAudioSpec_set_format, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAudioSpec_channels_FIELD
+#if BIND_SDLAudioSpec_channels_FIELD_READER
   mrb_define_method(mrb, SDLAudioSpec_class, "channels", mrb_SDL_SDLAudioSpec_get_channels, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAudioSpec_channels_FIELD_WRITER
   mrb_define_method(mrb, SDLAudioSpec_class, "channels=", mrb_SDL_SDLAudioSpec_set_channels, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAudioSpec_silence_FIELD
+#if BIND_SDLAudioSpec_silence_FIELD_READER
   mrb_define_method(mrb, SDLAudioSpec_class, "silence", mrb_SDL_SDLAudioSpec_get_silence, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAudioSpec_silence_FIELD_WRITER
   mrb_define_method(mrb, SDLAudioSpec_class, "silence=", mrb_SDL_SDLAudioSpec_set_silence, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAudioSpec_samples_FIELD
+#if BIND_SDLAudioSpec_samples_FIELD_READER
   mrb_define_method(mrb, SDLAudioSpec_class, "samples", mrb_SDL_SDLAudioSpec_get_samples, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAudioSpec_samples_FIELD_WRITER
   mrb_define_method(mrb, SDLAudioSpec_class, "samples=", mrb_SDL_SDLAudioSpec_set_samples, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAudioSpec_padding_FIELD
+#if BIND_SDLAudioSpec_padding_FIELD_READER
   mrb_define_method(mrb, SDLAudioSpec_class, "padding", mrb_SDL_SDLAudioSpec_get_padding, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAudioSpec_padding_FIELD_WRITER
   mrb_define_method(mrb, SDLAudioSpec_class, "padding=", mrb_SDL_SDLAudioSpec_set_padding, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAudioSpec_size_FIELD
+#if BIND_SDLAudioSpec_size_FIELD_READER
   mrb_define_method(mrb, SDLAudioSpec_class, "size", mrb_SDL_SDLAudioSpec_get_size, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAudioSpec_size_FIELD_WRITER
   mrb_define_method(mrb, SDLAudioSpec_class, "size=", mrb_SDL_SDLAudioSpec_set_size, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAudioSpec_callback_FIELD
+#if BIND_SDLAudioSpec_callback_FIELD_READER
   mrb_define_method(mrb, SDLAudioSpec_class, "callback", mrb_SDL_SDLAudioSpec_get_callback, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAudioSpec_callback_FIELD_WRITER
   mrb_define_method(mrb, SDLAudioSpec_class, "callback=", mrb_SDL_SDLAudioSpec_set_callback, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAudioSpec_userdata_FIELD
+#if BIND_SDLAudioSpec_userdata_FIELD_READER
   mrb_define_method(mrb, SDLAudioSpec_class, "userdata", mrb_SDL_SDLAudioSpec_get_userdata, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAudioSpec_userdata_FIELD_WRITER
   mrb_define_method(mrb, SDLAudioSpec_class, "userdata=", mrb_SDL_SDLAudioSpec_set_userdata, MRB_ARGS_ARG(1, 0));
 #endif
 

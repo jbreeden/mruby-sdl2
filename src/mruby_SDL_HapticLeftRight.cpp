@@ -60,7 +60,7 @@ mrb_SDL_SDLHapticLeftRight_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLHapticLeftRight_type_FIELD
+#if BIND_SDLHapticLeftRight_type_FIELD_READER
 /* get_type
  *
  * Return Type: Uint16
@@ -75,7 +75,9 @@ mrb_SDL_SDLHapticLeftRight_get_type(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticLeftRight_type_FIELD_WRITER
 /* set_type
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLHapticLeftRight_set_type(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticLeftRight_length_FIELD
+#if BIND_SDLHapticLeftRight_length_FIELD_READER
 /* get_length
  *
  * Return Type: Uint32
@@ -114,7 +116,9 @@ mrb_SDL_SDLHapticLeftRight_get_length(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticLeftRight_length_FIELD_WRITER
 /* set_length
  *
  * Parameters:
@@ -138,7 +142,7 @@ mrb_SDL_SDLHapticLeftRight_set_length(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticLeftRight_large_magnitude_FIELD
+#if BIND_SDLHapticLeftRight_large_magnitude_FIELD_READER
 /* get_large_magnitude
  *
  * Return Type: Uint16
@@ -153,7 +157,9 @@ mrb_SDL_SDLHapticLeftRight_get_large_magnitude(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticLeftRight_large_magnitude_FIELD_WRITER
 /* set_large_magnitude
  *
  * Parameters:
@@ -177,7 +183,7 @@ mrb_SDL_SDLHapticLeftRight_set_large_magnitude(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticLeftRight_small_magnitude_FIELD
+#if BIND_SDLHapticLeftRight_small_magnitude_FIELD_READER
 /* get_small_magnitude
  *
  * Return Type: Uint16
@@ -192,7 +198,9 @@ mrb_SDL_SDLHapticLeftRight_get_small_magnitude(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticLeftRight_small_magnitude_FIELD_WRITER
 /* set_small_magnitude
  *
  * Parameters:
@@ -230,20 +238,28 @@ void mrb_SDL_SDLHapticLeftRight_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLHapticLeftRight_type_FIELD
+#if BIND_SDLHapticLeftRight_type_FIELD_READER
   mrb_define_method(mrb, SDLHapticLeftRight_class, "type", mrb_SDL_SDLHapticLeftRight_get_type, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticLeftRight_type_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticLeftRight_class, "type=", mrb_SDL_SDLHapticLeftRight_set_type, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticLeftRight_length_FIELD
+#if BIND_SDLHapticLeftRight_length_FIELD_READER
   mrb_define_method(mrb, SDLHapticLeftRight_class, "length", mrb_SDL_SDLHapticLeftRight_get_length, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticLeftRight_length_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticLeftRight_class, "length=", mrb_SDL_SDLHapticLeftRight_set_length, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticLeftRight_large_magnitude_FIELD
+#if BIND_SDLHapticLeftRight_large_magnitude_FIELD_READER
   mrb_define_method(mrb, SDLHapticLeftRight_class, "large_magnitude", mrb_SDL_SDLHapticLeftRight_get_large_magnitude, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticLeftRight_large_magnitude_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticLeftRight_class, "large_magnitude=", mrb_SDL_SDLHapticLeftRight_set_large_magnitude, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticLeftRight_small_magnitude_FIELD
+#if BIND_SDLHapticLeftRight_small_magnitude_FIELD_READER
   mrb_define_method(mrb, SDLHapticLeftRight_class, "small_magnitude", mrb_SDL_SDLHapticLeftRight_get_small_magnitude, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticLeftRight_small_magnitude_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticLeftRight_class, "small_magnitude=", mrb_SDL_SDLHapticLeftRight_set_small_magnitude, MRB_ARGS_ARG(1, 0));
 #endif
 

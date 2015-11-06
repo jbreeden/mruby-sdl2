@@ -60,7 +60,7 @@ mrb_SDL_SDLAssertData_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLAssertData_always_ignore_FIELD
+#if BIND_SDLAssertData_always_ignore_FIELD_READER
 /* get_always_ignore
  *
  * Return Type: int
@@ -79,7 +79,9 @@ mrb_SDL_SDLAssertData_get_always_ignore(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAssertData_always_ignore_FIELD_WRITER
 /* set_always_ignore
  *
  * Parameters:
@@ -106,7 +108,7 @@ mrb_SDL_SDLAssertData_set_always_ignore(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAssertData_trigger_count_FIELD
+#if BIND_SDLAssertData_trigger_count_FIELD_READER
 /* get_trigger_count
  *
  * Return Type: unsigned int
@@ -125,7 +127,9 @@ mrb_SDL_SDLAssertData_get_trigger_count(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAssertData_trigger_count_FIELD_WRITER
 /* set_trigger_count
  *
  * Parameters:
@@ -152,7 +156,7 @@ mrb_SDL_SDLAssertData_set_trigger_count(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAssertData_condition_FIELD
+#if BIND_SDLAssertData_condition_FIELD_READER
 /* get_condition
  *
  * Return Type: const char *
@@ -167,7 +171,9 @@ mrb_SDL_SDLAssertData_get_condition(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAssertData_condition_FIELD_WRITER
 /* set_condition
  *
  * Parameters:
@@ -194,7 +200,7 @@ mrb_SDL_SDLAssertData_set_condition(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAssertData_filename_FIELD
+#if BIND_SDLAssertData_filename_FIELD_READER
 /* get_filename
  *
  * Return Type: const char *
@@ -209,7 +215,9 @@ mrb_SDL_SDLAssertData_get_filename(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAssertData_filename_FIELD_WRITER
 /* set_filename
  *
  * Parameters:
@@ -236,7 +244,7 @@ mrb_SDL_SDLAssertData_set_filename(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAssertData_linenum_FIELD
+#if BIND_SDLAssertData_linenum_FIELD_READER
 /* get_linenum
  *
  * Return Type: int
@@ -255,7 +263,9 @@ mrb_SDL_SDLAssertData_get_linenum(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAssertData_linenum_FIELD_WRITER
 /* set_linenum
  *
  * Parameters:
@@ -282,7 +292,7 @@ mrb_SDL_SDLAssertData_set_linenum(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAssertData_function_FIELD
+#if BIND_SDLAssertData_function_FIELD_READER
 /* get_function
  *
  * Return Type: const char *
@@ -297,7 +307,9 @@ mrb_SDL_SDLAssertData_get_function(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAssertData_function_FIELD_WRITER
 /* set_function
  *
  * Parameters:
@@ -324,7 +336,7 @@ mrb_SDL_SDLAssertData_set_function(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAssertData_next_FIELD
+#if BIND_SDLAssertData_next_FIELD_READER
 /* get_next
  *
  * Return Type: const struct SDL_assert_data *
@@ -339,7 +351,9 @@ mrb_SDL_SDLAssertData_get_next(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAssertData_next_FIELD_WRITER
 /* set_next
  *
  * Parameters:
@@ -380,32 +394,46 @@ void mrb_SDL_SDLAssertData_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLAssertData_always_ignore_FIELD
+#if BIND_SDLAssertData_always_ignore_FIELD_READER
   mrb_define_method(mrb, SDLAssertData_class, "always_ignore", mrb_SDL_SDLAssertData_get_always_ignore, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAssertData_always_ignore_FIELD_WRITER
   mrb_define_method(mrb, SDLAssertData_class, "always_ignore=", mrb_SDL_SDLAssertData_set_always_ignore, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAssertData_trigger_count_FIELD
+#if BIND_SDLAssertData_trigger_count_FIELD_READER
   mrb_define_method(mrb, SDLAssertData_class, "trigger_count", mrb_SDL_SDLAssertData_get_trigger_count, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAssertData_trigger_count_FIELD_WRITER
   mrb_define_method(mrb, SDLAssertData_class, "trigger_count=", mrb_SDL_SDLAssertData_set_trigger_count, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAssertData_condition_FIELD
+#if BIND_SDLAssertData_condition_FIELD_READER
   mrb_define_method(mrb, SDLAssertData_class, "condition", mrb_SDL_SDLAssertData_get_condition, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAssertData_condition_FIELD_WRITER
   mrb_define_method(mrb, SDLAssertData_class, "condition=", mrb_SDL_SDLAssertData_set_condition, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAssertData_filename_FIELD
+#if BIND_SDLAssertData_filename_FIELD_READER
   mrb_define_method(mrb, SDLAssertData_class, "filename", mrb_SDL_SDLAssertData_get_filename, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAssertData_filename_FIELD_WRITER
   mrb_define_method(mrb, SDLAssertData_class, "filename=", mrb_SDL_SDLAssertData_set_filename, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAssertData_linenum_FIELD
+#if BIND_SDLAssertData_linenum_FIELD_READER
   mrb_define_method(mrb, SDLAssertData_class, "linenum", mrb_SDL_SDLAssertData_get_linenum, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAssertData_linenum_FIELD_WRITER
   mrb_define_method(mrb, SDLAssertData_class, "linenum=", mrb_SDL_SDLAssertData_set_linenum, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAssertData_function_FIELD
+#if BIND_SDLAssertData_function_FIELD_READER
   mrb_define_method(mrb, SDLAssertData_class, "function", mrb_SDL_SDLAssertData_get_function, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAssertData_function_FIELD_WRITER
   mrb_define_method(mrb, SDLAssertData_class, "function=", mrb_SDL_SDLAssertData_set_function, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAssertData_next_FIELD
+#if BIND_SDLAssertData_next_FIELD_READER
   mrb_define_method(mrb, SDLAssertData_class, "next", mrb_SDL_SDLAssertData_get_next, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAssertData_next_FIELD_WRITER
   mrb_define_method(mrb, SDLAssertData_class, "next=", mrb_SDL_SDLAssertData_set_next, MRB_ARGS_ARG(1, 0));
 #endif
 

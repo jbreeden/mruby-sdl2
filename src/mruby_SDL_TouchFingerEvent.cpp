@@ -60,7 +60,7 @@ mrb_SDL_SDLTouchFingerEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLTouchFingerEvent_type_FIELD
+#if BIND_SDLTouchFingerEvent_type_FIELD_READER
 /* get_type
  *
  * Return Type: Uint32
@@ -75,7 +75,9 @@ mrb_SDL_SDLTouchFingerEvent_get_type(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTouchFingerEvent_type_FIELD_WRITER
 /* set_type
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLTouchFingerEvent_set_type(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLTouchFingerEvent_timestamp_FIELD
+#if BIND_SDLTouchFingerEvent_timestamp_FIELD_READER
 /* get_timestamp
  *
  * Return Type: Uint32
@@ -114,7 +116,9 @@ mrb_SDL_SDLTouchFingerEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTouchFingerEvent_timestamp_FIELD_WRITER
 /* set_timestamp
  *
  * Parameters:
@@ -138,7 +142,7 @@ mrb_SDL_SDLTouchFingerEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLTouchFingerEvent_touchId_FIELD
+#if BIND_SDLTouchFingerEvent_touchId_FIELD_READER
 /* get_touchId
  *
  * Return Type: SDL_TouchID
@@ -153,7 +157,9 @@ mrb_SDL_SDLTouchFingerEvent_get_touchId(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTouchFingerEvent_touchId_FIELD_WRITER
 /* set_touchId
  *
  * Parameters:
@@ -177,7 +183,7 @@ mrb_SDL_SDLTouchFingerEvent_set_touchId(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLTouchFingerEvent_fingerId_FIELD
+#if BIND_SDLTouchFingerEvent_fingerId_FIELD_READER
 /* get_fingerId
  *
  * Return Type: SDL_FingerID
@@ -192,7 +198,9 @@ mrb_SDL_SDLTouchFingerEvent_get_fingerId(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTouchFingerEvent_fingerId_FIELD_WRITER
 /* set_fingerId
  *
  * Parameters:
@@ -216,7 +224,7 @@ mrb_SDL_SDLTouchFingerEvent_set_fingerId(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLTouchFingerEvent_x_FIELD
+#if BIND_SDLTouchFingerEvent_x_FIELD_READER
 /* get_x
  *
  * Return Type: float
@@ -227,11 +235,13 @@ mrb_SDL_SDLTouchFingerEvent_get_x(mrb_state* mrb, mrb_value self) {
 
   float native_field = native_self->x;
 
-  mrb_value ruby_field = mrb_float_value(native_field);
+  mrb_value ruby_field = mrb_float_value(mrb, native_field);
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTouchFingerEvent_x_FIELD_WRITER
 /* set_x
  *
  * Parameters:
@@ -258,7 +268,7 @@ mrb_SDL_SDLTouchFingerEvent_set_x(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLTouchFingerEvent_y_FIELD
+#if BIND_SDLTouchFingerEvent_y_FIELD_READER
 /* get_y
  *
  * Return Type: float
@@ -269,11 +279,13 @@ mrb_SDL_SDLTouchFingerEvent_get_y(mrb_state* mrb, mrb_value self) {
 
   float native_field = native_self->y;
 
-  mrb_value ruby_field = mrb_float_value(native_field);
+  mrb_value ruby_field = mrb_float_value(mrb, native_field);
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTouchFingerEvent_y_FIELD_WRITER
 /* set_y
  *
  * Parameters:
@@ -300,7 +312,7 @@ mrb_SDL_SDLTouchFingerEvent_set_y(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLTouchFingerEvent_dx_FIELD
+#if BIND_SDLTouchFingerEvent_dx_FIELD_READER
 /* get_dx
  *
  * Return Type: float
@@ -311,11 +323,13 @@ mrb_SDL_SDLTouchFingerEvent_get_dx(mrb_state* mrb, mrb_value self) {
 
   float native_field = native_self->dx;
 
-  mrb_value ruby_field = mrb_float_value(native_field);
+  mrb_value ruby_field = mrb_float_value(mrb, native_field);
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTouchFingerEvent_dx_FIELD_WRITER
 /* set_dx
  *
  * Parameters:
@@ -342,7 +356,7 @@ mrb_SDL_SDLTouchFingerEvent_set_dx(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLTouchFingerEvent_dy_FIELD
+#if BIND_SDLTouchFingerEvent_dy_FIELD_READER
 /* get_dy
  *
  * Return Type: float
@@ -353,11 +367,13 @@ mrb_SDL_SDLTouchFingerEvent_get_dy(mrb_state* mrb, mrb_value self) {
 
   float native_field = native_self->dy;
 
-  mrb_value ruby_field = mrb_float_value(native_field);
+  mrb_value ruby_field = mrb_float_value(mrb, native_field);
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTouchFingerEvent_dy_FIELD_WRITER
 /* set_dy
  *
  * Parameters:
@@ -384,7 +400,7 @@ mrb_SDL_SDLTouchFingerEvent_set_dy(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLTouchFingerEvent_pressure_FIELD
+#if BIND_SDLTouchFingerEvent_pressure_FIELD_READER
 /* get_pressure
  *
  * Return Type: float
@@ -395,11 +411,13 @@ mrb_SDL_SDLTouchFingerEvent_get_pressure(mrb_state* mrb, mrb_value self) {
 
   float native_field = native_self->pressure;
 
-  mrb_value ruby_field = mrb_float_value(native_field);
+  mrb_value ruby_field = mrb_float_value(mrb, native_field);
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLTouchFingerEvent_pressure_FIELD_WRITER
 /* set_pressure
  *
  * Parameters:
@@ -440,40 +458,58 @@ void mrb_SDL_SDLTouchFingerEvent_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLTouchFingerEvent_type_FIELD
+#if BIND_SDLTouchFingerEvent_type_FIELD_READER
   mrb_define_method(mrb, SDLTouchFingerEvent_class, "type", mrb_SDL_SDLTouchFingerEvent_get_type, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTouchFingerEvent_type_FIELD_WRITER
   mrb_define_method(mrb, SDLTouchFingerEvent_class, "type=", mrb_SDL_SDLTouchFingerEvent_set_type, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTouchFingerEvent_timestamp_FIELD
+#if BIND_SDLTouchFingerEvent_timestamp_FIELD_READER
   mrb_define_method(mrb, SDLTouchFingerEvent_class, "timestamp", mrb_SDL_SDLTouchFingerEvent_get_timestamp, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTouchFingerEvent_timestamp_FIELD_WRITER
   mrb_define_method(mrb, SDLTouchFingerEvent_class, "timestamp=", mrb_SDL_SDLTouchFingerEvent_set_timestamp, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTouchFingerEvent_touchId_FIELD
+#if BIND_SDLTouchFingerEvent_touchId_FIELD_READER
   mrb_define_method(mrb, SDLTouchFingerEvent_class, "touchId", mrb_SDL_SDLTouchFingerEvent_get_touchId, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTouchFingerEvent_touchId_FIELD_WRITER
   mrb_define_method(mrb, SDLTouchFingerEvent_class, "touchId=", mrb_SDL_SDLTouchFingerEvent_set_touchId, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTouchFingerEvent_fingerId_FIELD
+#if BIND_SDLTouchFingerEvent_fingerId_FIELD_READER
   mrb_define_method(mrb, SDLTouchFingerEvent_class, "fingerId", mrb_SDL_SDLTouchFingerEvent_get_fingerId, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTouchFingerEvent_fingerId_FIELD_WRITER
   mrb_define_method(mrb, SDLTouchFingerEvent_class, "fingerId=", mrb_SDL_SDLTouchFingerEvent_set_fingerId, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTouchFingerEvent_x_FIELD
+#if BIND_SDLTouchFingerEvent_x_FIELD_READER
   mrb_define_method(mrb, SDLTouchFingerEvent_class, "x", mrb_SDL_SDLTouchFingerEvent_get_x, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTouchFingerEvent_x_FIELD_WRITER
   mrb_define_method(mrb, SDLTouchFingerEvent_class, "x=", mrb_SDL_SDLTouchFingerEvent_set_x, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTouchFingerEvent_y_FIELD
+#if BIND_SDLTouchFingerEvent_y_FIELD_READER
   mrb_define_method(mrb, SDLTouchFingerEvent_class, "y", mrb_SDL_SDLTouchFingerEvent_get_y, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTouchFingerEvent_y_FIELD_WRITER
   mrb_define_method(mrb, SDLTouchFingerEvent_class, "y=", mrb_SDL_SDLTouchFingerEvent_set_y, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTouchFingerEvent_dx_FIELD
+#if BIND_SDLTouchFingerEvent_dx_FIELD_READER
   mrb_define_method(mrb, SDLTouchFingerEvent_class, "dx", mrb_SDL_SDLTouchFingerEvent_get_dx, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTouchFingerEvent_dx_FIELD_WRITER
   mrb_define_method(mrb, SDLTouchFingerEvent_class, "dx=", mrb_SDL_SDLTouchFingerEvent_set_dx, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTouchFingerEvent_dy_FIELD
+#if BIND_SDLTouchFingerEvent_dy_FIELD_READER
   mrb_define_method(mrb, SDLTouchFingerEvent_class, "dy", mrb_SDL_SDLTouchFingerEvent_get_dy, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTouchFingerEvent_dy_FIELD_WRITER
   mrb_define_method(mrb, SDLTouchFingerEvent_class, "dy=", mrb_SDL_SDLTouchFingerEvent_set_dy, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLTouchFingerEvent_pressure_FIELD
+#if BIND_SDLTouchFingerEvent_pressure_FIELD_READER
   mrb_define_method(mrb, SDLTouchFingerEvent_class, "pressure", mrb_SDL_SDLTouchFingerEvent_get_pressure, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLTouchFingerEvent_pressure_FIELD_WRITER
   mrb_define_method(mrb, SDLTouchFingerEvent_class, "pressure=", mrb_SDL_SDLTouchFingerEvent_set_pressure, MRB_ARGS_ARG(1, 0));
 #endif
 

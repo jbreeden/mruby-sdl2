@@ -60,7 +60,7 @@ mrb_SDL_SDLSysWMmsg_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLSysWMmsg_version_FIELD
+#if BIND_SDLSysWMmsg_version_FIELD_READER
 /* get_version
  *
  * Return Type: SDL_version
@@ -75,7 +75,9 @@ mrb_SDL_SDLSysWMmsg_get_version(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLSysWMmsg_version_FIELD_WRITER
 /* set_version
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLSysWMmsg_set_version(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLSysWMmsg_subsystem_FIELD
+#if BIND_SDLSysWMmsg_subsystem_FIELD_READER
 /* get_subsystem
  *
  * Return Type: SDL_SYSWM_TYPE
@@ -114,7 +116,9 @@ mrb_SDL_SDLSysWMmsg_get_subsystem(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLSysWMmsg_subsystem_FIELD_WRITER
 /* set_subsystem
  *
  * Parameters:
@@ -138,26 +142,28 @@ mrb_SDL_SDLSysWMmsg_set_subsystem(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLSysWMmsg_msg_FIELD
+#if BIND_SDLSysWMmsg_msg_FIELD_READER
 /* get_msg
  *
- * Return Type: union (anonymous union at ./headers/SDL_syswm.h:129:5)
+ * Return Type: union (anonymous union at ./sdl/SDL2-2.0.3/include//SDL_syswm.h:129:5)
  */
 mrb_value
 mrb_SDL_SDLSysWMmsg_get_msg(mrb_state* mrb, mrb_value self) {
   struct SDL_SysWMmsg * native_self = mruby_unbox_struct SDL_SysWMmsg(self);
 
-  union (anonymous union at ./headers/SDL_syswm.h:129:5) native_field = native_self->msg;
+  union (anonymous union at ./sdl/SDL2-2.0.3/include//SDL_syswm.h:129:5) native_field = native_self->msg;
 
-  mrb_value ruby_field = TODO_mruby_box_union_LPAREN_anonymous_union_at_./headers/SDL_syswm.h:129:5_RPAREN(mrb, native_field);
+  mrb_value ruby_field = TODO_mruby_box_union_LPAREN_anonymous_union_at_./sdl/SDL2-2.0.3/include//SDL_syswm.h:129:5_RPAREN(mrb, native_field);
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLSysWMmsg_msg_FIELD_WRITER
 /* set_msg
  *
  * Parameters:
- * - value: union (anonymous union at ./headers/SDL_syswm.h:129:5)
+ * - value: union (anonymous union at ./sdl/SDL2-2.0.3/include//SDL_syswm.h:129:5)
  */
 mrb_value
 mrb_SDL_SDLSysWMmsg_set_msg(mrb_state* mrb, mrb_value self) {
@@ -167,9 +173,9 @@ mrb_SDL_SDLSysWMmsg_set_msg(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_union_LPAREN_anonymous_union_at_./headers/SDL_syswm.h:129:5_RPAREN(ruby_field);
+  TODO_type_check_union_LPAREN_anonymous_union_at_./sdl/SDL2-2.0.3/include//SDL_syswm.h:129:5_RPAREN(ruby_field);
 
-  union (anonymous union at ./headers/SDL_syswm.h:129:5) native_field = TODO_mruby_unbox_union_LPAREN_anonymous_union_at_./headers/SDL_syswm.h:129:5_RPAREN(ruby_field);
+  union (anonymous union at ./sdl/SDL2-2.0.3/include//SDL_syswm.h:129:5) native_field = TODO_mruby_unbox_union_LPAREN_anonymous_union_at_./sdl/SDL2-2.0.3/include//SDL_syswm.h:129:5_RPAREN(ruby_field);
 
   native_self->msg = native_field;
 
@@ -191,16 +197,22 @@ void mrb_SDL_SDLSysWMmsg_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLSysWMmsg_version_FIELD
+#if BIND_SDLSysWMmsg_version_FIELD_READER
   mrb_define_method(mrb, SDLSysWMmsg_class, "version", mrb_SDL_SDLSysWMmsg_get_version, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLSysWMmsg_version_FIELD_WRITER
   mrb_define_method(mrb, SDLSysWMmsg_class, "version=", mrb_SDL_SDLSysWMmsg_set_version, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLSysWMmsg_subsystem_FIELD
+#if BIND_SDLSysWMmsg_subsystem_FIELD_READER
   mrb_define_method(mrb, SDLSysWMmsg_class, "subsystem", mrb_SDL_SDLSysWMmsg_get_subsystem, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLSysWMmsg_subsystem_FIELD_WRITER
   mrb_define_method(mrb, SDLSysWMmsg_class, "subsystem=", mrb_SDL_SDLSysWMmsg_set_subsystem, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLSysWMmsg_msg_FIELD
+#if BIND_SDLSysWMmsg_msg_FIELD_READER
   mrb_define_method(mrb, SDLSysWMmsg_class, "msg", mrb_SDL_SDLSysWMmsg_get_msg, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLSysWMmsg_msg_FIELD_WRITER
   mrb_define_method(mrb, SDLSysWMmsg_class, "msg=", mrb_SDL_SDLSysWMmsg_set_msg, MRB_ARGS_ARG(1, 0));
 #endif
 

@@ -60,7 +60,7 @@ mrb_SDL_SDLKeyboardEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLKeyboardEvent_type_FIELD
+#if BIND_SDLKeyboardEvent_type_FIELD_READER
 /* get_type
  *
  * Return Type: Uint32
@@ -75,7 +75,9 @@ mrb_SDL_SDLKeyboardEvent_get_type(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLKeyboardEvent_type_FIELD_WRITER
 /* set_type
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLKeyboardEvent_set_type(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLKeyboardEvent_timestamp_FIELD
+#if BIND_SDLKeyboardEvent_timestamp_FIELD_READER
 /* get_timestamp
  *
  * Return Type: Uint32
@@ -114,7 +116,9 @@ mrb_SDL_SDLKeyboardEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLKeyboardEvent_timestamp_FIELD_WRITER
 /* set_timestamp
  *
  * Parameters:
@@ -138,7 +142,7 @@ mrb_SDL_SDLKeyboardEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLKeyboardEvent_windowID_FIELD
+#if BIND_SDLKeyboardEvent_windowID_FIELD_READER
 /* get_windowID
  *
  * Return Type: Uint32
@@ -153,7 +157,9 @@ mrb_SDL_SDLKeyboardEvent_get_windowID(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLKeyboardEvent_windowID_FIELD_WRITER
 /* set_windowID
  *
  * Parameters:
@@ -177,7 +183,7 @@ mrb_SDL_SDLKeyboardEvent_set_windowID(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLKeyboardEvent_state_FIELD
+#if BIND_SDLKeyboardEvent_state_FIELD_READER
 /* get_state
  *
  * Return Type: Uint8
@@ -192,7 +198,9 @@ mrb_SDL_SDLKeyboardEvent_get_state(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLKeyboardEvent_state_FIELD_WRITER
 /* set_state
  *
  * Parameters:
@@ -216,7 +224,7 @@ mrb_SDL_SDLKeyboardEvent_set_state(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLKeyboardEvent_repeat_FIELD
+#if BIND_SDLKeyboardEvent_repeat_FIELD_READER
 /* get_repeat
  *
  * Return Type: Uint8
@@ -231,7 +239,9 @@ mrb_SDL_SDLKeyboardEvent_get_repeat(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLKeyboardEvent_repeat_FIELD_WRITER
 /* set_repeat
  *
  * Parameters:
@@ -255,7 +265,7 @@ mrb_SDL_SDLKeyboardEvent_set_repeat(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLKeyboardEvent_padding2_FIELD
+#if BIND_SDLKeyboardEvent_padding2_FIELD_READER
 /* get_padding2
  *
  * Return Type: Uint8
@@ -270,7 +280,9 @@ mrb_SDL_SDLKeyboardEvent_get_padding2(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLKeyboardEvent_padding2_FIELD_WRITER
 /* set_padding2
  *
  * Parameters:
@@ -294,7 +306,7 @@ mrb_SDL_SDLKeyboardEvent_set_padding2(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLKeyboardEvent_padding3_FIELD
+#if BIND_SDLKeyboardEvent_padding3_FIELD_READER
 /* get_padding3
  *
  * Return Type: Uint8
@@ -309,7 +321,9 @@ mrb_SDL_SDLKeyboardEvent_get_padding3(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLKeyboardEvent_padding3_FIELD_WRITER
 /* set_padding3
  *
  * Parameters:
@@ -333,7 +347,7 @@ mrb_SDL_SDLKeyboardEvent_set_padding3(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLKeyboardEvent_keysym_FIELD
+#if BIND_SDLKeyboardEvent_keysym_FIELD_READER
 /* get_keysym
  *
  * Return Type: SDL_Keysym
@@ -348,7 +362,9 @@ mrb_SDL_SDLKeyboardEvent_get_keysym(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLKeyboardEvent_keysym_FIELD_WRITER
 /* set_keysym
  *
  * Parameters:
@@ -386,36 +402,52 @@ void mrb_SDL_SDLKeyboardEvent_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLKeyboardEvent_type_FIELD
+#if BIND_SDLKeyboardEvent_type_FIELD_READER
   mrb_define_method(mrb, SDLKeyboardEvent_class, "type", mrb_SDL_SDLKeyboardEvent_get_type, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLKeyboardEvent_type_FIELD_WRITER
   mrb_define_method(mrb, SDLKeyboardEvent_class, "type=", mrb_SDL_SDLKeyboardEvent_set_type, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLKeyboardEvent_timestamp_FIELD
+#if BIND_SDLKeyboardEvent_timestamp_FIELD_READER
   mrb_define_method(mrb, SDLKeyboardEvent_class, "timestamp", mrb_SDL_SDLKeyboardEvent_get_timestamp, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLKeyboardEvent_timestamp_FIELD_WRITER
   mrb_define_method(mrb, SDLKeyboardEvent_class, "timestamp=", mrb_SDL_SDLKeyboardEvent_set_timestamp, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLKeyboardEvent_windowID_FIELD
+#if BIND_SDLKeyboardEvent_windowID_FIELD_READER
   mrb_define_method(mrb, SDLKeyboardEvent_class, "windowID", mrb_SDL_SDLKeyboardEvent_get_windowID, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLKeyboardEvent_windowID_FIELD_WRITER
   mrb_define_method(mrb, SDLKeyboardEvent_class, "windowID=", mrb_SDL_SDLKeyboardEvent_set_windowID, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLKeyboardEvent_state_FIELD
+#if BIND_SDLKeyboardEvent_state_FIELD_READER
   mrb_define_method(mrb, SDLKeyboardEvent_class, "state", mrb_SDL_SDLKeyboardEvent_get_state, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLKeyboardEvent_state_FIELD_WRITER
   mrb_define_method(mrb, SDLKeyboardEvent_class, "state=", mrb_SDL_SDLKeyboardEvent_set_state, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLKeyboardEvent_repeat_FIELD
+#if BIND_SDLKeyboardEvent_repeat_FIELD_READER
   mrb_define_method(mrb, SDLKeyboardEvent_class, "repeat", mrb_SDL_SDLKeyboardEvent_get_repeat, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLKeyboardEvent_repeat_FIELD_WRITER
   mrb_define_method(mrb, SDLKeyboardEvent_class, "repeat=", mrb_SDL_SDLKeyboardEvent_set_repeat, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLKeyboardEvent_padding2_FIELD
+#if BIND_SDLKeyboardEvent_padding2_FIELD_READER
   mrb_define_method(mrb, SDLKeyboardEvent_class, "padding2", mrb_SDL_SDLKeyboardEvent_get_padding2, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLKeyboardEvent_padding2_FIELD_WRITER
   mrb_define_method(mrb, SDLKeyboardEvent_class, "padding2=", mrb_SDL_SDLKeyboardEvent_set_padding2, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLKeyboardEvent_padding3_FIELD
+#if BIND_SDLKeyboardEvent_padding3_FIELD_READER
   mrb_define_method(mrb, SDLKeyboardEvent_class, "padding3", mrb_SDL_SDLKeyboardEvent_get_padding3, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLKeyboardEvent_padding3_FIELD_WRITER
   mrb_define_method(mrb, SDLKeyboardEvent_class, "padding3=", mrb_SDL_SDLKeyboardEvent_set_padding3, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLKeyboardEvent_keysym_FIELD
+#if BIND_SDLKeyboardEvent_keysym_FIELD_READER
   mrb_define_method(mrb, SDLKeyboardEvent_class, "keysym", mrb_SDL_SDLKeyboardEvent_get_keysym, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLKeyboardEvent_keysym_FIELD_WRITER
   mrb_define_method(mrb, SDLKeyboardEvent_class, "keysym=", mrb_SDL_SDLKeyboardEvent_set_keysym, MRB_ARGS_ARG(1, 0));
 #endif
 

@@ -60,7 +60,7 @@ mrb_SDL_SDLDisplayMode_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLDisplayMode_format_FIELD
+#if BIND_SDLDisplayMode_format_FIELD_READER
 /* get_format
  *
  * Return Type: Uint32
@@ -75,7 +75,9 @@ mrb_SDL_SDLDisplayMode_get_format(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLDisplayMode_format_FIELD_WRITER
 /* set_format
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLDisplayMode_set_format(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLDisplayMode_w_FIELD
+#if BIND_SDLDisplayMode_w_FIELD_READER
 /* get_w
  *
  * Return Type: int
@@ -118,7 +120,9 @@ mrb_SDL_SDLDisplayMode_get_w(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLDisplayMode_w_FIELD_WRITER
 /* set_w
  *
  * Parameters:
@@ -145,7 +149,7 @@ mrb_SDL_SDLDisplayMode_set_w(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLDisplayMode_h_FIELD
+#if BIND_SDLDisplayMode_h_FIELD_READER
 /* get_h
  *
  * Return Type: int
@@ -164,7 +168,9 @@ mrb_SDL_SDLDisplayMode_get_h(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLDisplayMode_h_FIELD_WRITER
 /* set_h
  *
  * Parameters:
@@ -191,7 +197,7 @@ mrb_SDL_SDLDisplayMode_set_h(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLDisplayMode_refresh_rate_FIELD
+#if BIND_SDLDisplayMode_refresh_rate_FIELD_READER
 /* get_refresh_rate
  *
  * Return Type: int
@@ -210,7 +216,9 @@ mrb_SDL_SDLDisplayMode_get_refresh_rate(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLDisplayMode_refresh_rate_FIELD_WRITER
 /* set_refresh_rate
  *
  * Parameters:
@@ -237,7 +245,7 @@ mrb_SDL_SDLDisplayMode_set_refresh_rate(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLDisplayMode_driverdata_FIELD
+#if BIND_SDLDisplayMode_driverdata_FIELD_READER
 /* get_driverdata
  *
  * Return Type: void *
@@ -252,7 +260,9 @@ mrb_SDL_SDLDisplayMode_get_driverdata(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLDisplayMode_driverdata_FIELD_WRITER
 /* set_driverdata
  *
  * Parameters:
@@ -290,24 +300,34 @@ void mrb_SDL_SDLDisplayMode_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLDisplayMode_format_FIELD
+#if BIND_SDLDisplayMode_format_FIELD_READER
   mrb_define_method(mrb, SDLDisplayMode_class, "format", mrb_SDL_SDLDisplayMode_get_format, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLDisplayMode_format_FIELD_WRITER
   mrb_define_method(mrb, SDLDisplayMode_class, "format=", mrb_SDL_SDLDisplayMode_set_format, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLDisplayMode_w_FIELD
+#if BIND_SDLDisplayMode_w_FIELD_READER
   mrb_define_method(mrb, SDLDisplayMode_class, "w", mrb_SDL_SDLDisplayMode_get_w, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLDisplayMode_w_FIELD_WRITER
   mrb_define_method(mrb, SDLDisplayMode_class, "w=", mrb_SDL_SDLDisplayMode_set_w, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLDisplayMode_h_FIELD
+#if BIND_SDLDisplayMode_h_FIELD_READER
   mrb_define_method(mrb, SDLDisplayMode_class, "h", mrb_SDL_SDLDisplayMode_get_h, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLDisplayMode_h_FIELD_WRITER
   mrb_define_method(mrb, SDLDisplayMode_class, "h=", mrb_SDL_SDLDisplayMode_set_h, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLDisplayMode_refresh_rate_FIELD
+#if BIND_SDLDisplayMode_refresh_rate_FIELD_READER
   mrb_define_method(mrb, SDLDisplayMode_class, "refresh_rate", mrb_SDL_SDLDisplayMode_get_refresh_rate, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLDisplayMode_refresh_rate_FIELD_WRITER
   mrb_define_method(mrb, SDLDisplayMode_class, "refresh_rate=", mrb_SDL_SDLDisplayMode_set_refresh_rate, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLDisplayMode_driverdata_FIELD
+#if BIND_SDLDisplayMode_driverdata_FIELD_READER
   mrb_define_method(mrb, SDLDisplayMode_class, "driverdata", mrb_SDL_SDLDisplayMode_get_driverdata, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLDisplayMode_driverdata_FIELD_WRITER
   mrb_define_method(mrb, SDLDisplayMode_class, "driverdata=", mrb_SDL_SDLDisplayMode_set_driverdata, MRB_ARGS_ARG(1, 0));
 #endif
 

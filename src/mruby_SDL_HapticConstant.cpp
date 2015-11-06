@@ -60,7 +60,7 @@ mrb_SDL_SDLHapticConstant_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLHapticConstant_type_FIELD
+#if BIND_SDLHapticConstant_type_FIELD_READER
 /* get_type
  *
  * Return Type: Uint16
@@ -75,7 +75,9 @@ mrb_SDL_SDLHapticConstant_get_type(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticConstant_type_FIELD_WRITER
 /* set_type
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLHapticConstant_set_type(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticConstant_direction_FIELD
+#if BIND_SDLHapticConstant_direction_FIELD_READER
 /* get_direction
  *
  * Return Type: SDL_HapticDirection
@@ -114,7 +116,9 @@ mrb_SDL_SDLHapticConstant_get_direction(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticConstant_direction_FIELD_WRITER
 /* set_direction
  *
  * Parameters:
@@ -138,7 +142,7 @@ mrb_SDL_SDLHapticConstant_set_direction(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticConstant_length_FIELD
+#if BIND_SDLHapticConstant_length_FIELD_READER
 /* get_length
  *
  * Return Type: Uint32
@@ -153,7 +157,9 @@ mrb_SDL_SDLHapticConstant_get_length(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticConstant_length_FIELD_WRITER
 /* set_length
  *
  * Parameters:
@@ -177,7 +183,7 @@ mrb_SDL_SDLHapticConstant_set_length(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticConstant_delay_FIELD
+#if BIND_SDLHapticConstant_delay_FIELD_READER
 /* get_delay
  *
  * Return Type: Uint16
@@ -192,7 +198,9 @@ mrb_SDL_SDLHapticConstant_get_delay(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticConstant_delay_FIELD_WRITER
 /* set_delay
  *
  * Parameters:
@@ -216,7 +224,7 @@ mrb_SDL_SDLHapticConstant_set_delay(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticConstant_button_FIELD
+#if BIND_SDLHapticConstant_button_FIELD_READER
 /* get_button
  *
  * Return Type: Uint16
@@ -231,7 +239,9 @@ mrb_SDL_SDLHapticConstant_get_button(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticConstant_button_FIELD_WRITER
 /* set_button
  *
  * Parameters:
@@ -255,7 +265,7 @@ mrb_SDL_SDLHapticConstant_set_button(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticConstant_interval_FIELD
+#if BIND_SDLHapticConstant_interval_FIELD_READER
 /* get_interval
  *
  * Return Type: Uint16
@@ -270,7 +280,9 @@ mrb_SDL_SDLHapticConstant_get_interval(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticConstant_interval_FIELD_WRITER
 /* set_interval
  *
  * Parameters:
@@ -294,7 +306,7 @@ mrb_SDL_SDLHapticConstant_set_interval(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticConstant_level_FIELD
+#if BIND_SDLHapticConstant_level_FIELD_READER
 /* get_level
  *
  * Return Type: Sint16
@@ -309,7 +321,9 @@ mrb_SDL_SDLHapticConstant_get_level(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticConstant_level_FIELD_WRITER
 /* set_level
  *
  * Parameters:
@@ -333,7 +347,7 @@ mrb_SDL_SDLHapticConstant_set_level(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticConstant_attack_length_FIELD
+#if BIND_SDLHapticConstant_attack_length_FIELD_READER
 /* get_attack_length
  *
  * Return Type: Uint16
@@ -348,7 +362,9 @@ mrb_SDL_SDLHapticConstant_get_attack_length(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticConstant_attack_length_FIELD_WRITER
 /* set_attack_length
  *
  * Parameters:
@@ -372,7 +388,7 @@ mrb_SDL_SDLHapticConstant_set_attack_length(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticConstant_attack_level_FIELD
+#if BIND_SDLHapticConstant_attack_level_FIELD_READER
 /* get_attack_level
  *
  * Return Type: Uint16
@@ -387,7 +403,9 @@ mrb_SDL_SDLHapticConstant_get_attack_level(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticConstant_attack_level_FIELD_WRITER
 /* set_attack_level
  *
  * Parameters:
@@ -411,7 +429,7 @@ mrb_SDL_SDLHapticConstant_set_attack_level(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticConstant_fade_length_FIELD
+#if BIND_SDLHapticConstant_fade_length_FIELD_READER
 /* get_fade_length
  *
  * Return Type: Uint16
@@ -426,7 +444,9 @@ mrb_SDL_SDLHapticConstant_get_fade_length(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticConstant_fade_length_FIELD_WRITER
 /* set_fade_length
  *
  * Parameters:
@@ -450,7 +470,7 @@ mrb_SDL_SDLHapticConstant_set_fade_length(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticConstant_fade_level_FIELD
+#if BIND_SDLHapticConstant_fade_level_FIELD_READER
 /* get_fade_level
  *
  * Return Type: Uint16
@@ -465,7 +485,9 @@ mrb_SDL_SDLHapticConstant_get_fade_level(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticConstant_fade_level_FIELD_WRITER
 /* set_fade_level
  *
  * Parameters:
@@ -503,48 +525,70 @@ void mrb_SDL_SDLHapticConstant_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLHapticConstant_type_FIELD
+#if BIND_SDLHapticConstant_type_FIELD_READER
   mrb_define_method(mrb, SDLHapticConstant_class, "type", mrb_SDL_SDLHapticConstant_get_type, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticConstant_type_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticConstant_class, "type=", mrb_SDL_SDLHapticConstant_set_type, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticConstant_direction_FIELD
+#if BIND_SDLHapticConstant_direction_FIELD_READER
   mrb_define_method(mrb, SDLHapticConstant_class, "direction", mrb_SDL_SDLHapticConstant_get_direction, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticConstant_direction_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticConstant_class, "direction=", mrb_SDL_SDLHapticConstant_set_direction, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticConstant_length_FIELD
+#if BIND_SDLHapticConstant_length_FIELD_READER
   mrb_define_method(mrb, SDLHapticConstant_class, "length", mrb_SDL_SDLHapticConstant_get_length, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticConstant_length_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticConstant_class, "length=", mrb_SDL_SDLHapticConstant_set_length, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticConstant_delay_FIELD
+#if BIND_SDLHapticConstant_delay_FIELD_READER
   mrb_define_method(mrb, SDLHapticConstant_class, "delay", mrb_SDL_SDLHapticConstant_get_delay, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticConstant_delay_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticConstant_class, "delay=", mrb_SDL_SDLHapticConstant_set_delay, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticConstant_button_FIELD
+#if BIND_SDLHapticConstant_button_FIELD_READER
   mrb_define_method(mrb, SDLHapticConstant_class, "button", mrb_SDL_SDLHapticConstant_get_button, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticConstant_button_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticConstant_class, "button=", mrb_SDL_SDLHapticConstant_set_button, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticConstant_interval_FIELD
+#if BIND_SDLHapticConstant_interval_FIELD_READER
   mrb_define_method(mrb, SDLHapticConstant_class, "interval", mrb_SDL_SDLHapticConstant_get_interval, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticConstant_interval_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticConstant_class, "interval=", mrb_SDL_SDLHapticConstant_set_interval, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticConstant_level_FIELD
+#if BIND_SDLHapticConstant_level_FIELD_READER
   mrb_define_method(mrb, SDLHapticConstant_class, "level", mrb_SDL_SDLHapticConstant_get_level, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticConstant_level_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticConstant_class, "level=", mrb_SDL_SDLHapticConstant_set_level, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticConstant_attack_length_FIELD
+#if BIND_SDLHapticConstant_attack_length_FIELD_READER
   mrb_define_method(mrb, SDLHapticConstant_class, "attack_length", mrb_SDL_SDLHapticConstant_get_attack_length, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticConstant_attack_length_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticConstant_class, "attack_length=", mrb_SDL_SDLHapticConstant_set_attack_length, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticConstant_attack_level_FIELD
+#if BIND_SDLHapticConstant_attack_level_FIELD_READER
   mrb_define_method(mrb, SDLHapticConstant_class, "attack_level", mrb_SDL_SDLHapticConstant_get_attack_level, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticConstant_attack_level_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticConstant_class, "attack_level=", mrb_SDL_SDLHapticConstant_set_attack_level, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticConstant_fade_length_FIELD
+#if BIND_SDLHapticConstant_fade_length_FIELD_READER
   mrb_define_method(mrb, SDLHapticConstant_class, "fade_length", mrb_SDL_SDLHapticConstant_get_fade_length, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticConstant_fade_length_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticConstant_class, "fade_length=", mrb_SDL_SDLHapticConstant_set_fade_length, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticConstant_fade_level_FIELD
+#if BIND_SDLHapticConstant_fade_level_FIELD_READER
   mrb_define_method(mrb, SDLHapticConstant_class, "fade_level", mrb_SDL_SDLHapticConstant_get_fade_level, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticConstant_fade_level_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticConstant_class, "fade_level=", mrb_SDL_SDLHapticConstant_set_fade_level, MRB_ARGS_ARG(1, 0));
 #endif
 

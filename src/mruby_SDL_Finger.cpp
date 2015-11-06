@@ -60,7 +60,7 @@ mrb_SDL_SDLFinger_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLFinger_id_FIELD
+#if BIND_SDLFinger_id_FIELD_READER
 /* get_id
  *
  * Return Type: SDL_FingerID
@@ -75,7 +75,9 @@ mrb_SDL_SDLFinger_get_id(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLFinger_id_FIELD_WRITER
 /* set_id
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLFinger_set_id(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLFinger_x_FIELD
+#if BIND_SDLFinger_x_FIELD_READER
 /* get_x
  *
  * Return Type: float
@@ -110,11 +112,13 @@ mrb_SDL_SDLFinger_get_x(mrb_state* mrb, mrb_value self) {
 
   float native_field = native_self->x;
 
-  mrb_value ruby_field = mrb_float_value(native_field);
+  mrb_value ruby_field = mrb_float_value(mrb, native_field);
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLFinger_x_FIELD_WRITER
 /* set_x
  *
  * Parameters:
@@ -141,7 +145,7 @@ mrb_SDL_SDLFinger_set_x(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLFinger_y_FIELD
+#if BIND_SDLFinger_y_FIELD_READER
 /* get_y
  *
  * Return Type: float
@@ -152,11 +156,13 @@ mrb_SDL_SDLFinger_get_y(mrb_state* mrb, mrb_value self) {
 
   float native_field = native_self->y;
 
-  mrb_value ruby_field = mrb_float_value(native_field);
+  mrb_value ruby_field = mrb_float_value(mrb, native_field);
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLFinger_y_FIELD_WRITER
 /* set_y
  *
  * Parameters:
@@ -183,7 +189,7 @@ mrb_SDL_SDLFinger_set_y(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLFinger_pressure_FIELD
+#if BIND_SDLFinger_pressure_FIELD_READER
 /* get_pressure
  *
  * Return Type: float
@@ -194,11 +200,13 @@ mrb_SDL_SDLFinger_get_pressure(mrb_state* mrb, mrb_value self) {
 
   float native_field = native_self->pressure;
 
-  mrb_value ruby_field = mrb_float_value(native_field);
+  mrb_value ruby_field = mrb_float_value(mrb, native_field);
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLFinger_pressure_FIELD_WRITER
 /* set_pressure
  *
  * Parameters:
@@ -239,20 +247,28 @@ void mrb_SDL_SDLFinger_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLFinger_id_FIELD
+#if BIND_SDLFinger_id_FIELD_READER
   mrb_define_method(mrb, SDLFinger_class, "id", mrb_SDL_SDLFinger_get_id, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLFinger_id_FIELD_WRITER
   mrb_define_method(mrb, SDLFinger_class, "id=", mrb_SDL_SDLFinger_set_id, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLFinger_x_FIELD
+#if BIND_SDLFinger_x_FIELD_READER
   mrb_define_method(mrb, SDLFinger_class, "x", mrb_SDL_SDLFinger_get_x, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLFinger_x_FIELD_WRITER
   mrb_define_method(mrb, SDLFinger_class, "x=", mrb_SDL_SDLFinger_set_x, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLFinger_y_FIELD
+#if BIND_SDLFinger_y_FIELD_READER
   mrb_define_method(mrb, SDLFinger_class, "y", mrb_SDL_SDLFinger_get_y, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLFinger_y_FIELD_WRITER
   mrb_define_method(mrb, SDLFinger_class, "y=", mrb_SDL_SDLFinger_set_y, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLFinger_pressure_FIELD
+#if BIND_SDLFinger_pressure_FIELD_READER
   mrb_define_method(mrb, SDLFinger_class, "pressure", mrb_SDL_SDLFinger_get_pressure, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLFinger_pressure_FIELD_WRITER
   mrb_define_method(mrb, SDLFinger_class, "pressure=", mrb_SDL_SDLFinger_set_pressure, MRB_ARGS_ARG(1, 0));
 #endif
 

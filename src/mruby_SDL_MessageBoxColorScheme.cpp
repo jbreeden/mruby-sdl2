@@ -60,7 +60,7 @@ mrb_SDL_SDLMessageBoxColorScheme_belongs_to_ruby(mrb_state* mrb, mrb_value self)
  * Fields
  */
 
-#if BIND_SDLMessageBoxColorScheme_colors_FIELD
+#if BIND_SDLMessageBoxColorScheme_colors_FIELD_READER
 /* get_colors
  *
  * Return Type: SDL_MessageBoxColor [5]
@@ -75,7 +75,9 @@ mrb_SDL_SDLMessageBoxColorScheme_get_colors(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLMessageBoxColorScheme_colors_FIELD_WRITER
 /* set_colors
  *
  * Parameters:
@@ -113,8 +115,10 @@ void mrb_SDL_SDLMessageBoxColorScheme_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLMessageBoxColorScheme_colors_FIELD
+#if BIND_SDLMessageBoxColorScheme_colors_FIELD_READER
   mrb_define_method(mrb, SDLMessageBoxColorScheme_class, "colors", mrb_SDL_SDLMessageBoxColorScheme_get_colors, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLMessageBoxColorScheme_colors_FIELD_WRITER
   mrb_define_method(mrb, SDLMessageBoxColorScheme_class, "colors=", mrb_SDL_SDLMessageBoxColorScheme_set_colors, MRB_ARGS_ARG(1, 0));
 #endif
 

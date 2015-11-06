@@ -60,7 +60,7 @@ mrb_SDL_SDLAudioCVT_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLAudioCVT_needed_FIELD
+#if BIND_SDLAudioCVT_needed_FIELD_READER
 /* get_needed
  *
  * Return Type: int
@@ -79,7 +79,9 @@ mrb_SDL_SDLAudioCVT_get_needed(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAudioCVT_needed_FIELD_WRITER
 /* set_needed
  *
  * Parameters:
@@ -106,7 +108,7 @@ mrb_SDL_SDLAudioCVT_set_needed(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAudioCVT_src_format_FIELD
+#if BIND_SDLAudioCVT_src_format_FIELD_READER
 /* get_src_format
  *
  * Return Type: SDL_AudioFormat
@@ -121,7 +123,9 @@ mrb_SDL_SDLAudioCVT_get_src_format(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAudioCVT_src_format_FIELD_WRITER
 /* set_src_format
  *
  * Parameters:
@@ -145,7 +149,7 @@ mrb_SDL_SDLAudioCVT_set_src_format(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAudioCVT_dst_format_FIELD
+#if BIND_SDLAudioCVT_dst_format_FIELD_READER
 /* get_dst_format
  *
  * Return Type: SDL_AudioFormat
@@ -160,7 +164,9 @@ mrb_SDL_SDLAudioCVT_get_dst_format(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAudioCVT_dst_format_FIELD_WRITER
 /* set_dst_format
  *
  * Parameters:
@@ -184,7 +190,7 @@ mrb_SDL_SDLAudioCVT_set_dst_format(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAudioCVT_rate_incr_FIELD
+#if BIND_SDLAudioCVT_rate_incr_FIELD_READER
 /* get_rate_incr
  *
  * Return Type: double
@@ -195,11 +201,13 @@ mrb_SDL_SDLAudioCVT_get_rate_incr(mrb_state* mrb, mrb_value self) {
 
   double native_field = native_self->rate_incr;
 
-  mrb_value ruby_field = mrb_float_value(native_field);
+  mrb_value ruby_field = mrb_float_value(mrb, native_field);
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAudioCVT_rate_incr_FIELD_WRITER
 /* set_rate_incr
  *
  * Parameters:
@@ -226,7 +234,7 @@ mrb_SDL_SDLAudioCVT_set_rate_incr(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAudioCVT_buf_FIELD
+#if BIND_SDLAudioCVT_buf_FIELD_READER
 /* get_buf
  *
  * Return Type: Uint8 *
@@ -241,7 +249,9 @@ mrb_SDL_SDLAudioCVT_get_buf(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAudioCVT_buf_FIELD_WRITER
 /* set_buf
  *
  * Parameters:
@@ -265,7 +275,7 @@ mrb_SDL_SDLAudioCVT_set_buf(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAudioCVT_len_FIELD
+#if BIND_SDLAudioCVT_len_FIELD_READER
 /* get_len
  *
  * Return Type: int
@@ -284,7 +294,9 @@ mrb_SDL_SDLAudioCVT_get_len(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAudioCVT_len_FIELD_WRITER
 /* set_len
  *
  * Parameters:
@@ -311,7 +323,7 @@ mrb_SDL_SDLAudioCVT_set_len(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAudioCVT_len_cvt_FIELD
+#if BIND_SDLAudioCVT_len_cvt_FIELD_READER
 /* get_len_cvt
  *
  * Return Type: int
@@ -330,7 +342,9 @@ mrb_SDL_SDLAudioCVT_get_len_cvt(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAudioCVT_len_cvt_FIELD_WRITER
 /* set_len_cvt
  *
  * Parameters:
@@ -357,7 +371,7 @@ mrb_SDL_SDLAudioCVT_set_len_cvt(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAudioCVT_len_mult_FIELD
+#if BIND_SDLAudioCVT_len_mult_FIELD_READER
 /* get_len_mult
  *
  * Return Type: int
@@ -376,7 +390,9 @@ mrb_SDL_SDLAudioCVT_get_len_mult(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAudioCVT_len_mult_FIELD_WRITER
 /* set_len_mult
  *
  * Parameters:
@@ -403,7 +419,7 @@ mrb_SDL_SDLAudioCVT_set_len_mult(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAudioCVT_len_ratio_FIELD
+#if BIND_SDLAudioCVT_len_ratio_FIELD_READER
 /* get_len_ratio
  *
  * Return Type: double
@@ -414,11 +430,13 @@ mrb_SDL_SDLAudioCVT_get_len_ratio(mrb_state* mrb, mrb_value self) {
 
   double native_field = native_self->len_ratio;
 
-  mrb_value ruby_field = mrb_float_value(native_field);
+  mrb_value ruby_field = mrb_float_value(mrb, native_field);
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAudioCVT_len_ratio_FIELD_WRITER
 /* set_len_ratio
  *
  * Parameters:
@@ -445,7 +463,7 @@ mrb_SDL_SDLAudioCVT_set_len_ratio(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAudioCVT_filters_FIELD
+#if BIND_SDLAudioCVT_filters_FIELD_READER
 /* get_filters
  *
  * Return Type: SDL_AudioFilter [10]
@@ -460,7 +478,9 @@ mrb_SDL_SDLAudioCVT_get_filters(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAudioCVT_filters_FIELD_WRITER
 /* set_filters
  *
  * Parameters:
@@ -484,7 +504,7 @@ mrb_SDL_SDLAudioCVT_set_filters(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLAudioCVT_filter_index_FIELD
+#if BIND_SDLAudioCVT_filter_index_FIELD_READER
 /* get_filter_index
  *
  * Return Type: int
@@ -503,7 +523,9 @@ mrb_SDL_SDLAudioCVT_get_filter_index(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLAudioCVT_filter_index_FIELD_WRITER
 /* set_filter_index
  *
  * Parameters:
@@ -544,48 +566,70 @@ void mrb_SDL_SDLAudioCVT_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLAudioCVT_needed_FIELD
+#if BIND_SDLAudioCVT_needed_FIELD_READER
   mrb_define_method(mrb, SDLAudioCVT_class, "needed", mrb_SDL_SDLAudioCVT_get_needed, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAudioCVT_needed_FIELD_WRITER
   mrb_define_method(mrb, SDLAudioCVT_class, "needed=", mrb_SDL_SDLAudioCVT_set_needed, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAudioCVT_src_format_FIELD
+#if BIND_SDLAudioCVT_src_format_FIELD_READER
   mrb_define_method(mrb, SDLAudioCVT_class, "src_format", mrb_SDL_SDLAudioCVT_get_src_format, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAudioCVT_src_format_FIELD_WRITER
   mrb_define_method(mrb, SDLAudioCVT_class, "src_format=", mrb_SDL_SDLAudioCVT_set_src_format, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAudioCVT_dst_format_FIELD
+#if BIND_SDLAudioCVT_dst_format_FIELD_READER
   mrb_define_method(mrb, SDLAudioCVT_class, "dst_format", mrb_SDL_SDLAudioCVT_get_dst_format, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAudioCVT_dst_format_FIELD_WRITER
   mrb_define_method(mrb, SDLAudioCVT_class, "dst_format=", mrb_SDL_SDLAudioCVT_set_dst_format, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAudioCVT_rate_incr_FIELD
+#if BIND_SDLAudioCVT_rate_incr_FIELD_READER
   mrb_define_method(mrb, SDLAudioCVT_class, "rate_incr", mrb_SDL_SDLAudioCVT_get_rate_incr, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAudioCVT_rate_incr_FIELD_WRITER
   mrb_define_method(mrb, SDLAudioCVT_class, "rate_incr=", mrb_SDL_SDLAudioCVT_set_rate_incr, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAudioCVT_buf_FIELD
+#if BIND_SDLAudioCVT_buf_FIELD_READER
   mrb_define_method(mrb, SDLAudioCVT_class, "buf", mrb_SDL_SDLAudioCVT_get_buf, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAudioCVT_buf_FIELD_WRITER
   mrb_define_method(mrb, SDLAudioCVT_class, "buf=", mrb_SDL_SDLAudioCVT_set_buf, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAudioCVT_len_FIELD
+#if BIND_SDLAudioCVT_len_FIELD_READER
   mrb_define_method(mrb, SDLAudioCVT_class, "len", mrb_SDL_SDLAudioCVT_get_len, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAudioCVT_len_FIELD_WRITER
   mrb_define_method(mrb, SDLAudioCVT_class, "len=", mrb_SDL_SDLAudioCVT_set_len, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAudioCVT_len_cvt_FIELD
+#if BIND_SDLAudioCVT_len_cvt_FIELD_READER
   mrb_define_method(mrb, SDLAudioCVT_class, "len_cvt", mrb_SDL_SDLAudioCVT_get_len_cvt, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAudioCVT_len_cvt_FIELD_WRITER
   mrb_define_method(mrb, SDLAudioCVT_class, "len_cvt=", mrb_SDL_SDLAudioCVT_set_len_cvt, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAudioCVT_len_mult_FIELD
+#if BIND_SDLAudioCVT_len_mult_FIELD_READER
   mrb_define_method(mrb, SDLAudioCVT_class, "len_mult", mrb_SDL_SDLAudioCVT_get_len_mult, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAudioCVT_len_mult_FIELD_WRITER
   mrb_define_method(mrb, SDLAudioCVT_class, "len_mult=", mrb_SDL_SDLAudioCVT_set_len_mult, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAudioCVT_len_ratio_FIELD
+#if BIND_SDLAudioCVT_len_ratio_FIELD_READER
   mrb_define_method(mrb, SDLAudioCVT_class, "len_ratio", mrb_SDL_SDLAudioCVT_get_len_ratio, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAudioCVT_len_ratio_FIELD_WRITER
   mrb_define_method(mrb, SDLAudioCVT_class, "len_ratio=", mrb_SDL_SDLAudioCVT_set_len_ratio, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAudioCVT_filters_FIELD
+#if BIND_SDLAudioCVT_filters_FIELD_READER
   mrb_define_method(mrb, SDLAudioCVT_class, "filters", mrb_SDL_SDLAudioCVT_get_filters, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAudioCVT_filters_FIELD_WRITER
   mrb_define_method(mrb, SDLAudioCVT_class, "filters=", mrb_SDL_SDLAudioCVT_set_filters, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLAudioCVT_filter_index_FIELD
+#if BIND_SDLAudioCVT_filter_index_FIELD_READER
   mrb_define_method(mrb, SDLAudioCVT_class, "filter_index", mrb_SDL_SDLAudioCVT_get_filter_index, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLAudioCVT_filter_index_FIELD_WRITER
   mrb_define_method(mrb, SDLAudioCVT_class, "filter_index=", mrb_SDL_SDLAudioCVT_set_filter_index, MRB_ARGS_ARG(1, 0));
 #endif
 

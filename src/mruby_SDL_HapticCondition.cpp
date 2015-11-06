@@ -60,7 +60,7 @@ mrb_SDL_SDLHapticCondition_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLHapticCondition_type_FIELD
+#if BIND_SDLHapticCondition_type_FIELD_READER
 /* get_type
  *
  * Return Type: Uint16
@@ -75,7 +75,9 @@ mrb_SDL_SDLHapticCondition_get_type(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticCondition_type_FIELD_WRITER
 /* set_type
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLHapticCondition_set_type(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticCondition_direction_FIELD
+#if BIND_SDLHapticCondition_direction_FIELD_READER
 /* get_direction
  *
  * Return Type: SDL_HapticDirection
@@ -114,7 +116,9 @@ mrb_SDL_SDLHapticCondition_get_direction(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticCondition_direction_FIELD_WRITER
 /* set_direction
  *
  * Parameters:
@@ -138,7 +142,7 @@ mrb_SDL_SDLHapticCondition_set_direction(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticCondition_length_FIELD
+#if BIND_SDLHapticCondition_length_FIELD_READER
 /* get_length
  *
  * Return Type: Uint32
@@ -153,7 +157,9 @@ mrb_SDL_SDLHapticCondition_get_length(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticCondition_length_FIELD_WRITER
 /* set_length
  *
  * Parameters:
@@ -177,7 +183,7 @@ mrb_SDL_SDLHapticCondition_set_length(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticCondition_delay_FIELD
+#if BIND_SDLHapticCondition_delay_FIELD_READER
 /* get_delay
  *
  * Return Type: Uint16
@@ -192,7 +198,9 @@ mrb_SDL_SDLHapticCondition_get_delay(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticCondition_delay_FIELD_WRITER
 /* set_delay
  *
  * Parameters:
@@ -216,7 +224,7 @@ mrb_SDL_SDLHapticCondition_set_delay(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticCondition_button_FIELD
+#if BIND_SDLHapticCondition_button_FIELD_READER
 /* get_button
  *
  * Return Type: Uint16
@@ -231,7 +239,9 @@ mrb_SDL_SDLHapticCondition_get_button(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticCondition_button_FIELD_WRITER
 /* set_button
  *
  * Parameters:
@@ -255,7 +265,7 @@ mrb_SDL_SDLHapticCondition_set_button(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticCondition_interval_FIELD
+#if BIND_SDLHapticCondition_interval_FIELD_READER
 /* get_interval
  *
  * Return Type: Uint16
@@ -270,7 +280,9 @@ mrb_SDL_SDLHapticCondition_get_interval(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticCondition_interval_FIELD_WRITER
 /* set_interval
  *
  * Parameters:
@@ -294,7 +306,7 @@ mrb_SDL_SDLHapticCondition_set_interval(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticCondition_right_sat_FIELD
+#if BIND_SDLHapticCondition_right_sat_FIELD_READER
 /* get_right_sat
  *
  * Return Type: Uint16 [3]
@@ -309,7 +321,9 @@ mrb_SDL_SDLHapticCondition_get_right_sat(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticCondition_right_sat_FIELD_WRITER
 /* set_right_sat
  *
  * Parameters:
@@ -333,7 +347,7 @@ mrb_SDL_SDLHapticCondition_set_right_sat(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticCondition_left_sat_FIELD
+#if BIND_SDLHapticCondition_left_sat_FIELD_READER
 /* get_left_sat
  *
  * Return Type: Uint16 [3]
@@ -348,7 +362,9 @@ mrb_SDL_SDLHapticCondition_get_left_sat(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticCondition_left_sat_FIELD_WRITER
 /* set_left_sat
  *
  * Parameters:
@@ -372,7 +388,7 @@ mrb_SDL_SDLHapticCondition_set_left_sat(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticCondition_right_coeff_FIELD
+#if BIND_SDLHapticCondition_right_coeff_FIELD_READER
 /* get_right_coeff
  *
  * Return Type: Sint16 [3]
@@ -387,7 +403,9 @@ mrb_SDL_SDLHapticCondition_get_right_coeff(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticCondition_right_coeff_FIELD_WRITER
 /* set_right_coeff
  *
  * Parameters:
@@ -411,7 +429,7 @@ mrb_SDL_SDLHapticCondition_set_right_coeff(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticCondition_left_coeff_FIELD
+#if BIND_SDLHapticCondition_left_coeff_FIELD_READER
 /* get_left_coeff
  *
  * Return Type: Sint16 [3]
@@ -426,7 +444,9 @@ mrb_SDL_SDLHapticCondition_get_left_coeff(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticCondition_left_coeff_FIELD_WRITER
 /* set_left_coeff
  *
  * Parameters:
@@ -450,7 +470,7 @@ mrb_SDL_SDLHapticCondition_set_left_coeff(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticCondition_deadband_FIELD
+#if BIND_SDLHapticCondition_deadband_FIELD_READER
 /* get_deadband
  *
  * Return Type: Uint16 [3]
@@ -465,7 +485,9 @@ mrb_SDL_SDLHapticCondition_get_deadband(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticCondition_deadband_FIELD_WRITER
 /* set_deadband
  *
  * Parameters:
@@ -489,7 +511,7 @@ mrb_SDL_SDLHapticCondition_set_deadband(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLHapticCondition_center_FIELD
+#if BIND_SDLHapticCondition_center_FIELD_READER
 /* get_center
  *
  * Return Type: Sint16 [3]
@@ -504,7 +526,9 @@ mrb_SDL_SDLHapticCondition_get_center(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLHapticCondition_center_FIELD_WRITER
 /* set_center
  *
  * Parameters:
@@ -542,52 +566,76 @@ void mrb_SDL_SDLHapticCondition_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLHapticCondition_type_FIELD
+#if BIND_SDLHapticCondition_type_FIELD_READER
   mrb_define_method(mrb, SDLHapticCondition_class, "type", mrb_SDL_SDLHapticCondition_get_type, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticCondition_type_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticCondition_class, "type=", mrb_SDL_SDLHapticCondition_set_type, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticCondition_direction_FIELD
+#if BIND_SDLHapticCondition_direction_FIELD_READER
   mrb_define_method(mrb, SDLHapticCondition_class, "direction", mrb_SDL_SDLHapticCondition_get_direction, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticCondition_direction_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticCondition_class, "direction=", mrb_SDL_SDLHapticCondition_set_direction, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticCondition_length_FIELD
+#if BIND_SDLHapticCondition_length_FIELD_READER
   mrb_define_method(mrb, SDLHapticCondition_class, "length", mrb_SDL_SDLHapticCondition_get_length, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticCondition_length_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticCondition_class, "length=", mrb_SDL_SDLHapticCondition_set_length, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticCondition_delay_FIELD
+#if BIND_SDLHapticCondition_delay_FIELD_READER
   mrb_define_method(mrb, SDLHapticCondition_class, "delay", mrb_SDL_SDLHapticCondition_get_delay, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticCondition_delay_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticCondition_class, "delay=", mrb_SDL_SDLHapticCondition_set_delay, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticCondition_button_FIELD
+#if BIND_SDLHapticCondition_button_FIELD_READER
   mrb_define_method(mrb, SDLHapticCondition_class, "button", mrb_SDL_SDLHapticCondition_get_button, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticCondition_button_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticCondition_class, "button=", mrb_SDL_SDLHapticCondition_set_button, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticCondition_interval_FIELD
+#if BIND_SDLHapticCondition_interval_FIELD_READER
   mrb_define_method(mrb, SDLHapticCondition_class, "interval", mrb_SDL_SDLHapticCondition_get_interval, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticCondition_interval_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticCondition_class, "interval=", mrb_SDL_SDLHapticCondition_set_interval, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticCondition_right_sat_FIELD
+#if BIND_SDLHapticCondition_right_sat_FIELD_READER
   mrb_define_method(mrb, SDLHapticCondition_class, "right_sat", mrb_SDL_SDLHapticCondition_get_right_sat, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticCondition_right_sat_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticCondition_class, "right_sat=", mrb_SDL_SDLHapticCondition_set_right_sat, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticCondition_left_sat_FIELD
+#if BIND_SDLHapticCondition_left_sat_FIELD_READER
   mrb_define_method(mrb, SDLHapticCondition_class, "left_sat", mrb_SDL_SDLHapticCondition_get_left_sat, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticCondition_left_sat_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticCondition_class, "left_sat=", mrb_SDL_SDLHapticCondition_set_left_sat, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticCondition_right_coeff_FIELD
+#if BIND_SDLHapticCondition_right_coeff_FIELD_READER
   mrb_define_method(mrb, SDLHapticCondition_class, "right_coeff", mrb_SDL_SDLHapticCondition_get_right_coeff, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticCondition_right_coeff_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticCondition_class, "right_coeff=", mrb_SDL_SDLHapticCondition_set_right_coeff, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticCondition_left_coeff_FIELD
+#if BIND_SDLHapticCondition_left_coeff_FIELD_READER
   mrb_define_method(mrb, SDLHapticCondition_class, "left_coeff", mrb_SDL_SDLHapticCondition_get_left_coeff, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticCondition_left_coeff_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticCondition_class, "left_coeff=", mrb_SDL_SDLHapticCondition_set_left_coeff, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticCondition_deadband_FIELD
+#if BIND_SDLHapticCondition_deadband_FIELD_READER
   mrb_define_method(mrb, SDLHapticCondition_class, "deadband", mrb_SDL_SDLHapticCondition_get_deadband, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticCondition_deadband_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticCondition_class, "deadband=", mrb_SDL_SDLHapticCondition_set_deadband, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLHapticCondition_center_FIELD
+#if BIND_SDLHapticCondition_center_FIELD_READER
   mrb_define_method(mrb, SDLHapticCondition_class, "center", mrb_SDL_SDLHapticCondition_get_center, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLHapticCondition_center_FIELD_WRITER
   mrb_define_method(mrb, SDLHapticCondition_class, "center=", mrb_SDL_SDLHapticCondition_set_center, MRB_ARGS_ARG(1, 0));
 #endif
 

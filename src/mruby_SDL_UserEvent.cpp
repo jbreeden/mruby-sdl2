@@ -60,7 +60,7 @@ mrb_SDL_SDLUserEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  * Fields
  */
 
-#if BIND_SDLUserEvent_type_FIELD
+#if BIND_SDLUserEvent_type_FIELD_READER
 /* get_type
  *
  * Return Type: Uint32
@@ -75,7 +75,9 @@ mrb_SDL_SDLUserEvent_get_type(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLUserEvent_type_FIELD_WRITER
 /* set_type
  *
  * Parameters:
@@ -99,7 +101,7 @@ mrb_SDL_SDLUserEvent_set_type(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLUserEvent_timestamp_FIELD
+#if BIND_SDLUserEvent_timestamp_FIELD_READER
 /* get_timestamp
  *
  * Return Type: Uint32
@@ -114,7 +116,9 @@ mrb_SDL_SDLUserEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLUserEvent_timestamp_FIELD_WRITER
 /* set_timestamp
  *
  * Parameters:
@@ -138,7 +142,7 @@ mrb_SDL_SDLUserEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLUserEvent_windowID_FIELD
+#if BIND_SDLUserEvent_windowID_FIELD_READER
 /* get_windowID
  *
  * Return Type: Uint32
@@ -153,7 +157,9 @@ mrb_SDL_SDLUserEvent_get_windowID(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLUserEvent_windowID_FIELD_WRITER
 /* set_windowID
  *
  * Parameters:
@@ -177,7 +183,7 @@ mrb_SDL_SDLUserEvent_set_windowID(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLUserEvent_code_FIELD
+#if BIND_SDLUserEvent_code_FIELD_READER
 /* get_code
  *
  * Return Type: Sint32
@@ -192,7 +198,9 @@ mrb_SDL_SDLUserEvent_get_code(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLUserEvent_code_FIELD_WRITER
 /* set_code
  *
  * Parameters:
@@ -216,7 +224,7 @@ mrb_SDL_SDLUserEvent_set_code(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLUserEvent_data1_FIELD
+#if BIND_SDLUserEvent_data1_FIELD_READER
 /* get_data1
  *
  * Return Type: void *
@@ -231,7 +239,9 @@ mrb_SDL_SDLUserEvent_get_data1(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLUserEvent_data1_FIELD_WRITER
 /* set_data1
  *
  * Parameters:
@@ -255,7 +265,7 @@ mrb_SDL_SDLUserEvent_set_data1(mrb_state* mrb, mrb_value self) {
 }
 #endif
 
-#if BIND_SDLUserEvent_data2_FIELD
+#if BIND_SDLUserEvent_data2_FIELD_READER
 /* get_data2
  *
  * Return Type: void *
@@ -270,7 +280,9 @@ mrb_SDL_SDLUserEvent_get_data2(mrb_state* mrb, mrb_value self) {
 
   return ruby_field;
 }
+#endif
 
+#if BIND_SDLUserEvent_data2_FIELD_WRITER
 /* set_data2
  *
  * Parameters:
@@ -308,28 +320,40 @@ void mrb_SDL_SDLUserEvent_init(mrb_state* mrb) {
   /*
    * Fields
    */
-#if BIND_SDLUserEvent_type_FIELD
+#if BIND_SDLUserEvent_type_FIELD_READER
   mrb_define_method(mrb, SDLUserEvent_class, "type", mrb_SDL_SDLUserEvent_get_type, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLUserEvent_type_FIELD_WRITER
   mrb_define_method(mrb, SDLUserEvent_class, "type=", mrb_SDL_SDLUserEvent_set_type, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLUserEvent_timestamp_FIELD
+#if BIND_SDLUserEvent_timestamp_FIELD_READER
   mrb_define_method(mrb, SDLUserEvent_class, "timestamp", mrb_SDL_SDLUserEvent_get_timestamp, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLUserEvent_timestamp_FIELD_WRITER
   mrb_define_method(mrb, SDLUserEvent_class, "timestamp=", mrb_SDL_SDLUserEvent_set_timestamp, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLUserEvent_windowID_FIELD
+#if BIND_SDLUserEvent_windowID_FIELD_READER
   mrb_define_method(mrb, SDLUserEvent_class, "windowID", mrb_SDL_SDLUserEvent_get_windowID, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLUserEvent_windowID_FIELD_WRITER
   mrb_define_method(mrb, SDLUserEvent_class, "windowID=", mrb_SDL_SDLUserEvent_set_windowID, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLUserEvent_code_FIELD
+#if BIND_SDLUserEvent_code_FIELD_READER
   mrb_define_method(mrb, SDLUserEvent_class, "code", mrb_SDL_SDLUserEvent_get_code, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLUserEvent_code_FIELD_WRITER
   mrb_define_method(mrb, SDLUserEvent_class, "code=", mrb_SDL_SDLUserEvent_set_code, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLUserEvent_data1_FIELD
+#if BIND_SDLUserEvent_data1_FIELD_READER
   mrb_define_method(mrb, SDLUserEvent_class, "data1", mrb_SDL_SDLUserEvent_get_data1, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLUserEvent_data1_FIELD_WRITER
   mrb_define_method(mrb, SDLUserEvent_class, "data1=", mrb_SDL_SDLUserEvent_set_data1, MRB_ARGS_ARG(1, 0));
 #endif
-#if BIND_SDLUserEvent_data2_FIELD
+#if BIND_SDLUserEvent_data2_FIELD_READER
   mrb_define_method(mrb, SDLUserEvent_class, "data2", mrb_SDL_SDLUserEvent_get_data2, MRB_ARGS_ARG(0, 0));
+#endif
+#if BIND_SDLUserEvent_data2_FIELD_WRITER
   mrb_define_method(mrb, SDLUserEvent_class, "data2=", mrb_SDL_SDLUserEvent_set_data2, MRB_ARGS_ARG(1, 0));
 #endif
 
