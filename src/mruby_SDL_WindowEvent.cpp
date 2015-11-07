@@ -431,7 +431,7 @@ mrb_SDL_SDLWindowEvent_set_data2(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLWindowEvent_init(mrb_state* mrb) {
-  RClass* SDLWindowEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLWindowEvent", mrb->object_class);
+  RClass* SDLWindowEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "WindowEvent", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLWindowEvent_class, MRB_TT_DATA);
 
 #if BIND_SDLWindowEvent_INITIALIZE

@@ -349,7 +349,7 @@ mrb_SDL_SDLJoyHatEvent_set_padding2(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLJoyHatEvent_init(mrb_state* mrb) {
-  RClass* SDLJoyHatEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLJoyHatEvent", mrb->object_class);
+  RClass* SDLJoyHatEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "JoyHatEvent", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLJoyHatEvent_class, MRB_TT_DATA);
 
 #if BIND_SDLJoyHatEvent_INITIALIZE

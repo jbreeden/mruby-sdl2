@@ -58,7 +58,7 @@ mrb_SDL_SDLTexture_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLTexture_init(mrb_state* mrb) {
-  RClass* SDLTexture_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLTexture", mrb->object_class);
+  RClass* SDLTexture_class = mrb_define_class_under(mrb, SDL_module(mrb), "Texture", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLTexture_class, MRB_TT_DATA);
 
 #if BIND_SDLTexture_INITIALIZE

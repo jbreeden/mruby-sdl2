@@ -636,7 +636,7 @@ mrb_SDL_SDLHapticPeriodic_set_fade_level(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLHapticPeriodic_init(mrb_state* mrb) {
-  RClass* SDLHapticPeriodic_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLHapticPeriodic", mrb->object_class);
+  RClass* SDLHapticPeriodic_class = mrb_define_class_under(mrb, SDL_module(mrb), "HapticPeriodic", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLHapticPeriodic_class, MRB_TT_DATA);
 
 #if BIND_SDLHapticPeriodic_INITIALIZE

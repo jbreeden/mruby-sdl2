@@ -185,7 +185,7 @@ mrb_SDL_SDLJoyDeviceEvent_set_which(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLJoyDeviceEvent_init(mrb_state* mrb) {
-  RClass* SDLJoyDeviceEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLJoyDeviceEvent", mrb->object_class);
+  RClass* SDLJoyDeviceEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "JoyDeviceEvent", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLJoyDeviceEvent_class, MRB_TT_DATA);
 
 #if BIND_SDLJoyDeviceEvent_INITIALIZE

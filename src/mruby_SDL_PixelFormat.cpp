@@ -854,7 +854,7 @@ mrb_SDL_SDLPixelFormat_set_next(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLPixelFormat_init(mrb_state* mrb) {
-  RClass* SDLPixelFormat_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLPixelFormat", mrb->object_class);
+  RClass* SDLPixelFormat_class = mrb_define_class_under(mrb, SDL_module(mrb), "PixelFormat", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLPixelFormat_class, MRB_TT_DATA);
 
 #if BIND_SDLPixelFormat_INITIALIZE

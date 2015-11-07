@@ -58,7 +58,7 @@ mrb_SDL_SDLHaptic_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLHaptic_init(mrb_state* mrb) {
-  RClass* SDLHaptic_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLHaptic", mrb->object_class);
+  RClass* SDLHaptic_class = mrb_define_class_under(mrb, SDL_module(mrb), "Haptic", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLHaptic_class, MRB_TT_DATA);
 
 #if BIND_SDLHaptic_INITIALIZE

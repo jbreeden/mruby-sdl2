@@ -103,7 +103,7 @@ mrb_SDL_SDLMessageBoxColorScheme_set_colors(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLMessageBoxColorScheme_init(mrb_state* mrb) {
-  RClass* SDLMessageBoxColorScheme_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLMessageBoxColorScheme", mrb->object_class);
+  RClass* SDLMessageBoxColorScheme_class = mrb_define_class_under(mrb, SDL_module(mrb), "MessageBoxColorScheme", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLMessageBoxColorScheme_class, MRB_TT_DATA);
 
 #if BIND_SDLMessageBoxColorScheme_INITIALIZE

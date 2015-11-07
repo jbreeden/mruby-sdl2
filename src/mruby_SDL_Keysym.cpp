@@ -226,7 +226,7 @@ mrb_SDL_SDLKeysym_set_unused(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLKeysym_init(mrb_state* mrb) {
-  RClass* SDLKeysym_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLKeysym", mrb->object_class);
+  RClass* SDLKeysym_class = mrb_define_class_under(mrb, SDL_module(mrb), "Keysym", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLKeysym_class, MRB_TT_DATA);
 
 #if BIND_SDLKeysym_INITIALIZE

@@ -243,7 +243,7 @@ mrb_SDL_SDLPalette_set_refcount(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLPalette_init(mrb_state* mrb) {
-  RClass* SDLPalette_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLPalette", mrb->object_class);
+  RClass* SDLPalette_class = mrb_define_class_under(mrb, SDL_module(mrb), "Palette", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLPalette_class, MRB_TT_DATA);
 
 #if BIND_SDLPalette_INITIALIZE

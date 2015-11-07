@@ -554,7 +554,7 @@ mrb_SDL_SDLHapticRamp_set_fade_level(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLHapticRamp_init(mrb_state* mrb) {
-  RClass* SDLHapticRamp_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLHapticRamp", mrb->object_class);
+  RClass* SDLHapticRamp_class = mrb_define_class_under(mrb, SDL_module(mrb), "HapticRamp", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLHapticRamp_class, MRB_TT_DATA);
 
 #if BIND_SDLHapticRamp_INITIALIZE

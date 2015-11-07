@@ -193,7 +193,7 @@ mrb_SDL_SDLDropEvent_set_file(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLDropEvent_init(mrb_state* mrb) {
-  RClass* SDLDropEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLDropEvent", mrb->object_class);
+  RClass* SDLDropEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "DropEvent", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLDropEvent_class, MRB_TT_DATA);
 
 #if BIND_SDLDropEvent_INITIALIZE

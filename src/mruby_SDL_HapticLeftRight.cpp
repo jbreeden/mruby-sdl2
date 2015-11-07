@@ -226,7 +226,7 @@ mrb_SDL_SDLHapticLeftRight_set_small_magnitude(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLHapticLeftRight_init(mrb_state* mrb) {
-  RClass* SDLHapticLeftRight_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLHapticLeftRight", mrb->object_class);
+  RClass* SDLHapticLeftRight_class = mrb_define_class_under(mrb, SDL_module(mrb), "HapticLeftRight", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLHapticLeftRight_class, MRB_TT_DATA);
 
 #if BIND_SDLHapticLeftRight_INITIALIZE

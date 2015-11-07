@@ -110,7 +110,7 @@ mrb_SDL_SDLAtomicT_set_value(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLAtomicT_init(mrb_state* mrb) {
-  RClass* SDLAtomicT_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLAtomicT", mrb->object_class);
+  RClass* SDLAtomicT_class = mrb_define_class_under(mrb, SDL_module(mrb), "AtomicT", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLAtomicT_class, MRB_TT_DATA);
 
 #if BIND_SDLAtomicT_INITIALIZE

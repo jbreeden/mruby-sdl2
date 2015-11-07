@@ -390,7 +390,7 @@ mrb_SDL_SDLKeyboardEvent_set_keysym(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLKeyboardEvent_init(mrb_state* mrb) {
-  RClass* SDLKeyboardEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLKeyboardEvent", mrb->object_class);
+  RClass* SDLKeyboardEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "KeyboardEvent", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLKeyboardEvent_class, MRB_TT_DATA);
 
 #if BIND_SDLKeyboardEvent_INITIALIZE

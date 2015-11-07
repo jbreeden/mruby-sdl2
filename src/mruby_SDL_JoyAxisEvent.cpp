@@ -431,7 +431,7 @@ mrb_SDL_SDLJoyAxisEvent_set_padding4(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLJoyAxisEvent_init(mrb_state* mrb) {
-  RClass* SDLJoyAxisEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLJoyAxisEvent", mrb->object_class);
+  RClass* SDLJoyAxisEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "JoyAxisEvent", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLJoyAxisEvent_class, MRB_TT_DATA);
 
 #if BIND_SDLJoyAxisEvent_INITIALIZE

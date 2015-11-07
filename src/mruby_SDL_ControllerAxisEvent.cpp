@@ -431,7 +431,7 @@ mrb_SDL_SDLControllerAxisEvent_set_padding4(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLControllerAxisEvent_init(mrb_state* mrb) {
-  RClass* SDLControllerAxisEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLControllerAxisEvent", mrb->object_class);
+  RClass* SDLControllerAxisEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "ControllerAxisEvent", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLControllerAxisEvent_class, MRB_TT_DATA);
 
 #if BIND_SDLControllerAxisEvent_INITIALIZE

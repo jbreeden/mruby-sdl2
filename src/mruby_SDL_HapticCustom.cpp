@@ -636,7 +636,7 @@ mrb_SDL_SDLHapticCustom_set_fade_level(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLHapticCustom_init(mrb_state* mrb) {
-  RClass* SDLHapticCustom_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLHapticCustom", mrb->object_class);
+  RClass* SDLHapticCustom_class = mrb_define_class_under(mrb, SDL_module(mrb), "HapticCustom", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLHapticCustom_class, MRB_TT_DATA);
 
 #if BIND_SDLHapticCustom_INITIALIZE

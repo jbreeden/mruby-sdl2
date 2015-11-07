@@ -254,7 +254,7 @@ mrb_SDL_SDLRect_set_h(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLRect_init(mrb_state* mrb) {
-  RClass* SDLRect_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLRect", mrb->object_class);
+  RClass* SDLRect_class = mrb_define_class_under(mrb, SDL_module(mrb), "Rect", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLRect_class, MRB_TT_DATA);
 
 #if BIND_SDLRect_INITIALIZE

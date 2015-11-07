@@ -185,7 +185,7 @@ mrb_SDL_SDLControllerDeviceEvent_set_which(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLControllerDeviceEvent_init(mrb_state* mrb) {
-  RClass* SDLControllerDeviceEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLControllerDeviceEvent", mrb->object_class);
+  RClass* SDLControllerDeviceEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "ControllerDeviceEvent", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLControllerDeviceEvent_class, MRB_TT_DATA);
 
 #if BIND_SDLControllerDeviceEvent_INITIALIZE

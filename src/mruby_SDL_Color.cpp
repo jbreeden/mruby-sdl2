@@ -226,7 +226,7 @@ mrb_SDL_SDLColor_set_a(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLColor_init(mrb_state* mrb) {
-  RClass* SDLColor_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLColor", mrb->object_class);
+  RClass* SDLColor_class = mrb_define_class_under(mrb, SDL_module(mrb), "Color", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLColor_class, MRB_TT_DATA);
 
 #if BIND_SDLColor_INITIALIZE

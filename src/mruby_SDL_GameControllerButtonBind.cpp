@@ -144,7 +144,7 @@ mrb_SDL_SDLGameControllerButtonBind_set_value(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLGameControllerButtonBind_init(mrb_state* mrb) {
-  RClass* SDLGameControllerButtonBind_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLGameControllerButtonBind", mrb->object_class);
+  RClass* SDLGameControllerButtonBind_class = mrb_define_class_under(mrb, SDL_module(mrb), "GameControllerButtonBind", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLGameControllerButtonBind_class, MRB_TT_DATA);
 
 #if BIND_SDLGameControllerButtonBind_INITIALIZE

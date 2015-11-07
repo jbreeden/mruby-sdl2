@@ -185,7 +185,7 @@ mrb_SDL_SDLSysWMmsg_set_msg(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLSysWMmsg_init(mrb_state* mrb) {
-  RClass* SDLSysWMmsg_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLSysWMmsg", mrb->object_class);
+  RClass* SDLSysWMmsg_class = mrb_define_class_under(mrb, SDL_module(mrb), "SysWMmsg", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLSysWMmsg_class, MRB_TT_DATA);
 
 #if BIND_SDLSysWMmsg_INITIALIZE

@@ -226,7 +226,7 @@ mrb_SDL_SDLTextInputEvent_set_text(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLTextInputEvent_init(mrb_state* mrb) {
-  RClass* SDLTextInputEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLTextInputEvent", mrb->object_class);
+  RClass* SDLTextInputEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "TextInputEvent", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLTextInputEvent_class, MRB_TT_DATA);
 
 #if BIND_SDLTextInputEvent_INITIALIZE

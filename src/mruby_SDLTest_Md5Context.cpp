@@ -226,7 +226,7 @@ mrb_SDL_SDLTestMd5Context_set_digest(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLTestMd5Context_init(mrb_state* mrb) {
-  RClass* SDLTestMd5Context_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLTestMd5Context", mrb->object_class);
+  RClass* SDLTestMd5Context_class = mrb_define_class_under(mrb, SDL_module(mrb), "TestMd5Context", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLTestMd5Context_class, MRB_TT_DATA);
 
 #if BIND_SDLTestMd5Context_INITIALIZE

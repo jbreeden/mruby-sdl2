@@ -58,7 +58,7 @@ mrb_SDL_SDLCond_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLCond_init(mrb_state* mrb) {
-  RClass* SDLCond_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLCond", mrb->object_class);
+  RClass* SDLCond_class = mrb_define_class_under(mrb, SDL_module(mrb), "Cond", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLCond_class, MRB_TT_DATA);
 
 #if BIND_SDLCond_INITIALIZE

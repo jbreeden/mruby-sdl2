@@ -185,7 +185,7 @@ mrb_SDL_SDLVersion_set_patch(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLVersion_init(mrb_state* mrb) {
-  RClass* SDLVersion_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLVersion", mrb->object_class);
+  RClass* SDLVersion_class = mrb_define_class_under(mrb, SDL_module(mrb), "Version", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLVersion_class, MRB_TT_DATA);
 
 #if BIND_SDLVersion_INITIALIZE

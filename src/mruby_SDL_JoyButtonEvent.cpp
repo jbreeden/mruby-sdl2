@@ -349,7 +349,7 @@ mrb_SDL_SDLJoyButtonEvent_set_padding2(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLJoyButtonEvent_init(mrb_state* mrb) {
-  RClass* SDLJoyButtonEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLJoyButtonEvent", mrb->object_class);
+  RClass* SDLJoyButtonEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "JoyButtonEvent", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLJoyButtonEvent_class, MRB_TT_DATA);
 
 #if BIND_SDLJoyButtonEvent_INITIALIZE

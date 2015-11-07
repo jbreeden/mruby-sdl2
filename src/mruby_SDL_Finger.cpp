@@ -235,7 +235,7 @@ mrb_SDL_SDLFinger_set_pressure(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLFinger_init(mrb_state* mrb) {
-  RClass* SDLFinger_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLFinger", mrb->object_class);
+  RClass* SDLFinger_class = mrb_define_class_under(mrb, SDL_module(mrb), "Finger", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLFinger_class, MRB_TT_DATA);
 
 #if BIND_SDLFinger_INITIALIZE

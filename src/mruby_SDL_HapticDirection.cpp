@@ -144,7 +144,7 @@ mrb_SDL_SDLHapticDirection_set_dir(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLHapticDirection_init(mrb_state* mrb) {
-  RClass* SDLHapticDirection_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLHapticDirection", mrb->object_class);
+  RClass* SDLHapticDirection_class = mrb_define_class_under(mrb, SDL_module(mrb), "HapticDirection", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLHapticDirection_class, MRB_TT_DATA);
 
 #if BIND_SDLHapticDirection_INITIALIZE

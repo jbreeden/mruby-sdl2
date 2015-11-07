@@ -554,7 +554,7 @@ mrb_SDL_SDLAudioCVT_set_filter_index(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLAudioCVT_init(mrb_state* mrb) {
-  RClass* SDLAudioCVT_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLAudioCVT", mrb->object_class);
+  RClass* SDLAudioCVT_class = mrb_define_class_under(mrb, SDL_module(mrb), "AudioCVT", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLAudioCVT_class, MRB_TT_DATA);
 
 #if BIND_SDLAudioCVT_INITIALIZE

@@ -185,7 +185,7 @@ mrb_SDL_SDLSysWMinfo_set_info(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLSysWMinfo_init(mrb_state* mrb) {
-  RClass* SDLSysWMinfo_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLSysWMinfo", mrb->object_class);
+  RClass* SDLSysWMinfo_class = mrb_define_class_under(mrb, SDL_module(mrb), "SysWMinfo", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLSysWMinfo_class, MRB_TT_DATA);
 
 #if BIND_SDLSysWMinfo_INITIALIZE

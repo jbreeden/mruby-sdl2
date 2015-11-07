@@ -144,7 +144,7 @@ mrb_SDL_SDLCommonEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLCommonEvent_init(mrb_state* mrb) {
-  RClass* SDLCommonEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLCommonEvent", mrb->object_class);
+  RClass* SDLCommonEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "CommonEvent", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLCommonEvent_class, MRB_TT_DATA);
 
 #if BIND_SDLCommonEvent_INITIALIZE

@@ -58,7 +58,7 @@ mrb_SDL_SDLThread_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLThread_init(mrb_state* mrb) {
-  RClass* SDLThread_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLThread", mrb->object_class);
+  RClass* SDLThread_class = mrb_define_class_under(mrb, SDL_module(mrb), "Thread", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLThread_class, MRB_TT_DATA);
 
 #if BIND_SDLThread_INITIALIZE

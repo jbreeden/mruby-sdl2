@@ -399,7 +399,7 @@ mrb_SDL_SDLDollarGestureEvent_set_y(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLDollarGestureEvent_init(mrb_state* mrb) {
-  RClass* SDLDollarGestureEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLDollarGestureEvent", mrb->object_class);
+  RClass* SDLDollarGestureEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "DollarGestureEvent", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLDollarGestureEvent_class, MRB_TT_DATA);
 
 #if BIND_SDLDollarGestureEvent_INITIALIZE

@@ -144,7 +144,7 @@ mrb_SDL_SDLWindowShapeMode_set_parameters(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLWindowShapeMode_init(mrb_state* mrb) {
-  RClass* SDLWindowShapeMode_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLWindowShapeMode", mrb->object_class);
+  RClass* SDLWindowShapeMode_class = mrb_define_class_under(mrb, SDL_module(mrb), "WindowShapeMode", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLWindowShapeMode_class, MRB_TT_DATA);
 
 #if BIND_SDLWindowShapeMode_INITIALIZE

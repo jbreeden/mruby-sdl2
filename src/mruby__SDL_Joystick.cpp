@@ -58,7 +58,7 @@ mrb_SDL_SDLJoystick_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLJoystick_init(mrb_state* mrb) {
-  RClass* SDLJoystick_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLJoystick", mrb->object_class);
+  RClass* SDLJoystick_class = mrb_define_class_under(mrb, SDL_module(mrb), "Joystick", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLJoystick_class, MRB_TT_DATA);
 
 #if BIND_SDLJoystick_INITIALIZE

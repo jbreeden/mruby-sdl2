@@ -2416,7 +2416,7 @@ mrb_SDL_SDLTestCommonState_set_gl_profile_mask(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLTestCommonState_init(mrb_state* mrb) {
-  RClass* SDLTestCommonState_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLTestCommonState", mrb->object_class);
+  RClass* SDLTestCommonState_class = mrb_define_class_under(mrb, SDL_module(mrb), "TestCommonState", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLTestCommonState_class, MRB_TT_DATA);
 
 #if BIND_SDLTestCommonState_INITIALIZE

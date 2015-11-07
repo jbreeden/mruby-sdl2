@@ -249,7 +249,7 @@ mrb_SDL_SDLTestTestCaseReference_set_enabled(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLTestTestCaseReference_init(mrb_state* mrb) {
-  RClass* SDLTestTestCaseReference_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLTestTestCaseReference", mrb->object_class);
+  RClass* SDLTestTestCaseReference_class = mrb_define_class_under(mrb, SDL_module(mrb), "TestTestCaseReference", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLTestTestCaseReference_class, MRB_TT_DATA);
 
 #if BIND_SDLTestTestCaseReference_INITIALIZE

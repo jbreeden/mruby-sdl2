@@ -438,7 +438,7 @@ mrb_SDL_SDLAudioSpec_set_userdata(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLAudioSpec_init(mrb_state* mrb) {
-  RClass* SDLAudioSpec_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLAudioSpec", mrb->object_class);
+  RClass* SDLAudioSpec_class = mrb_define_class_under(mrb, SDL_module(mrb), "AudioSpec", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLAudioSpec_class, MRB_TT_DATA);
 
 #if BIND_SDLAudioSpec_INITIALIZE

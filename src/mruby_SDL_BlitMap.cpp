@@ -58,7 +58,7 @@ mrb_SDL_SDLBlitMap_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLBlitMap_init(mrb_state* mrb) {
-  RClass* SDLBlitMap_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLBlitMap", mrb->object_class);
+  RClass* SDLBlitMap_class = mrb_define_class_under(mrb, SDL_module(mrb), "BlitMap", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLBlitMap_class, MRB_TT_DATA);
 
 #if BIND_SDLBlitMap_INITIALIZE

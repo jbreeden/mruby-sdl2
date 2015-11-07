@@ -3663,7 +3663,7 @@ mrb_SDL_SDL_CreateRenderer(mrb_state* mrb, mrb_value self) {
   SDL_Renderer * result = SDL_CreateRenderer(native_window, native_index, native_flags);
 
   /* Box the return value */
-  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Renderer(mrb, result));
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_giftwrap_SDL_Renderer(mrb, result));
 
   return return_value;
 }
@@ -3756,7 +3756,7 @@ mrb_SDL_SDL_CreateRGBSurface(mrb_state* mrb, mrb_value self) {
   SDL_Surface * result = SDL_CreateRGBSurface(native_flags, native_width, native_height, native_depth, native_Rmask, native_Gmask, native_Bmask, native_Amask);
 
   /* Box the return value */
-  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Surface(mrb, result));
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_giftwrap_SDL_Surface(mrb, result));
 
   return return_value;
 }
@@ -4277,7 +4277,7 @@ mrb_SDL_SDL_CreateWindow(mrb_state* mrb, mrb_value self) {
   SDL_Window * result = SDL_CreateWindow(native_title, native_x, native_y, native_w, native_h, native_flags);
 
   /* Box the return value */
-  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Window(mrb, result));
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_giftwrap_SDL_Window(mrb, result));
 
   return return_value;
 }
@@ -15989,40 +15989,169 @@ mrb_SDL_SDL_PixelFormatEnumToMasks(mrb_state* mrb, mrb_value self) {
 #endif
 
 #if BIND_SDL_PollEvent_FUNCTION
-#define SDL_PollEvent_REQUIRED_ARGC 1
+#define SDL_PollEvent_REQUIRED_ARGC 0
 #define SDL_PollEvent_OPTIONAL_ARGC 0
 /* SDL_PollEvent
  *
  * Parameters:
- * - event: union SDL_Event *
+ * - peek: Boolean
  * Return Type: int
  */
 mrb_value
 mrb_SDL_SDL_PollEvent(mrb_state* mrb, mrb_value self) {
-  mrb_value event;
-
-  /* Fetch the args */
-  mrb_get_args(mrb, "o", &event);
-
-
-  /* Type checking */
-  TODO_type_check_union_SDL_Event_PTR(event);
-
-
-  /* Unbox parameters */
-  union SDL_Event * native_event = TODO_mruby_unbox_union_SDL_Event_PTR(event);
+  SDL_Event* native_event = (SDL_Event*)calloc(1, sizeof(SDL_Event));
 
   /* Invocation */
   int result = SDL_PollEvent(native_event);
 
-  /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
+  if (result == 0) {
     return mrb_nil_value();
   }
-  mrb_value return_value = mrb_fixnum_value(result);
 
-  return return_value;
+  mrb_value event;
+  switch (native_event->type) {
+    // case SDL_AUDIODEVICEADDED:
+    //   event = mruby_giftwrap_SDL_AudioDeviceEvent(mrb, &(native_event->adevice));
+    //   ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+    //   break;
+    // case SDL_AUDIODEVICEREMOVED:
+    //   event = mruby_giftwrap_SDL_AudioDeviceEvent(mrb, &(native_event->adevice));
+    //   ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+    //   break;
+    case SDL_CONTROLLERAXISMOTION:
+      event = mruby_giftwrap_SDL_ControllerAxisEvent(mrb, &(native_event->caxis));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_CONTROLLERBUTTONDOWN:
+      event = mruby_giftwrap_SDL_ControllerButtonEvent(mrb, &(native_event->cbutton));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_CONTROLLERBUTTONUP:
+      event = mruby_giftwrap_SDL_ControllerButtonEvent(mrb, &(native_event->cbutton));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_CONTROLLERDEVICEADDED:
+      event = mruby_giftwrap_SDL_ControllerDeviceEvent(mrb, &(native_event->cdevice));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_CONTROLLERDEVICEREMOVED:
+      event = mruby_giftwrap_SDL_ControllerDeviceEvent(mrb, &(native_event->cdevice));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_CONTROLLERDEVICEREMAPPED:
+      event = mruby_giftwrap_SDL_ControllerDeviceEvent(mrb, &(native_event->cdevice));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_DOLLARGESTURE:
+      event = mruby_giftwrap_SDL_DollarGestureEvent(mrb, &(native_event->dgesture));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_DOLLARRECORD:
+      event = mruby_giftwrap_SDL_DollarGestureEvent(mrb, &(native_event->dgesture));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_DROPFILE:
+      event = mruby_giftwrap_SDL_DropEvent(mrb, &(native_event->drop));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_FINGERMOTION:
+      event = mruby_giftwrap_SDL_TouchFingerEvent(mrb, &(native_event->tfinger));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_FINGERDOWN:
+      event = mruby_giftwrap_SDL_TouchFingerEvent(mrb, &(native_event->tfinger));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_FINGERUP:
+      event = mruby_giftwrap_SDL_TouchFingerEvent(mrb, &(native_event->tfinger));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_KEYDOWN:
+      event = mruby_giftwrap_SDL_KeyboardEvent(mrb, &(native_event->key));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_KEYUP:
+      event = mruby_giftwrap_SDL_KeyboardEvent(mrb, &(native_event->key));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_JOYAXISMOTION:
+      event = mruby_giftwrap_SDL_JoyAxisEvent(mrb, &(native_event->jaxis));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_JOYBALLMOTION:
+      event = mruby_giftwrap_SDL_JoyBallEvent(mrb, &(native_event->jball));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_JOYHATMOTION:
+      event = mruby_giftwrap_SDL_JoyHatEvent(mrb, &(native_event->jhat));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_JOYBUTTONDOWN:
+      event = mruby_giftwrap_SDL_JoyButtonEvent(mrb, &(native_event->jbutton));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_JOYBUTTONUP:
+      event = mruby_giftwrap_SDL_JoyButtonEvent(mrb, &(native_event->jbutton));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_JOYDEVICEADDED:
+      event = mruby_giftwrap_SDL_JoyDeviceEvent(mrb, &(native_event->jdevice));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_JOYDEVICEREMOVED:
+      event = mruby_giftwrap_SDL_JoyDeviceEvent(mrb, &(native_event->jdevice));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_MOUSEMOTION:
+      event = mruby_giftwrap_SDL_MouseMotionEvent(mrb, &(native_event->motion));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_MOUSEBUTTONDOWN:
+      event = mruby_giftwrap_SDL_MouseButtonEvent(mrb, &(native_event->button));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_MOUSEBUTTONUP:
+      event = mruby_giftwrap_SDL_MouseButtonEvent(mrb, &(native_event->button));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_MOUSEWHEEL:
+      event = mruby_giftwrap_SDL_MouseWheelEvent(mrb, &(native_event->wheel));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_MULTIGESTURE:
+      event = mruby_giftwrap_SDL_MultiGestureEvent(mrb, &(native_event->mgesture));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_QUIT:
+      event = mruby_giftwrap_SDL_QuitEvent(mrb, &(native_event->quit));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_SYSWMEVENT:
+      event = mruby_giftwrap_SDL_SysWMEvent(mrb, &(native_event->syswm));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_TEXTEDITING:
+      event = mruby_giftwrap_SDL_TextEditingEvent(mrb, &(native_event->edit));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_TEXTINPUT:
+      event = mruby_giftwrap_SDL_TextInputEvent(mrb, &(native_event->text));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_USEREVENT:
+      event = mruby_giftwrap_SDL_UserEvent(mrb, &(native_event->user));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    case SDL_WINDOWEVENT:
+      event = mruby_giftwrap_SDL_WindowEvent(mrb, &(native_event->window));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+      break;
+    default:
+      event = mruby_giftwrap_SDL_CommonEvent(mrb, &(native_event->common));
+      ((mruby_to_native_ref*)DATA_PTR(event))->data = (void*)native_event;
+  }
+
+  return event;
 }
 #endif
 

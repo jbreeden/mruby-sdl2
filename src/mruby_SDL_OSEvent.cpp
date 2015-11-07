@@ -144,7 +144,7 @@ mrb_SDL_SDLOSEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLOSEvent_init(mrb_state* mrb) {
-  RClass* SDLOSEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLOSEvent", mrb->object_class);
+  RClass* SDLOSEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "OSEvent", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLOSEvent_class, MRB_TT_DATA);
 
 #if BIND_SDLOSEvent_INITIALIZE

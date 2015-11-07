@@ -103,7 +103,7 @@ mrb_SDL_SDLTestCrc32Context_set_crc32_table(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLTestCrc32Context_init(mrb_state* mrb) {
-  RClass* SDLTestCrc32Context_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLTestCrc32Context", mrb->object_class);
+  RClass* SDLTestCrc32Context_class = mrb_define_class_under(mrb, SDL_module(mrb), "TestCrc32Context", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLTestCrc32Context_class, MRB_TT_DATA);
 
 #if BIND_SDLTestCrc32Context_INITIALIZE

@@ -676,7 +676,7 @@ static void free_SDLTest_SurfaceImage_s(mrb_state* mrb, void* ptr) {
      *       destructor is provided for this type.
      */
     if (box->obj != NULL) {
-      free(box->obj);
+      SDL_FreeSurface((SDL_Surface*)box->obj);
       box->obj = NULL;
     }
   }
@@ -1095,9 +1095,9 @@ static void free_SDL_CommonEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -1155,9 +1155,9 @@ static void free_SDL_ControllerAxisEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -1215,9 +1215,9 @@ static void free_SDL_ControllerButtonEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -1275,9 +1275,9 @@ static void free_SDL_ControllerDeviceEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -1395,9 +1395,9 @@ static void free_SDL_DollarGestureEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -1455,9 +1455,9 @@ static void free_SDL_DropEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -2055,9 +2055,9 @@ static void free_SDL_JoyAxisEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -2115,9 +2115,9 @@ static void free_SDL_JoyBallEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -2175,9 +2175,9 @@ static void free_SDL_JoyButtonEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -2235,9 +2235,9 @@ static void free_SDL_JoyDeviceEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -2295,9 +2295,9 @@ static void free_SDL_JoyHatEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -2355,9 +2355,9 @@ static void free_SDL_KeyboardEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -2475,9 +2475,9 @@ static void free_SDL_MouseButtonEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -2535,9 +2535,9 @@ static void free_SDL_MouseMotionEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -2595,9 +2595,9 @@ static void free_SDL_MouseWheelEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -2655,9 +2655,9 @@ static void free_SDL_MultiGestureEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -2715,9 +2715,9 @@ static void free_SDL_OSEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -2955,9 +2955,9 @@ static void free_SDL_QuitEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -3136,7 +3136,7 @@ static void free_SDL_Renderer(mrb_state* mrb, void* ptr) {
      *       destructor is provided for this type.
      */
     if (box->obj != NULL) {
-      free(box->obj);
+      SDL_DestroyRenderer((SDL_Renderer*)box->obj);
       box->obj = NULL;
     }
   }
@@ -3315,9 +3315,9 @@ static void free_SDL_SysWMEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -3495,9 +3495,9 @@ static void free_SDL_TextEditingEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -3555,9 +3555,9 @@ static void free_SDL_TextInputEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -3735,9 +3735,9 @@ static void free_SDL_TouchFingerEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -3795,9 +3795,9 @@ static void free_SDL_UserEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -3856,7 +3856,7 @@ static void free_SDL_Window(mrb_state* mrb, void* ptr) {
      *       destructor is provided for this type.
      */
     if (box->obj != NULL) {
-      free(box->obj);
+      SDL_DestroyWindow((SDL_Window*)box->obj);
       box->obj = NULL;
     }
   }
@@ -3915,9 +3915,9 @@ static void free_SDL_WindowEvent(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -4695,9 +4695,9 @@ static void free__cl_event(mrb_state* mrb, void* ptr) {
     /* TODO: free is the default. Should be changed if a type-specific
      *       destructor is provided for this type.
      */
-    if (box->obj != NULL) {
-      free(box->obj);
-      box->obj = NULL;
+    if (box->data != NULL) {
+      free(box->data);
+      box->data = NULL;
     }
   }
 }
@@ -4743,4 +4743,3 @@ mruby_unbox__cl_event(mrb_value boxed) {
   return (struct _cl_event *)((mruby_to_native_ref *)DATA_PTR(boxed))->obj;
 }
 #endif
-

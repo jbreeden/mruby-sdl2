@@ -431,7 +431,7 @@ mrb_SDL_SDLJoyBallEvent_set_yrel(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_SDL_SDLJoyBallEvent_init(mrb_state* mrb) {
-  RClass* SDLJoyBallEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "SDLJoyBallEvent", mrb->object_class);
+  RClass* SDLJoyBallEvent_class = mrb_define_class_under(mrb, SDL_module(mrb), "JoyBallEvent", mrb->object_class);
   MRB_SET_INSTANCE_TT(SDLJoyBallEvent_class, MRB_TT_DATA);
 
 #if BIND_SDLJoyBallEvent_INITIALIZE
