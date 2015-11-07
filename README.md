@@ -9,9 +9,48 @@ This API would allow MRuby to be embedded in SDL applications as a quick scripti
 simple SDL applications purely in MRuby.
 
 Functions bound so far are listed below. They are all provided under the `SDL` module. There may be some
-bugs present in the bindings as no unit tests have been written yet. 
+bugs present in the bindings as no unit tests have been written yet.
 
 ```
+IMG_Init
+IMG_Load
+IMG_LoadBMP_RW
+IMG_LoadCUR_RW
+IMG_LoadGIF_RW
+IMG_LoadICO_RW
+IMG_LoadJPG_RW
+IMG_LoadLBM_RW
+IMG_LoadPCX_RW
+IMG_LoadPNG_RW
+IMG_LoadPNM_RW
+IMG_LoadTGA_RW
+IMG_LoadTIF_RW
+IMG_LoadTexture
+IMG_LoadTextureTyped_RW
+IMG_LoadTexture_RW
+IMG_LoadTyped_RW
+IMG_LoadWEBP_RW
+IMG_LoadXCF_RW
+IMG_LoadXPM_RW
+IMG_LoadXV_RW
+IMG_Load_RW
+IMG_Quit
+IMG_SavePNG
+IMG_SavePNG_RW
+IMG_isBMP
+IMG_isCUR
+IMG_isGIF
+IMG_isICO
+IMG_isJPG
+IMG_isLBM
+IMG_isPCX
+IMG_isPNG
+IMG_isPNM
+IMG_isTIF
+IMG_isWEBP
+IMG_isXCF
+IMG_isXPM
+IMG_isXV
 SDL_AllocFormat
 SDL_AllocPalette
 SDL_AllocRW
@@ -21,6 +60,7 @@ SDL_AtomicGet
 SDL_AtomicSet
 SDL_AudioInit
 SDL_AudioQuit
+SDL_BlitSurface
 SDL_BuildAudioCVT
 SDL_ClearError
 SDL_ClearHints
