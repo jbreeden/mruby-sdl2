@@ -8,6 +8,1647 @@
 extern "C" {
 #endif
 
+#if BIND_IMG_Init_FUNCTION
+#define IMG_Init_REQUIRED_ARGC 1
+#define IMG_Init_OPTIONAL_ARGC 0
+/* IMG_Init
+ *
+ * Parameters:
+ * - flags: int
+ * Return Type: int
+ */
+mrb_value
+mrb_SDL_IMG_Init(mrb_state* mrb, mrb_value self) {
+  mrb_value flags;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &flags);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, flags, mrb->fixnum_class)) {
+    mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  int native_flags = mrb_fixnum(flags);
+
+  /* Invocation */
+  int result = IMG_Init(native_flags);
+
+  /* Box the return value */
+  if (result > MRB_INT_MAX) {
+    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
+    return mrb_nil_value();
+  }
+  mrb_value return_value = mrb_fixnum_value(result);
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_isBMP_FUNCTION
+#define IMG_isBMP_REQUIRED_ARGC 1
+#define IMG_isBMP_OPTIONAL_ARGC 0
+/* IMG_isBMP
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: int
+ */
+mrb_value
+mrb_SDL_IMG_isBMP(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  int result = IMG_isBMP(native_src);
+
+  /* Box the return value */
+  if (result > MRB_INT_MAX) {
+    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
+    return mrb_nil_value();
+  }
+  mrb_value return_value = mrb_fixnum_value(result);
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_isCUR_FUNCTION
+#define IMG_isCUR_REQUIRED_ARGC 1
+#define IMG_isCUR_OPTIONAL_ARGC 0
+/* IMG_isCUR
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: int
+ */
+mrb_value
+mrb_SDL_IMG_isCUR(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  int result = IMG_isCUR(native_src);
+
+  /* Box the return value */
+  if (result > MRB_INT_MAX) {
+    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
+    return mrb_nil_value();
+  }
+  mrb_value return_value = mrb_fixnum_value(result);
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_isGIF_FUNCTION
+#define IMG_isGIF_REQUIRED_ARGC 1
+#define IMG_isGIF_OPTIONAL_ARGC 0
+/* IMG_isGIF
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: int
+ */
+mrb_value
+mrb_SDL_IMG_isGIF(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  int result = IMG_isGIF(native_src);
+
+  /* Box the return value */
+  if (result > MRB_INT_MAX) {
+    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
+    return mrb_nil_value();
+  }
+  mrb_value return_value = mrb_fixnum_value(result);
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_isICO_FUNCTION
+#define IMG_isICO_REQUIRED_ARGC 1
+#define IMG_isICO_OPTIONAL_ARGC 0
+/* IMG_isICO
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: int
+ */
+mrb_value
+mrb_SDL_IMG_isICO(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  int result = IMG_isICO(native_src);
+
+  /* Box the return value */
+  if (result > MRB_INT_MAX) {
+    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
+    return mrb_nil_value();
+  }
+  mrb_value return_value = mrb_fixnum_value(result);
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_isJPG_FUNCTION
+#define IMG_isJPG_REQUIRED_ARGC 1
+#define IMG_isJPG_OPTIONAL_ARGC 0
+/* IMG_isJPG
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: int
+ */
+mrb_value
+mrb_SDL_IMG_isJPG(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  int result = IMG_isJPG(native_src);
+
+  /* Box the return value */
+  if (result > MRB_INT_MAX) {
+    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
+    return mrb_nil_value();
+  }
+  mrb_value return_value = mrb_fixnum_value(result);
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_isLBM_FUNCTION
+#define IMG_isLBM_REQUIRED_ARGC 1
+#define IMG_isLBM_OPTIONAL_ARGC 0
+/* IMG_isLBM
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: int
+ */
+mrb_value
+mrb_SDL_IMG_isLBM(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  int result = IMG_isLBM(native_src);
+
+  /* Box the return value */
+  if (result > MRB_INT_MAX) {
+    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
+    return mrb_nil_value();
+  }
+  mrb_value return_value = mrb_fixnum_value(result);
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_isPCX_FUNCTION
+#define IMG_isPCX_REQUIRED_ARGC 1
+#define IMG_isPCX_OPTIONAL_ARGC 0
+/* IMG_isPCX
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: int
+ */
+mrb_value
+mrb_SDL_IMG_isPCX(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  int result = IMG_isPCX(native_src);
+
+  /* Box the return value */
+  if (result > MRB_INT_MAX) {
+    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
+    return mrb_nil_value();
+  }
+  mrb_value return_value = mrb_fixnum_value(result);
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_isPNG_FUNCTION
+#define IMG_isPNG_REQUIRED_ARGC 1
+#define IMG_isPNG_OPTIONAL_ARGC 0
+/* IMG_isPNG
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: int
+ */
+mrb_value
+mrb_SDL_IMG_isPNG(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  int result = IMG_isPNG(native_src);
+
+  /* Box the return value */
+  if (result > MRB_INT_MAX) {
+    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
+    return mrb_nil_value();
+  }
+  mrb_value return_value = mrb_fixnum_value(result);
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_isPNM_FUNCTION
+#define IMG_isPNM_REQUIRED_ARGC 1
+#define IMG_isPNM_OPTIONAL_ARGC 0
+/* IMG_isPNM
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: int
+ */
+mrb_value
+mrb_SDL_IMG_isPNM(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  int result = IMG_isPNM(native_src);
+
+  /* Box the return value */
+  if (result > MRB_INT_MAX) {
+    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
+    return mrb_nil_value();
+  }
+  mrb_value return_value = mrb_fixnum_value(result);
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_isTIF_FUNCTION
+#define IMG_isTIF_REQUIRED_ARGC 1
+#define IMG_isTIF_OPTIONAL_ARGC 0
+/* IMG_isTIF
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: int
+ */
+mrb_value
+mrb_SDL_IMG_isTIF(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  int result = IMG_isTIF(native_src);
+
+  /* Box the return value */
+  if (result > MRB_INT_MAX) {
+    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
+    return mrb_nil_value();
+  }
+  mrb_value return_value = mrb_fixnum_value(result);
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_isWEBP_FUNCTION
+#define IMG_isWEBP_REQUIRED_ARGC 1
+#define IMG_isWEBP_OPTIONAL_ARGC 0
+/* IMG_isWEBP
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: int
+ */
+mrb_value
+mrb_SDL_IMG_isWEBP(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  int result = IMG_isWEBP(native_src);
+
+  /* Box the return value */
+  if (result > MRB_INT_MAX) {
+    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
+    return mrb_nil_value();
+  }
+  mrb_value return_value = mrb_fixnum_value(result);
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_isXCF_FUNCTION
+#define IMG_isXCF_REQUIRED_ARGC 1
+#define IMG_isXCF_OPTIONAL_ARGC 0
+/* IMG_isXCF
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: int
+ */
+mrb_value
+mrb_SDL_IMG_isXCF(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  int result = IMG_isXCF(native_src);
+
+  /* Box the return value */
+  if (result > MRB_INT_MAX) {
+    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
+    return mrb_nil_value();
+  }
+  mrb_value return_value = mrb_fixnum_value(result);
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_isXPM_FUNCTION
+#define IMG_isXPM_REQUIRED_ARGC 1
+#define IMG_isXPM_OPTIONAL_ARGC 0
+/* IMG_isXPM
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: int
+ */
+mrb_value
+mrb_SDL_IMG_isXPM(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  int result = IMG_isXPM(native_src);
+
+  /* Box the return value */
+  if (result > MRB_INT_MAX) {
+    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
+    return mrb_nil_value();
+  }
+  mrb_value return_value = mrb_fixnum_value(result);
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_isXV_FUNCTION
+#define IMG_isXV_REQUIRED_ARGC 1
+#define IMG_isXV_OPTIONAL_ARGC 0
+/* IMG_isXV
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: int
+ */
+mrb_value
+mrb_SDL_IMG_isXV(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  int result = IMG_isXV(native_src);
+
+  /* Box the return value */
+  if (result > MRB_INT_MAX) {
+    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
+    return mrb_nil_value();
+  }
+  mrb_value return_value = mrb_fixnum_value(result);
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_Linked_Version_FUNCTION
+#define IMG_Linked_Version_REQUIRED_ARGC 0
+#define IMG_Linked_Version_OPTIONAL_ARGC 0
+/* IMG_Linked_Version
+ *
+ * Parameters: None
+ * Return Type: const SDL_version *
+ */
+mrb_value
+mrb_SDL_IMG_Linked_Version(mrb_state* mrb, mrb_value self) {
+  /* Invocation */
+  const SDL_version * result = IMG_Linked_Version();
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_version(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_Load_FUNCTION
+#define IMG_Load_REQUIRED_ARGC 1
+#define IMG_Load_OPTIONAL_ARGC 0
+/* IMG_Load
+ *
+ * Parameters:
+ * - file: const char *
+ * Return Type: SDL_Surface *
+ */
+mrb_value
+mrb_SDL_IMG_Load(mrb_state* mrb, mrb_value self) {
+  mrb_value file;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &file);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, file, mrb->string_class)) {
+    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  const char * native_file = mrb_string_value_cstr(mrb, &file);
+
+  /* Invocation */
+  SDL_Surface * result = IMG_Load(native_file);
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Surface(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_Load_RW_FUNCTION
+#define IMG_Load_RW_REQUIRED_ARGC 2
+#define IMG_Load_RW_OPTIONAL_ARGC 0
+/* IMG_Load_RW
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * - freesrc: int
+ * Return Type: SDL_Surface *
+ */
+mrb_value
+mrb_SDL_IMG_Load_RW(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+  mrb_value freesrc;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "oo", &src, &freesrc);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+  if (!mrb_obj_is_kind_of(mrb, freesrc, mrb->fixnum_class)) {
+    mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  int native_freesrc = mrb_fixnum(freesrc);
+
+  /* Invocation */
+  SDL_Surface * result = IMG_Load_RW(native_src, native_freesrc);
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Surface(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_LoadBMP_RW_FUNCTION
+#define IMG_LoadBMP_RW_REQUIRED_ARGC 1
+#define IMG_LoadBMP_RW_OPTIONAL_ARGC 0
+/* IMG_LoadBMP_RW
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: SDL_Surface *
+ */
+mrb_value
+mrb_SDL_IMG_LoadBMP_RW(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  SDL_Surface * result = IMG_LoadBMP_RW(native_src);
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Surface(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_LoadCUR_RW_FUNCTION
+#define IMG_LoadCUR_RW_REQUIRED_ARGC 1
+#define IMG_LoadCUR_RW_OPTIONAL_ARGC 0
+/* IMG_LoadCUR_RW
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: SDL_Surface *
+ */
+mrb_value
+mrb_SDL_IMG_LoadCUR_RW(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  SDL_Surface * result = IMG_LoadCUR_RW(native_src);
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Surface(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_LoadGIF_RW_FUNCTION
+#define IMG_LoadGIF_RW_REQUIRED_ARGC 1
+#define IMG_LoadGIF_RW_OPTIONAL_ARGC 0
+/* IMG_LoadGIF_RW
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: SDL_Surface *
+ */
+mrb_value
+mrb_SDL_IMG_LoadGIF_RW(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  SDL_Surface * result = IMG_LoadGIF_RW(native_src);
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Surface(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_LoadICO_RW_FUNCTION
+#define IMG_LoadICO_RW_REQUIRED_ARGC 1
+#define IMG_LoadICO_RW_OPTIONAL_ARGC 0
+/* IMG_LoadICO_RW
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: SDL_Surface *
+ */
+mrb_value
+mrb_SDL_IMG_LoadICO_RW(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  SDL_Surface * result = IMG_LoadICO_RW(native_src);
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Surface(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_LoadJPG_RW_FUNCTION
+#define IMG_LoadJPG_RW_REQUIRED_ARGC 1
+#define IMG_LoadJPG_RW_OPTIONAL_ARGC 0
+/* IMG_LoadJPG_RW
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: SDL_Surface *
+ */
+mrb_value
+mrb_SDL_IMG_LoadJPG_RW(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  SDL_Surface * result = IMG_LoadJPG_RW(native_src);
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Surface(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_LoadLBM_RW_FUNCTION
+#define IMG_LoadLBM_RW_REQUIRED_ARGC 1
+#define IMG_LoadLBM_RW_OPTIONAL_ARGC 0
+/* IMG_LoadLBM_RW
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: SDL_Surface *
+ */
+mrb_value
+mrb_SDL_IMG_LoadLBM_RW(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  SDL_Surface * result = IMG_LoadLBM_RW(native_src);
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Surface(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_LoadPCX_RW_FUNCTION
+#define IMG_LoadPCX_RW_REQUIRED_ARGC 1
+#define IMG_LoadPCX_RW_OPTIONAL_ARGC 0
+/* IMG_LoadPCX_RW
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: SDL_Surface *
+ */
+mrb_value
+mrb_SDL_IMG_LoadPCX_RW(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  SDL_Surface * result = IMG_LoadPCX_RW(native_src);
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Surface(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_LoadPNG_RW_FUNCTION
+#define IMG_LoadPNG_RW_REQUIRED_ARGC 1
+#define IMG_LoadPNG_RW_OPTIONAL_ARGC 0
+/* IMG_LoadPNG_RW
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: SDL_Surface *
+ */
+mrb_value
+mrb_SDL_IMG_LoadPNG_RW(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  SDL_Surface * result = IMG_LoadPNG_RW(native_src);
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Surface(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_LoadPNM_RW_FUNCTION
+#define IMG_LoadPNM_RW_REQUIRED_ARGC 1
+#define IMG_LoadPNM_RW_OPTIONAL_ARGC 0
+/* IMG_LoadPNM_RW
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: SDL_Surface *
+ */
+mrb_value
+mrb_SDL_IMG_LoadPNM_RW(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  SDL_Surface * result = IMG_LoadPNM_RW(native_src);
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Surface(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_LoadTexture_FUNCTION
+#define IMG_LoadTexture_REQUIRED_ARGC 2
+#define IMG_LoadTexture_OPTIONAL_ARGC 0
+/* IMG_LoadTexture
+ *
+ * Parameters:
+ * - renderer: struct SDL_Renderer *
+ * - file: const char *
+ * Return Type: SDL_Texture *
+ */
+mrb_value
+mrb_SDL_IMG_LoadTexture(mrb_state* mrb, mrb_value self) {
+  mrb_value renderer;
+  mrb_value file;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "oo", &renderer, &file);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, renderer, SDLRenderer_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRenderer expected");
+    return mrb_nil_value();
+  }
+  if (!mrb_obj_is_kind_of(mrb, file, mrb->string_class)) {
+    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_Renderer * native_renderer = (mrb_nil_p(renderer) ? NULL : mruby_unbox_SDL_Renderer(renderer));
+
+  const char * native_file = mrb_string_value_cstr(mrb, &file);
+
+  /* Invocation */
+  SDL_Texture * result = IMG_LoadTexture(native_renderer, native_file);
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Texture(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_LoadTexture_RW_FUNCTION
+#define IMG_LoadTexture_RW_REQUIRED_ARGC 3
+#define IMG_LoadTexture_RW_OPTIONAL_ARGC 0
+/* IMG_LoadTexture_RW
+ *
+ * Parameters:
+ * - renderer: struct SDL_Renderer *
+ * - src: struct SDL_RWops *
+ * - freesrc: int
+ * Return Type: SDL_Texture *
+ */
+mrb_value
+mrb_SDL_IMG_LoadTexture_RW(mrb_state* mrb, mrb_value self) {
+  mrb_value renderer;
+  mrb_value src;
+  mrb_value freesrc;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "ooo", &renderer, &src, &freesrc);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, renderer, SDLRenderer_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRenderer expected");
+    return mrb_nil_value();
+  }
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+  if (!mrb_obj_is_kind_of(mrb, freesrc, mrb->fixnum_class)) {
+    mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_Renderer * native_renderer = (mrb_nil_p(renderer) ? NULL : mruby_unbox_SDL_Renderer(renderer));
+
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  int native_freesrc = mrb_fixnum(freesrc);
+
+  /* Invocation */
+  SDL_Texture * result = IMG_LoadTexture_RW(native_renderer, native_src, native_freesrc);
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Texture(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_LoadTextureTyped_RW_FUNCTION
+#define IMG_LoadTextureTyped_RW_REQUIRED_ARGC 4
+#define IMG_LoadTextureTyped_RW_OPTIONAL_ARGC 0
+/* IMG_LoadTextureTyped_RW
+ *
+ * Parameters:
+ * - renderer: struct SDL_Renderer *
+ * - src: struct SDL_RWops *
+ * - freesrc: int
+ * - type: const char *
+ * Return Type: SDL_Texture *
+ */
+mrb_value
+mrb_SDL_IMG_LoadTextureTyped_RW(mrb_state* mrb, mrb_value self) {
+  mrb_value renderer;
+  mrb_value src;
+  mrb_value freesrc;
+  mrb_value type;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "oooo", &renderer, &src, &freesrc, &type);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, renderer, SDLRenderer_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRenderer expected");
+    return mrb_nil_value();
+  }
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+  if (!mrb_obj_is_kind_of(mrb, freesrc, mrb->fixnum_class)) {
+    mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected");
+    return mrb_nil_value();
+  }
+  if (!mrb_obj_is_kind_of(mrb, type, mrb->string_class)) {
+    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_Renderer * native_renderer = (mrb_nil_p(renderer) ? NULL : mruby_unbox_SDL_Renderer(renderer));
+
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  int native_freesrc = mrb_fixnum(freesrc);
+
+  const char * native_type = mrb_string_value_cstr(mrb, &type);
+
+  /* Invocation */
+  SDL_Texture * result = IMG_LoadTextureTyped_RW(native_renderer, native_src, native_freesrc, native_type);
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Texture(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_LoadTGA_RW_FUNCTION
+#define IMG_LoadTGA_RW_REQUIRED_ARGC 1
+#define IMG_LoadTGA_RW_OPTIONAL_ARGC 0
+/* IMG_LoadTGA_RW
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: SDL_Surface *
+ */
+mrb_value
+mrb_SDL_IMG_LoadTGA_RW(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  SDL_Surface * result = IMG_LoadTGA_RW(native_src);
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Surface(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_LoadTIF_RW_FUNCTION
+#define IMG_LoadTIF_RW_REQUIRED_ARGC 1
+#define IMG_LoadTIF_RW_OPTIONAL_ARGC 0
+/* IMG_LoadTIF_RW
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: SDL_Surface *
+ */
+mrb_value
+mrb_SDL_IMG_LoadTIF_RW(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  SDL_Surface * result = IMG_LoadTIF_RW(native_src);
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Surface(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_LoadTyped_RW_FUNCTION
+#define IMG_LoadTyped_RW_REQUIRED_ARGC 3
+#define IMG_LoadTyped_RW_OPTIONAL_ARGC 0
+/* IMG_LoadTyped_RW
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * - freesrc: int
+ * - type: const char *
+ * Return Type: SDL_Surface *
+ */
+mrb_value
+mrb_SDL_IMG_LoadTyped_RW(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+  mrb_value freesrc;
+  mrb_value type;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "ooo", &src, &freesrc, &type);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+  if (!mrb_obj_is_kind_of(mrb, freesrc, mrb->fixnum_class)) {
+    mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected");
+    return mrb_nil_value();
+  }
+  if (!mrb_obj_is_kind_of(mrb, type, mrb->string_class)) {
+    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  int native_freesrc = mrb_fixnum(freesrc);
+
+  const char * native_type = mrb_string_value_cstr(mrb, &type);
+
+  /* Invocation */
+  SDL_Surface * result = IMG_LoadTyped_RW(native_src, native_freesrc, native_type);
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Surface(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_LoadWEBP_RW_FUNCTION
+#define IMG_LoadWEBP_RW_REQUIRED_ARGC 1
+#define IMG_LoadWEBP_RW_OPTIONAL_ARGC 0
+/* IMG_LoadWEBP_RW
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: SDL_Surface *
+ */
+mrb_value
+mrb_SDL_IMG_LoadWEBP_RW(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  SDL_Surface * result = IMG_LoadWEBP_RW(native_src);
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Surface(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_LoadXCF_RW_FUNCTION
+#define IMG_LoadXCF_RW_REQUIRED_ARGC 1
+#define IMG_LoadXCF_RW_OPTIONAL_ARGC 0
+/* IMG_LoadXCF_RW
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: SDL_Surface *
+ */
+mrb_value
+mrb_SDL_IMG_LoadXCF_RW(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  SDL_Surface * result = IMG_LoadXCF_RW(native_src);
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Surface(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_LoadXPM_RW_FUNCTION
+#define IMG_LoadXPM_RW_REQUIRED_ARGC 1
+#define IMG_LoadXPM_RW_OPTIONAL_ARGC 0
+/* IMG_LoadXPM_RW
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: SDL_Surface *
+ */
+mrb_value
+mrb_SDL_IMG_LoadXPM_RW(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  SDL_Surface * result = IMG_LoadXPM_RW(native_src);
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Surface(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_LoadXV_RW_FUNCTION
+#define IMG_LoadXV_RW_REQUIRED_ARGC 1
+#define IMG_LoadXV_RW_OPTIONAL_ARGC 0
+/* IMG_LoadXV_RW
+ *
+ * Parameters:
+ * - src: struct SDL_RWops *
+ * Return Type: SDL_Surface *
+ */
+mrb_value
+mrb_SDL_IMG_LoadXV_RW(mrb_state* mrb, mrb_value self) {
+  mrb_value src;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &src);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, src, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_RWops * native_src = (mrb_nil_p(src) ? NULL : mruby_unbox_SDL_RWops(src));
+
+  /* Invocation */
+  SDL_Surface * result = IMG_LoadXV_RW(native_src);
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Surface(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_Quit_FUNCTION
+#define IMG_Quit_REQUIRED_ARGC 0
+#define IMG_Quit_OPTIONAL_ARGC 0
+/* IMG_Quit
+ *
+ * Parameters: None
+ * Return Type: void
+ */
+mrb_value
+mrb_SDL_IMG_Quit(mrb_state* mrb, mrb_value self) {
+  /* Invocation */
+  IMG_Quit();
+
+  return mrb_nil_value();
+}
+#endif
+
+#if BIND_IMG_ReadXPMFromArray_FUNCTION
+#define IMG_ReadXPMFromArray_REQUIRED_ARGC 1
+#define IMG_ReadXPMFromArray_OPTIONAL_ARGC 0
+/* IMG_ReadXPMFromArray
+ *
+ * Parameters:
+ * - xpm: char **
+ * Return Type: SDL_Surface *
+ */
+mrb_value
+mrb_SDL_IMG_ReadXPMFromArray(mrb_state* mrb, mrb_value self) {
+  mrb_value xpm;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "o", &xpm);
+
+
+  /* Type checking */
+  TODO_type_check_char_PTR_PTR(xpm);
+
+
+  /* Unbox parameters */
+  char ** native_xpm = TODO_mruby_unbox_char_PTR_PTR(xpm);
+
+  /* Invocation */
+  SDL_Surface * result = IMG_ReadXPMFromArray(native_xpm);
+
+  /* Box the return value */
+  mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box_SDL_Surface(mrb, result));
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_SavePNG_FUNCTION
+#define IMG_SavePNG_REQUIRED_ARGC 2
+#define IMG_SavePNG_OPTIONAL_ARGC 0
+/* IMG_SavePNG
+ *
+ * Parameters:
+ * - surface: struct SDL_Surface *
+ * - file: const char *
+ * Return Type: int
+ */
+mrb_value
+mrb_SDL_IMG_SavePNG(mrb_state* mrb, mrb_value self) {
+  mrb_value surface;
+  mrb_value file;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "oo", &surface, &file);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, surface, SDLSurface_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLSurface expected");
+    return mrb_nil_value();
+  }
+  if (!mrb_obj_is_kind_of(mrb, file, mrb->string_class)) {
+    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_Surface * native_surface = (mrb_nil_p(surface) ? NULL : mruby_unbox_SDL_Surface(surface));
+
+  const char * native_file = mrb_string_value_cstr(mrb, &file);
+
+  /* Invocation */
+  int result = IMG_SavePNG(native_surface, native_file);
+
+  /* Box the return value */
+  if (result > MRB_INT_MAX) {
+    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
+    return mrb_nil_value();
+  }
+  mrb_value return_value = mrb_fixnum_value(result);
+
+  return return_value;
+}
+#endif
+
+#if BIND_IMG_SavePNG_RW_FUNCTION
+#define IMG_SavePNG_RW_REQUIRED_ARGC 3
+#define IMG_SavePNG_RW_OPTIONAL_ARGC 0
+/* IMG_SavePNG_RW
+ *
+ * Parameters:
+ * - surface: struct SDL_Surface *
+ * - dst: struct SDL_RWops *
+ * - freedst: int
+ * Return Type: int
+ */
+mrb_value
+mrb_SDL_IMG_SavePNG_RW(mrb_state* mrb, mrb_value self) {
+  mrb_value surface;
+  mrb_value dst;
+  mrb_value freedst;
+
+  /* Fetch the args */
+  mrb_get_args(mrb, "ooo", &surface, &dst, &freedst);
+
+
+  /* Type checking */
+  if (!mrb_obj_is_kind_of(mrb, surface, SDLSurface_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLSurface expected");
+    return mrb_nil_value();
+  }
+  if (!mrb_obj_is_kind_of(mrb, dst, SDLRWops_class(mrb))) {
+    mrb_raise(mrb, E_TYPE_ERROR, "SDLRWops expected");
+    return mrb_nil_value();
+  }
+  if (!mrb_obj_is_kind_of(mrb, freedst, mrb->fixnum_class)) {
+    mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected");
+    return mrb_nil_value();
+  }
+
+
+  /* Unbox parameters */
+  struct SDL_Surface * native_surface = (mrb_nil_p(surface) ? NULL : mruby_unbox_SDL_Surface(surface));
+
+  struct SDL_RWops * native_dst = (mrb_nil_p(dst) ? NULL : mruby_unbox_SDL_RWops(dst));
+
+  int native_freedst = mrb_fixnum(freedst);
+
+  /* Invocation */
+  int result = IMG_SavePNG_RW(native_surface, native_dst, native_freedst);
+
+  /* Box the return value */
+  if (result > MRB_INT_MAX) {
+    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
+    return mrb_nil_value();
+  }
+  mrb_value return_value = mrb_fixnum_value(result);
+
+  return return_value;
+}
+#endif
+
 #if BIND_SDL_abs_FUNCTION
 #define SDL_abs_REQUIRED_ARGC 1
 #define SDL_abs_OPTIONAL_ARGC 0
@@ -3336,7 +4977,7 @@ mrb_SDL_SDL_FillRect(mrb_state* mrb, mrb_value self) {
     mrb_raise(mrb, E_TYPE_ERROR, "SDLSurface expected");
     return mrb_nil_value();
   }
-  if (!mrb_obj_is_kind_of(mrb, rect, SDLRect_class(mrb))) {
+  if (!mrb_obj_is_kind_of(mrb, rect, SDLRect_class(mrb)) && !mrb_nil_p(rect)) {
     mrb_raise(mrb, E_TYPE_ERROR, "SDLRect expected");
     return mrb_nil_value();
   }
@@ -24990,6 +26631,129 @@ void mrb_mruby_sdl_gem_init(mrb_state* mrb) {
   /*
    * Global Functions
    */
+#if BIND_IMG_Init_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_Init", mrb_SDL_IMG_Init, MRB_ARGS_ARG(IMG_Init_REQUIRED_ARGC, IMG_Init_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_isBMP_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_isBMP", mrb_SDL_IMG_isBMP, MRB_ARGS_ARG(IMG_isBMP_REQUIRED_ARGC, IMG_isBMP_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_isCUR_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_isCUR", mrb_SDL_IMG_isCUR, MRB_ARGS_ARG(IMG_isCUR_REQUIRED_ARGC, IMG_isCUR_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_isGIF_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_isGIF", mrb_SDL_IMG_isGIF, MRB_ARGS_ARG(IMG_isGIF_REQUIRED_ARGC, IMG_isGIF_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_isICO_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_isICO", mrb_SDL_IMG_isICO, MRB_ARGS_ARG(IMG_isICO_REQUIRED_ARGC, IMG_isICO_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_isJPG_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_isJPG", mrb_SDL_IMG_isJPG, MRB_ARGS_ARG(IMG_isJPG_REQUIRED_ARGC, IMG_isJPG_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_isLBM_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_isLBM", mrb_SDL_IMG_isLBM, MRB_ARGS_ARG(IMG_isLBM_REQUIRED_ARGC, IMG_isLBM_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_isPCX_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_isPCX", mrb_SDL_IMG_isPCX, MRB_ARGS_ARG(IMG_isPCX_REQUIRED_ARGC, IMG_isPCX_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_isPNG_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_isPNG", mrb_SDL_IMG_isPNG, MRB_ARGS_ARG(IMG_isPNG_REQUIRED_ARGC, IMG_isPNG_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_isPNM_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_isPNM", mrb_SDL_IMG_isPNM, MRB_ARGS_ARG(IMG_isPNM_REQUIRED_ARGC, IMG_isPNM_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_isTIF_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_isTIF", mrb_SDL_IMG_isTIF, MRB_ARGS_ARG(IMG_isTIF_REQUIRED_ARGC, IMG_isTIF_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_isWEBP_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_isWEBP", mrb_SDL_IMG_isWEBP, MRB_ARGS_ARG(IMG_isWEBP_REQUIRED_ARGC, IMG_isWEBP_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_isXCF_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_isXCF", mrb_SDL_IMG_isXCF, MRB_ARGS_ARG(IMG_isXCF_REQUIRED_ARGC, IMG_isXCF_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_isXPM_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_isXPM", mrb_SDL_IMG_isXPM, MRB_ARGS_ARG(IMG_isXPM_REQUIRED_ARGC, IMG_isXPM_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_isXV_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_isXV", mrb_SDL_IMG_isXV, MRB_ARGS_ARG(IMG_isXV_REQUIRED_ARGC, IMG_isXV_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_Linked_Version_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_Linked_Version", mrb_SDL_IMG_Linked_Version, MRB_ARGS_ARG(IMG_Linked_Version_REQUIRED_ARGC, IMG_Linked_Version_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_Load_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_Load", mrb_SDL_IMG_Load, MRB_ARGS_ARG(IMG_Load_REQUIRED_ARGC, IMG_Load_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_Load_RW_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_Load_RW", mrb_SDL_IMG_Load_RW, MRB_ARGS_ARG(IMG_Load_RW_REQUIRED_ARGC, IMG_Load_RW_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_LoadBMP_RW_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_LoadBMP_RW", mrb_SDL_IMG_LoadBMP_RW, MRB_ARGS_ARG(IMG_LoadBMP_RW_REQUIRED_ARGC, IMG_LoadBMP_RW_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_LoadCUR_RW_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_LoadCUR_RW", mrb_SDL_IMG_LoadCUR_RW, MRB_ARGS_ARG(IMG_LoadCUR_RW_REQUIRED_ARGC, IMG_LoadCUR_RW_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_LoadGIF_RW_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_LoadGIF_RW", mrb_SDL_IMG_LoadGIF_RW, MRB_ARGS_ARG(IMG_LoadGIF_RW_REQUIRED_ARGC, IMG_LoadGIF_RW_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_LoadICO_RW_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_LoadICO_RW", mrb_SDL_IMG_LoadICO_RW, MRB_ARGS_ARG(IMG_LoadICO_RW_REQUIRED_ARGC, IMG_LoadICO_RW_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_LoadJPG_RW_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_LoadJPG_RW", mrb_SDL_IMG_LoadJPG_RW, MRB_ARGS_ARG(IMG_LoadJPG_RW_REQUIRED_ARGC, IMG_LoadJPG_RW_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_LoadLBM_RW_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_LoadLBM_RW", mrb_SDL_IMG_LoadLBM_RW, MRB_ARGS_ARG(IMG_LoadLBM_RW_REQUIRED_ARGC, IMG_LoadLBM_RW_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_LoadPCX_RW_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_LoadPCX_RW", mrb_SDL_IMG_LoadPCX_RW, MRB_ARGS_ARG(IMG_LoadPCX_RW_REQUIRED_ARGC, IMG_LoadPCX_RW_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_LoadPNG_RW_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_LoadPNG_RW", mrb_SDL_IMG_LoadPNG_RW, MRB_ARGS_ARG(IMG_LoadPNG_RW_REQUIRED_ARGC, IMG_LoadPNG_RW_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_LoadPNM_RW_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_LoadPNM_RW", mrb_SDL_IMG_LoadPNM_RW, MRB_ARGS_ARG(IMG_LoadPNM_RW_REQUIRED_ARGC, IMG_LoadPNM_RW_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_LoadTexture_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_LoadTexture", mrb_SDL_IMG_LoadTexture, MRB_ARGS_ARG(IMG_LoadTexture_REQUIRED_ARGC, IMG_LoadTexture_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_LoadTexture_RW_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_LoadTexture_RW", mrb_SDL_IMG_LoadTexture_RW, MRB_ARGS_ARG(IMG_LoadTexture_RW_REQUIRED_ARGC, IMG_LoadTexture_RW_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_LoadTextureTyped_RW_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_LoadTextureTyped_RW", mrb_SDL_IMG_LoadTextureTyped_RW, MRB_ARGS_ARG(IMG_LoadTextureTyped_RW_REQUIRED_ARGC, IMG_LoadTextureTyped_RW_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_LoadTGA_RW_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_LoadTGA_RW", mrb_SDL_IMG_LoadTGA_RW, MRB_ARGS_ARG(IMG_LoadTGA_RW_REQUIRED_ARGC, IMG_LoadTGA_RW_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_LoadTIF_RW_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_LoadTIF_RW", mrb_SDL_IMG_LoadTIF_RW, MRB_ARGS_ARG(IMG_LoadTIF_RW_REQUIRED_ARGC, IMG_LoadTIF_RW_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_LoadTyped_RW_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_LoadTyped_RW", mrb_SDL_IMG_LoadTyped_RW, MRB_ARGS_ARG(IMG_LoadTyped_RW_REQUIRED_ARGC, IMG_LoadTyped_RW_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_LoadWEBP_RW_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_LoadWEBP_RW", mrb_SDL_IMG_LoadWEBP_RW, MRB_ARGS_ARG(IMG_LoadWEBP_RW_REQUIRED_ARGC, IMG_LoadWEBP_RW_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_LoadXCF_RW_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_LoadXCF_RW", mrb_SDL_IMG_LoadXCF_RW, MRB_ARGS_ARG(IMG_LoadXCF_RW_REQUIRED_ARGC, IMG_LoadXCF_RW_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_LoadXPM_RW_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_LoadXPM_RW", mrb_SDL_IMG_LoadXPM_RW, MRB_ARGS_ARG(IMG_LoadXPM_RW_REQUIRED_ARGC, IMG_LoadXPM_RW_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_LoadXV_RW_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_LoadXV_RW", mrb_SDL_IMG_LoadXV_RW, MRB_ARGS_ARG(IMG_LoadXV_RW_REQUIRED_ARGC, IMG_LoadXV_RW_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_Quit_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_Quit", mrb_SDL_IMG_Quit, MRB_ARGS_ARG(IMG_Quit_REQUIRED_ARGC, IMG_Quit_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_ReadXPMFromArray_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_ReadXPMFromArray", mrb_SDL_IMG_ReadXPMFromArray, MRB_ARGS_ARG(IMG_ReadXPMFromArray_REQUIRED_ARGC, IMG_ReadXPMFromArray_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_SavePNG_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_SavePNG", mrb_SDL_IMG_SavePNG, MRB_ARGS_ARG(IMG_SavePNG_REQUIRED_ARGC, IMG_SavePNG_OPTIONAL_ARGC));
+#endif
+#if BIND_IMG_SavePNG_RW_FUNCTION
+  mrb_define_class_method(mrb, SDL_module, "IMG_SavePNG_RW", mrb_SDL_IMG_SavePNG_RW, MRB_ARGS_ARG(IMG_SavePNG_RW_REQUIRED_ARGC, IMG_SavePNG_RW_OPTIONAL_ARGC));
+#endif
 #if BIND_SDL_abs_FUNCTION
   mrb_define_class_method(mrb, SDL_module, "SDL_abs", mrb_SDL_SDL_abs, MRB_ARGS_ARG(SDL_abs_REQUIRED_ARGC, SDL_abs_OPTIONAL_ARGC));
 #endif
