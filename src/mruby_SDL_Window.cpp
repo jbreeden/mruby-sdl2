@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLWindow_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_Window* native_object = (struct SDL_Window*)malloc(sizeof(struct SDL_Window));
-  mruby_gift_struct SDL_Window_data_ptr(self, native_object);
+  mruby_gift_SDL_Window_data_ptr(self, native_object);
   return self;
 }
 #endif

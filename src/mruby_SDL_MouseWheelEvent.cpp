@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLMouseWheelEvent_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_MouseWheelEvent* native_object = (struct SDL_MouseWheelEvent*)malloc(sizeof(struct SDL_MouseWheelEvent));
-  mruby_gift_struct SDL_MouseWheelEvent_data_ptr(self, native_object);
+  mruby_gift_SDL_MouseWheelEvent_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLMouseWheelEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseWheelEvent_get_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseWheelEvent * native_self = mruby_unbox_struct SDL_MouseWheelEvent(self);
+  struct SDL_MouseWheelEvent * native_self = mruby_unbox_SDL_MouseWheelEvent(self);
 
   Uint32 native_field = native_self->type;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLMouseWheelEvent_get_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseWheelEvent_set_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseWheelEvent * native_self = mruby_unbox_struct SDL_MouseWheelEvent(self);
+  struct SDL_MouseWheelEvent * native_self = mruby_unbox_SDL_MouseWheelEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLMouseWheelEvent_set_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseWheelEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseWheelEvent * native_self = mruby_unbox_struct SDL_MouseWheelEvent(self);
+  struct SDL_MouseWheelEvent * native_self = mruby_unbox_SDL_MouseWheelEvent(self);
 
   Uint32 native_field = native_self->timestamp;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLMouseWheelEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseWheelEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseWheelEvent * native_self = mruby_unbox_struct SDL_MouseWheelEvent(self);
+  struct SDL_MouseWheelEvent * native_self = mruby_unbox_SDL_MouseWheelEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -149,7 +149,7 @@ mrb_SDL_SDLMouseWheelEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseWheelEvent_get_windowID(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseWheelEvent * native_self = mruby_unbox_struct SDL_MouseWheelEvent(self);
+  struct SDL_MouseWheelEvent * native_self = mruby_unbox_SDL_MouseWheelEvent(self);
 
   Uint32 native_field = native_self->windowID;
 
@@ -167,7 +167,7 @@ mrb_SDL_SDLMouseWheelEvent_get_windowID(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseWheelEvent_set_windowID(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseWheelEvent * native_self = mruby_unbox_struct SDL_MouseWheelEvent(self);
+  struct SDL_MouseWheelEvent * native_self = mruby_unbox_SDL_MouseWheelEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -190,7 +190,7 @@ mrb_SDL_SDLMouseWheelEvent_set_windowID(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseWheelEvent_get_which(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseWheelEvent * native_self = mruby_unbox_struct SDL_MouseWheelEvent(self);
+  struct SDL_MouseWheelEvent * native_self = mruby_unbox_SDL_MouseWheelEvent(self);
 
   Uint32 native_field = native_self->which;
 
@@ -208,7 +208,7 @@ mrb_SDL_SDLMouseWheelEvent_get_which(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseWheelEvent_set_which(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseWheelEvent * native_self = mruby_unbox_struct SDL_MouseWheelEvent(self);
+  struct SDL_MouseWheelEvent * native_self = mruby_unbox_SDL_MouseWheelEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -231,7 +231,7 @@ mrb_SDL_SDLMouseWheelEvent_set_which(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseWheelEvent_get_x(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseWheelEvent * native_self = mruby_unbox_struct SDL_MouseWheelEvent(self);
+  struct SDL_MouseWheelEvent * native_self = mruby_unbox_SDL_MouseWheelEvent(self);
 
   Sint32 native_field = native_self->x;
 
@@ -249,7 +249,7 @@ mrb_SDL_SDLMouseWheelEvent_get_x(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseWheelEvent_set_x(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseWheelEvent * native_self = mruby_unbox_struct SDL_MouseWheelEvent(self);
+  struct SDL_MouseWheelEvent * native_self = mruby_unbox_SDL_MouseWheelEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -272,7 +272,7 @@ mrb_SDL_SDLMouseWheelEvent_set_x(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseWheelEvent_get_y(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseWheelEvent * native_self = mruby_unbox_struct SDL_MouseWheelEvent(self);
+  struct SDL_MouseWheelEvent * native_self = mruby_unbox_SDL_MouseWheelEvent(self);
 
   Sint32 native_field = native_self->y;
 
@@ -290,7 +290,7 @@ mrb_SDL_SDLMouseWheelEvent_get_y(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseWheelEvent_set_y(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseWheelEvent * native_self = mruby_unbox_struct SDL_MouseWheelEvent(self);
+  struct SDL_MouseWheelEvent * native_self = mruby_unbox_SDL_MouseWheelEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

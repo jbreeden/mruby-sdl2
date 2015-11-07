@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLThread_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_Thread* native_object = (struct SDL_Thread*)malloc(sizeof(struct SDL_Thread));
-  mruby_gift_struct SDL_Thread_data_ptr(self, native_object);
+  mruby_gift_SDL_Thread_data_ptr(self, native_object);
   return self;
 }
 #endif

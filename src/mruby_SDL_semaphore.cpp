@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLSemaphore_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_semaphore* native_object = (struct SDL_semaphore*)malloc(sizeof(struct SDL_semaphore));
-  mruby_gift_struct SDL_semaphore_data_ptr(self, native_object);
+  mruby_gift_SDL_semaphore_data_ptr(self, native_object);
   return self;
 }
 #endif

@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLTestSurfaceImageS_initialize(mrb_state* mrb, mrb_value self) {
   struct SDLTest_SurfaceImage_s* native_object = (struct SDLTest_SurfaceImage_s*)malloc(sizeof(struct SDLTest_SurfaceImage_s));
-  mruby_gift_struct SDLTest_SurfaceImage_s_data_ptr(self, native_object);
+  mruby_gift_SDLTest_SurfaceImage_s_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLTestSurfaceImageS_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTestSurfaceImageS_get_width(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_SurfaceImage_s * native_self = mruby_unbox_struct SDLTest_SurfaceImage_s(self);
+  struct SDLTest_SurfaceImage_s * native_self = mruby_unbox_SDLTest_SurfaceImage_s(self);
 
   int native_field = native_self->width;
 
@@ -89,7 +89,7 @@ mrb_SDL_SDLTestSurfaceImageS_get_width(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTestSurfaceImageS_set_width(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_SurfaceImage_s * native_self = mruby_unbox_struct SDLTest_SurfaceImage_s(self);
+  struct SDLTest_SurfaceImage_s * native_self = mruby_unbox_SDLTest_SurfaceImage_s(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -115,7 +115,7 @@ mrb_SDL_SDLTestSurfaceImageS_set_width(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTestSurfaceImageS_get_height(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_SurfaceImage_s * native_self = mruby_unbox_struct SDLTest_SurfaceImage_s(self);
+  struct SDLTest_SurfaceImage_s * native_self = mruby_unbox_SDLTest_SurfaceImage_s(self);
 
   int native_field = native_self->height;
 
@@ -137,7 +137,7 @@ mrb_SDL_SDLTestSurfaceImageS_get_height(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTestSurfaceImageS_set_height(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_SurfaceImage_s * native_self = mruby_unbox_struct SDLTest_SurfaceImage_s(self);
+  struct SDLTest_SurfaceImage_s * native_self = mruby_unbox_SDLTest_SurfaceImage_s(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -163,7 +163,7 @@ mrb_SDL_SDLTestSurfaceImageS_set_height(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTestSurfaceImageS_get_bytes_per_pixel(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_SurfaceImage_s * native_self = mruby_unbox_struct SDLTest_SurfaceImage_s(self);
+  struct SDLTest_SurfaceImage_s * native_self = mruby_unbox_SDLTest_SurfaceImage_s(self);
 
   unsigned int native_field = native_self->bytes_per_pixel;
 
@@ -185,7 +185,7 @@ mrb_SDL_SDLTestSurfaceImageS_get_bytes_per_pixel(mrb_state* mrb, mrb_value self)
  */
 mrb_value
 mrb_SDL_SDLTestSurfaceImageS_set_bytes_per_pixel(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_SurfaceImage_s * native_self = mruby_unbox_struct SDLTest_SurfaceImage_s(self);
+  struct SDLTest_SurfaceImage_s * native_self = mruby_unbox_SDLTest_SurfaceImage_s(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -211,7 +211,7 @@ mrb_SDL_SDLTestSurfaceImageS_set_bytes_per_pixel(mrb_state* mrb, mrb_value self)
  */
 mrb_value
 mrb_SDL_SDLTestSurfaceImageS_get_pixel_data(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_SurfaceImage_s * native_self = mruby_unbox_struct SDLTest_SurfaceImage_s(self);
+  struct SDLTest_SurfaceImage_s * native_self = mruby_unbox_SDLTest_SurfaceImage_s(self);
 
   const char * native_field = native_self->pixel_data;
 
@@ -229,7 +229,7 @@ mrb_SDL_SDLTestSurfaceImageS_get_pixel_data(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTestSurfaceImageS_set_pixel_data(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_SurfaceImage_s * native_self = mruby_unbox_struct SDLTest_SurfaceImage_s(self);
+  struct SDLTest_SurfaceImage_s * native_self = mruby_unbox_SDLTest_SurfaceImage_s(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLAssertData_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_assert_data* native_object = (struct SDL_assert_data*)malloc(sizeof(struct SDL_assert_data));
-  mruby_gift_struct SDL_assert_data_data_ptr(self, native_object);
+  mruby_gift_SDL_assert_data_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLAssertData_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAssertData_get_always_ignore(mrb_state* mrb, mrb_value self) {
-  struct SDL_assert_data * native_self = mruby_unbox_struct SDL_assert_data(self);
+  struct SDL_assert_data * native_self = mruby_unbox_SDL_assert_data(self);
 
   int native_field = native_self->always_ignore;
 
@@ -89,7 +89,7 @@ mrb_SDL_SDLAssertData_get_always_ignore(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAssertData_set_always_ignore(mrb_state* mrb, mrb_value self) {
-  struct SDL_assert_data * native_self = mruby_unbox_struct SDL_assert_data(self);
+  struct SDL_assert_data * native_self = mruby_unbox_SDL_assert_data(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -115,7 +115,7 @@ mrb_SDL_SDLAssertData_set_always_ignore(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAssertData_get_trigger_count(mrb_state* mrb, mrb_value self) {
-  struct SDL_assert_data * native_self = mruby_unbox_struct SDL_assert_data(self);
+  struct SDL_assert_data * native_self = mruby_unbox_SDL_assert_data(self);
 
   unsigned int native_field = native_self->trigger_count;
 
@@ -137,7 +137,7 @@ mrb_SDL_SDLAssertData_get_trigger_count(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAssertData_set_trigger_count(mrb_state* mrb, mrb_value self) {
-  struct SDL_assert_data * native_self = mruby_unbox_struct SDL_assert_data(self);
+  struct SDL_assert_data * native_self = mruby_unbox_SDL_assert_data(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -163,7 +163,7 @@ mrb_SDL_SDLAssertData_set_trigger_count(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAssertData_get_condition(mrb_state* mrb, mrb_value self) {
-  struct SDL_assert_data * native_self = mruby_unbox_struct SDL_assert_data(self);
+  struct SDL_assert_data * native_self = mruby_unbox_SDL_assert_data(self);
 
   const char * native_field = native_self->condition;
 
@@ -181,7 +181,7 @@ mrb_SDL_SDLAssertData_get_condition(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAssertData_set_condition(mrb_state* mrb, mrb_value self) {
-  struct SDL_assert_data * native_self = mruby_unbox_struct SDL_assert_data(self);
+  struct SDL_assert_data * native_self = mruby_unbox_SDL_assert_data(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -207,7 +207,7 @@ mrb_SDL_SDLAssertData_set_condition(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAssertData_get_filename(mrb_state* mrb, mrb_value self) {
-  struct SDL_assert_data * native_self = mruby_unbox_struct SDL_assert_data(self);
+  struct SDL_assert_data * native_self = mruby_unbox_SDL_assert_data(self);
 
   const char * native_field = native_self->filename;
 
@@ -225,7 +225,7 @@ mrb_SDL_SDLAssertData_get_filename(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAssertData_set_filename(mrb_state* mrb, mrb_value self) {
-  struct SDL_assert_data * native_self = mruby_unbox_struct SDL_assert_data(self);
+  struct SDL_assert_data * native_self = mruby_unbox_SDL_assert_data(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -251,7 +251,7 @@ mrb_SDL_SDLAssertData_set_filename(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAssertData_get_linenum(mrb_state* mrb, mrb_value self) {
-  struct SDL_assert_data * native_self = mruby_unbox_struct SDL_assert_data(self);
+  struct SDL_assert_data * native_self = mruby_unbox_SDL_assert_data(self);
 
   int native_field = native_self->linenum;
 
@@ -273,7 +273,7 @@ mrb_SDL_SDLAssertData_get_linenum(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAssertData_set_linenum(mrb_state* mrb, mrb_value self) {
-  struct SDL_assert_data * native_self = mruby_unbox_struct SDL_assert_data(self);
+  struct SDL_assert_data * native_self = mruby_unbox_SDL_assert_data(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -299,7 +299,7 @@ mrb_SDL_SDLAssertData_set_linenum(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAssertData_get_function(mrb_state* mrb, mrb_value self) {
-  struct SDL_assert_data * native_self = mruby_unbox_struct SDL_assert_data(self);
+  struct SDL_assert_data * native_self = mruby_unbox_SDL_assert_data(self);
 
   const char * native_field = native_self->function;
 
@@ -317,7 +317,7 @@ mrb_SDL_SDLAssertData_get_function(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAssertData_set_function(mrb_state* mrb, mrb_value self) {
-  struct SDL_assert_data * native_self = mruby_unbox_struct SDL_assert_data(self);
+  struct SDL_assert_data * native_self = mruby_unbox_SDL_assert_data(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -343,7 +343,7 @@ mrb_SDL_SDLAssertData_set_function(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAssertData_get_next(mrb_state* mrb, mrb_value self) {
-  struct SDL_assert_data * native_self = mruby_unbox_struct SDL_assert_data(self);
+  struct SDL_assert_data * native_self = mruby_unbox_SDL_assert_data(self);
 
   const struct SDL_assert_data * native_field = native_self->next;
 
@@ -361,7 +361,7 @@ mrb_SDL_SDLAssertData_get_next(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAssertData_set_next(mrb_state* mrb, mrb_value self) {
-  struct SDL_assert_data * native_self = mruby_unbox_struct SDL_assert_data(self);
+  struct SDL_assert_data * native_self = mruby_unbox_SDL_assert_data(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

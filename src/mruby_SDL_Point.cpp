@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLPoint_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_Point* native_object = (struct SDL_Point*)malloc(sizeof(struct SDL_Point));
-  mruby_gift_struct SDL_Point_data_ptr(self, native_object);
+  mruby_gift_SDL_Point_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLPoint_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPoint_get_x(mrb_state* mrb, mrb_value self) {
-  struct SDL_Point * native_self = mruby_unbox_struct SDL_Point(self);
+  struct SDL_Point * native_self = mruby_unbox_SDL_Point(self);
 
   int native_field = native_self->x;
 
@@ -89,7 +89,7 @@ mrb_SDL_SDLPoint_get_x(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPoint_set_x(mrb_state* mrb, mrb_value self) {
-  struct SDL_Point * native_self = mruby_unbox_struct SDL_Point(self);
+  struct SDL_Point * native_self = mruby_unbox_SDL_Point(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -115,7 +115,7 @@ mrb_SDL_SDLPoint_set_x(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPoint_get_y(mrb_state* mrb, mrb_value self) {
-  struct SDL_Point * native_self = mruby_unbox_struct SDL_Point(self);
+  struct SDL_Point * native_self = mruby_unbox_SDL_Point(self);
 
   int native_field = native_self->y;
 
@@ -137,7 +137,7 @@ mrb_SDL_SDLPoint_get_y(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPoint_set_y(mrb_state* mrb, mrb_value self) {
-  struct SDL_Point * native_self = mruby_unbox_struct SDL_Point(self);
+  struct SDL_Point * native_self = mruby_unbox_SDL_Point(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

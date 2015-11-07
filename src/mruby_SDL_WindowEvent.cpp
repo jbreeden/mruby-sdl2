@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLWindowEvent_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_WindowEvent* native_object = (struct SDL_WindowEvent*)malloc(sizeof(struct SDL_WindowEvent));
-  mruby_gift_struct SDL_WindowEvent_data_ptr(self, native_object);
+  mruby_gift_SDL_WindowEvent_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLWindowEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLWindowEvent_get_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_WindowEvent * native_self = mruby_unbox_struct SDL_WindowEvent(self);
+  struct SDL_WindowEvent * native_self = mruby_unbox_SDL_WindowEvent(self);
 
   Uint32 native_field = native_self->type;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLWindowEvent_get_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLWindowEvent_set_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_WindowEvent * native_self = mruby_unbox_struct SDL_WindowEvent(self);
+  struct SDL_WindowEvent * native_self = mruby_unbox_SDL_WindowEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLWindowEvent_set_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLWindowEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_WindowEvent * native_self = mruby_unbox_struct SDL_WindowEvent(self);
+  struct SDL_WindowEvent * native_self = mruby_unbox_SDL_WindowEvent(self);
 
   Uint32 native_field = native_self->timestamp;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLWindowEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLWindowEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_WindowEvent * native_self = mruby_unbox_struct SDL_WindowEvent(self);
+  struct SDL_WindowEvent * native_self = mruby_unbox_SDL_WindowEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -149,7 +149,7 @@ mrb_SDL_SDLWindowEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLWindowEvent_get_windowID(mrb_state* mrb, mrb_value self) {
-  struct SDL_WindowEvent * native_self = mruby_unbox_struct SDL_WindowEvent(self);
+  struct SDL_WindowEvent * native_self = mruby_unbox_SDL_WindowEvent(self);
 
   Uint32 native_field = native_self->windowID;
 
@@ -167,7 +167,7 @@ mrb_SDL_SDLWindowEvent_get_windowID(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLWindowEvent_set_windowID(mrb_state* mrb, mrb_value self) {
-  struct SDL_WindowEvent * native_self = mruby_unbox_struct SDL_WindowEvent(self);
+  struct SDL_WindowEvent * native_self = mruby_unbox_SDL_WindowEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -190,7 +190,7 @@ mrb_SDL_SDLWindowEvent_set_windowID(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLWindowEvent_get_event(mrb_state* mrb, mrb_value self) {
-  struct SDL_WindowEvent * native_self = mruby_unbox_struct SDL_WindowEvent(self);
+  struct SDL_WindowEvent * native_self = mruby_unbox_SDL_WindowEvent(self);
 
   Uint8 native_field = native_self->event;
 
@@ -208,7 +208,7 @@ mrb_SDL_SDLWindowEvent_get_event(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLWindowEvent_set_event(mrb_state* mrb, mrb_value self) {
-  struct SDL_WindowEvent * native_self = mruby_unbox_struct SDL_WindowEvent(self);
+  struct SDL_WindowEvent * native_self = mruby_unbox_SDL_WindowEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -231,7 +231,7 @@ mrb_SDL_SDLWindowEvent_set_event(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLWindowEvent_get_padding1(mrb_state* mrb, mrb_value self) {
-  struct SDL_WindowEvent * native_self = mruby_unbox_struct SDL_WindowEvent(self);
+  struct SDL_WindowEvent * native_self = mruby_unbox_SDL_WindowEvent(self);
 
   Uint8 native_field = native_self->padding1;
 
@@ -249,7 +249,7 @@ mrb_SDL_SDLWindowEvent_get_padding1(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLWindowEvent_set_padding1(mrb_state* mrb, mrb_value self) {
-  struct SDL_WindowEvent * native_self = mruby_unbox_struct SDL_WindowEvent(self);
+  struct SDL_WindowEvent * native_self = mruby_unbox_SDL_WindowEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -272,7 +272,7 @@ mrb_SDL_SDLWindowEvent_set_padding1(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLWindowEvent_get_padding2(mrb_state* mrb, mrb_value self) {
-  struct SDL_WindowEvent * native_self = mruby_unbox_struct SDL_WindowEvent(self);
+  struct SDL_WindowEvent * native_self = mruby_unbox_SDL_WindowEvent(self);
 
   Uint8 native_field = native_self->padding2;
 
@@ -290,7 +290,7 @@ mrb_SDL_SDLWindowEvent_get_padding2(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLWindowEvent_set_padding2(mrb_state* mrb, mrb_value self) {
-  struct SDL_WindowEvent * native_self = mruby_unbox_struct SDL_WindowEvent(self);
+  struct SDL_WindowEvent * native_self = mruby_unbox_SDL_WindowEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -313,7 +313,7 @@ mrb_SDL_SDLWindowEvent_set_padding2(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLWindowEvent_get_padding3(mrb_state* mrb, mrb_value self) {
-  struct SDL_WindowEvent * native_self = mruby_unbox_struct SDL_WindowEvent(self);
+  struct SDL_WindowEvent * native_self = mruby_unbox_SDL_WindowEvent(self);
 
   Uint8 native_field = native_self->padding3;
 
@@ -331,7 +331,7 @@ mrb_SDL_SDLWindowEvent_get_padding3(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLWindowEvent_set_padding3(mrb_state* mrb, mrb_value self) {
-  struct SDL_WindowEvent * native_self = mruby_unbox_struct SDL_WindowEvent(self);
+  struct SDL_WindowEvent * native_self = mruby_unbox_SDL_WindowEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -354,7 +354,7 @@ mrb_SDL_SDLWindowEvent_set_padding3(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLWindowEvent_get_data1(mrb_state* mrb, mrb_value self) {
-  struct SDL_WindowEvent * native_self = mruby_unbox_struct SDL_WindowEvent(self);
+  struct SDL_WindowEvent * native_self = mruby_unbox_SDL_WindowEvent(self);
 
   Sint32 native_field = native_self->data1;
 
@@ -372,7 +372,7 @@ mrb_SDL_SDLWindowEvent_get_data1(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLWindowEvent_set_data1(mrb_state* mrb, mrb_value self) {
-  struct SDL_WindowEvent * native_self = mruby_unbox_struct SDL_WindowEvent(self);
+  struct SDL_WindowEvent * native_self = mruby_unbox_SDL_WindowEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -395,7 +395,7 @@ mrb_SDL_SDLWindowEvent_set_data1(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLWindowEvent_get_data2(mrb_state* mrb, mrb_value self) {
-  struct SDL_WindowEvent * native_self = mruby_unbox_struct SDL_WindowEvent(self);
+  struct SDL_WindowEvent * native_self = mruby_unbox_SDL_WindowEvent(self);
 
   Sint32 native_field = native_self->data2;
 
@@ -413,7 +413,7 @@ mrb_SDL_SDLWindowEvent_get_data2(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLWindowEvent_set_data2(mrb_state* mrb, mrb_value self) {
-  struct SDL_WindowEvent * native_self = mruby_unbox_struct SDL_WindowEvent(self);
+  struct SDL_WindowEvent * native_self = mruby_unbox_SDL_WindowEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

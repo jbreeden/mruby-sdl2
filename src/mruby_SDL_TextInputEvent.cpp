@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLTextInputEvent_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_TextInputEvent* native_object = (struct SDL_TextInputEvent*)malloc(sizeof(struct SDL_TextInputEvent));
-  mruby_gift_struct SDL_TextInputEvent_data_ptr(self, native_object);
+  mruby_gift_SDL_TextInputEvent_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLTextInputEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTextInputEvent_get_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_TextInputEvent * native_self = mruby_unbox_struct SDL_TextInputEvent(self);
+  struct SDL_TextInputEvent * native_self = mruby_unbox_SDL_TextInputEvent(self);
 
   Uint32 native_field = native_self->type;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLTextInputEvent_get_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTextInputEvent_set_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_TextInputEvent * native_self = mruby_unbox_struct SDL_TextInputEvent(self);
+  struct SDL_TextInputEvent * native_self = mruby_unbox_SDL_TextInputEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLTextInputEvent_set_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTextInputEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_TextInputEvent * native_self = mruby_unbox_struct SDL_TextInputEvent(self);
+  struct SDL_TextInputEvent * native_self = mruby_unbox_SDL_TextInputEvent(self);
 
   Uint32 native_field = native_self->timestamp;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLTextInputEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTextInputEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_TextInputEvent * native_self = mruby_unbox_struct SDL_TextInputEvent(self);
+  struct SDL_TextInputEvent * native_self = mruby_unbox_SDL_TextInputEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -149,7 +149,7 @@ mrb_SDL_SDLTextInputEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTextInputEvent_get_windowID(mrb_state* mrb, mrb_value self) {
-  struct SDL_TextInputEvent * native_self = mruby_unbox_struct SDL_TextInputEvent(self);
+  struct SDL_TextInputEvent * native_self = mruby_unbox_SDL_TextInputEvent(self);
 
   Uint32 native_field = native_self->windowID;
 
@@ -167,7 +167,7 @@ mrb_SDL_SDLTextInputEvent_get_windowID(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTextInputEvent_set_windowID(mrb_state* mrb, mrb_value self) {
-  struct SDL_TextInputEvent * native_self = mruby_unbox_struct SDL_TextInputEvent(self);
+  struct SDL_TextInputEvent * native_self = mruby_unbox_SDL_TextInputEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -190,11 +190,11 @@ mrb_SDL_SDLTextInputEvent_set_windowID(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTextInputEvent_get_text(mrb_state* mrb, mrb_value self) {
-  struct SDL_TextInputEvent * native_self = mruby_unbox_struct SDL_TextInputEvent(self);
+  struct SDL_TextInputEvent * native_self = mruby_unbox_SDL_TextInputEvent(self);
 
-  char [32] native_field = native_self->text;
+  char *native_field = native_self->text;
 
-  mrb_value ruby_field = TODO_mruby_box_char_[32](mrb, native_field);
+  mrb_value ruby_field = mrb_str_new_cstr(mrb, native_field);
 
   return ruby_field;
 }
@@ -208,7 +208,7 @@ mrb_SDL_SDLTextInputEvent_get_text(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTextInputEvent_set_text(mrb_state* mrb, mrb_value self) {
-  struct SDL_TextInputEvent * native_self = mruby_unbox_struct SDL_TextInputEvent(self);
+  struct SDL_TextInputEvent * native_self = mruby_unbox_SDL_TextInputEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

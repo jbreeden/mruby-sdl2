@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLRWops_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_RWops* native_object = (struct SDL_RWops*)malloc(sizeof(struct SDL_RWops));
-  mruby_gift_struct SDL_RWops_data_ptr(self, native_object);
+  mruby_gift_SDL_RWops_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLRWops_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRWops_get_size(mrb_state* mrb, mrb_value self) {
-  struct SDL_RWops * native_self = mruby_unbox_struct SDL_RWops(self);
+  struct SDL_RWops * native_self = mruby_unbox_SDL_RWops(self);
 
   Sint64 (*)(struct SDL_RWops *) native_field = native_self->size;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLRWops_get_size(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRWops_set_size(mrb_state* mrb, mrb_value self) {
-  struct SDL_RWops * native_self = mruby_unbox_struct SDL_RWops(self);
+  struct SDL_RWops * native_self = mruby_unbox_SDL_RWops(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLRWops_set_size(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRWops_get_seek(mrb_state* mrb, mrb_value self) {
-  struct SDL_RWops * native_self = mruby_unbox_struct SDL_RWops(self);
+  struct SDL_RWops * native_self = mruby_unbox_SDL_RWops(self);
 
   Sint64 (*)(struct SDL_RWops *, Sint64, int) native_field = native_self->seek;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLRWops_get_seek(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRWops_set_seek(mrb_state* mrb, mrb_value self) {
-  struct SDL_RWops * native_self = mruby_unbox_struct SDL_RWops(self);
+  struct SDL_RWops * native_self = mruby_unbox_SDL_RWops(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -149,7 +149,7 @@ mrb_SDL_SDLRWops_set_seek(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRWops_get_read(mrb_state* mrb, mrb_value self) {
-  struct SDL_RWops * native_self = mruby_unbox_struct SDL_RWops(self);
+  struct SDL_RWops * native_self = mruby_unbox_SDL_RWops(self);
 
   size_t (*)(struct SDL_RWops *, void *, size_t, size_t) native_field = native_self->read;
 
@@ -167,7 +167,7 @@ mrb_SDL_SDLRWops_get_read(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRWops_set_read(mrb_state* mrb, mrb_value self) {
-  struct SDL_RWops * native_self = mruby_unbox_struct SDL_RWops(self);
+  struct SDL_RWops * native_self = mruby_unbox_SDL_RWops(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -190,7 +190,7 @@ mrb_SDL_SDLRWops_set_read(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRWops_get_write(mrb_state* mrb, mrb_value self) {
-  struct SDL_RWops * native_self = mruby_unbox_struct SDL_RWops(self);
+  struct SDL_RWops * native_self = mruby_unbox_SDL_RWops(self);
 
   size_t (*)(struct SDL_RWops *, const void *, size_t, size_t) native_field = native_self->write;
 
@@ -208,7 +208,7 @@ mrb_SDL_SDLRWops_get_write(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRWops_set_write(mrb_state* mrb, mrb_value self) {
-  struct SDL_RWops * native_self = mruby_unbox_struct SDL_RWops(self);
+  struct SDL_RWops * native_self = mruby_unbox_SDL_RWops(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -231,7 +231,7 @@ mrb_SDL_SDLRWops_set_write(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRWops_get_close(mrb_state* mrb, mrb_value self) {
-  struct SDL_RWops * native_self = mruby_unbox_struct SDL_RWops(self);
+  struct SDL_RWops * native_self = mruby_unbox_SDL_RWops(self);
 
   int (*)(struct SDL_RWops *) native_field = native_self->close;
 
@@ -249,7 +249,7 @@ mrb_SDL_SDLRWops_get_close(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRWops_set_close(mrb_state* mrb, mrb_value self) {
-  struct SDL_RWops * native_self = mruby_unbox_struct SDL_RWops(self);
+  struct SDL_RWops * native_self = mruby_unbox_SDL_RWops(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -272,7 +272,7 @@ mrb_SDL_SDLRWops_set_close(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRWops_get_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_RWops * native_self = mruby_unbox_struct SDL_RWops(self);
+  struct SDL_RWops * native_self = mruby_unbox_SDL_RWops(self);
 
   Uint32 native_field = native_self->type;
 
@@ -290,7 +290,7 @@ mrb_SDL_SDLRWops_get_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRWops_set_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_RWops * native_self = mruby_unbox_struct SDL_RWops(self);
+  struct SDL_RWops * native_self = mruby_unbox_SDL_RWops(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -313,7 +313,7 @@ mrb_SDL_SDLRWops_set_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRWops_get_hidden(mrb_state* mrb, mrb_value self) {
-  struct SDL_RWops * native_self = mruby_unbox_struct SDL_RWops(self);
+  struct SDL_RWops * native_self = mruby_unbox_SDL_RWops(self);
 
   union (anonymous union at ./sdl/SDL2-2.0.3/include//SDL_rwops.h:94:5) native_field = native_self->hidden;
 
@@ -331,7 +331,7 @@ mrb_SDL_SDLRWops_get_hidden(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRWops_set_hidden(mrb_state* mrb, mrb_value self) {
-  struct SDL_RWops * native_self = mruby_unbox_struct SDL_RWops(self);
+  struct SDL_RWops * native_self = mruby_unbox_SDL_RWops(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

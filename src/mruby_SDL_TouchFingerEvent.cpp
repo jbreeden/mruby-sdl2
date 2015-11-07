@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLTouchFingerEvent_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_TouchFingerEvent* native_object = (struct SDL_TouchFingerEvent*)malloc(sizeof(struct SDL_TouchFingerEvent));
-  mruby_gift_struct SDL_TouchFingerEvent_data_ptr(self, native_object);
+  mruby_gift_SDL_TouchFingerEvent_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLTouchFingerEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTouchFingerEvent_get_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_TouchFingerEvent * native_self = mruby_unbox_struct SDL_TouchFingerEvent(self);
+  struct SDL_TouchFingerEvent * native_self = mruby_unbox_SDL_TouchFingerEvent(self);
 
   Uint32 native_field = native_self->type;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLTouchFingerEvent_get_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTouchFingerEvent_set_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_TouchFingerEvent * native_self = mruby_unbox_struct SDL_TouchFingerEvent(self);
+  struct SDL_TouchFingerEvent * native_self = mruby_unbox_SDL_TouchFingerEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLTouchFingerEvent_set_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTouchFingerEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_TouchFingerEvent * native_self = mruby_unbox_struct SDL_TouchFingerEvent(self);
+  struct SDL_TouchFingerEvent * native_self = mruby_unbox_SDL_TouchFingerEvent(self);
 
   Uint32 native_field = native_self->timestamp;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLTouchFingerEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTouchFingerEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_TouchFingerEvent * native_self = mruby_unbox_struct SDL_TouchFingerEvent(self);
+  struct SDL_TouchFingerEvent * native_self = mruby_unbox_SDL_TouchFingerEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -149,7 +149,7 @@ mrb_SDL_SDLTouchFingerEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTouchFingerEvent_get_touchId(mrb_state* mrb, mrb_value self) {
-  struct SDL_TouchFingerEvent * native_self = mruby_unbox_struct SDL_TouchFingerEvent(self);
+  struct SDL_TouchFingerEvent * native_self = mruby_unbox_SDL_TouchFingerEvent(self);
 
   SDL_TouchID native_field = native_self->touchId;
 
@@ -167,7 +167,7 @@ mrb_SDL_SDLTouchFingerEvent_get_touchId(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTouchFingerEvent_set_touchId(mrb_state* mrb, mrb_value self) {
-  struct SDL_TouchFingerEvent * native_self = mruby_unbox_struct SDL_TouchFingerEvent(self);
+  struct SDL_TouchFingerEvent * native_self = mruby_unbox_SDL_TouchFingerEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -190,7 +190,7 @@ mrb_SDL_SDLTouchFingerEvent_set_touchId(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTouchFingerEvent_get_fingerId(mrb_state* mrb, mrb_value self) {
-  struct SDL_TouchFingerEvent * native_self = mruby_unbox_struct SDL_TouchFingerEvent(self);
+  struct SDL_TouchFingerEvent * native_self = mruby_unbox_SDL_TouchFingerEvent(self);
 
   SDL_FingerID native_field = native_self->fingerId;
 
@@ -208,7 +208,7 @@ mrb_SDL_SDLTouchFingerEvent_get_fingerId(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTouchFingerEvent_set_fingerId(mrb_state* mrb, mrb_value self) {
-  struct SDL_TouchFingerEvent * native_self = mruby_unbox_struct SDL_TouchFingerEvent(self);
+  struct SDL_TouchFingerEvent * native_self = mruby_unbox_SDL_TouchFingerEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -231,7 +231,7 @@ mrb_SDL_SDLTouchFingerEvent_set_fingerId(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTouchFingerEvent_get_x(mrb_state* mrb, mrb_value self) {
-  struct SDL_TouchFingerEvent * native_self = mruby_unbox_struct SDL_TouchFingerEvent(self);
+  struct SDL_TouchFingerEvent * native_self = mruby_unbox_SDL_TouchFingerEvent(self);
 
   float native_field = native_self->x;
 
@@ -249,7 +249,7 @@ mrb_SDL_SDLTouchFingerEvent_get_x(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTouchFingerEvent_set_x(mrb_state* mrb, mrb_value self) {
-  struct SDL_TouchFingerEvent * native_self = mruby_unbox_struct SDL_TouchFingerEvent(self);
+  struct SDL_TouchFingerEvent * native_self = mruby_unbox_SDL_TouchFingerEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -275,7 +275,7 @@ mrb_SDL_SDLTouchFingerEvent_set_x(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTouchFingerEvent_get_y(mrb_state* mrb, mrb_value self) {
-  struct SDL_TouchFingerEvent * native_self = mruby_unbox_struct SDL_TouchFingerEvent(self);
+  struct SDL_TouchFingerEvent * native_self = mruby_unbox_SDL_TouchFingerEvent(self);
 
   float native_field = native_self->y;
 
@@ -293,7 +293,7 @@ mrb_SDL_SDLTouchFingerEvent_get_y(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTouchFingerEvent_set_y(mrb_state* mrb, mrb_value self) {
-  struct SDL_TouchFingerEvent * native_self = mruby_unbox_struct SDL_TouchFingerEvent(self);
+  struct SDL_TouchFingerEvent * native_self = mruby_unbox_SDL_TouchFingerEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -319,7 +319,7 @@ mrb_SDL_SDLTouchFingerEvent_set_y(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTouchFingerEvent_get_dx(mrb_state* mrb, mrb_value self) {
-  struct SDL_TouchFingerEvent * native_self = mruby_unbox_struct SDL_TouchFingerEvent(self);
+  struct SDL_TouchFingerEvent * native_self = mruby_unbox_SDL_TouchFingerEvent(self);
 
   float native_field = native_self->dx;
 
@@ -337,7 +337,7 @@ mrb_SDL_SDLTouchFingerEvent_get_dx(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTouchFingerEvent_set_dx(mrb_state* mrb, mrb_value self) {
-  struct SDL_TouchFingerEvent * native_self = mruby_unbox_struct SDL_TouchFingerEvent(self);
+  struct SDL_TouchFingerEvent * native_self = mruby_unbox_SDL_TouchFingerEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -363,7 +363,7 @@ mrb_SDL_SDLTouchFingerEvent_set_dx(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTouchFingerEvent_get_dy(mrb_state* mrb, mrb_value self) {
-  struct SDL_TouchFingerEvent * native_self = mruby_unbox_struct SDL_TouchFingerEvent(self);
+  struct SDL_TouchFingerEvent * native_self = mruby_unbox_SDL_TouchFingerEvent(self);
 
   float native_field = native_self->dy;
 
@@ -381,7 +381,7 @@ mrb_SDL_SDLTouchFingerEvent_get_dy(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTouchFingerEvent_set_dy(mrb_state* mrb, mrb_value self) {
-  struct SDL_TouchFingerEvent * native_self = mruby_unbox_struct SDL_TouchFingerEvent(self);
+  struct SDL_TouchFingerEvent * native_self = mruby_unbox_SDL_TouchFingerEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -407,7 +407,7 @@ mrb_SDL_SDLTouchFingerEvent_set_dy(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTouchFingerEvent_get_pressure(mrb_state* mrb, mrb_value self) {
-  struct SDL_TouchFingerEvent * native_self = mruby_unbox_struct SDL_TouchFingerEvent(self);
+  struct SDL_TouchFingerEvent * native_self = mruby_unbox_SDL_TouchFingerEvent(self);
 
   float native_field = native_self->pressure;
 
@@ -425,7 +425,7 @@ mrb_SDL_SDLTouchFingerEvent_get_pressure(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTouchFingerEvent_set_pressure(mrb_state* mrb, mrb_value self) {
-  struct SDL_TouchFingerEvent * native_self = mruby_unbox_struct SDL_TouchFingerEvent(self);
+  struct SDL_TouchFingerEvent * native_self = mruby_unbox_SDL_TouchFingerEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

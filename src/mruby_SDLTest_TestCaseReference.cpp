@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLTestTestCaseReference_initialize(mrb_state* mrb, mrb_value self) {
   struct SDLTest_TestCaseReference* native_object = (struct SDLTest_TestCaseReference*)malloc(sizeof(struct SDLTest_TestCaseReference));
-  mruby_gift_struct SDLTest_TestCaseReference_data_ptr(self, native_object);
+  mruby_gift_SDLTest_TestCaseReference_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLTestTestCaseReference_belongs_to_ruby(mrb_state* mrb, mrb_value self)
  */
 mrb_value
 mrb_SDL_SDLTestTestCaseReference_get_testCase(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_TestCaseReference * native_self = mruby_unbox_struct SDLTest_TestCaseReference(self);
+  struct SDLTest_TestCaseReference * native_self = mruby_unbox_SDLTest_TestCaseReference(self);
 
   SDLTest_TestCaseFp native_field = native_self->testCase;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLTestTestCaseReference_get_testCase(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTestTestCaseReference_set_testCase(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_TestCaseReference * native_self = mruby_unbox_struct SDLTest_TestCaseReference(self);
+  struct SDLTest_TestCaseReference * native_self = mruby_unbox_SDLTest_TestCaseReference(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLTestTestCaseReference_set_testCase(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTestTestCaseReference_get_name(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_TestCaseReference * native_self = mruby_unbox_struct SDLTest_TestCaseReference(self);
+  struct SDLTest_TestCaseReference * native_self = mruby_unbox_SDLTest_TestCaseReference(self);
 
   char * native_field = native_self->name;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLTestTestCaseReference_get_name(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTestTestCaseReference_set_name(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_TestCaseReference * native_self = mruby_unbox_struct SDLTest_TestCaseReference(self);
+  struct SDLTest_TestCaseReference * native_self = mruby_unbox_SDLTest_TestCaseReference(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -157,7 +157,7 @@ mrb_SDL_SDLTestTestCaseReference_set_name(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTestTestCaseReference_get_description(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_TestCaseReference * native_self = mruby_unbox_struct SDLTest_TestCaseReference(self);
+  struct SDLTest_TestCaseReference * native_self = mruby_unbox_SDLTest_TestCaseReference(self);
 
   char * native_field = native_self->description;
 
@@ -175,7 +175,7 @@ mrb_SDL_SDLTestTestCaseReference_get_description(mrb_state* mrb, mrb_value self)
  */
 mrb_value
 mrb_SDL_SDLTestTestCaseReference_set_description(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_TestCaseReference * native_self = mruby_unbox_struct SDLTest_TestCaseReference(self);
+  struct SDLTest_TestCaseReference * native_self = mruby_unbox_SDLTest_TestCaseReference(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -206,7 +206,7 @@ mrb_SDL_SDLTestTestCaseReference_set_description(mrb_state* mrb, mrb_value self)
  */
 mrb_value
 mrb_SDL_SDLTestTestCaseReference_get_enabled(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_TestCaseReference * native_self = mruby_unbox_struct SDLTest_TestCaseReference(self);
+  struct SDLTest_TestCaseReference * native_self = mruby_unbox_SDLTest_TestCaseReference(self);
 
   int native_field = native_self->enabled;
 
@@ -228,7 +228,7 @@ mrb_SDL_SDLTestTestCaseReference_get_enabled(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTestTestCaseReference_set_enabled(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_TestCaseReference * native_self = mruby_unbox_struct SDLTest_TestCaseReference(self);
+  struct SDLTest_TestCaseReference * native_self = mruby_unbox_SDLTest_TestCaseReference(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

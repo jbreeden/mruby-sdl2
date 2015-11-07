@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLMultiGestureEvent_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_MultiGestureEvent* native_object = (struct SDL_MultiGestureEvent*)malloc(sizeof(struct SDL_MultiGestureEvent));
-  mruby_gift_struct SDL_MultiGestureEvent_data_ptr(self, native_object);
+  mruby_gift_SDL_MultiGestureEvent_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLMultiGestureEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMultiGestureEvent_get_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_MultiGestureEvent * native_self = mruby_unbox_struct SDL_MultiGestureEvent(self);
+  struct SDL_MultiGestureEvent * native_self = mruby_unbox_SDL_MultiGestureEvent(self);
 
   Uint32 native_field = native_self->type;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLMultiGestureEvent_get_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMultiGestureEvent_set_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_MultiGestureEvent * native_self = mruby_unbox_struct SDL_MultiGestureEvent(self);
+  struct SDL_MultiGestureEvent * native_self = mruby_unbox_SDL_MultiGestureEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLMultiGestureEvent_set_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMultiGestureEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_MultiGestureEvent * native_self = mruby_unbox_struct SDL_MultiGestureEvent(self);
+  struct SDL_MultiGestureEvent * native_self = mruby_unbox_SDL_MultiGestureEvent(self);
 
   Uint32 native_field = native_self->timestamp;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLMultiGestureEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMultiGestureEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_MultiGestureEvent * native_self = mruby_unbox_struct SDL_MultiGestureEvent(self);
+  struct SDL_MultiGestureEvent * native_self = mruby_unbox_SDL_MultiGestureEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -149,7 +149,7 @@ mrb_SDL_SDLMultiGestureEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMultiGestureEvent_get_touchId(mrb_state* mrb, mrb_value self) {
-  struct SDL_MultiGestureEvent * native_self = mruby_unbox_struct SDL_MultiGestureEvent(self);
+  struct SDL_MultiGestureEvent * native_self = mruby_unbox_SDL_MultiGestureEvent(self);
 
   SDL_TouchID native_field = native_self->touchId;
 
@@ -167,7 +167,7 @@ mrb_SDL_SDLMultiGestureEvent_get_touchId(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMultiGestureEvent_set_touchId(mrb_state* mrb, mrb_value self) {
-  struct SDL_MultiGestureEvent * native_self = mruby_unbox_struct SDL_MultiGestureEvent(self);
+  struct SDL_MultiGestureEvent * native_self = mruby_unbox_SDL_MultiGestureEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -190,7 +190,7 @@ mrb_SDL_SDLMultiGestureEvent_set_touchId(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMultiGestureEvent_get_dTheta(mrb_state* mrb, mrb_value self) {
-  struct SDL_MultiGestureEvent * native_self = mruby_unbox_struct SDL_MultiGestureEvent(self);
+  struct SDL_MultiGestureEvent * native_self = mruby_unbox_SDL_MultiGestureEvent(self);
 
   float native_field = native_self->dTheta;
 
@@ -208,7 +208,7 @@ mrb_SDL_SDLMultiGestureEvent_get_dTheta(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMultiGestureEvent_set_dTheta(mrb_state* mrb, mrb_value self) {
-  struct SDL_MultiGestureEvent * native_self = mruby_unbox_struct SDL_MultiGestureEvent(self);
+  struct SDL_MultiGestureEvent * native_self = mruby_unbox_SDL_MultiGestureEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -234,7 +234,7 @@ mrb_SDL_SDLMultiGestureEvent_set_dTheta(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMultiGestureEvent_get_dDist(mrb_state* mrb, mrb_value self) {
-  struct SDL_MultiGestureEvent * native_self = mruby_unbox_struct SDL_MultiGestureEvent(self);
+  struct SDL_MultiGestureEvent * native_self = mruby_unbox_SDL_MultiGestureEvent(self);
 
   float native_field = native_self->dDist;
 
@@ -252,7 +252,7 @@ mrb_SDL_SDLMultiGestureEvent_get_dDist(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMultiGestureEvent_set_dDist(mrb_state* mrb, mrb_value self) {
-  struct SDL_MultiGestureEvent * native_self = mruby_unbox_struct SDL_MultiGestureEvent(self);
+  struct SDL_MultiGestureEvent * native_self = mruby_unbox_SDL_MultiGestureEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -278,7 +278,7 @@ mrb_SDL_SDLMultiGestureEvent_set_dDist(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMultiGestureEvent_get_x(mrb_state* mrb, mrb_value self) {
-  struct SDL_MultiGestureEvent * native_self = mruby_unbox_struct SDL_MultiGestureEvent(self);
+  struct SDL_MultiGestureEvent * native_self = mruby_unbox_SDL_MultiGestureEvent(self);
 
   float native_field = native_self->x;
 
@@ -296,7 +296,7 @@ mrb_SDL_SDLMultiGestureEvent_get_x(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMultiGestureEvent_set_x(mrb_state* mrb, mrb_value self) {
-  struct SDL_MultiGestureEvent * native_self = mruby_unbox_struct SDL_MultiGestureEvent(self);
+  struct SDL_MultiGestureEvent * native_self = mruby_unbox_SDL_MultiGestureEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -322,7 +322,7 @@ mrb_SDL_SDLMultiGestureEvent_set_x(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMultiGestureEvent_get_y(mrb_state* mrb, mrb_value self) {
-  struct SDL_MultiGestureEvent * native_self = mruby_unbox_struct SDL_MultiGestureEvent(self);
+  struct SDL_MultiGestureEvent * native_self = mruby_unbox_SDL_MultiGestureEvent(self);
 
   float native_field = native_self->y;
 
@@ -340,7 +340,7 @@ mrb_SDL_SDLMultiGestureEvent_get_y(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMultiGestureEvent_set_y(mrb_state* mrb, mrb_value self) {
-  struct SDL_MultiGestureEvent * native_self = mruby_unbox_struct SDL_MultiGestureEvent(self);
+  struct SDL_MultiGestureEvent * native_self = mruby_unbox_SDL_MultiGestureEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -366,7 +366,7 @@ mrb_SDL_SDLMultiGestureEvent_set_y(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMultiGestureEvent_get_numFingers(mrb_state* mrb, mrb_value self) {
-  struct SDL_MultiGestureEvent * native_self = mruby_unbox_struct SDL_MultiGestureEvent(self);
+  struct SDL_MultiGestureEvent * native_self = mruby_unbox_SDL_MultiGestureEvent(self);
 
   Uint16 native_field = native_self->numFingers;
 
@@ -384,7 +384,7 @@ mrb_SDL_SDLMultiGestureEvent_get_numFingers(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMultiGestureEvent_set_numFingers(mrb_state* mrb, mrb_value self) {
-  struct SDL_MultiGestureEvent * native_self = mruby_unbox_struct SDL_MultiGestureEvent(self);
+  struct SDL_MultiGestureEvent * native_self = mruby_unbox_SDL_MultiGestureEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -407,7 +407,7 @@ mrb_SDL_SDLMultiGestureEvent_set_numFingers(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMultiGestureEvent_get_padding(mrb_state* mrb, mrb_value self) {
-  struct SDL_MultiGestureEvent * native_self = mruby_unbox_struct SDL_MultiGestureEvent(self);
+  struct SDL_MultiGestureEvent * native_self = mruby_unbox_SDL_MultiGestureEvent(self);
 
   Uint16 native_field = native_self->padding;
 
@@ -425,7 +425,7 @@ mrb_SDL_SDLMultiGestureEvent_get_padding(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMultiGestureEvent_set_padding(mrb_state* mrb, mrb_value self) {
-  struct SDL_MultiGestureEvent * native_self = mruby_unbox_struct SDL_MultiGestureEvent(self);
+  struct SDL_MultiGestureEvent * native_self = mruby_unbox_SDL_MultiGestureEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

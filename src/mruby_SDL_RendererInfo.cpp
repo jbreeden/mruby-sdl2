@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLRendererInfo_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_RendererInfo* native_object = (struct SDL_RendererInfo*)malloc(sizeof(struct SDL_RendererInfo));
-  mruby_gift_struct SDL_RendererInfo_data_ptr(self, native_object);
+  mruby_gift_SDL_RendererInfo_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLRendererInfo_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRendererInfo_get_name(mrb_state* mrb, mrb_value self) {
-  struct SDL_RendererInfo * native_self = mruby_unbox_struct SDL_RendererInfo(self);
+  struct SDL_RendererInfo * native_self = mruby_unbox_SDL_RendererInfo(self);
 
   const char * native_field = native_self->name;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLRendererInfo_get_name(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRendererInfo_set_name(mrb_state* mrb, mrb_value self) {
-  struct SDL_RendererInfo * native_self = mruby_unbox_struct SDL_RendererInfo(self);
+  struct SDL_RendererInfo * native_self = mruby_unbox_SDL_RendererInfo(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -111,7 +111,7 @@ mrb_SDL_SDLRendererInfo_set_name(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRendererInfo_get_flags(mrb_state* mrb, mrb_value self) {
-  struct SDL_RendererInfo * native_self = mruby_unbox_struct SDL_RendererInfo(self);
+  struct SDL_RendererInfo * native_self = mruby_unbox_SDL_RendererInfo(self);
 
   Uint32 native_field = native_self->flags;
 
@@ -129,7 +129,7 @@ mrb_SDL_SDLRendererInfo_get_flags(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRendererInfo_set_flags(mrb_state* mrb, mrb_value self) {
-  struct SDL_RendererInfo * native_self = mruby_unbox_struct SDL_RendererInfo(self);
+  struct SDL_RendererInfo * native_self = mruby_unbox_SDL_RendererInfo(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -152,7 +152,7 @@ mrb_SDL_SDLRendererInfo_set_flags(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRendererInfo_get_num_texture_formats(mrb_state* mrb, mrb_value self) {
-  struct SDL_RendererInfo * native_self = mruby_unbox_struct SDL_RendererInfo(self);
+  struct SDL_RendererInfo * native_self = mruby_unbox_SDL_RendererInfo(self);
 
   Uint32 native_field = native_self->num_texture_formats;
 
@@ -170,7 +170,7 @@ mrb_SDL_SDLRendererInfo_get_num_texture_formats(mrb_state* mrb, mrb_value self) 
  */
 mrb_value
 mrb_SDL_SDLRendererInfo_set_num_texture_formats(mrb_state* mrb, mrb_value self) {
-  struct SDL_RendererInfo * native_self = mruby_unbox_struct SDL_RendererInfo(self);
+  struct SDL_RendererInfo * native_self = mruby_unbox_SDL_RendererInfo(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -193,7 +193,7 @@ mrb_SDL_SDLRendererInfo_set_num_texture_formats(mrb_state* mrb, mrb_value self) 
  */
 mrb_value
 mrb_SDL_SDLRendererInfo_get_texture_formats(mrb_state* mrb, mrb_value self) {
-  struct SDL_RendererInfo * native_self = mruby_unbox_struct SDL_RendererInfo(self);
+  struct SDL_RendererInfo * native_self = mruby_unbox_SDL_RendererInfo(self);
 
   Uint32 [16] native_field = native_self->texture_formats;
 
@@ -211,7 +211,7 @@ mrb_SDL_SDLRendererInfo_get_texture_formats(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRendererInfo_set_texture_formats(mrb_state* mrb, mrb_value self) {
-  struct SDL_RendererInfo * native_self = mruby_unbox_struct SDL_RendererInfo(self);
+  struct SDL_RendererInfo * native_self = mruby_unbox_SDL_RendererInfo(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -234,7 +234,7 @@ mrb_SDL_SDLRendererInfo_set_texture_formats(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRendererInfo_get_max_texture_width(mrb_state* mrb, mrb_value self) {
-  struct SDL_RendererInfo * native_self = mruby_unbox_struct SDL_RendererInfo(self);
+  struct SDL_RendererInfo * native_self = mruby_unbox_SDL_RendererInfo(self);
 
   int native_field = native_self->max_texture_width;
 
@@ -256,7 +256,7 @@ mrb_SDL_SDLRendererInfo_get_max_texture_width(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRendererInfo_set_max_texture_width(mrb_state* mrb, mrb_value self) {
-  struct SDL_RendererInfo * native_self = mruby_unbox_struct SDL_RendererInfo(self);
+  struct SDL_RendererInfo * native_self = mruby_unbox_SDL_RendererInfo(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -282,7 +282,7 @@ mrb_SDL_SDLRendererInfo_set_max_texture_width(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRendererInfo_get_max_texture_height(mrb_state* mrb, mrb_value self) {
-  struct SDL_RendererInfo * native_self = mruby_unbox_struct SDL_RendererInfo(self);
+  struct SDL_RendererInfo * native_self = mruby_unbox_SDL_RendererInfo(self);
 
   int native_field = native_self->max_texture_height;
 
@@ -304,7 +304,7 @@ mrb_SDL_SDLRendererInfo_get_max_texture_height(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRendererInfo_set_max_texture_height(mrb_state* mrb, mrb_value self) {
-  struct SDL_RendererInfo * native_self = mruby_unbox_struct SDL_RendererInfo(self);
+  struct SDL_RendererInfo * native_self = mruby_unbox_SDL_RendererInfo(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

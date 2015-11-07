@@ -7210,7 +7210,7 @@ mrb_SDL_SDL_GetKeyFromScancode(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  SDL_Scancode native_scancode = TODO_mruby_unbox_SDL_Scancode(scancode);
+  SDL_Scancode native_scancode = (SDL_Scancode)mrb_fixnum(scancode);
 
   /* Invocation */
   SDL_Keycode result = SDL_GetKeyFromScancode(native_scancode);
@@ -8345,7 +8345,7 @@ mrb_SDL_SDL_GetScancodeFromKey(mrb_state* mrb, mrb_value self) {
   SDL_Scancode result = SDL_GetScancodeFromKey(native_key);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_SDL_Scancode(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(mrb, result);
 
   return return_value;
 }
@@ -8382,7 +8382,7 @@ mrb_SDL_SDL_GetScancodeFromName(mrb_state* mrb, mrb_value self) {
   SDL_Scancode result = SDL_GetScancodeFromName(native_name);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_SDL_Scancode(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(mrb, result);
 
   return return_value;
 }
@@ -8410,7 +8410,7 @@ mrb_SDL_SDL_GetScancodeName(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  SDL_Scancode native_scancode = TODO_mruby_unbox_SDL_Scancode(scancode);
+  SDL_Scancode native_scancode = (SDL_Scancode)mrb_fixnum(scancode);
 
   /* Invocation */
   const char * result = SDL_GetScancodeName(native_scancode);

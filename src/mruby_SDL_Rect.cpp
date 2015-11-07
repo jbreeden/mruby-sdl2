@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLRect_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_Rect* native_object = (struct SDL_Rect*)malloc(sizeof(struct SDL_Rect));
-  mruby_gift_struct SDL_Rect_data_ptr(self, native_object);
+  mruby_gift_SDL_Rect_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLRect_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRect_get_x(mrb_state* mrb, mrb_value self) {
-  struct SDL_Rect * native_self = mruby_unbox_struct SDL_Rect(self);
+  struct SDL_Rect * native_self = mruby_unbox_SDL_Rect(self);
 
   int native_field = native_self->x;
 
@@ -89,7 +89,7 @@ mrb_SDL_SDLRect_get_x(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRect_set_x(mrb_state* mrb, mrb_value self) {
-  struct SDL_Rect * native_self = mruby_unbox_struct SDL_Rect(self);
+  struct SDL_Rect * native_self = mruby_unbox_SDL_Rect(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -115,7 +115,7 @@ mrb_SDL_SDLRect_set_x(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRect_get_y(mrb_state* mrb, mrb_value self) {
-  struct SDL_Rect * native_self = mruby_unbox_struct SDL_Rect(self);
+  struct SDL_Rect * native_self = mruby_unbox_SDL_Rect(self);
 
   int native_field = native_self->y;
 
@@ -137,7 +137,7 @@ mrb_SDL_SDLRect_get_y(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRect_set_y(mrb_state* mrb, mrb_value self) {
-  struct SDL_Rect * native_self = mruby_unbox_struct SDL_Rect(self);
+  struct SDL_Rect * native_self = mruby_unbox_SDL_Rect(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -163,7 +163,7 @@ mrb_SDL_SDLRect_set_y(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRect_get_w(mrb_state* mrb, mrb_value self) {
-  struct SDL_Rect * native_self = mruby_unbox_struct SDL_Rect(self);
+  struct SDL_Rect * native_self = mruby_unbox_SDL_Rect(self);
 
   int native_field = native_self->w;
 
@@ -185,7 +185,7 @@ mrb_SDL_SDLRect_get_w(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRect_set_w(mrb_state* mrb, mrb_value self) {
-  struct SDL_Rect * native_self = mruby_unbox_struct SDL_Rect(self);
+  struct SDL_Rect * native_self = mruby_unbox_SDL_Rect(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -211,7 +211,7 @@ mrb_SDL_SDLRect_set_w(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRect_get_h(mrb_state* mrb, mrb_value self) {
-  struct SDL_Rect * native_self = mruby_unbox_struct SDL_Rect(self);
+  struct SDL_Rect * native_self = mruby_unbox_SDL_Rect(self);
 
   int native_field = native_self->h;
 
@@ -233,7 +233,7 @@ mrb_SDL_SDLRect_get_h(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLRect_set_h(mrb_state* mrb, mrb_value self) {
-  struct SDL_Rect * native_self = mruby_unbox_struct SDL_Rect(self);
+  struct SDL_Rect * native_self = mruby_unbox_SDL_Rect(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLUserEvent_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_UserEvent* native_object = (struct SDL_UserEvent*)malloc(sizeof(struct SDL_UserEvent));
-  mruby_gift_struct SDL_UserEvent_data_ptr(self, native_object);
+  mruby_gift_SDL_UserEvent_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLUserEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLUserEvent_get_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_UserEvent * native_self = mruby_unbox_struct SDL_UserEvent(self);
+  struct SDL_UserEvent * native_self = mruby_unbox_SDL_UserEvent(self);
 
   Uint32 native_field = native_self->type;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLUserEvent_get_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLUserEvent_set_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_UserEvent * native_self = mruby_unbox_struct SDL_UserEvent(self);
+  struct SDL_UserEvent * native_self = mruby_unbox_SDL_UserEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLUserEvent_set_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLUserEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_UserEvent * native_self = mruby_unbox_struct SDL_UserEvent(self);
+  struct SDL_UserEvent * native_self = mruby_unbox_SDL_UserEvent(self);
 
   Uint32 native_field = native_self->timestamp;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLUserEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLUserEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_UserEvent * native_self = mruby_unbox_struct SDL_UserEvent(self);
+  struct SDL_UserEvent * native_self = mruby_unbox_SDL_UserEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -149,7 +149,7 @@ mrb_SDL_SDLUserEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLUserEvent_get_windowID(mrb_state* mrb, mrb_value self) {
-  struct SDL_UserEvent * native_self = mruby_unbox_struct SDL_UserEvent(self);
+  struct SDL_UserEvent * native_self = mruby_unbox_SDL_UserEvent(self);
 
   Uint32 native_field = native_self->windowID;
 
@@ -167,7 +167,7 @@ mrb_SDL_SDLUserEvent_get_windowID(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLUserEvent_set_windowID(mrb_state* mrb, mrb_value self) {
-  struct SDL_UserEvent * native_self = mruby_unbox_struct SDL_UserEvent(self);
+  struct SDL_UserEvent * native_self = mruby_unbox_SDL_UserEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -190,7 +190,7 @@ mrb_SDL_SDLUserEvent_set_windowID(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLUserEvent_get_code(mrb_state* mrb, mrb_value self) {
-  struct SDL_UserEvent * native_self = mruby_unbox_struct SDL_UserEvent(self);
+  struct SDL_UserEvent * native_self = mruby_unbox_SDL_UserEvent(self);
 
   Sint32 native_field = native_self->code;
 
@@ -208,7 +208,7 @@ mrb_SDL_SDLUserEvent_get_code(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLUserEvent_set_code(mrb_state* mrb, mrb_value self) {
-  struct SDL_UserEvent * native_self = mruby_unbox_struct SDL_UserEvent(self);
+  struct SDL_UserEvent * native_self = mruby_unbox_SDL_UserEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -231,11 +231,11 @@ mrb_SDL_SDLUserEvent_set_code(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLUserEvent_get_data1(mrb_state* mrb, mrb_value self) {
-  struct SDL_UserEvent * native_self = mruby_unbox_struct SDL_UserEvent(self);
+  struct SDL_UserEvent * native_self = mruby_unbox_SDL_UserEvent(self);
 
   void * native_field = native_self->data1;
 
-  mrb_value ruby_field = TODO_mruby_box_void_PTR(mrb, native_field);
+  mrb_value ruby_field = *((mrb_value*)native_field);
 
   return ruby_field;
 }
@@ -249,17 +249,14 @@ mrb_SDL_SDLUserEvent_get_data1(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLUserEvent_set_data1(mrb_state* mrb, mrb_value self) {
-  struct SDL_UserEvent * native_self = mruby_unbox_struct SDL_UserEvent(self);
+  struct SDL_UserEvent * native_self = mruby_unbox_SDL_UserEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
+  mrb_value* new_ruby_field = (mrb_value*)malloc(sizeof(mrb_value));
+  *new_ruby_field = ruby_field;
 
-  /* type checking */
-  TODO_type_check_void_PTR(ruby_field);
-
-  void * native_field = TODO_mruby_unbox_void_PTR(ruby_field);
-
-  native_self->data1 = native_field;
+  native_self->data1 = (void*)new_ruby_field;
 
   return ruby_field;
 }
@@ -272,11 +269,11 @@ mrb_SDL_SDLUserEvent_set_data1(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLUserEvent_get_data2(mrb_state* mrb, mrb_value self) {
-  struct SDL_UserEvent * native_self = mruby_unbox_struct SDL_UserEvent(self);
+  struct SDL_UserEvent * native_self = mruby_unbox_SDL_UserEvent(self);
 
   void * native_field = native_self->data2;
 
-  mrb_value ruby_field = TODO_mruby_box_void_PTR(mrb, native_field);
+  mrb_value ruby_field = *((mrb_value*)native_field);
 
   return ruby_field;
 }
@@ -290,17 +287,14 @@ mrb_SDL_SDLUserEvent_get_data2(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLUserEvent_set_data2(mrb_state* mrb, mrb_value self) {
-  struct SDL_UserEvent * native_self = mruby_unbox_struct SDL_UserEvent(self);
+  struct SDL_UserEvent * native_self = mruby_unbox_SDL_UserEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
+  mrb_value* new_ruby_field = (mrb_value*)malloc(sizeof(mrb_value));
+  *new_ruby_field = ruby_field;
 
-  /* type checking */
-  TODO_type_check_void_PTR(ruby_field);
-
-  void * native_field = TODO_mruby_unbox_void_PTR(ruby_field);
-
-  native_self->data2 = native_field;
+  native_self->data2 = (void*)new_ruby_field;
 
   return ruby_field;
 }

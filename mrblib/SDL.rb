@@ -1,26 +1,26 @@
 module SDL
 
-  module SdlAudiostatus
+  module Audiostatus
     SDL_AUDIO_STOPPED = 0
     SDL_AUDIO_PLAYING = 1
     SDL_AUDIO_PAUSED = 2
   end
-  include SdlAudiostatus
+  include Audiostatus
 
-  module SdlBlendmode
+  module Blendmode
     SDL_BLENDMODE_NONE = 0
     SDL_BLENDMODE_BLEND = 1
     SDL_BLENDMODE_ADD = 2
     SDL_BLENDMODE_MOD = 4
   end
-  include SdlBlendmode
+  include Blendmode
 
-  module SdlDummyEnum
+  module DummyEnum
     DUMMY_ENUM_VALUE = 0
   end
-  include SdlDummyEnum
+  include DummyEnum
 
-  module SdlEventtype
+  module Eventtype
     SDL_FIRSTEVENT = 0
     SDL_QUIT = 256
     SDL_APP_TERMINATING = 257
@@ -64,9 +64,9 @@ module SDL
     SDL_USEREVENT = 32768
     SDL_LASTEVENT = 65535
   end
-  include SdlEventtype
+  include Eventtype
 
-  module SdlGlattr
+  module Glattr
     SDL_GL_RED_SIZE = 0
     SDL_GL_GREEN_SIZE = 1
     SDL_GL_BLUE_SIZE = 2
@@ -92,24 +92,24 @@ module SDL
     SDL_GL_SHARE_WITH_CURRENT_CONTEXT = 22
     SDL_GL_FRAMEBUFFER_SRGB_CAPABLE = 23
   end
-  include SdlGlattr
+  include Glattr
 
-  module SdlGlcontextflag
+  module Glcontextflag
     SDL_GL_CONTEXT_DEBUG_FLAG = 1
     SDL_GL_CONTEXT_FORWARD_COMPATIBLE_FLAG = 2
     SDL_GL_CONTEXT_ROBUST_ACCESS_FLAG = 4
     SDL_GL_CONTEXT_RESET_ISOLATION_FLAG = 8
   end
-  include SdlGlcontextflag
+  include Glcontextflag
 
-  module SdlGlprofile
+  module Glprofile
     SDL_GL_CONTEXT_PROFILE_CORE = 1
     SDL_GL_CONTEXT_PROFILE_COMPATIBILITY = 2
     SDL_GL_CONTEXT_PROFILE_ES = 4
   end
-  include SdlGlprofile
+  include Glprofile
 
-  module SdlGamecontrolleraxis
+  module Gamecontrolleraxis
     SDL_CONTROLLER_AXIS_INVALID = -1
     SDL_CONTROLLER_AXIS_LEFTX = 0
     SDL_CONTROLLER_AXIS_LEFTY = 1
@@ -119,17 +119,17 @@ module SDL
     SDL_CONTROLLER_AXIS_TRIGGERRIGHT = 5
     SDL_CONTROLLER_AXIS_MAX = 6
   end
-  include SdlGamecontrolleraxis
+  include Gamecontrolleraxis
 
-  module SdlGamecontrollerbindtype
+  module Gamecontrollerbindtype
     SDL_CONTROLLER_BINDTYPE_NONE = 0
     SDL_CONTROLLER_BINDTYPE_BUTTON = 1
     SDL_CONTROLLER_BINDTYPE_AXIS = 2
     SDL_CONTROLLER_BINDTYPE_HAT = 3
   end
-  include SdlGamecontrollerbindtype
+  include Gamecontrollerbindtype
 
-  module SdlGamecontrollerbutton
+  module Gamecontrollerbutton
     SDL_CONTROLLER_BUTTON_INVALID = -1
     SDL_CONTROLLER_BUTTON_A = 0
     SDL_CONTROLLER_BUTTON_B = 1
@@ -148,16 +148,16 @@ module SDL
     SDL_CONTROLLER_BUTTON_DPAD_RIGHT = 14
     SDL_CONTROLLER_BUTTON_MAX = 15
   end
-  include SdlGamecontrollerbutton
+  include Gamecontrollerbutton
 
-  module SdlHintpriority
+  module Hintpriority
     SDL_HINT_DEFAULT = 0
     SDL_HINT_NORMAL = 1
     SDL_HINT_OVERRIDE = 2
   end
-  include SdlHintpriority
+  include Hintpriority
 
-  module SdlKeymod
+  module Keymod
     KMOD_NONE = 0
     KMOD_LSHIFT = 1
     KMOD_RSHIFT = 2
@@ -172,9 +172,9 @@ module SDL
     KMOD_MODE = 16384
     KMOD_RESERVED = 32768
   end
-  include SdlKeymod
+  include Keymod
 
-  module SdlLogpriority
+  module Logpriority
     SDL_LOG_PRIORITY_VERBOSE = 1
     SDL_LOG_PRIORITY_DEBUG = 2
     SDL_LOG_PRIORITY_INFO = 3
@@ -183,15 +183,15 @@ module SDL
     SDL_LOG_PRIORITY_CRITICAL = 6
     SDL_NUM_LOG_PRIORITIES = 7
   end
-  include SdlLogpriority
+  include Logpriority
 
-  module SdlMessageboxbuttonflags
+  module Messageboxbuttonflags
     SDL_MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT = 1
     SDL_MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT = 2
   end
-  include SdlMessageboxbuttonflags
+  include Messageboxbuttonflags
 
-  module SdlMessageboxcolortype
+  module Messageboxcolortype
     SDL_MESSAGEBOX_COLOR_BACKGROUND = 0
     SDL_MESSAGEBOX_COLOR_TEXT = 1
     SDL_MESSAGEBOX_COLOR_BUTTON_BORDER = 2
@@ -199,40 +199,40 @@ module SDL
     SDL_MESSAGEBOX_COLOR_BUTTON_SELECTED = 4
     SDL_MESSAGEBOX_COLOR_MAX = 5
   end
-  include SdlMessageboxcolortype
+  include Messageboxcolortype
 
-  module SdlMessageboxflags
+  module Messageboxflags
     SDL_MESSAGEBOX_ERROR = 16
     SDL_MESSAGEBOX_WARNING = 32
     SDL_MESSAGEBOX_INFORMATION = 64
   end
-  include SdlMessageboxflags
+  include Messageboxflags
 
-  module SdlPowerstate
+  module Powerstate
     SDL_POWERSTATE_UNKNOWN = 0
     SDL_POWERSTATE_ON_BATTERY = 1
     SDL_POWERSTATE_NO_BATTERY = 2
     SDL_POWERSTATE_CHARGING = 3
     SDL_POWERSTATE_CHARGED = 4
   end
-  include SdlPowerstate
+  include Powerstate
 
-  module SdlRendererflags
+  module Rendererflags
     SDL_RENDERER_SOFTWARE = 1
     SDL_RENDERER_ACCELERATED = 2
     SDL_RENDERER_PRESENTVSYNC = 4
     SDL_RENDERER_TARGETTEXTURE = 8
   end
-  include SdlRendererflags
+  include Rendererflags
 
-  module SdlRendererflip
+  module Rendererflip
     SDL_FLIP_NONE = 0
     SDL_FLIP_HORIZONTAL = 1
     SDL_FLIP_VERTICAL = 2
   end
-  include SdlRendererflip
+  include Rendererflip
 
-  module SdlSyswmType
+  module SyswmType
     SDL_SYSWM_UNKNOWN = 0
     SDL_SYSWM_WINDOWS = 1
     SDL_SYSWM_X11 = 2
@@ -243,9 +243,9 @@ module SDL
     SDL_SYSWM_MIR = 7
     SDL_SYSWM_WINRT = 8
   end
-  include SdlSyswmType
+  include SyswmType
 
-  module SdlScancode
+  module Scancode
     SDL_SCANCODE_UNKNOWN = 0
     SDL_SCANCODE_A = 4
     SDL_SCANCODE_B = 5
@@ -489,9 +489,9 @@ module SDL
     SDL_SCANCODE_APP2 = 284
     SDL_NUM_SCANCODES = 512
   end
-  include SdlScancode
+  include Scancode
 
-  module SdlSystemcursor
+  module Systemcursor
     SDL_SYSTEM_CURSOR_ARROW = 0
     SDL_SYSTEM_CURSOR_IBEAM = 1
     SDL_SYSTEM_CURSOR_WAIT = 2
@@ -506,30 +506,30 @@ module SDL
     SDL_SYSTEM_CURSOR_HAND = 11
     SDL_NUM_SYSTEM_CURSORS = 12
   end
-  include SdlSystemcursor
+  include Systemcursor
 
-  module SdlTextureaccess
+  module Textureaccess
     SDL_TEXTUREACCESS_STATIC = 0
     SDL_TEXTUREACCESS_STREAMING = 1
     SDL_TEXTUREACCESS_TARGET = 2
   end
-  include SdlTextureaccess
+  include Textureaccess
 
-  module SdlTexturemodulate
+  module Texturemodulate
     SDL_TEXTUREMODULATE_NONE = 0
     SDL_TEXTUREMODULATE_COLOR = 1
     SDL_TEXTUREMODULATE_ALPHA = 2
   end
-  include SdlTexturemodulate
+  include Texturemodulate
 
-  module SdlThreadpriority
+  module Threadpriority
     SDL_THREAD_PRIORITY_LOW = 0
     SDL_THREAD_PRIORITY_NORMAL = 1
     SDL_THREAD_PRIORITY_HIGH = 2
   end
-  include SdlThreadpriority
+  include Threadpriority
 
-  module SdlWindoweventid
+  module Windoweventid
     SDL_WINDOWEVENT_NONE = 0
     SDL_WINDOWEVENT_SHOWN = 1
     SDL_WINDOWEVENT_HIDDEN = 2
@@ -546,9 +546,9 @@ module SDL
     SDL_WINDOWEVENT_FOCUS_LOST = 13
     SDL_WINDOWEVENT_CLOSE = 14
   end
-  include SdlWindoweventid
+  include Windoweventid
 
-  module SdlWindowflags
+  module Windowflags
     SDL_WINDOW_FULLSCREEN = 1
     SDL_WINDOW_OPENGL = 2
     SDL_WINDOW_SHOWN = 4
@@ -564,24 +564,24 @@ module SDL
     SDL_WINDOW_FOREIGN = 2048
     SDL_WINDOW_ALLOW_HIGHDPI = 8192
   end
-  include SdlWindowflags
+  include Windowflags
 
-  module SdlAssertState
+  module AssertState
     SDL_ASSERTION_RETRY = 0
     SDL_ASSERTION_BREAK = 1
     SDL_ASSERTION_ABORT = 2
     SDL_ASSERTION_IGNORE = 3
     SDL_ASSERTION_ALWAYS_IGNORE = 4
   end
-  include SdlAssertState
+  include AssertState
 
-  module SdlBool
+  module Bool
     SDL_FALSE = 0
     SDL_TRUE = 1
   end
-  include SdlBool
+  include Bool
 
-  module SdlErrorcode
+  module Errorcode
     SDL_ENOMEM = 0
     SDL_EFREAD = 1
     SDL_EFWRITE = 2
@@ -589,14 +589,14 @@ module SDL
     SDL_UNSUPPORTED = 4
     SDL_LASTERROR = 5
   end
-  include SdlErrorcode
+  include Errorcode
 
-  module SdlEventaction
+  module Eventaction
     SDL_ADDEVENT = 0
     SDL_PEEKEVENT = 1
     SDL_GETEVENT = 2
   end
-  include SdlEventaction
+  include Eventaction
 
   module Windowshapemode
     ShapeModeDefault = 0

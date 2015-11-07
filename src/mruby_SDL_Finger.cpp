@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLFinger_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_Finger* native_object = (struct SDL_Finger*)malloc(sizeof(struct SDL_Finger));
-  mruby_gift_struct SDL_Finger_data_ptr(self, native_object);
+  mruby_gift_SDL_Finger_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLFinger_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLFinger_get_id(mrb_state* mrb, mrb_value self) {
-  struct SDL_Finger * native_self = mruby_unbox_struct SDL_Finger(self);
+  struct SDL_Finger * native_self = mruby_unbox_SDL_Finger(self);
 
   SDL_FingerID native_field = native_self->id;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLFinger_get_id(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLFinger_set_id(mrb_state* mrb, mrb_value self) {
-  struct SDL_Finger * native_self = mruby_unbox_struct SDL_Finger(self);
+  struct SDL_Finger * native_self = mruby_unbox_SDL_Finger(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLFinger_set_id(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLFinger_get_x(mrb_state* mrb, mrb_value self) {
-  struct SDL_Finger * native_self = mruby_unbox_struct SDL_Finger(self);
+  struct SDL_Finger * native_self = mruby_unbox_SDL_Finger(self);
 
   float native_field = native_self->x;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLFinger_get_x(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLFinger_set_x(mrb_state* mrb, mrb_value self) {
-  struct SDL_Finger * native_self = mruby_unbox_struct SDL_Finger(self);
+  struct SDL_Finger * native_self = mruby_unbox_SDL_Finger(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -152,7 +152,7 @@ mrb_SDL_SDLFinger_set_x(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLFinger_get_y(mrb_state* mrb, mrb_value self) {
-  struct SDL_Finger * native_self = mruby_unbox_struct SDL_Finger(self);
+  struct SDL_Finger * native_self = mruby_unbox_SDL_Finger(self);
 
   float native_field = native_self->y;
 
@@ -170,7 +170,7 @@ mrb_SDL_SDLFinger_get_y(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLFinger_set_y(mrb_state* mrb, mrb_value self) {
-  struct SDL_Finger * native_self = mruby_unbox_struct SDL_Finger(self);
+  struct SDL_Finger * native_self = mruby_unbox_SDL_Finger(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -196,7 +196,7 @@ mrb_SDL_SDLFinger_set_y(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLFinger_get_pressure(mrb_state* mrb, mrb_value self) {
-  struct SDL_Finger * native_self = mruby_unbox_struct SDL_Finger(self);
+  struct SDL_Finger * native_self = mruby_unbox_SDL_Finger(self);
 
   float native_field = native_self->pressure;
 
@@ -214,7 +214,7 @@ mrb_SDL_SDLFinger_get_pressure(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLFinger_set_pressure(mrb_state* mrb, mrb_value self) {
-  struct SDL_Finger * native_self = mruby_unbox_struct SDL_Finger(self);
+  struct SDL_Finger * native_self = mruby_unbox_SDL_Finger(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

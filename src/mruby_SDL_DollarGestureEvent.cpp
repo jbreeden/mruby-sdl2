@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLDollarGestureEvent_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_DollarGestureEvent* native_object = (struct SDL_DollarGestureEvent*)malloc(sizeof(struct SDL_DollarGestureEvent));
-  mruby_gift_struct SDL_DollarGestureEvent_data_ptr(self, native_object);
+  mruby_gift_SDL_DollarGestureEvent_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLDollarGestureEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLDollarGestureEvent_get_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_DollarGestureEvent * native_self = mruby_unbox_struct SDL_DollarGestureEvent(self);
+  struct SDL_DollarGestureEvent * native_self = mruby_unbox_SDL_DollarGestureEvent(self);
 
   Uint32 native_field = native_self->type;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLDollarGestureEvent_get_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLDollarGestureEvent_set_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_DollarGestureEvent * native_self = mruby_unbox_struct SDL_DollarGestureEvent(self);
+  struct SDL_DollarGestureEvent * native_self = mruby_unbox_SDL_DollarGestureEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLDollarGestureEvent_set_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLDollarGestureEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_DollarGestureEvent * native_self = mruby_unbox_struct SDL_DollarGestureEvent(self);
+  struct SDL_DollarGestureEvent * native_self = mruby_unbox_SDL_DollarGestureEvent(self);
 
   Uint32 native_field = native_self->timestamp;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLDollarGestureEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLDollarGestureEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_DollarGestureEvent * native_self = mruby_unbox_struct SDL_DollarGestureEvent(self);
+  struct SDL_DollarGestureEvent * native_self = mruby_unbox_SDL_DollarGestureEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -149,7 +149,7 @@ mrb_SDL_SDLDollarGestureEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLDollarGestureEvent_get_touchId(mrb_state* mrb, mrb_value self) {
-  struct SDL_DollarGestureEvent * native_self = mruby_unbox_struct SDL_DollarGestureEvent(self);
+  struct SDL_DollarGestureEvent * native_self = mruby_unbox_SDL_DollarGestureEvent(self);
 
   SDL_TouchID native_field = native_self->touchId;
 
@@ -167,7 +167,7 @@ mrb_SDL_SDLDollarGestureEvent_get_touchId(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLDollarGestureEvent_set_touchId(mrb_state* mrb, mrb_value self) {
-  struct SDL_DollarGestureEvent * native_self = mruby_unbox_struct SDL_DollarGestureEvent(self);
+  struct SDL_DollarGestureEvent * native_self = mruby_unbox_SDL_DollarGestureEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -190,7 +190,7 @@ mrb_SDL_SDLDollarGestureEvent_set_touchId(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLDollarGestureEvent_get_gestureId(mrb_state* mrb, mrb_value self) {
-  struct SDL_DollarGestureEvent * native_self = mruby_unbox_struct SDL_DollarGestureEvent(self);
+  struct SDL_DollarGestureEvent * native_self = mruby_unbox_SDL_DollarGestureEvent(self);
 
   SDL_GestureID native_field = native_self->gestureId;
 
@@ -208,7 +208,7 @@ mrb_SDL_SDLDollarGestureEvent_get_gestureId(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLDollarGestureEvent_set_gestureId(mrb_state* mrb, mrb_value self) {
-  struct SDL_DollarGestureEvent * native_self = mruby_unbox_struct SDL_DollarGestureEvent(self);
+  struct SDL_DollarGestureEvent * native_self = mruby_unbox_SDL_DollarGestureEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -231,7 +231,7 @@ mrb_SDL_SDLDollarGestureEvent_set_gestureId(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLDollarGestureEvent_get_numFingers(mrb_state* mrb, mrb_value self) {
-  struct SDL_DollarGestureEvent * native_self = mruby_unbox_struct SDL_DollarGestureEvent(self);
+  struct SDL_DollarGestureEvent * native_self = mruby_unbox_SDL_DollarGestureEvent(self);
 
   Uint32 native_field = native_self->numFingers;
 
@@ -249,7 +249,7 @@ mrb_SDL_SDLDollarGestureEvent_get_numFingers(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLDollarGestureEvent_set_numFingers(mrb_state* mrb, mrb_value self) {
-  struct SDL_DollarGestureEvent * native_self = mruby_unbox_struct SDL_DollarGestureEvent(self);
+  struct SDL_DollarGestureEvent * native_self = mruby_unbox_SDL_DollarGestureEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -272,7 +272,7 @@ mrb_SDL_SDLDollarGestureEvent_set_numFingers(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLDollarGestureEvent_get_error(mrb_state* mrb, mrb_value self) {
-  struct SDL_DollarGestureEvent * native_self = mruby_unbox_struct SDL_DollarGestureEvent(self);
+  struct SDL_DollarGestureEvent * native_self = mruby_unbox_SDL_DollarGestureEvent(self);
 
   float native_field = native_self->error;
 
@@ -290,7 +290,7 @@ mrb_SDL_SDLDollarGestureEvent_get_error(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLDollarGestureEvent_set_error(mrb_state* mrb, mrb_value self) {
-  struct SDL_DollarGestureEvent * native_self = mruby_unbox_struct SDL_DollarGestureEvent(self);
+  struct SDL_DollarGestureEvent * native_self = mruby_unbox_SDL_DollarGestureEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -316,7 +316,7 @@ mrb_SDL_SDLDollarGestureEvent_set_error(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLDollarGestureEvent_get_x(mrb_state* mrb, mrb_value self) {
-  struct SDL_DollarGestureEvent * native_self = mruby_unbox_struct SDL_DollarGestureEvent(self);
+  struct SDL_DollarGestureEvent * native_self = mruby_unbox_SDL_DollarGestureEvent(self);
 
   float native_field = native_self->x;
 
@@ -334,7 +334,7 @@ mrb_SDL_SDLDollarGestureEvent_get_x(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLDollarGestureEvent_set_x(mrb_state* mrb, mrb_value self) {
-  struct SDL_DollarGestureEvent * native_self = mruby_unbox_struct SDL_DollarGestureEvent(self);
+  struct SDL_DollarGestureEvent * native_self = mruby_unbox_SDL_DollarGestureEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -360,7 +360,7 @@ mrb_SDL_SDLDollarGestureEvent_set_x(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLDollarGestureEvent_get_y(mrb_state* mrb, mrb_value self) {
-  struct SDL_DollarGestureEvent * native_self = mruby_unbox_struct SDL_DollarGestureEvent(self);
+  struct SDL_DollarGestureEvent * native_self = mruby_unbox_SDL_DollarGestureEvent(self);
 
   float native_field = native_self->y;
 
@@ -378,7 +378,7 @@ mrb_SDL_SDLDollarGestureEvent_get_y(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLDollarGestureEvent_set_y(mrb_state* mrb, mrb_value self) {
-  struct SDL_DollarGestureEvent * native_self = mruby_unbox_struct SDL_DollarGestureEvent(self);
+  struct SDL_DollarGestureEvent * native_self = mruby_unbox_SDL_DollarGestureEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

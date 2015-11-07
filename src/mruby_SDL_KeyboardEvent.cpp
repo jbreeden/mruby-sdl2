@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLKeyboardEvent_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_KeyboardEvent* native_object = (struct SDL_KeyboardEvent*)malloc(sizeof(struct SDL_KeyboardEvent));
-  mruby_gift_struct SDL_KeyboardEvent_data_ptr(self, native_object);
+  mruby_gift_SDL_KeyboardEvent_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLKeyboardEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeyboardEvent_get_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_KeyboardEvent * native_self = mruby_unbox_struct SDL_KeyboardEvent(self);
+  struct SDL_KeyboardEvent * native_self = mruby_unbox_SDL_KeyboardEvent(self);
 
   Uint32 native_field = native_self->type;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLKeyboardEvent_get_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeyboardEvent_set_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_KeyboardEvent * native_self = mruby_unbox_struct SDL_KeyboardEvent(self);
+  struct SDL_KeyboardEvent * native_self = mruby_unbox_SDL_KeyboardEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLKeyboardEvent_set_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeyboardEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_KeyboardEvent * native_self = mruby_unbox_struct SDL_KeyboardEvent(self);
+  struct SDL_KeyboardEvent * native_self = mruby_unbox_SDL_KeyboardEvent(self);
 
   Uint32 native_field = native_self->timestamp;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLKeyboardEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeyboardEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_KeyboardEvent * native_self = mruby_unbox_struct SDL_KeyboardEvent(self);
+  struct SDL_KeyboardEvent * native_self = mruby_unbox_SDL_KeyboardEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -149,7 +149,7 @@ mrb_SDL_SDLKeyboardEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeyboardEvent_get_windowID(mrb_state* mrb, mrb_value self) {
-  struct SDL_KeyboardEvent * native_self = mruby_unbox_struct SDL_KeyboardEvent(self);
+  struct SDL_KeyboardEvent * native_self = mruby_unbox_SDL_KeyboardEvent(self);
 
   Uint32 native_field = native_self->windowID;
 
@@ -167,7 +167,7 @@ mrb_SDL_SDLKeyboardEvent_get_windowID(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeyboardEvent_set_windowID(mrb_state* mrb, mrb_value self) {
-  struct SDL_KeyboardEvent * native_self = mruby_unbox_struct SDL_KeyboardEvent(self);
+  struct SDL_KeyboardEvent * native_self = mruby_unbox_SDL_KeyboardEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -190,7 +190,7 @@ mrb_SDL_SDLKeyboardEvent_set_windowID(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeyboardEvent_get_state(mrb_state* mrb, mrb_value self) {
-  struct SDL_KeyboardEvent * native_self = mruby_unbox_struct SDL_KeyboardEvent(self);
+  struct SDL_KeyboardEvent * native_self = mruby_unbox_SDL_KeyboardEvent(self);
 
   Uint8 native_field = native_self->state;
 
@@ -208,7 +208,7 @@ mrb_SDL_SDLKeyboardEvent_get_state(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeyboardEvent_set_state(mrb_state* mrb, mrb_value self) {
-  struct SDL_KeyboardEvent * native_self = mruby_unbox_struct SDL_KeyboardEvent(self);
+  struct SDL_KeyboardEvent * native_self = mruby_unbox_SDL_KeyboardEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -231,7 +231,7 @@ mrb_SDL_SDLKeyboardEvent_set_state(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeyboardEvent_get_repeat(mrb_state* mrb, mrb_value self) {
-  struct SDL_KeyboardEvent * native_self = mruby_unbox_struct SDL_KeyboardEvent(self);
+  struct SDL_KeyboardEvent * native_self = mruby_unbox_SDL_KeyboardEvent(self);
 
   Uint8 native_field = native_self->repeat;
 
@@ -249,7 +249,7 @@ mrb_SDL_SDLKeyboardEvent_get_repeat(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeyboardEvent_set_repeat(mrb_state* mrb, mrb_value self) {
-  struct SDL_KeyboardEvent * native_self = mruby_unbox_struct SDL_KeyboardEvent(self);
+  struct SDL_KeyboardEvent * native_self = mruby_unbox_SDL_KeyboardEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -272,7 +272,7 @@ mrb_SDL_SDLKeyboardEvent_set_repeat(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeyboardEvent_get_padding2(mrb_state* mrb, mrb_value self) {
-  struct SDL_KeyboardEvent * native_self = mruby_unbox_struct SDL_KeyboardEvent(self);
+  struct SDL_KeyboardEvent * native_self = mruby_unbox_SDL_KeyboardEvent(self);
 
   Uint8 native_field = native_self->padding2;
 
@@ -290,7 +290,7 @@ mrb_SDL_SDLKeyboardEvent_get_padding2(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeyboardEvent_set_padding2(mrb_state* mrb, mrb_value self) {
-  struct SDL_KeyboardEvent * native_self = mruby_unbox_struct SDL_KeyboardEvent(self);
+  struct SDL_KeyboardEvent * native_self = mruby_unbox_SDL_KeyboardEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -313,7 +313,7 @@ mrb_SDL_SDLKeyboardEvent_set_padding2(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeyboardEvent_get_padding3(mrb_state* mrb, mrb_value self) {
-  struct SDL_KeyboardEvent * native_self = mruby_unbox_struct SDL_KeyboardEvent(self);
+  struct SDL_KeyboardEvent * native_self = mruby_unbox_SDL_KeyboardEvent(self);
 
   Uint8 native_field = native_self->padding3;
 
@@ -331,7 +331,7 @@ mrb_SDL_SDLKeyboardEvent_get_padding3(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeyboardEvent_set_padding3(mrb_state* mrb, mrb_value self) {
-  struct SDL_KeyboardEvent * native_self = mruby_unbox_struct SDL_KeyboardEvent(self);
+  struct SDL_KeyboardEvent * native_self = mruby_unbox_SDL_KeyboardEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -354,12 +354,8 @@ mrb_SDL_SDLKeyboardEvent_set_padding3(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeyboardEvent_get_keysym(mrb_state* mrb, mrb_value self) {
-  struct SDL_KeyboardEvent * native_self = mruby_unbox_struct SDL_KeyboardEvent(self);
-
-  SDL_Keysym native_field = native_self->keysym;
-
-  mrb_value ruby_field = TODO_mruby_box_SDL_Keysym(mrb, native_field);
-
+  struct SDL_KeyboardEvent * native_self = mruby_unbox_SDL_KeyboardEvent(self);
+  mrb_value ruby_field = mruby_box_SDL_Keysym(mrb, &(native_self->keysym));
   return ruby_field;
 }
 #endif
@@ -372,7 +368,7 @@ mrb_SDL_SDLKeyboardEvent_get_keysym(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeyboardEvent_set_keysym(mrb_state* mrb, mrb_value self) {
-  struct SDL_KeyboardEvent * native_self = mruby_unbox_struct SDL_KeyboardEvent(self);
+  struct SDL_KeyboardEvent * native_self = mruby_unbox_SDL_KeyboardEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -380,7 +376,7 @@ mrb_SDL_SDLKeyboardEvent_set_keysym(mrb_state* mrb, mrb_value self) {
   /* type checking */
   TODO_type_check_SDL_Keysym(ruby_field);
 
-  SDL_Keysym native_field = TODO_mruby_unbox_SDL_Keysym(ruby_field);
+  SDL_Keysym native_field = mruby_unbox_SDL_Keysym(ruby_field);
 
   native_self->keysym = native_field;
 

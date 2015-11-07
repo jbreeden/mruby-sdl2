@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLGameControllerButtonBind_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_GameControllerButtonBind* native_object = (struct SDL_GameControllerButtonBind*)malloc(sizeof(struct SDL_GameControllerButtonBind));
-  mruby_gift_struct SDL_GameControllerButtonBind_data_ptr(self, native_object);
+  mruby_gift_SDL_GameControllerButtonBind_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLGameControllerButtonBind_belongs_to_ruby(mrb_state* mrb, mrb_value se
  */
 mrb_value
 mrb_SDL_SDLGameControllerButtonBind_get_bindType(mrb_state* mrb, mrb_value self) {
-  struct SDL_GameControllerButtonBind * native_self = mruby_unbox_struct SDL_GameControllerButtonBind(self);
+  struct SDL_GameControllerButtonBind * native_self = mruby_unbox_SDL_GameControllerButtonBind(self);
 
   SDL_GameControllerBindType native_field = native_self->bindType;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLGameControllerButtonBind_get_bindType(mrb_state* mrb, mrb_value self)
  */
 mrb_value
 mrb_SDL_SDLGameControllerButtonBind_set_bindType(mrb_state* mrb, mrb_value self) {
-  struct SDL_GameControllerButtonBind * native_self = mruby_unbox_struct SDL_GameControllerButtonBind(self);
+  struct SDL_GameControllerButtonBind * native_self = mruby_unbox_SDL_GameControllerButtonBind(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLGameControllerButtonBind_set_bindType(mrb_state* mrb, mrb_value self)
  */
 mrb_value
 mrb_SDL_SDLGameControllerButtonBind_get_value(mrb_state* mrb, mrb_value self) {
-  struct SDL_GameControllerButtonBind * native_self = mruby_unbox_struct SDL_GameControllerButtonBind(self);
+  struct SDL_GameControllerButtonBind * native_self = mruby_unbox_SDL_GameControllerButtonBind(self);
 
   union (anonymous union at ./sdl/SDL2-2.0.3/include//SDL_gamecontroller.h:73:5) native_field = native_self->value;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLGameControllerButtonBind_get_value(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLGameControllerButtonBind_set_value(mrb_state* mrb, mrb_value self) {
-  struct SDL_GameControllerButtonBind * native_self = mruby_unbox_struct SDL_GameControllerButtonBind(self);
+  struct SDL_GameControllerButtonBind * native_self = mruby_unbox_SDL_GameControllerButtonBind(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

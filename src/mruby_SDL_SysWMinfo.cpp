@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLSysWMinfo_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_SysWMinfo* native_object = (struct SDL_SysWMinfo*)malloc(sizeof(struct SDL_SysWMinfo));
-  mruby_gift_struct SDL_SysWMinfo_data_ptr(self, native_object);
+  mruby_gift_SDL_SysWMinfo_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLSysWMinfo_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSysWMinfo_get_version(mrb_state* mrb, mrb_value self) {
-  struct SDL_SysWMinfo * native_self = mruby_unbox_struct SDL_SysWMinfo(self);
+  struct SDL_SysWMinfo * native_self = mruby_unbox_SDL_SysWMinfo(self);
 
   SDL_version native_field = native_self->version;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLSysWMinfo_get_version(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSysWMinfo_set_version(mrb_state* mrb, mrb_value self) {
-  struct SDL_SysWMinfo * native_self = mruby_unbox_struct SDL_SysWMinfo(self);
+  struct SDL_SysWMinfo * native_self = mruby_unbox_SDL_SysWMinfo(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLSysWMinfo_set_version(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSysWMinfo_get_subsystem(mrb_state* mrb, mrb_value self) {
-  struct SDL_SysWMinfo * native_self = mruby_unbox_struct SDL_SysWMinfo(self);
+  struct SDL_SysWMinfo * native_self = mruby_unbox_SDL_SysWMinfo(self);
 
   SDL_SYSWM_TYPE native_field = native_self->subsystem;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLSysWMinfo_get_subsystem(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSysWMinfo_set_subsystem(mrb_state* mrb, mrb_value self) {
-  struct SDL_SysWMinfo * native_self = mruby_unbox_struct SDL_SysWMinfo(self);
+  struct SDL_SysWMinfo * native_self = mruby_unbox_SDL_SysWMinfo(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -149,7 +149,7 @@ mrb_SDL_SDLSysWMinfo_set_subsystem(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSysWMinfo_get_info(mrb_state* mrb, mrb_value self) {
-  struct SDL_SysWMinfo * native_self = mruby_unbox_struct SDL_SysWMinfo(self);
+  struct SDL_SysWMinfo * native_self = mruby_unbox_SDL_SysWMinfo(self);
 
   union (anonymous union at ./sdl/SDL2-2.0.3/include//SDL_syswm.h:176:5) native_field = native_self->info;
 
@@ -167,7 +167,7 @@ mrb_SDL_SDLSysWMinfo_get_info(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSysWMinfo_set_info(mrb_state* mrb, mrb_value self) {
-  struct SDL_SysWMinfo * native_self = mruby_unbox_struct SDL_SysWMinfo(self);
+  struct SDL_SysWMinfo * native_self = mruby_unbox_SDL_SysWMinfo(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLCond_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_cond* native_object = (struct SDL_cond*)malloc(sizeof(struct SDL_cond));
-  mruby_gift_struct SDL_cond_data_ptr(self, native_object);
+  mruby_gift_SDL_cond_data_ptr(self, native_object);
   return self;
 }
 #endif

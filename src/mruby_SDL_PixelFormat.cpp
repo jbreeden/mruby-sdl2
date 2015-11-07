@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLPixelFormat_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_PixelFormat* native_object = (struct SDL_PixelFormat*)malloc(sizeof(struct SDL_PixelFormat));
-  mruby_gift_struct SDL_PixelFormat_data_ptr(self, native_object);
+  mruby_gift_SDL_PixelFormat_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLPixelFormat_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_get_format(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
 
   Uint32 native_field = native_self->format;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLPixelFormat_get_format(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_set_format(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLPixelFormat_set_format(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_get_palette(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
 
   SDL_Palette * native_field = native_self->palette;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLPixelFormat_get_palette(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_set_palette(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -152,7 +152,7 @@ mrb_SDL_SDLPixelFormat_set_palette(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_get_BitsPerPixel(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
 
   Uint8 native_field = native_self->BitsPerPixel;
 
@@ -170,7 +170,7 @@ mrb_SDL_SDLPixelFormat_get_BitsPerPixel(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_set_BitsPerPixel(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -193,7 +193,7 @@ mrb_SDL_SDLPixelFormat_set_BitsPerPixel(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_get_BytesPerPixel(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
 
   Uint8 native_field = native_self->BytesPerPixel;
 
@@ -211,7 +211,7 @@ mrb_SDL_SDLPixelFormat_get_BytesPerPixel(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_set_BytesPerPixel(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -234,7 +234,7 @@ mrb_SDL_SDLPixelFormat_set_BytesPerPixel(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_get_padding(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
 
   Uint8 [2] native_field = native_self->padding;
 
@@ -252,7 +252,7 @@ mrb_SDL_SDLPixelFormat_get_padding(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_set_padding(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -275,7 +275,7 @@ mrb_SDL_SDLPixelFormat_set_padding(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_get_Rmask(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
 
   Uint32 native_field = native_self->Rmask;
 
@@ -293,7 +293,7 @@ mrb_SDL_SDLPixelFormat_get_Rmask(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_set_Rmask(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -316,7 +316,7 @@ mrb_SDL_SDLPixelFormat_set_Rmask(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_get_Gmask(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
 
   Uint32 native_field = native_self->Gmask;
 
@@ -334,7 +334,7 @@ mrb_SDL_SDLPixelFormat_get_Gmask(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_set_Gmask(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -357,7 +357,7 @@ mrb_SDL_SDLPixelFormat_set_Gmask(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_get_Bmask(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
 
   Uint32 native_field = native_self->Bmask;
 
@@ -375,7 +375,7 @@ mrb_SDL_SDLPixelFormat_get_Bmask(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_set_Bmask(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -398,7 +398,7 @@ mrb_SDL_SDLPixelFormat_set_Bmask(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_get_Amask(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
 
   Uint32 native_field = native_self->Amask;
 
@@ -416,7 +416,7 @@ mrb_SDL_SDLPixelFormat_get_Amask(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_set_Amask(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -439,7 +439,7 @@ mrb_SDL_SDLPixelFormat_set_Amask(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_get_Rloss(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
 
   Uint8 native_field = native_self->Rloss;
 
@@ -457,7 +457,7 @@ mrb_SDL_SDLPixelFormat_get_Rloss(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_set_Rloss(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -480,7 +480,7 @@ mrb_SDL_SDLPixelFormat_set_Rloss(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_get_Gloss(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
 
   Uint8 native_field = native_self->Gloss;
 
@@ -498,7 +498,7 @@ mrb_SDL_SDLPixelFormat_get_Gloss(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_set_Gloss(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -521,7 +521,7 @@ mrb_SDL_SDLPixelFormat_set_Gloss(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_get_Bloss(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
 
   Uint8 native_field = native_self->Bloss;
 
@@ -539,7 +539,7 @@ mrb_SDL_SDLPixelFormat_get_Bloss(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_set_Bloss(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -562,7 +562,7 @@ mrb_SDL_SDLPixelFormat_set_Bloss(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_get_Aloss(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
 
   Uint8 native_field = native_self->Aloss;
 
@@ -580,7 +580,7 @@ mrb_SDL_SDLPixelFormat_get_Aloss(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_set_Aloss(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -603,7 +603,7 @@ mrb_SDL_SDLPixelFormat_set_Aloss(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_get_Rshift(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
 
   Uint8 native_field = native_self->Rshift;
 
@@ -621,7 +621,7 @@ mrb_SDL_SDLPixelFormat_get_Rshift(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_set_Rshift(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -644,7 +644,7 @@ mrb_SDL_SDLPixelFormat_set_Rshift(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_get_Gshift(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
 
   Uint8 native_field = native_self->Gshift;
 
@@ -662,7 +662,7 @@ mrb_SDL_SDLPixelFormat_get_Gshift(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_set_Gshift(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -685,7 +685,7 @@ mrb_SDL_SDLPixelFormat_set_Gshift(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_get_Bshift(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
 
   Uint8 native_field = native_self->Bshift;
 
@@ -703,7 +703,7 @@ mrb_SDL_SDLPixelFormat_get_Bshift(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_set_Bshift(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -726,7 +726,7 @@ mrb_SDL_SDLPixelFormat_set_Bshift(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_get_Ashift(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
 
   Uint8 native_field = native_self->Ashift;
 
@@ -744,7 +744,7 @@ mrb_SDL_SDLPixelFormat_get_Ashift(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_set_Ashift(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -767,7 +767,7 @@ mrb_SDL_SDLPixelFormat_set_Ashift(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_get_refcount(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
 
   int native_field = native_self->refcount;
 
@@ -789,7 +789,7 @@ mrb_SDL_SDLPixelFormat_get_refcount(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_set_refcount(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -815,7 +815,7 @@ mrb_SDL_SDLPixelFormat_set_refcount(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_get_next(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
 
   struct SDL_PixelFormat * native_field = native_self->next;
 
@@ -833,7 +833,7 @@ mrb_SDL_SDLPixelFormat_get_next(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPixelFormat_set_next(mrb_state* mrb, mrb_value self) {
-  struct SDL_PixelFormat * native_self = mruby_unbox_struct SDL_PixelFormat(self);
+  struct SDL_PixelFormat * native_self = mruby_unbox_SDL_PixelFormat(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLSurface_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_Surface* native_object = (struct SDL_Surface*)malloc(sizeof(struct SDL_Surface));
-  mruby_gift_struct SDL_Surface_data_ptr(self, native_object);
+  mruby_gift_SDL_Surface_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLSurface_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_get_flags(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
 
   Uint32 native_field = native_self->flags;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLSurface_get_flags(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_set_flags(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLSurface_set_flags(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_get_format(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
 
   SDL_PixelFormat * native_field = native_self->format;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLSurface_get_format(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_set_format(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -152,7 +152,7 @@ mrb_SDL_SDLSurface_set_format(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_get_w(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
 
   int native_field = native_self->w;
 
@@ -174,7 +174,7 @@ mrb_SDL_SDLSurface_get_w(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_set_w(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -200,7 +200,7 @@ mrb_SDL_SDLSurface_set_w(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_get_h(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
 
   int native_field = native_self->h;
 
@@ -222,7 +222,7 @@ mrb_SDL_SDLSurface_get_h(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_set_h(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -248,7 +248,7 @@ mrb_SDL_SDLSurface_set_h(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_get_pitch(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
 
   int native_field = native_self->pitch;
 
@@ -270,7 +270,7 @@ mrb_SDL_SDLSurface_get_pitch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_set_pitch(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -296,7 +296,7 @@ mrb_SDL_SDLSurface_set_pitch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_get_pixels(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
 
   void * native_field = native_self->pixels;
 
@@ -314,7 +314,7 @@ mrb_SDL_SDLSurface_get_pixels(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_set_pixels(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -337,7 +337,7 @@ mrb_SDL_SDLSurface_set_pixels(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_get_userdata(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
 
   void * native_field = native_self->userdata;
 
@@ -355,7 +355,7 @@ mrb_SDL_SDLSurface_get_userdata(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_set_userdata(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -378,7 +378,7 @@ mrb_SDL_SDLSurface_set_userdata(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_get_locked(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
 
   int native_field = native_self->locked;
 
@@ -400,7 +400,7 @@ mrb_SDL_SDLSurface_get_locked(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_set_locked(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -426,7 +426,7 @@ mrb_SDL_SDLSurface_set_locked(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_get_lock_data(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
 
   void * native_field = native_self->lock_data;
 
@@ -444,7 +444,7 @@ mrb_SDL_SDLSurface_get_lock_data(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_set_lock_data(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -467,7 +467,7 @@ mrb_SDL_SDLSurface_set_lock_data(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_get_clip_rect(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
 
   SDL_Rect native_field = native_self->clip_rect;
 
@@ -485,7 +485,7 @@ mrb_SDL_SDLSurface_get_clip_rect(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_set_clip_rect(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -508,7 +508,7 @@ mrb_SDL_SDLSurface_set_clip_rect(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_get_map(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
 
   struct SDL_BlitMap * native_field = native_self->map;
 
@@ -526,7 +526,7 @@ mrb_SDL_SDLSurface_get_map(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_set_map(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -552,7 +552,7 @@ mrb_SDL_SDLSurface_set_map(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_get_refcount(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
 
   int native_field = native_self->refcount;
 
@@ -574,7 +574,7 @@ mrb_SDL_SDLSurface_get_refcount(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLSurface_set_refcount(mrb_state* mrb, mrb_value self) {
-  struct SDL_Surface * native_self = mruby_unbox_struct SDL_Surface(self);
+  struct SDL_Surface * native_self = mruby_unbox_SDL_Surface(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

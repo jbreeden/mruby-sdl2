@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLOSEvent_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_OSEvent* native_object = (struct SDL_OSEvent*)malloc(sizeof(struct SDL_OSEvent));
-  mruby_gift_struct SDL_OSEvent_data_ptr(self, native_object);
+  mruby_gift_SDL_OSEvent_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLOSEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLOSEvent_get_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_OSEvent * native_self = mruby_unbox_struct SDL_OSEvent(self);
+  struct SDL_OSEvent * native_self = mruby_unbox_SDL_OSEvent(self);
 
   Uint32 native_field = native_self->type;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLOSEvent_get_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLOSEvent_set_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_OSEvent * native_self = mruby_unbox_struct SDL_OSEvent(self);
+  struct SDL_OSEvent * native_self = mruby_unbox_SDL_OSEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLOSEvent_set_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLOSEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_OSEvent * native_self = mruby_unbox_struct SDL_OSEvent(self);
+  struct SDL_OSEvent * native_self = mruby_unbox_SDL_OSEvent(self);
 
   Uint32 native_field = native_self->timestamp;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLOSEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLOSEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_OSEvent * native_self = mruby_unbox_struct SDL_OSEvent(self);
+  struct SDL_OSEvent * native_self = mruby_unbox_SDL_OSEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

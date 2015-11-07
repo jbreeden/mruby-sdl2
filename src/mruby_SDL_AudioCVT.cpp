@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLAudioCVT_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_AudioCVT* native_object = (struct SDL_AudioCVT*)malloc(sizeof(struct SDL_AudioCVT));
-  mruby_gift_struct SDL_AudioCVT_data_ptr(self, native_object);
+  mruby_gift_SDL_AudioCVT_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLAudioCVT_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAudioCVT_get_needed(mrb_state* mrb, mrb_value self) {
-  struct SDL_AudioCVT * native_self = mruby_unbox_struct SDL_AudioCVT(self);
+  struct SDL_AudioCVT * native_self = mruby_unbox_SDL_AudioCVT(self);
 
   int native_field = native_self->needed;
 
@@ -89,7 +89,7 @@ mrb_SDL_SDLAudioCVT_get_needed(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAudioCVT_set_needed(mrb_state* mrb, mrb_value self) {
-  struct SDL_AudioCVT * native_self = mruby_unbox_struct SDL_AudioCVT(self);
+  struct SDL_AudioCVT * native_self = mruby_unbox_SDL_AudioCVT(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -115,7 +115,7 @@ mrb_SDL_SDLAudioCVT_set_needed(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAudioCVT_get_src_format(mrb_state* mrb, mrb_value self) {
-  struct SDL_AudioCVT * native_self = mruby_unbox_struct SDL_AudioCVT(self);
+  struct SDL_AudioCVT * native_self = mruby_unbox_SDL_AudioCVT(self);
 
   SDL_AudioFormat native_field = native_self->src_format;
 
@@ -133,7 +133,7 @@ mrb_SDL_SDLAudioCVT_get_src_format(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAudioCVT_set_src_format(mrb_state* mrb, mrb_value self) {
-  struct SDL_AudioCVT * native_self = mruby_unbox_struct SDL_AudioCVT(self);
+  struct SDL_AudioCVT * native_self = mruby_unbox_SDL_AudioCVT(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -156,7 +156,7 @@ mrb_SDL_SDLAudioCVT_set_src_format(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAudioCVT_get_dst_format(mrb_state* mrb, mrb_value self) {
-  struct SDL_AudioCVT * native_self = mruby_unbox_struct SDL_AudioCVT(self);
+  struct SDL_AudioCVT * native_self = mruby_unbox_SDL_AudioCVT(self);
 
   SDL_AudioFormat native_field = native_self->dst_format;
 
@@ -174,7 +174,7 @@ mrb_SDL_SDLAudioCVT_get_dst_format(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAudioCVT_set_dst_format(mrb_state* mrb, mrb_value self) {
-  struct SDL_AudioCVT * native_self = mruby_unbox_struct SDL_AudioCVT(self);
+  struct SDL_AudioCVT * native_self = mruby_unbox_SDL_AudioCVT(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -197,7 +197,7 @@ mrb_SDL_SDLAudioCVT_set_dst_format(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAudioCVT_get_rate_incr(mrb_state* mrb, mrb_value self) {
-  struct SDL_AudioCVT * native_self = mruby_unbox_struct SDL_AudioCVT(self);
+  struct SDL_AudioCVT * native_self = mruby_unbox_SDL_AudioCVT(self);
 
   double native_field = native_self->rate_incr;
 
@@ -215,7 +215,7 @@ mrb_SDL_SDLAudioCVT_get_rate_incr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAudioCVT_set_rate_incr(mrb_state* mrb, mrb_value self) {
-  struct SDL_AudioCVT * native_self = mruby_unbox_struct SDL_AudioCVT(self);
+  struct SDL_AudioCVT * native_self = mruby_unbox_SDL_AudioCVT(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -241,7 +241,7 @@ mrb_SDL_SDLAudioCVT_set_rate_incr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAudioCVT_get_buf(mrb_state* mrb, mrb_value self) {
-  struct SDL_AudioCVT * native_self = mruby_unbox_struct SDL_AudioCVT(self);
+  struct SDL_AudioCVT * native_self = mruby_unbox_SDL_AudioCVT(self);
 
   Uint8 * native_field = native_self->buf;
 
@@ -259,7 +259,7 @@ mrb_SDL_SDLAudioCVT_get_buf(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAudioCVT_set_buf(mrb_state* mrb, mrb_value self) {
-  struct SDL_AudioCVT * native_self = mruby_unbox_struct SDL_AudioCVT(self);
+  struct SDL_AudioCVT * native_self = mruby_unbox_SDL_AudioCVT(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -282,7 +282,7 @@ mrb_SDL_SDLAudioCVT_set_buf(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAudioCVT_get_len(mrb_state* mrb, mrb_value self) {
-  struct SDL_AudioCVT * native_self = mruby_unbox_struct SDL_AudioCVT(self);
+  struct SDL_AudioCVT * native_self = mruby_unbox_SDL_AudioCVT(self);
 
   int native_field = native_self->len;
 
@@ -304,7 +304,7 @@ mrb_SDL_SDLAudioCVT_get_len(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAudioCVT_set_len(mrb_state* mrb, mrb_value self) {
-  struct SDL_AudioCVT * native_self = mruby_unbox_struct SDL_AudioCVT(self);
+  struct SDL_AudioCVT * native_self = mruby_unbox_SDL_AudioCVT(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -330,7 +330,7 @@ mrb_SDL_SDLAudioCVT_set_len(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAudioCVT_get_len_cvt(mrb_state* mrb, mrb_value self) {
-  struct SDL_AudioCVT * native_self = mruby_unbox_struct SDL_AudioCVT(self);
+  struct SDL_AudioCVT * native_self = mruby_unbox_SDL_AudioCVT(self);
 
   int native_field = native_self->len_cvt;
 
@@ -352,7 +352,7 @@ mrb_SDL_SDLAudioCVT_get_len_cvt(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAudioCVT_set_len_cvt(mrb_state* mrb, mrb_value self) {
-  struct SDL_AudioCVT * native_self = mruby_unbox_struct SDL_AudioCVT(self);
+  struct SDL_AudioCVT * native_self = mruby_unbox_SDL_AudioCVT(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -378,7 +378,7 @@ mrb_SDL_SDLAudioCVT_set_len_cvt(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAudioCVT_get_len_mult(mrb_state* mrb, mrb_value self) {
-  struct SDL_AudioCVT * native_self = mruby_unbox_struct SDL_AudioCVT(self);
+  struct SDL_AudioCVT * native_self = mruby_unbox_SDL_AudioCVT(self);
 
   int native_field = native_self->len_mult;
 
@@ -400,7 +400,7 @@ mrb_SDL_SDLAudioCVT_get_len_mult(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAudioCVT_set_len_mult(mrb_state* mrb, mrb_value self) {
-  struct SDL_AudioCVT * native_self = mruby_unbox_struct SDL_AudioCVT(self);
+  struct SDL_AudioCVT * native_self = mruby_unbox_SDL_AudioCVT(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -426,7 +426,7 @@ mrb_SDL_SDLAudioCVT_set_len_mult(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAudioCVT_get_len_ratio(mrb_state* mrb, mrb_value self) {
-  struct SDL_AudioCVT * native_self = mruby_unbox_struct SDL_AudioCVT(self);
+  struct SDL_AudioCVT * native_self = mruby_unbox_SDL_AudioCVT(self);
 
   double native_field = native_self->len_ratio;
 
@@ -444,7 +444,7 @@ mrb_SDL_SDLAudioCVT_get_len_ratio(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAudioCVT_set_len_ratio(mrb_state* mrb, mrb_value self) {
-  struct SDL_AudioCVT * native_self = mruby_unbox_struct SDL_AudioCVT(self);
+  struct SDL_AudioCVT * native_self = mruby_unbox_SDL_AudioCVT(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -470,7 +470,7 @@ mrb_SDL_SDLAudioCVT_set_len_ratio(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAudioCVT_get_filters(mrb_state* mrb, mrb_value self) {
-  struct SDL_AudioCVT * native_self = mruby_unbox_struct SDL_AudioCVT(self);
+  struct SDL_AudioCVT * native_self = mruby_unbox_SDL_AudioCVT(self);
 
   SDL_AudioFilter [10] native_field = native_self->filters;
 
@@ -488,7 +488,7 @@ mrb_SDL_SDLAudioCVT_get_filters(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAudioCVT_set_filters(mrb_state* mrb, mrb_value self) {
-  struct SDL_AudioCVT * native_self = mruby_unbox_struct SDL_AudioCVT(self);
+  struct SDL_AudioCVT * native_self = mruby_unbox_SDL_AudioCVT(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -511,7 +511,7 @@ mrb_SDL_SDLAudioCVT_set_filters(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAudioCVT_get_filter_index(mrb_state* mrb, mrb_value self) {
-  struct SDL_AudioCVT * native_self = mruby_unbox_struct SDL_AudioCVT(self);
+  struct SDL_AudioCVT * native_self = mruby_unbox_SDL_AudioCVT(self);
 
   int native_field = native_self->filter_index;
 
@@ -533,7 +533,7 @@ mrb_SDL_SDLAudioCVT_get_filter_index(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLAudioCVT_set_filter_index(mrb_state* mrb, mrb_value self) {
-  struct SDL_AudioCVT * native_self = mruby_unbox_struct SDL_AudioCVT(self);
+  struct SDL_AudioCVT * native_self = mruby_unbox_SDL_AudioCVT(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLMouseButtonEvent_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_MouseButtonEvent* native_object = (struct SDL_MouseButtonEvent*)malloc(sizeof(struct SDL_MouseButtonEvent));
-  mruby_gift_struct SDL_MouseButtonEvent_data_ptr(self, native_object);
+  mruby_gift_SDL_MouseButtonEvent_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLMouseButtonEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseButtonEvent_get_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseButtonEvent * native_self = mruby_unbox_struct SDL_MouseButtonEvent(self);
+  struct SDL_MouseButtonEvent * native_self = mruby_unbox_SDL_MouseButtonEvent(self);
 
   Uint32 native_field = native_self->type;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLMouseButtonEvent_get_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseButtonEvent_set_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseButtonEvent * native_self = mruby_unbox_struct SDL_MouseButtonEvent(self);
+  struct SDL_MouseButtonEvent * native_self = mruby_unbox_SDL_MouseButtonEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLMouseButtonEvent_set_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseButtonEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseButtonEvent * native_self = mruby_unbox_struct SDL_MouseButtonEvent(self);
+  struct SDL_MouseButtonEvent * native_self = mruby_unbox_SDL_MouseButtonEvent(self);
 
   Uint32 native_field = native_self->timestamp;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLMouseButtonEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseButtonEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseButtonEvent * native_self = mruby_unbox_struct SDL_MouseButtonEvent(self);
+  struct SDL_MouseButtonEvent * native_self = mruby_unbox_SDL_MouseButtonEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -149,7 +149,7 @@ mrb_SDL_SDLMouseButtonEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseButtonEvent_get_windowID(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseButtonEvent * native_self = mruby_unbox_struct SDL_MouseButtonEvent(self);
+  struct SDL_MouseButtonEvent * native_self = mruby_unbox_SDL_MouseButtonEvent(self);
 
   Uint32 native_field = native_self->windowID;
 
@@ -167,7 +167,7 @@ mrb_SDL_SDLMouseButtonEvent_get_windowID(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseButtonEvent_set_windowID(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseButtonEvent * native_self = mruby_unbox_struct SDL_MouseButtonEvent(self);
+  struct SDL_MouseButtonEvent * native_self = mruby_unbox_SDL_MouseButtonEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -190,7 +190,7 @@ mrb_SDL_SDLMouseButtonEvent_set_windowID(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseButtonEvent_get_which(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseButtonEvent * native_self = mruby_unbox_struct SDL_MouseButtonEvent(self);
+  struct SDL_MouseButtonEvent * native_self = mruby_unbox_SDL_MouseButtonEvent(self);
 
   Uint32 native_field = native_self->which;
 
@@ -208,7 +208,7 @@ mrb_SDL_SDLMouseButtonEvent_get_which(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseButtonEvent_set_which(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseButtonEvent * native_self = mruby_unbox_struct SDL_MouseButtonEvent(self);
+  struct SDL_MouseButtonEvent * native_self = mruby_unbox_SDL_MouseButtonEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -231,7 +231,7 @@ mrb_SDL_SDLMouseButtonEvent_set_which(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseButtonEvent_get_button(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseButtonEvent * native_self = mruby_unbox_struct SDL_MouseButtonEvent(self);
+  struct SDL_MouseButtonEvent * native_self = mruby_unbox_SDL_MouseButtonEvent(self);
 
   Uint8 native_field = native_self->button;
 
@@ -249,7 +249,7 @@ mrb_SDL_SDLMouseButtonEvent_get_button(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseButtonEvent_set_button(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseButtonEvent * native_self = mruby_unbox_struct SDL_MouseButtonEvent(self);
+  struct SDL_MouseButtonEvent * native_self = mruby_unbox_SDL_MouseButtonEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -272,7 +272,7 @@ mrb_SDL_SDLMouseButtonEvent_set_button(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseButtonEvent_get_state(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseButtonEvent * native_self = mruby_unbox_struct SDL_MouseButtonEvent(self);
+  struct SDL_MouseButtonEvent * native_self = mruby_unbox_SDL_MouseButtonEvent(self);
 
   Uint8 native_field = native_self->state;
 
@@ -290,7 +290,7 @@ mrb_SDL_SDLMouseButtonEvent_get_state(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseButtonEvent_set_state(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseButtonEvent * native_self = mruby_unbox_struct SDL_MouseButtonEvent(self);
+  struct SDL_MouseButtonEvent * native_self = mruby_unbox_SDL_MouseButtonEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -313,7 +313,7 @@ mrb_SDL_SDLMouseButtonEvent_set_state(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseButtonEvent_get_clicks(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseButtonEvent * native_self = mruby_unbox_struct SDL_MouseButtonEvent(self);
+  struct SDL_MouseButtonEvent * native_self = mruby_unbox_SDL_MouseButtonEvent(self);
 
   Uint8 native_field = native_self->clicks;
 
@@ -331,7 +331,7 @@ mrb_SDL_SDLMouseButtonEvent_get_clicks(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseButtonEvent_set_clicks(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseButtonEvent * native_self = mruby_unbox_struct SDL_MouseButtonEvent(self);
+  struct SDL_MouseButtonEvent * native_self = mruby_unbox_SDL_MouseButtonEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -354,7 +354,7 @@ mrb_SDL_SDLMouseButtonEvent_set_clicks(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseButtonEvent_get_padding1(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseButtonEvent * native_self = mruby_unbox_struct SDL_MouseButtonEvent(self);
+  struct SDL_MouseButtonEvent * native_self = mruby_unbox_SDL_MouseButtonEvent(self);
 
   Uint8 native_field = native_self->padding1;
 
@@ -372,7 +372,7 @@ mrb_SDL_SDLMouseButtonEvent_get_padding1(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseButtonEvent_set_padding1(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseButtonEvent * native_self = mruby_unbox_struct SDL_MouseButtonEvent(self);
+  struct SDL_MouseButtonEvent * native_self = mruby_unbox_SDL_MouseButtonEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -395,7 +395,7 @@ mrb_SDL_SDLMouseButtonEvent_set_padding1(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseButtonEvent_get_x(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseButtonEvent * native_self = mruby_unbox_struct SDL_MouseButtonEvent(self);
+  struct SDL_MouseButtonEvent * native_self = mruby_unbox_SDL_MouseButtonEvent(self);
 
   Sint32 native_field = native_self->x;
 
@@ -413,7 +413,7 @@ mrb_SDL_SDLMouseButtonEvent_get_x(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseButtonEvent_set_x(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseButtonEvent * native_self = mruby_unbox_struct SDL_MouseButtonEvent(self);
+  struct SDL_MouseButtonEvent * native_self = mruby_unbox_SDL_MouseButtonEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -436,7 +436,7 @@ mrb_SDL_SDLMouseButtonEvent_set_x(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseButtonEvent_get_y(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseButtonEvent * native_self = mruby_unbox_struct SDL_MouseButtonEvent(self);
+  struct SDL_MouseButtonEvent * native_self = mruby_unbox_SDL_MouseButtonEvent(self);
 
   Sint32 native_field = native_self->y;
 
@@ -454,7 +454,7 @@ mrb_SDL_SDLMouseButtonEvent_get_y(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLMouseButtonEvent_set_y(mrb_state* mrb, mrb_value self) {
-  struct SDL_MouseButtonEvent * native_self = mruby_unbox_struct SDL_MouseButtonEvent(self);
+  struct SDL_MouseButtonEvent * native_self = mruby_unbox_SDL_MouseButtonEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

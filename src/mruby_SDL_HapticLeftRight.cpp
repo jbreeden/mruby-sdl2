@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLHapticLeftRight_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_HapticLeftRight* native_object = (struct SDL_HapticLeftRight*)malloc(sizeof(struct SDL_HapticLeftRight));
-  mruby_gift_struct SDL_HapticLeftRight_data_ptr(self, native_object);
+  mruby_gift_SDL_HapticLeftRight_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLHapticLeftRight_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticLeftRight_get_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticLeftRight * native_self = mruby_unbox_struct SDL_HapticLeftRight(self);
+  struct SDL_HapticLeftRight * native_self = mruby_unbox_SDL_HapticLeftRight(self);
 
   Uint16 native_field = native_self->type;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLHapticLeftRight_get_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticLeftRight_set_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticLeftRight * native_self = mruby_unbox_struct SDL_HapticLeftRight(self);
+  struct SDL_HapticLeftRight * native_self = mruby_unbox_SDL_HapticLeftRight(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLHapticLeftRight_set_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticLeftRight_get_length(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticLeftRight * native_self = mruby_unbox_struct SDL_HapticLeftRight(self);
+  struct SDL_HapticLeftRight * native_self = mruby_unbox_SDL_HapticLeftRight(self);
 
   Uint32 native_field = native_self->length;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLHapticLeftRight_get_length(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticLeftRight_set_length(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticLeftRight * native_self = mruby_unbox_struct SDL_HapticLeftRight(self);
+  struct SDL_HapticLeftRight * native_self = mruby_unbox_SDL_HapticLeftRight(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -149,7 +149,7 @@ mrb_SDL_SDLHapticLeftRight_set_length(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticLeftRight_get_large_magnitude(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticLeftRight * native_self = mruby_unbox_struct SDL_HapticLeftRight(self);
+  struct SDL_HapticLeftRight * native_self = mruby_unbox_SDL_HapticLeftRight(self);
 
   Uint16 native_field = native_self->large_magnitude;
 
@@ -167,7 +167,7 @@ mrb_SDL_SDLHapticLeftRight_get_large_magnitude(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticLeftRight_set_large_magnitude(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticLeftRight * native_self = mruby_unbox_struct SDL_HapticLeftRight(self);
+  struct SDL_HapticLeftRight * native_self = mruby_unbox_SDL_HapticLeftRight(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -190,7 +190,7 @@ mrb_SDL_SDLHapticLeftRight_set_large_magnitude(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticLeftRight_get_small_magnitude(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticLeftRight * native_self = mruby_unbox_struct SDL_HapticLeftRight(self);
+  struct SDL_HapticLeftRight * native_self = mruby_unbox_SDL_HapticLeftRight(self);
 
   Uint16 native_field = native_self->small_magnitude;
 
@@ -208,7 +208,7 @@ mrb_SDL_SDLHapticLeftRight_get_small_magnitude(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticLeftRight_set_small_magnitude(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticLeftRight * native_self = mruby_unbox_struct SDL_HapticLeftRight(self);
+  struct SDL_HapticLeftRight * native_self = mruby_unbox_SDL_HapticLeftRight(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

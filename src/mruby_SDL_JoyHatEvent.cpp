@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLJoyHatEvent_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_JoyHatEvent* native_object = (struct SDL_JoyHatEvent*)malloc(sizeof(struct SDL_JoyHatEvent));
-  mruby_gift_struct SDL_JoyHatEvent_data_ptr(self, native_object);
+  mruby_gift_SDL_JoyHatEvent_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLJoyHatEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyHatEvent_get_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyHatEvent * native_self = mruby_unbox_struct SDL_JoyHatEvent(self);
+  struct SDL_JoyHatEvent * native_self = mruby_unbox_SDL_JoyHatEvent(self);
 
   Uint32 native_field = native_self->type;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLJoyHatEvent_get_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyHatEvent_set_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyHatEvent * native_self = mruby_unbox_struct SDL_JoyHatEvent(self);
+  struct SDL_JoyHatEvent * native_self = mruby_unbox_SDL_JoyHatEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLJoyHatEvent_set_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyHatEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyHatEvent * native_self = mruby_unbox_struct SDL_JoyHatEvent(self);
+  struct SDL_JoyHatEvent * native_self = mruby_unbox_SDL_JoyHatEvent(self);
 
   Uint32 native_field = native_self->timestamp;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLJoyHatEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyHatEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyHatEvent * native_self = mruby_unbox_struct SDL_JoyHatEvent(self);
+  struct SDL_JoyHatEvent * native_self = mruby_unbox_SDL_JoyHatEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -149,7 +149,7 @@ mrb_SDL_SDLJoyHatEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyHatEvent_get_which(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyHatEvent * native_self = mruby_unbox_struct SDL_JoyHatEvent(self);
+  struct SDL_JoyHatEvent * native_self = mruby_unbox_SDL_JoyHatEvent(self);
 
   SDL_JoystickID native_field = native_self->which;
 
@@ -167,7 +167,7 @@ mrb_SDL_SDLJoyHatEvent_get_which(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyHatEvent_set_which(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyHatEvent * native_self = mruby_unbox_struct SDL_JoyHatEvent(self);
+  struct SDL_JoyHatEvent * native_self = mruby_unbox_SDL_JoyHatEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -190,7 +190,7 @@ mrb_SDL_SDLJoyHatEvent_set_which(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyHatEvent_get_hat(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyHatEvent * native_self = mruby_unbox_struct SDL_JoyHatEvent(self);
+  struct SDL_JoyHatEvent * native_self = mruby_unbox_SDL_JoyHatEvent(self);
 
   Uint8 native_field = native_self->hat;
 
@@ -208,7 +208,7 @@ mrb_SDL_SDLJoyHatEvent_get_hat(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyHatEvent_set_hat(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyHatEvent * native_self = mruby_unbox_struct SDL_JoyHatEvent(self);
+  struct SDL_JoyHatEvent * native_self = mruby_unbox_SDL_JoyHatEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -231,7 +231,7 @@ mrb_SDL_SDLJoyHatEvent_set_hat(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyHatEvent_get_value(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyHatEvent * native_self = mruby_unbox_struct SDL_JoyHatEvent(self);
+  struct SDL_JoyHatEvent * native_self = mruby_unbox_SDL_JoyHatEvent(self);
 
   Uint8 native_field = native_self->value;
 
@@ -249,7 +249,7 @@ mrb_SDL_SDLJoyHatEvent_get_value(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyHatEvent_set_value(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyHatEvent * native_self = mruby_unbox_struct SDL_JoyHatEvent(self);
+  struct SDL_JoyHatEvent * native_self = mruby_unbox_SDL_JoyHatEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -272,7 +272,7 @@ mrb_SDL_SDLJoyHatEvent_set_value(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyHatEvent_get_padding1(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyHatEvent * native_self = mruby_unbox_struct SDL_JoyHatEvent(self);
+  struct SDL_JoyHatEvent * native_self = mruby_unbox_SDL_JoyHatEvent(self);
 
   Uint8 native_field = native_self->padding1;
 
@@ -290,7 +290,7 @@ mrb_SDL_SDLJoyHatEvent_get_padding1(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyHatEvent_set_padding1(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyHatEvent * native_self = mruby_unbox_struct SDL_JoyHatEvent(self);
+  struct SDL_JoyHatEvent * native_self = mruby_unbox_SDL_JoyHatEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -313,7 +313,7 @@ mrb_SDL_SDLJoyHatEvent_set_padding1(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyHatEvent_get_padding2(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyHatEvent * native_self = mruby_unbox_struct SDL_JoyHatEvent(self);
+  struct SDL_JoyHatEvent * native_self = mruby_unbox_SDL_JoyHatEvent(self);
 
   Uint8 native_field = native_self->padding2;
 
@@ -331,7 +331,7 @@ mrb_SDL_SDLJoyHatEvent_get_padding2(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyHatEvent_set_padding2(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyHatEvent * native_self = mruby_unbox_struct SDL_JoyHatEvent(self);
+  struct SDL_JoyHatEvent * native_self = mruby_unbox_SDL_JoyHatEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

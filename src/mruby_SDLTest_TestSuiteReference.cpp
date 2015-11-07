@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLTestTestSuiteReference_initialize(mrb_state* mrb, mrb_value self) {
   struct SDLTest_TestSuiteReference* native_object = (struct SDLTest_TestSuiteReference*)malloc(sizeof(struct SDLTest_TestSuiteReference));
-  mruby_gift_struct SDLTest_TestSuiteReference_data_ptr(self, native_object);
+  mruby_gift_SDLTest_TestSuiteReference_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLTestTestSuiteReference_belongs_to_ruby(mrb_state* mrb, mrb_value self
  */
 mrb_value
 mrb_SDL_SDLTestTestSuiteReference_get_name(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_TestSuiteReference * native_self = mruby_unbox_struct SDLTest_TestSuiteReference(self);
+  struct SDLTest_TestSuiteReference * native_self = mruby_unbox_SDLTest_TestSuiteReference(self);
 
   char * native_field = native_self->name;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLTestTestSuiteReference_get_name(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTestTestSuiteReference_set_name(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_TestSuiteReference * native_self = mruby_unbox_struct SDLTest_TestSuiteReference(self);
+  struct SDLTest_TestSuiteReference * native_self = mruby_unbox_SDLTest_TestSuiteReference(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -116,7 +116,7 @@ mrb_SDL_SDLTestTestSuiteReference_set_name(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLTestTestSuiteReference_get_testSetUp(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_TestSuiteReference * native_self = mruby_unbox_struct SDLTest_TestSuiteReference(self);
+  struct SDLTest_TestSuiteReference * native_self = mruby_unbox_SDLTest_TestSuiteReference(self);
 
   SDLTest_TestCaseSetUpFp native_field = native_self->testSetUp;
 
@@ -134,7 +134,7 @@ mrb_SDL_SDLTestTestSuiteReference_get_testSetUp(mrb_state* mrb, mrb_value self) 
  */
 mrb_value
 mrb_SDL_SDLTestTestSuiteReference_set_testSetUp(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_TestSuiteReference * native_self = mruby_unbox_struct SDLTest_TestSuiteReference(self);
+  struct SDLTest_TestSuiteReference * native_self = mruby_unbox_SDLTest_TestSuiteReference(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -157,7 +157,7 @@ mrb_SDL_SDLTestTestSuiteReference_set_testSetUp(mrb_state* mrb, mrb_value self) 
  */
 mrb_value
 mrb_SDL_SDLTestTestSuiteReference_get_testCases(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_TestSuiteReference * native_self = mruby_unbox_struct SDLTest_TestSuiteReference(self);
+  struct SDLTest_TestSuiteReference * native_self = mruby_unbox_SDLTest_TestSuiteReference(self);
 
   const SDLTest_TestCaseReference ** native_field = native_self->testCases;
 
@@ -175,7 +175,7 @@ mrb_SDL_SDLTestTestSuiteReference_get_testCases(mrb_state* mrb, mrb_value self) 
  */
 mrb_value
 mrb_SDL_SDLTestTestSuiteReference_set_testCases(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_TestSuiteReference * native_self = mruby_unbox_struct SDLTest_TestSuiteReference(self);
+  struct SDLTest_TestSuiteReference * native_self = mruby_unbox_SDLTest_TestSuiteReference(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -198,7 +198,7 @@ mrb_SDL_SDLTestTestSuiteReference_set_testCases(mrb_state* mrb, mrb_value self) 
  */
 mrb_value
 mrb_SDL_SDLTestTestSuiteReference_get_testTearDown(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_TestSuiteReference * native_self = mruby_unbox_struct SDLTest_TestSuiteReference(self);
+  struct SDLTest_TestSuiteReference * native_self = mruby_unbox_SDLTest_TestSuiteReference(self);
 
   SDLTest_TestCaseTearDownFp native_field = native_self->testTearDown;
 
@@ -216,7 +216,7 @@ mrb_SDL_SDLTestTestSuiteReference_get_testTearDown(mrb_state* mrb, mrb_value sel
  */
 mrb_value
 mrb_SDL_SDLTestTestSuiteReference_set_testTearDown(mrb_state* mrb, mrb_value self) {
-  struct SDLTest_TestSuiteReference * native_self = mruby_unbox_struct SDLTest_TestSuiteReference(self);
+  struct SDLTest_TestSuiteReference * native_self = mruby_unbox_SDLTest_TestSuiteReference(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

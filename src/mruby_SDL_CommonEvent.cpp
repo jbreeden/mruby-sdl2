@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLCommonEvent_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_CommonEvent* native_object = (struct SDL_CommonEvent*)malloc(sizeof(struct SDL_CommonEvent));
-  mruby_gift_struct SDL_CommonEvent_data_ptr(self, native_object);
+  mruby_gift_SDL_CommonEvent_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLCommonEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLCommonEvent_get_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_CommonEvent * native_self = mruby_unbox_struct SDL_CommonEvent(self);
+  struct SDL_CommonEvent * native_self = mruby_unbox_SDL_CommonEvent(self);
 
   Uint32 native_field = native_self->type;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLCommonEvent_get_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLCommonEvent_set_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_CommonEvent * native_self = mruby_unbox_struct SDL_CommonEvent(self);
+  struct SDL_CommonEvent * native_self = mruby_unbox_SDL_CommonEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLCommonEvent_set_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLCommonEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_CommonEvent * native_self = mruby_unbox_struct SDL_CommonEvent(self);
+  struct SDL_CommonEvent * native_self = mruby_unbox_SDL_CommonEvent(self);
 
   Uint32 native_field = native_self->timestamp;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLCommonEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLCommonEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_CommonEvent * native_self = mruby_unbox_struct SDL_CommonEvent(self);
+  struct SDL_CommonEvent * native_self = mruby_unbox_SDL_CommonEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

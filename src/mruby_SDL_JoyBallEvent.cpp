@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLJoyBallEvent_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_JoyBallEvent* native_object = (struct SDL_JoyBallEvent*)malloc(sizeof(struct SDL_JoyBallEvent));
-  mruby_gift_struct SDL_JoyBallEvent_data_ptr(self, native_object);
+  mruby_gift_SDL_JoyBallEvent_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLJoyBallEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyBallEvent_get_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyBallEvent * native_self = mruby_unbox_struct SDL_JoyBallEvent(self);
+  struct SDL_JoyBallEvent * native_self = mruby_unbox_SDL_JoyBallEvent(self);
 
   Uint32 native_field = native_self->type;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLJoyBallEvent_get_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyBallEvent_set_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyBallEvent * native_self = mruby_unbox_struct SDL_JoyBallEvent(self);
+  struct SDL_JoyBallEvent * native_self = mruby_unbox_SDL_JoyBallEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLJoyBallEvent_set_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyBallEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyBallEvent * native_self = mruby_unbox_struct SDL_JoyBallEvent(self);
+  struct SDL_JoyBallEvent * native_self = mruby_unbox_SDL_JoyBallEvent(self);
 
   Uint32 native_field = native_self->timestamp;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLJoyBallEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyBallEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyBallEvent * native_self = mruby_unbox_struct SDL_JoyBallEvent(self);
+  struct SDL_JoyBallEvent * native_self = mruby_unbox_SDL_JoyBallEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -149,7 +149,7 @@ mrb_SDL_SDLJoyBallEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyBallEvent_get_which(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyBallEvent * native_self = mruby_unbox_struct SDL_JoyBallEvent(self);
+  struct SDL_JoyBallEvent * native_self = mruby_unbox_SDL_JoyBallEvent(self);
 
   SDL_JoystickID native_field = native_self->which;
 
@@ -167,7 +167,7 @@ mrb_SDL_SDLJoyBallEvent_get_which(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyBallEvent_set_which(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyBallEvent * native_self = mruby_unbox_struct SDL_JoyBallEvent(self);
+  struct SDL_JoyBallEvent * native_self = mruby_unbox_SDL_JoyBallEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -190,7 +190,7 @@ mrb_SDL_SDLJoyBallEvent_set_which(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyBallEvent_get_ball(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyBallEvent * native_self = mruby_unbox_struct SDL_JoyBallEvent(self);
+  struct SDL_JoyBallEvent * native_self = mruby_unbox_SDL_JoyBallEvent(self);
 
   Uint8 native_field = native_self->ball;
 
@@ -208,7 +208,7 @@ mrb_SDL_SDLJoyBallEvent_get_ball(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyBallEvent_set_ball(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyBallEvent * native_self = mruby_unbox_struct SDL_JoyBallEvent(self);
+  struct SDL_JoyBallEvent * native_self = mruby_unbox_SDL_JoyBallEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -231,7 +231,7 @@ mrb_SDL_SDLJoyBallEvent_set_ball(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyBallEvent_get_padding1(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyBallEvent * native_self = mruby_unbox_struct SDL_JoyBallEvent(self);
+  struct SDL_JoyBallEvent * native_self = mruby_unbox_SDL_JoyBallEvent(self);
 
   Uint8 native_field = native_self->padding1;
 
@@ -249,7 +249,7 @@ mrb_SDL_SDLJoyBallEvent_get_padding1(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyBallEvent_set_padding1(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyBallEvent * native_self = mruby_unbox_struct SDL_JoyBallEvent(self);
+  struct SDL_JoyBallEvent * native_self = mruby_unbox_SDL_JoyBallEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -272,7 +272,7 @@ mrb_SDL_SDLJoyBallEvent_set_padding1(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyBallEvent_get_padding2(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyBallEvent * native_self = mruby_unbox_struct SDL_JoyBallEvent(self);
+  struct SDL_JoyBallEvent * native_self = mruby_unbox_SDL_JoyBallEvent(self);
 
   Uint8 native_field = native_self->padding2;
 
@@ -290,7 +290,7 @@ mrb_SDL_SDLJoyBallEvent_get_padding2(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyBallEvent_set_padding2(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyBallEvent * native_self = mruby_unbox_struct SDL_JoyBallEvent(self);
+  struct SDL_JoyBallEvent * native_self = mruby_unbox_SDL_JoyBallEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -313,7 +313,7 @@ mrb_SDL_SDLJoyBallEvent_set_padding2(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyBallEvent_get_padding3(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyBallEvent * native_self = mruby_unbox_struct SDL_JoyBallEvent(self);
+  struct SDL_JoyBallEvent * native_self = mruby_unbox_SDL_JoyBallEvent(self);
 
   Uint8 native_field = native_self->padding3;
 
@@ -331,7 +331,7 @@ mrb_SDL_SDLJoyBallEvent_get_padding3(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyBallEvent_set_padding3(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyBallEvent * native_self = mruby_unbox_struct SDL_JoyBallEvent(self);
+  struct SDL_JoyBallEvent * native_self = mruby_unbox_SDL_JoyBallEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -354,11 +354,11 @@ mrb_SDL_SDLJoyBallEvent_set_padding3(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyBallEvent_get_xrel(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyBallEvent * native_self = mruby_unbox_struct SDL_JoyBallEvent(self);
+  struct SDL_JoyBallEvent * native_self = mruby_unbox_SDL_JoyBallEvent(self);
 
   Sint16 native_field = native_self->xrel;
 
-  mrb_value ruby_field = mrb_fixnum_value(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -372,7 +372,7 @@ mrb_SDL_SDLJoyBallEvent_get_xrel(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyBallEvent_set_xrel(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyBallEvent * native_self = mruby_unbox_struct SDL_JoyBallEvent(self);
+  struct SDL_JoyBallEvent * native_self = mruby_unbox_SDL_JoyBallEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -395,11 +395,11 @@ mrb_SDL_SDLJoyBallEvent_set_xrel(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyBallEvent_get_yrel(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyBallEvent * native_self = mruby_unbox_struct SDL_JoyBallEvent(self);
+  struct SDL_JoyBallEvent * native_self = mruby_unbox_SDL_JoyBallEvent(self);
 
   Sint16 native_field = native_self->yrel;
 
-  mrb_value ruby_field = mrb_fixnum_value(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -413,7 +413,7 @@ mrb_SDL_SDLJoyBallEvent_get_yrel(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyBallEvent_set_yrel(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyBallEvent * native_self = mruby_unbox_struct SDL_JoyBallEvent(self);
+  struct SDL_JoyBallEvent * native_self = mruby_unbox_SDL_JoyBallEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

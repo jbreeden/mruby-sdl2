@@ -32,35 +32,35 @@
 #define NativeWindowFactory_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "NativeWindowFactory")
 #define PixOrCopy_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "PixOrCopy")
 #define PngImage_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "PngImage")
-#define SDLAtomicT_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLAtomicT")
-#define SDLAudioRateFilters_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLAudioRateFilters")
-#define SDLAudioStreamer_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLAudioStreamer")
-#define SDLAudioTypeFilters_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLAudioTypeFilters")
-#define SDLBlitFuncEntry_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLBlitFuncEntry")
-#define SDLBlitInfo_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLBlitInfo")
-#define SDLDisplayData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLDisplayData")
-#define SDLDisplayMode_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLDisplayMode")
-#define SDLDisplayModeData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLDisplayModeData")
-#define SDLFPoint_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLFPoint")
-#define SDLFRect_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLFRect")
-#define SDLJoystickGUID_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLJoystickGUID")
-#define SDLMessageBoxButtonData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLMessageBoxButtonData")
-#define SDLMessageBoxColor_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLMessageBoxColor")
-#define SDLMessageBoxColorScheme_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLMessageBoxColorScheme")
-#define SDLMessageBoxData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLMessageBoxData")
-#define SDLMouse_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLMouse")
-#define SDLMouseClickState_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLMouseClickState")
-#define SDLMouseData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLMouseData")
-#define SDLQuadTreeChildren_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLQuadTreeChildren")
-#define SDLShapeData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLShapeData")
-#define SDLShapeTree_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLShapeTree")
-#define SDLTLSData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLTLSData")
-#define SDLVideoData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLVideoData")
-#define SDLWindowData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLWindowData")
-#define SDLTestCommonState_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLTestCommonState")
-#define SDLTestCrc32Context_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLTestCrc32Context")
-#define SDLTestMd5Context_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLTestMd5Context")
-#define SDLTestRandomContext_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLTestRandomContext")
+#define SDLAtomicT_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "AtomicT")
+#define SDLAudioRateFilters_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "AudioRateFilters")
+#define SDLAudioStreamer_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "AudioStreamer")
+#define SDLAudioTypeFilters_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "AudioTypeFilters")
+#define SDLBlitFuncEntry_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "BlitFuncEntry")
+#define SDLBlitInfo_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "BlitInfo")
+#define SDLDisplayData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "DisplayData")
+#define SDLDisplayMode_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "DisplayMode")
+#define SDLDisplayModeData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "DisplayModeData")
+#define SDLFPoint_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "FPoint")
+#define SDLFRect_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "FRect")
+#define SDLJoystickGUID_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "JoystickGUID")
+#define SDLMessageBoxButtonData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "MessageBoxButtonData")
+#define SDLMessageBoxColor_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "MessageBoxColor")
+#define SDLMessageBoxColorScheme_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "MessageBoxColorScheme")
+#define SDLMessageBoxData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "MessageBoxData")
+#define SDLMouse_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Mouse")
+#define SDLMouseClickState_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "MouseClickState")
+#define SDLMouseData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "MouseData")
+#define SDLQuadTreeChildren_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "QuadTreeChildren")
+#define SDLShapeData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "ShapeData")
+#define SDLShapeTree_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "ShapeTree")
+#define SDLTLSData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "TLSData")
+#define SDLVideoData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "VideoData")
+#define SDLWindowData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "WindowData")
+#define SDLTestCommonState_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "TestCommonState")
+#define SDLTestCrc32Context_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "TestCrc32Context")
+#define SDLTestMd5Context_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "TestMd5Context")
+#define SDLTestRandomContext_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "TestRandomContext")
 #define ClContext_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "ClContext")
 #define ClEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "ClEvent")
 #define DFBCursorData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "DFBCursorData")
@@ -72,10 +72,10 @@
 #define MainprogInfo_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "MainprogInfo")
 #define NSWindow_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "NSWindow")
 #define RPICursorData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "RPICursorData")
-#define SDLGameController_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLGameController")
-#define SDLHaptic_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLHaptic")
-#define SDLIconvT_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLIconvT")
-#define SDLJoystick_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLJoystick")
+#define SDLGameController_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "GameController")
+#define SDLHaptic_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Haptic")
+#define SDLIconvT_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "IconvT")
+#define SDLJoystick_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Joystick")
 #define TIFFField_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "TIFFField")
 #define TIFFFieldArray_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "TIFFFieldArray")
 #define TIFFImageIter_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "TIFFImageIter")
@@ -182,88 +182,88 @@
 #define PngUnknownChunkT_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "PngUnknownChunkT")
 #define Rasterfile_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Rasterfile")
 #define RecElement_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "RecElement")
-#define SDLAssertData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLAssertData")
-#define SDLAudioCVT_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLAudioCVT")
-#define SDLAudioDevice_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLAudioDevice")
-#define SDLAudioDriver_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLAudioDriver")
-#define SDLAudioDriverImpl_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLAudioDriverImpl")
-#define SDLAudioSpec_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLAudioSpec")
-#define SDLBlitMap_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLBlitMap")
-#define SDLColor_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLColor")
-#define SDLCommonEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLCommonEvent")
-#define SDLCond_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLCond")
-#define SDLControllerAxisEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLControllerAxisEvent")
-#define SDLControllerButtonEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLControllerButtonEvent")
-#define SDLControllerDeviceEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLControllerDeviceEvent")
-#define SDLCursor_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLCursor")
-#define SDLDisplayData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLDisplayData")
-#define SDLDollarGestureEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLDollarGestureEvent")
-#define SDLDropEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLDropEvent")
-#define SDLError_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLError")
-#define SDLFinger_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLFinger")
-#define SDLGameControllerButtonBind_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLGameControllerButtonBind")
-#define SDLGLDriverData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLGLDriverData")
-#define SDLHapticCondition_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLHapticCondition")
-#define SDLHapticConstant_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLHapticConstant")
-#define SDLHapticCustom_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLHapticCustom")
-#define SDLHapticDirection_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLHapticDirection")
-#define SDLHapticLeftRight_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLHapticLeftRight")
-#define SDLHapticPeriodic_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLHapticPeriodic")
-#define SDLHapticRamp_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLHapticRamp")
-#define SDLJoyAxisEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLJoyAxisEvent")
-#define SDLJoyBallEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLJoyBallEvent")
-#define SDLJoyButtonEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLJoyButtonEvent")
-#define SDLJoyDeviceEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLJoyDeviceEvent")
-#define SDLJoyHatEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLJoyHatEvent")
-#define SDLJoylistItem_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLJoylistItem")
-#define SDLKeyboardEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLKeyboardEvent")
-#define SDLKeysym_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLKeysym")
-#define SDLMouseButtonEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLMouseButtonEvent")
-#define SDLMouseMotionEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLMouseMotionEvent")
-#define SDLMouseWheelEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLMouseWheelEvent")
-#define SDLMultiGestureEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLMultiGestureEvent")
-#define SDLMutex_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLMutex")
-#define SDLOSEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLOSEvent")
-#define SDLPalette_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLPalette")
-#define SDLPixelFormat_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLPixelFormat")
-#define SDLPoint_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLPoint")
-#define SDLPrivateAudioData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLPrivateAudioData")
-#define SDLPrivateGLESData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLPrivateGLESData")
-#define SDLQuitEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLQuitEvent")
-#define SDLRect_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLRect")
-#define SDLRenderDriver_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLRenderDriver")
-#define SDLRenderer_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLRenderer")
-#define SDLRendererInfo_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLRendererInfo")
-#define SDLRWops_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLRWops")
-#define SDLSemaphore_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLSemaphore")
-#define SDLShapeDriver_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLShapeDriver")
-#define SDLShapeTree_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLShapeTree")
-#define SDLSurface_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLSurface")
-#define SDLSWYUVTexture_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLSWYUVTexture")
-#define SDLSysWMEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLSysWMEvent")
-#define SDLSysWMinfo_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLSysWMinfo")
-#define SDLSysWMmsg_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLSysWMmsg")
-#define SDLTextEditingEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLTextEditingEvent")
-#define SDLTextInputEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLTextInputEvent")
-#define SDLTexture_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLTexture")
-#define SDLThread_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLThread")
-#define SDLTouch_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLTouch")
-#define SDLTouchFingerEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLTouchFingerEvent")
-#define SDLUserEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLUserEvent")
-#define SDLVersion_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLVersion")
-#define SDLVideoData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLVideoData")
-#define SDLVideoDevice_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLVideoDevice")
-#define SDLVideoDisplay_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLVideoDisplay")
-#define SDLWaylandInput_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLWaylandInput")
-#define SDLWindow_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLWindow")
-#define SDLWindowData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLWindowData")
-#define SDLWindowEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLWindowEvent")
-#define SDLWindowShapeMode_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLWindowShapeMode")
-#define SDLWindowShaper_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLWindowShaper")
-#define SDLWindowUserData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLWindowUserData")
-#define SDLTestSurfaceImageS_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLTestSurfaceImageS")
-#define SDLTestTestCaseReference_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLTestTestCaseReference")
-#define SDLTestTestSuiteReference_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SDLTestTestSuiteReference")
+#define SDLAssertData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "AssertData")
+#define SDLAudioCVT_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "AudioCVT")
+#define SDLAudioDevice_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "AudioDevice")
+#define SDLAudioDriver_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "AudioDriver")
+#define SDLAudioDriverImpl_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "AudioDriverImpl")
+#define SDLAudioSpec_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "AudioSpec")
+#define SDLBlitMap_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "BlitMap")
+#define SDLColor_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Color")
+#define SDLCommonEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "CommonEvent")
+#define SDLCond_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Cond")
+#define SDLControllerAxisEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "ControllerAxisEvent")
+#define SDLControllerButtonEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "ControllerButtonEvent")
+#define SDLControllerDeviceEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "ControllerDeviceEvent")
+#define SDLCursor_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Cursor")
+#define SDLDisplayData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "DisplayData")
+#define SDLDollarGestureEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "DollarGestureEvent")
+#define SDLDropEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "DropEvent")
+#define SDLError_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Error")
+#define SDLFinger_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Finger")
+#define SDLGameControllerButtonBind_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "GameControllerButtonBind")
+#define SDLGLDriverData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "GLDriverData")
+#define SDLHapticCondition_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "HapticCondition")
+#define SDLHapticConstant_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "HapticConstant")
+#define SDLHapticCustom_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "HapticCustom")
+#define SDLHapticDirection_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "HapticDirection")
+#define SDLHapticLeftRight_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "HapticLeftRight")
+#define SDLHapticPeriodic_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "HapticPeriodic")
+#define SDLHapticRamp_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "HapticRamp")
+#define SDLJoyAxisEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "JoyAxisEvent")
+#define SDLJoyBallEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "JoyBallEvent")
+#define SDLJoyButtonEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "JoyButtonEvent")
+#define SDLJoyDeviceEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "JoyDeviceEvent")
+#define SDLJoyHatEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "JoyHatEvent")
+#define SDLJoylistItem_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "JoylistItem")
+#define SDLKeyboardEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "KeyboardEvent")
+#define SDLKeysym_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Keysym")
+#define SDLMouseButtonEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "MouseButtonEvent")
+#define SDLMouseMotionEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "MouseMotionEvent")
+#define SDLMouseWheelEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "MouseWheelEvent")
+#define SDLMultiGestureEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "MultiGestureEvent")
+#define SDLMutex_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Mutex")
+#define SDLOSEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "OSEvent")
+#define SDLPalette_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Palette")
+#define SDLPixelFormat_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "PixelFormat")
+#define SDLPoint_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Point")
+#define SDLPrivateAudioData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "PrivateAudioData")
+#define SDLPrivateGLESData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "PrivateGLESData")
+#define SDLQuitEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "QuitEvent")
+#define SDLRect_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Rect")
+#define SDLRenderDriver_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "RenderDriver")
+#define SDLRenderer_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Renderer")
+#define SDLRendererInfo_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "RendererInfo")
+#define SDLRWops_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "RWops")
+#define SDLSemaphore_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Semaphore")
+#define SDLShapeDriver_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "ShapeDriver")
+#define SDLShapeTree_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "ShapeTree")
+#define SDLSurface_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Surface")
+#define SDLSWYUVTexture_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SWYUVTexture")
+#define SDLSysWMEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SysWMEvent")
+#define SDLSysWMinfo_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SysWMinfo")
+#define SDLSysWMmsg_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SysWMmsg")
+#define SDLTextEditingEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "TextEditingEvent")
+#define SDLTextInputEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "TextInputEvent")
+#define SDLTexture_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Texture")
+#define SDLThread_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Thread")
+#define SDLTouch_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Touch")
+#define SDLTouchFingerEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "TouchFingerEvent")
+#define SDLUserEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "UserEvent")
+#define SDLVersion_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Version")
+#define SDLVideoData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "VideoData")
+#define SDLVideoDevice_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "VideoDevice")
+#define SDLVideoDisplay_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "VideoDisplay")
+#define SDLWaylandInput_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "WaylandInput")
+#define SDLWindow_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Window")
+#define SDLWindowData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "WindowData")
+#define SDLWindowEvent_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "WindowEvent")
+#define SDLWindowShapeMode_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "WindowShapeMode")
+#define SDLWindowShaper_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "WindowShaper")
+#define SDLWindowUserData_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "WindowUserData")
+#define SDLTestSurfaceImageS_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "TestSurfaceImageS")
+#define SDLTestTestCaseReference_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "TestTestCaseReference")
+#define SDLTestTestSuiteReference_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "TestTestSuiteReference")
 #define SioHdl_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "SioHdl")
 #define StaticTreeDescS_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "StaticTreeDescS")
 #define Tableentry_class(mrb) mrb_class_get_under(mrb, SDL_module(mrb), "Tableentry")
@@ -2578,9 +2578,9 @@
 #define BIND_JoystickHwdata_removed_FIELD_WRITER FALSE
 #define BIND_JoystickHwdata_removed_FIELD_READER FALSE
 #define BIND_JoystickHwdata_removed_FIELD_WRITER FALSE
-#define BIND_JoystickHwdata_send_open_event_FIELD_READER FALSE
+#define BIND_JoystickHwdata_send_open_Event_FIELD_READER TRUE
 #define BIND_JoystickHwdata_send_open_event_FIELD_WRITER FALSE
-#define BIND_JoystickHwdata_send_remove_event_FIELD_READER FALSE
+#define BIND_JoystickHwdata_send_remove_Event_FIELD_READER TRUE
 #define BIND_JoystickHwdata_send_remove_event_FIELD_WRITER FALSE
 #define BIND_JoystickHwdata_uncentered_FIELD_READER FALSE
 #define BIND_JoystickHwdata_uncentered_FIELD_WRITER FALSE
@@ -4193,9 +4193,9 @@
 
 #define BIND_SDLCommonEvent_TYPE TRUE
 #define BIND_SDLCommonEvent_INITIALIZE FALSE
-#define BIND_SDLCommonEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLCommonEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLCommonEvent_timestamp_FIELD_WRITER FALSE
-#define BIND_SDLCommonEvent_type_FIELD_READER FALSE
+#define BIND_SDLCommonEvent_type_FIELD_READER TRUE
 #define BIND_SDLCommonEvent_type_FIELD_WRITER FALSE
 
 #define BIND_SDLCond_TYPE TRUE
@@ -4203,49 +4203,49 @@
 
 #define BIND_SDLControllerAxisEvent_TYPE TRUE
 #define BIND_SDLControllerAxisEvent_INITIALIZE FALSE
-#define BIND_SDLControllerAxisEvent_axis_FIELD_READER FALSE
+#define BIND_SDLControllerAxisEvent_axis_FIELD_READER TRUE
 #define BIND_SDLControllerAxisEvent_axis_FIELD_WRITER FALSE
-#define BIND_SDLControllerAxisEvent_padding1_FIELD_READER FALSE
+#define BIND_SDLControllerAxisEvent_padding1_FIELD_READER TRUE
 #define BIND_SDLControllerAxisEvent_padding1_FIELD_WRITER FALSE
-#define BIND_SDLControllerAxisEvent_padding2_FIELD_READER FALSE
+#define BIND_SDLControllerAxisEvent_padding2_FIELD_READER TRUE
 #define BIND_SDLControllerAxisEvent_padding2_FIELD_WRITER FALSE
-#define BIND_SDLControllerAxisEvent_padding3_FIELD_READER FALSE
+#define BIND_SDLControllerAxisEvent_padding3_FIELD_READER TRUE
 #define BIND_SDLControllerAxisEvent_padding3_FIELD_WRITER FALSE
-#define BIND_SDLControllerAxisEvent_padding4_FIELD_READER FALSE
+#define BIND_SDLControllerAxisEvent_padding4_FIELD_READER TRUE
 #define BIND_SDLControllerAxisEvent_padding4_FIELD_WRITER FALSE
-#define BIND_SDLControllerAxisEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLControllerAxisEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLControllerAxisEvent_timestamp_FIELD_WRITER FALSE
-#define BIND_SDLControllerAxisEvent_type_FIELD_READER FALSE
+#define BIND_SDLControllerAxisEvent_type_FIELD_READER TRUE
 #define BIND_SDLControllerAxisEvent_type_FIELD_WRITER FALSE
-#define BIND_SDLControllerAxisEvent_value_FIELD_READER FALSE
+#define BIND_SDLControllerAxisEvent_value_FIELD_READER TRUE
 #define BIND_SDLControllerAxisEvent_value_FIELD_WRITER FALSE
-#define BIND_SDLControllerAxisEvent_which_FIELD_READER FALSE
+#define BIND_SDLControllerAxisEvent_which_FIELD_READER TRUE
 #define BIND_SDLControllerAxisEvent_which_FIELD_WRITER FALSE
 
 #define BIND_SDLControllerButtonEvent_TYPE TRUE
 #define BIND_SDLControllerButtonEvent_INITIALIZE FALSE
-#define BIND_SDLControllerButtonEvent_button_FIELD_READER FALSE
+#define BIND_SDLControllerButtonEvent_button_FIELD_READER TRUE
 #define BIND_SDLControllerButtonEvent_button_FIELD_WRITER FALSE
-#define BIND_SDLControllerButtonEvent_padding1_FIELD_READER FALSE
+#define BIND_SDLControllerButtonEvent_padding1_FIELD_READER TRUE
 #define BIND_SDLControllerButtonEvent_padding1_FIELD_WRITER FALSE
-#define BIND_SDLControllerButtonEvent_padding2_FIELD_READER FALSE
+#define BIND_SDLControllerButtonEvent_padding2_FIELD_READER TRUE
 #define BIND_SDLControllerButtonEvent_padding2_FIELD_WRITER FALSE
-#define BIND_SDLControllerButtonEvent_state_FIELD_READER FALSE
+#define BIND_SDLControllerButtonEvent_state_FIELD_READER TRUE
 #define BIND_SDLControllerButtonEvent_state_FIELD_WRITER FALSE
-#define BIND_SDLControllerButtonEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLControllerButtonEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLControllerButtonEvent_timestamp_FIELD_WRITER FALSE
-#define BIND_SDLControllerButtonEvent_type_FIELD_READER FALSE
+#define BIND_SDLControllerButtonEvent_type_FIELD_READER TRUE
 #define BIND_SDLControllerButtonEvent_type_FIELD_WRITER FALSE
-#define BIND_SDLControllerButtonEvent_which_FIELD_READER FALSE
+#define BIND_SDLControllerButtonEvent_which_FIELD_READER TRUE
 #define BIND_SDLControllerButtonEvent_which_FIELD_WRITER FALSE
 
 #define BIND_SDLControllerDeviceEvent_TYPE TRUE
 #define BIND_SDLControllerDeviceEvent_INITIALIZE FALSE
-#define BIND_SDLControllerDeviceEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLControllerDeviceEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLControllerDeviceEvent_timestamp_FIELD_WRITER FALSE
-#define BIND_SDLControllerDeviceEvent_type_FIELD_READER FALSE
+#define BIND_SDLControllerDeviceEvent_type_FIELD_READER TRUE
 #define BIND_SDLControllerDeviceEvent_type_FIELD_WRITER FALSE
-#define BIND_SDLControllerDeviceEvent_which_FIELD_READER FALSE
+#define BIND_SDLControllerDeviceEvent_which_FIELD_READER TRUE
 #define BIND_SDLControllerDeviceEvent_which_FIELD_WRITER FALSE
 
 #define BIND_SDLCursor_TYPE TRUE
@@ -4262,30 +4262,30 @@
 
 #define BIND_SDLDollarGestureEvent_TYPE TRUE
 #define BIND_SDLDollarGestureEvent_INITIALIZE FALSE
-#define BIND_SDLDollarGestureEvent_error_FIELD_READER FALSE
+#define BIND_SDLDollarGestureEvent_error_FIELD_READER TRUE
 #define BIND_SDLDollarGestureEvent_error_FIELD_WRITER FALSE
 #define BIND_SDLDollarGestureEvent_gestureId_FIELD_READER FALSE
 #define BIND_SDLDollarGestureEvent_gestureId_FIELD_WRITER FALSE
-#define BIND_SDLDollarGestureEvent_numFingers_FIELD_READER FALSE
+#define BIND_SDLDollarGestureEvent_numFingers_FIELD_READER TRUE
 #define BIND_SDLDollarGestureEvent_numFingers_FIELD_WRITER FALSE
-#define BIND_SDLDollarGestureEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLDollarGestureEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLDollarGestureEvent_timestamp_FIELD_WRITER FALSE
 #define BIND_SDLDollarGestureEvent_touchId_FIELD_READER FALSE
 #define BIND_SDLDollarGestureEvent_touchId_FIELD_WRITER FALSE
-#define BIND_SDLDollarGestureEvent_type_FIELD_READER FALSE
+#define BIND_SDLDollarGestureEvent_type_FIELD_READER TRUE
 #define BIND_SDLDollarGestureEvent_type_FIELD_WRITER FALSE
-#define BIND_SDLDollarGestureEvent_x_FIELD_READER FALSE
+#define BIND_SDLDollarGestureEvent_x_FIELD_READER TRUE
 #define BIND_SDLDollarGestureEvent_x_FIELD_WRITER FALSE
-#define BIND_SDLDollarGestureEvent_y_FIELD_READER FALSE
+#define BIND_SDLDollarGestureEvent_y_FIELD_READER TRUE
 #define BIND_SDLDollarGestureEvent_y_FIELD_WRITER FALSE
 
 #define BIND_SDLDropEvent_TYPE TRUE
 #define BIND_SDLDropEvent_INITIALIZE FALSE
-#define BIND_SDLDropEvent_file_FIELD_READER FALSE
+#define BIND_SDLDropEvent_file_FIELD_READER TRUE
 #define BIND_SDLDropEvent_file_FIELD_WRITER FALSE
-#define BIND_SDLDropEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLDropEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLDropEvent_timestamp_FIELD_WRITER FALSE
-#define BIND_SDLDropEvent_type_FIELD_READER FALSE
+#define BIND_SDLDropEvent_type_FIELD_READER TRUE
 #define BIND_SDLDropEvent_type_FIELD_WRITER FALSE
 
 #define BIND_SDLError_TYPE TRUE
@@ -4489,87 +4489,87 @@
 
 #define BIND_SDLJoyAxisEvent_TYPE TRUE
 #define BIND_SDLJoyAxisEvent_INITIALIZE FALSE
-#define BIND_SDLJoyAxisEvent_axis_FIELD_READER FALSE
+#define BIND_SDLJoyAxisEvent_axis_FIELD_READER TRUE
 #define BIND_SDLJoyAxisEvent_axis_FIELD_WRITER FALSE
-#define BIND_SDLJoyAxisEvent_padding1_FIELD_READER FALSE
+#define BIND_SDLJoyAxisEvent_padding1_FIELD_READER TRUE
 #define BIND_SDLJoyAxisEvent_padding1_FIELD_WRITER FALSE
-#define BIND_SDLJoyAxisEvent_padding2_FIELD_READER FALSE
+#define BIND_SDLJoyAxisEvent_padding2_FIELD_READER TRUE
 #define BIND_SDLJoyAxisEvent_padding2_FIELD_WRITER FALSE
-#define BIND_SDLJoyAxisEvent_padding3_FIELD_READER FALSE
+#define BIND_SDLJoyAxisEvent_padding3_FIELD_READER TRUE
 #define BIND_SDLJoyAxisEvent_padding3_FIELD_WRITER FALSE
-#define BIND_SDLJoyAxisEvent_padding4_FIELD_READER FALSE
+#define BIND_SDLJoyAxisEvent_padding4_FIELD_READER TRUE
 #define BIND_SDLJoyAxisEvent_padding4_FIELD_WRITER FALSE
-#define BIND_SDLJoyAxisEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLJoyAxisEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLJoyAxisEvent_timestamp_FIELD_WRITER FALSE
-#define BIND_SDLJoyAxisEvent_type_FIELD_READER FALSE
+#define BIND_SDLJoyAxisEvent_type_FIELD_READER TRUE
 #define BIND_SDLJoyAxisEvent_type_FIELD_WRITER FALSE
-#define BIND_SDLJoyAxisEvent_value_FIELD_READER FALSE
+#define BIND_SDLJoyAxisEvent_value_FIELD_READER TRUE
 #define BIND_SDLJoyAxisEvent_value_FIELD_WRITER FALSE
-#define BIND_SDLJoyAxisEvent_which_FIELD_READER FALSE
+#define BIND_SDLJoyAxisEvent_which_FIELD_READER TRUE
 #define BIND_SDLJoyAxisEvent_which_FIELD_WRITER FALSE
 
 #define BIND_SDLJoyBallEvent_TYPE TRUE
 #define BIND_SDLJoyBallEvent_INITIALIZE FALSE
-#define BIND_SDLJoyBallEvent_ball_FIELD_READER FALSE
+#define BIND_SDLJoyBallEvent_ball_FIELD_READER TRUE
 #define BIND_SDLJoyBallEvent_ball_FIELD_WRITER FALSE
-#define BIND_SDLJoyBallEvent_padding1_FIELD_READER FALSE
+#define BIND_SDLJoyBallEvent_padding1_FIELD_READER TRUE
 #define BIND_SDLJoyBallEvent_padding1_FIELD_WRITER FALSE
-#define BIND_SDLJoyBallEvent_padding2_FIELD_READER FALSE
+#define BIND_SDLJoyBallEvent_padding2_FIELD_READER TRUE
 #define BIND_SDLJoyBallEvent_padding2_FIELD_WRITER FALSE
-#define BIND_SDLJoyBallEvent_padding3_FIELD_READER FALSE
+#define BIND_SDLJoyBallEvent_padding3_FIELD_READER TRUE
 #define BIND_SDLJoyBallEvent_padding3_FIELD_WRITER FALSE
-#define BIND_SDLJoyBallEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLJoyBallEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLJoyBallEvent_timestamp_FIELD_WRITER FALSE
-#define BIND_SDLJoyBallEvent_type_FIELD_READER FALSE
+#define BIND_SDLJoyBallEvent_type_FIELD_READER TRUE
 #define BIND_SDLJoyBallEvent_type_FIELD_WRITER FALSE
-#define BIND_SDLJoyBallEvent_which_FIELD_READER FALSE
+#define BIND_SDLJoyBallEvent_which_FIELD_READER TRUE
 #define BIND_SDLJoyBallEvent_which_FIELD_WRITER FALSE
-#define BIND_SDLJoyBallEvent_xrel_FIELD_READER FALSE
+#define BIND_SDLJoyBallEvent_xrel_FIELD_READER TRUE
 #define BIND_SDLJoyBallEvent_xrel_FIELD_WRITER FALSE
-#define BIND_SDLJoyBallEvent_yrel_FIELD_READER FALSE
+#define BIND_SDLJoyBallEvent_yrel_FIELD_READER TRUE
 #define BIND_SDLJoyBallEvent_yrel_FIELD_WRITER FALSE
 
 #define BIND_SDLJoyButtonEvent_TYPE TRUE
 #define BIND_SDLJoyButtonEvent_INITIALIZE FALSE
-#define BIND_SDLJoyButtonEvent_button_FIELD_READER FALSE
+#define BIND_SDLJoyButtonEvent_button_FIELD_READER TRUE
 #define BIND_SDLJoyButtonEvent_button_FIELD_WRITER FALSE
-#define BIND_SDLJoyButtonEvent_padding1_FIELD_READER FALSE
+#define BIND_SDLJoyButtonEvent_padding1_FIELD_READER TRUE
 #define BIND_SDLJoyButtonEvent_padding1_FIELD_WRITER FALSE
-#define BIND_SDLJoyButtonEvent_padding2_FIELD_READER FALSE
+#define BIND_SDLJoyButtonEvent_padding2_FIELD_READER TRUE
 #define BIND_SDLJoyButtonEvent_padding2_FIELD_WRITER FALSE
-#define BIND_SDLJoyButtonEvent_state_FIELD_READER FALSE
+#define BIND_SDLJoyButtonEvent_state_FIELD_READER TRUE
 #define BIND_SDLJoyButtonEvent_state_FIELD_WRITER FALSE
-#define BIND_SDLJoyButtonEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLJoyButtonEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLJoyButtonEvent_timestamp_FIELD_WRITER FALSE
-#define BIND_SDLJoyButtonEvent_type_FIELD_READER FALSE
+#define BIND_SDLJoyButtonEvent_type_FIELD_READER TRUE
 #define BIND_SDLJoyButtonEvent_type_FIELD_WRITER FALSE
-#define BIND_SDLJoyButtonEvent_which_FIELD_READER FALSE
+#define BIND_SDLJoyButtonEvent_which_FIELD_READER TRUE
 #define BIND_SDLJoyButtonEvent_which_FIELD_WRITER FALSE
 
 #define BIND_SDLJoyDeviceEvent_TYPE TRUE
 #define BIND_SDLJoyDeviceEvent_INITIALIZE FALSE
-#define BIND_SDLJoyDeviceEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLJoyDeviceEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLJoyDeviceEvent_timestamp_FIELD_WRITER FALSE
-#define BIND_SDLJoyDeviceEvent_type_FIELD_READER FALSE
+#define BIND_SDLJoyDeviceEvent_type_FIELD_READER TRUE
 #define BIND_SDLJoyDeviceEvent_type_FIELD_WRITER FALSE
-#define BIND_SDLJoyDeviceEvent_which_FIELD_READER FALSE
+#define BIND_SDLJoyDeviceEvent_which_FIELD_READER TRUE
 #define BIND_SDLJoyDeviceEvent_which_FIELD_WRITER FALSE
 
 #define BIND_SDLJoyHatEvent_TYPE TRUE
 #define BIND_SDLJoyHatEvent_INITIALIZE FALSE
-#define BIND_SDLJoyHatEvent_hat_FIELD_READER FALSE
+#define BIND_SDLJoyHatEvent_hat_FIELD_READER TRUE
 #define BIND_SDLJoyHatEvent_hat_FIELD_WRITER FALSE
-#define BIND_SDLJoyHatEvent_padding1_FIELD_READER FALSE
+#define BIND_SDLJoyHatEvent_padding1_FIELD_READER TRUE
 #define BIND_SDLJoyHatEvent_padding1_FIELD_WRITER FALSE
-#define BIND_SDLJoyHatEvent_padding2_FIELD_READER FALSE
+#define BIND_SDLJoyHatEvent_padding2_FIELD_READER TRUE
 #define BIND_SDLJoyHatEvent_padding2_FIELD_WRITER FALSE
-#define BIND_SDLJoyHatEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLJoyHatEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLJoyHatEvent_timestamp_FIELD_WRITER FALSE
-#define BIND_SDLJoyHatEvent_type_FIELD_READER FALSE
+#define BIND_SDLJoyHatEvent_type_FIELD_READER TRUE
 #define BIND_SDLJoyHatEvent_type_FIELD_WRITER FALSE
-#define BIND_SDLJoyHatEvent_value_FIELD_READER FALSE
+#define BIND_SDLJoyHatEvent_value_FIELD_READER TRUE
 #define BIND_SDLJoyHatEvent_value_FIELD_WRITER FALSE
-#define BIND_SDLJoyHatEvent_which_FIELD_READER FALSE
+#define BIND_SDLJoyHatEvent_which_FIELD_READER TRUE
 #define BIND_SDLJoyHatEvent_which_FIELD_WRITER FALSE
 
 #define BIND_SDLJoylistItem_TYPE TRUE
@@ -4577,112 +4577,112 @@
 
 #define BIND_SDLKeyboardEvent_TYPE TRUE
 #define BIND_SDLKeyboardEvent_INITIALIZE FALSE
-#define BIND_SDLKeyboardEvent_keysym_FIELD_READER FALSE
+#define BIND_SDLKeyboardEvent_keysym_FIELD_READER TRUE
 #define BIND_SDLKeyboardEvent_keysym_FIELD_WRITER FALSE
-#define BIND_SDLKeyboardEvent_padding2_FIELD_READER FALSE
+#define BIND_SDLKeyboardEvent_padding2_FIELD_READER TRUE
 #define BIND_SDLKeyboardEvent_padding2_FIELD_WRITER FALSE
-#define BIND_SDLKeyboardEvent_padding3_FIELD_READER FALSE
+#define BIND_SDLKeyboardEvent_padding3_FIELD_READER TRUE
 #define BIND_SDLKeyboardEvent_padding3_FIELD_WRITER FALSE
-#define BIND_SDLKeyboardEvent_repeat_FIELD_READER FALSE
+#define BIND_SDLKeyboardEvent_repeat_FIELD_READER TRUE
 #define BIND_SDLKeyboardEvent_repeat_FIELD_WRITER FALSE
-#define BIND_SDLKeyboardEvent_state_FIELD_READER FALSE
+#define BIND_SDLKeyboardEvent_state_FIELD_READER TRUE
 #define BIND_SDLKeyboardEvent_state_FIELD_WRITER FALSE
-#define BIND_SDLKeyboardEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLKeyboardEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLKeyboardEvent_timestamp_FIELD_WRITER FALSE
-#define BIND_SDLKeyboardEvent_type_FIELD_READER FALSE
+#define BIND_SDLKeyboardEvent_type_FIELD_READER TRUE
 #define BIND_SDLKeyboardEvent_type_FIELD_WRITER FALSE
-#define BIND_SDLKeyboardEvent_windowID_FIELD_READER FALSE
+#define BIND_SDLKeyboardEvent_windowID_FIELD_READER TRUE
 #define BIND_SDLKeyboardEvent_windowID_FIELD_WRITER FALSE
 
 #define BIND_SDLKeysym_TYPE TRUE
 #define BIND_SDLKeysym_INITIALIZE FALSE
-#define BIND_SDLKeysym_mod_FIELD_READER FALSE
+#define BIND_SDLKeysym_mod_FIELD_READER TRUE
 #define BIND_SDLKeysym_mod_FIELD_WRITER FALSE
-#define BIND_SDLKeysym_scancode_FIELD_READER FALSE
+#define BIND_SDLKeysym_scancode_FIELD_READER TRUE
 #define BIND_SDLKeysym_scancode_FIELD_WRITER FALSE
-#define BIND_SDLKeysym_sym_FIELD_READER FALSE
+#define BIND_SDLKeysym_sym_FIELD_READER TRUE
 #define BIND_SDLKeysym_sym_FIELD_WRITER FALSE
 #define BIND_SDLKeysym_unused_FIELD_READER FALSE
 #define BIND_SDLKeysym_unused_FIELD_WRITER FALSE
 
 #define BIND_SDLMouseButtonEvent_TYPE TRUE
 #define BIND_SDLMouseButtonEvent_INITIALIZE FALSE
-#define BIND_SDLMouseButtonEvent_button_FIELD_READER FALSE
+#define BIND_SDLMouseButtonEvent_button_FIELD_READER TRUE
 #define BIND_SDLMouseButtonEvent_button_FIELD_WRITER FALSE
-#define BIND_SDLMouseButtonEvent_clicks_FIELD_READER FALSE
+#define BIND_SDLMouseButtonEvent_clicks_FIELD_READER TRUE
 #define BIND_SDLMouseButtonEvent_clicks_FIELD_WRITER FALSE
-#define BIND_SDLMouseButtonEvent_padding1_FIELD_READER FALSE
+#define BIND_SDLMouseButtonEvent_padding1_FIELD_READER TRUE
 #define BIND_SDLMouseButtonEvent_padding1_FIELD_WRITER FALSE
-#define BIND_SDLMouseButtonEvent_state_FIELD_READER FALSE
+#define BIND_SDLMouseButtonEvent_state_FIELD_READER TRUE
 #define BIND_SDLMouseButtonEvent_state_FIELD_WRITER FALSE
-#define BIND_SDLMouseButtonEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLMouseButtonEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLMouseButtonEvent_timestamp_FIELD_WRITER FALSE
-#define BIND_SDLMouseButtonEvent_type_FIELD_READER FALSE
+#define BIND_SDLMouseButtonEvent_type_FIELD_READER TRUE
 #define BIND_SDLMouseButtonEvent_type_FIELD_WRITER FALSE
-#define BIND_SDLMouseButtonEvent_which_FIELD_READER FALSE
+#define BIND_SDLMouseButtonEvent_which_FIELD_READER TRUE
 #define BIND_SDLMouseButtonEvent_which_FIELD_WRITER FALSE
-#define BIND_SDLMouseButtonEvent_windowID_FIELD_READER FALSE
+#define BIND_SDLMouseButtonEvent_windowID_FIELD_READER TRUE
 #define BIND_SDLMouseButtonEvent_windowID_FIELD_WRITER FALSE
-#define BIND_SDLMouseButtonEvent_x_FIELD_READER FALSE
+#define BIND_SDLMouseButtonEvent_x_FIELD_READER TRUE
 #define BIND_SDLMouseButtonEvent_x_FIELD_WRITER FALSE
-#define BIND_SDLMouseButtonEvent_y_FIELD_READER FALSE
+#define BIND_SDLMouseButtonEvent_y_FIELD_READER TRUE
 #define BIND_SDLMouseButtonEvent_y_FIELD_WRITER FALSE
 
 #define BIND_SDLMouseMotionEvent_TYPE TRUE
 #define BIND_SDLMouseMotionEvent_INITIALIZE FALSE
-#define BIND_SDLMouseMotionEvent_state_FIELD_READER FALSE
+#define BIND_SDLMouseMotionEvent_state_FIELD_READER TRUE
 #define BIND_SDLMouseMotionEvent_state_FIELD_WRITER FALSE
-#define BIND_SDLMouseMotionEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLMouseMotionEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLMouseMotionEvent_timestamp_FIELD_WRITER FALSE
-#define BIND_SDLMouseMotionEvent_type_FIELD_READER FALSE
+#define BIND_SDLMouseMotionEvent_type_FIELD_READER TRUE
 #define BIND_SDLMouseMotionEvent_type_FIELD_WRITER FALSE
-#define BIND_SDLMouseMotionEvent_which_FIELD_READER FALSE
+#define BIND_SDLMouseMotionEvent_which_FIELD_READER TRUE
 #define BIND_SDLMouseMotionEvent_which_FIELD_WRITER FALSE
-#define BIND_SDLMouseMotionEvent_windowID_FIELD_READER FALSE
+#define BIND_SDLMouseMotionEvent_windowID_FIELD_READER TRUE
 #define BIND_SDLMouseMotionEvent_windowID_FIELD_WRITER FALSE
-#define BIND_SDLMouseMotionEvent_x_FIELD_READER FALSE
+#define BIND_SDLMouseMotionEvent_x_FIELD_READER TRUE
 #define BIND_SDLMouseMotionEvent_x_FIELD_WRITER FALSE
-#define BIND_SDLMouseMotionEvent_xrel_FIELD_READER FALSE
+#define BIND_SDLMouseMotionEvent_xrel_FIELD_READER TRUE
 #define BIND_SDLMouseMotionEvent_xrel_FIELD_WRITER FALSE
-#define BIND_SDLMouseMotionEvent_y_FIELD_READER FALSE
+#define BIND_SDLMouseMotionEvent_y_FIELD_READER TRUE
 #define BIND_SDLMouseMotionEvent_y_FIELD_WRITER FALSE
-#define BIND_SDLMouseMotionEvent_yrel_FIELD_READER FALSE
+#define BIND_SDLMouseMotionEvent_yrel_FIELD_READER TRUE
 #define BIND_SDLMouseMotionEvent_yrel_FIELD_WRITER FALSE
 
 #define BIND_SDLMouseWheelEvent_TYPE TRUE
 #define BIND_SDLMouseWheelEvent_INITIALIZE FALSE
-#define BIND_SDLMouseWheelEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLMouseWheelEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLMouseWheelEvent_timestamp_FIELD_WRITER FALSE
-#define BIND_SDLMouseWheelEvent_type_FIELD_READER FALSE
+#define BIND_SDLMouseWheelEvent_type_FIELD_READER TRUE
 #define BIND_SDLMouseWheelEvent_type_FIELD_WRITER FALSE
-#define BIND_SDLMouseWheelEvent_which_FIELD_READER FALSE
+#define BIND_SDLMouseWheelEvent_which_FIELD_READER TRUE
 #define BIND_SDLMouseWheelEvent_which_FIELD_WRITER FALSE
-#define BIND_SDLMouseWheelEvent_windowID_FIELD_READER FALSE
+#define BIND_SDLMouseWheelEvent_windowID_FIELD_READER TRUE
 #define BIND_SDLMouseWheelEvent_windowID_FIELD_WRITER FALSE
-#define BIND_SDLMouseWheelEvent_x_FIELD_READER FALSE
+#define BIND_SDLMouseWheelEvent_x_FIELD_READER TRUE
 #define BIND_SDLMouseWheelEvent_x_FIELD_WRITER FALSE
-#define BIND_SDLMouseWheelEvent_y_FIELD_READER FALSE
+#define BIND_SDLMouseWheelEvent_y_FIELD_READER TRUE
 #define BIND_SDLMouseWheelEvent_y_FIELD_WRITER FALSE
 
 #define BIND_SDLMultiGestureEvent_TYPE TRUE
 #define BIND_SDLMultiGestureEvent_INITIALIZE FALSE
-#define BIND_SDLMultiGestureEvent_dDist_FIELD_READER FALSE
+#define BIND_SDLMultiGestureEvent_dDist_FIELD_READER TRUE
 #define BIND_SDLMultiGestureEvent_dDist_FIELD_WRITER FALSE
-#define BIND_SDLMultiGestureEvent_dTheta_FIELD_READER FALSE
+#define BIND_SDLMultiGestureEvent_dTheta_FIELD_READER TRUE
 #define BIND_SDLMultiGestureEvent_dTheta_FIELD_WRITER FALSE
-#define BIND_SDLMultiGestureEvent_numFingers_FIELD_READER FALSE
+#define BIND_SDLMultiGestureEvent_numFingers_FIELD_READER TRUE
 #define BIND_SDLMultiGestureEvent_numFingers_FIELD_WRITER FALSE
-#define BIND_SDLMultiGestureEvent_padding_FIELD_READER FALSE
+#define BIND_SDLMultiGestureEvent_padding_FIELD_READER TRUE
 #define BIND_SDLMultiGestureEvent_padding_FIELD_WRITER FALSE
-#define BIND_SDLMultiGestureEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLMultiGestureEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLMultiGestureEvent_timestamp_FIELD_WRITER FALSE
 #define BIND_SDLMultiGestureEvent_touchId_FIELD_READER FALSE
 #define BIND_SDLMultiGestureEvent_touchId_FIELD_WRITER FALSE
-#define BIND_SDLMultiGestureEvent_type_FIELD_READER FALSE
+#define BIND_SDLMultiGestureEvent_type_FIELD_READER TRUE
 #define BIND_SDLMultiGestureEvent_type_FIELD_WRITER FALSE
-#define BIND_SDLMultiGestureEvent_x_FIELD_READER FALSE
+#define BIND_SDLMultiGestureEvent_x_FIELD_READER TRUE
 #define BIND_SDLMultiGestureEvent_x_FIELD_WRITER FALSE
-#define BIND_SDLMultiGestureEvent_y_FIELD_READER FALSE
+#define BIND_SDLMultiGestureEvent_y_FIELD_READER TRUE
 #define BIND_SDLMultiGestureEvent_y_FIELD_WRITER FALSE
 
 #define BIND_SDLMutex_TYPE TRUE
@@ -4694,9 +4694,9 @@
 
 #define BIND_SDLOSEvent_TYPE TRUE
 #define BIND_SDLOSEvent_INITIALIZE FALSE
-#define BIND_SDLOSEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLOSEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLOSEvent_timestamp_FIELD_WRITER FALSE
-#define BIND_SDLOSEvent_type_FIELD_READER FALSE
+#define BIND_SDLOSEvent_type_FIELD_READER TRUE
 #define BIND_SDLOSEvent_type_FIELD_WRITER FALSE
 
 #define BIND_SDLPalette_TYPE TRUE
@@ -4966,9 +4966,9 @@
 
 #define BIND_SDLQuitEvent_TYPE TRUE
 #define BIND_SDLQuitEvent_INITIALIZE FALSE
-#define BIND_SDLQuitEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLQuitEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLQuitEvent_timestamp_FIELD_WRITER FALSE
-#define BIND_SDLQuitEvent_type_FIELD_READER FALSE
+#define BIND_SDLQuitEvent_type_FIELD_READER TRUE
 #define BIND_SDLQuitEvent_type_FIELD_WRITER FALSE
 
 #define BIND_SDLRect_TYPE TRUE
@@ -5039,7 +5039,7 @@
 #define BIND_SDLRenderer_UpdateTextureYUV_FIELD_WRITER FALSE
 #define BIND_SDLRenderer_UpdateViewport_FIELD_READER FALSE
 #define BIND_SDLRenderer_UpdateViewport_FIELD_WRITER FALSE
-#define BIND_SDLRenderer_WindowEvent_FIELD_READER FALSE
+#define BIND_SDLRenderer_WindowEvent_FIELD_READER TRUE
 #define BIND_SDLRenderer_WindowEvent_FIELD_WRITER FALSE
 #define BIND_SDLRenderer_a_FIELD_READER FALSE
 #define BIND_SDLRenderer_a_FIELD_WRITER FALSE
@@ -5191,11 +5191,11 @@
 
 #define BIND_SDLSysWMEvent_TYPE TRUE
 #define BIND_SDLSysWMEvent_INITIALIZE FALSE
-#define BIND_SDLSysWMEvent_msg_FIELD_READER FALSE
+#define BIND_SDLSysWMEvent_msg_FIELD_READER TRUE
 #define BIND_SDLSysWMEvent_msg_FIELD_WRITER FALSE
-#define BIND_SDLSysWMEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLSysWMEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLSysWMEvent_timestamp_FIELD_WRITER FALSE
-#define BIND_SDLSysWMEvent_type_FIELD_READER FALSE
+#define BIND_SDLSysWMEvent_type_FIELD_READER TRUE
 #define BIND_SDLSysWMEvent_type_FIELD_WRITER FALSE
 
 #define BIND_SDLSysWMinfo_TYPE TRUE
@@ -5218,28 +5218,28 @@
 
 #define BIND_SDLTextEditingEvent_TYPE TRUE
 #define BIND_SDLTextEditingEvent_INITIALIZE FALSE
-#define BIND_SDLTextEditingEvent_length_FIELD_READER FALSE
+#define BIND_SDLTextEditingEvent_length_FIELD_READER TRUE
 #define BIND_SDLTextEditingEvent_length_FIELD_WRITER FALSE
-#define BIND_SDLTextEditingEvent_start_FIELD_READER FALSE
+#define BIND_SDLTextEditingEvent_start_FIELD_READER TRUE
 #define BIND_SDLTextEditingEvent_start_FIELD_WRITER FALSE
-#define BIND_SDLTextEditingEvent_text_FIELD_READER FALSE
+#define BIND_SDLTextEditingEvent_text_FIELD_READER TRUE
 #define BIND_SDLTextEditingEvent_text_FIELD_WRITER FALSE
-#define BIND_SDLTextEditingEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLTextEditingEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLTextEditingEvent_timestamp_FIELD_WRITER FALSE
-#define BIND_SDLTextEditingEvent_type_FIELD_READER FALSE
+#define BIND_SDLTextEditingEvent_type_FIELD_READER TRUE
 #define BIND_SDLTextEditingEvent_type_FIELD_WRITER FALSE
-#define BIND_SDLTextEditingEvent_windowID_FIELD_READER FALSE
+#define BIND_SDLTextEditingEvent_windowID_FIELD_READER TRUE
 #define BIND_SDLTextEditingEvent_windowID_FIELD_WRITER FALSE
 
 #define BIND_SDLTextInputEvent_TYPE TRUE
 #define BIND_SDLTextInputEvent_INITIALIZE FALSE
-#define BIND_SDLTextInputEvent_text_FIELD_READER FALSE
+#define BIND_SDLTextInputEvent_text_FIELD_READER TRUE
 #define BIND_SDLTextInputEvent_text_FIELD_WRITER FALSE
-#define BIND_SDLTextInputEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLTextInputEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLTextInputEvent_timestamp_FIELD_WRITER FALSE
-#define BIND_SDLTextInputEvent_type_FIELD_READER FALSE
+#define BIND_SDLTextInputEvent_type_FIELD_READER TRUE
 #define BIND_SDLTextInputEvent_type_FIELD_WRITER FALSE
-#define BIND_SDLTextInputEvent_windowID_FIELD_READER FALSE
+#define BIND_SDLTextInputEvent_windowID_FIELD_READER TRUE
 #define BIND_SDLTextInputEvent_windowID_FIELD_WRITER FALSE
 
 #define BIND_SDLTexture_TYPE TRUE
@@ -5315,38 +5315,38 @@
 
 #define BIND_SDLTouchFingerEvent_TYPE TRUE
 #define BIND_SDLTouchFingerEvent_INITIALIZE FALSE
-#define BIND_SDLTouchFingerEvent_dx_FIELD_READER FALSE
+#define BIND_SDLTouchFingerEvent_dx_FIELD_READER TRUE
 #define BIND_SDLTouchFingerEvent_dx_FIELD_WRITER FALSE
-#define BIND_SDLTouchFingerEvent_dy_FIELD_READER FALSE
+#define BIND_SDLTouchFingerEvent_dy_FIELD_READER TRUE
 #define BIND_SDLTouchFingerEvent_dy_FIELD_WRITER FALSE
 #define BIND_SDLTouchFingerEvent_fingerId_FIELD_READER FALSE
 #define BIND_SDLTouchFingerEvent_fingerId_FIELD_WRITER FALSE
-#define BIND_SDLTouchFingerEvent_pressure_FIELD_READER FALSE
+#define BIND_SDLTouchFingerEvent_pressure_FIELD_READER TRUE
 #define BIND_SDLTouchFingerEvent_pressure_FIELD_WRITER FALSE
-#define BIND_SDLTouchFingerEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLTouchFingerEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLTouchFingerEvent_timestamp_FIELD_WRITER FALSE
 #define BIND_SDLTouchFingerEvent_touchId_FIELD_READER FALSE
 #define BIND_SDLTouchFingerEvent_touchId_FIELD_WRITER FALSE
-#define BIND_SDLTouchFingerEvent_type_FIELD_READER FALSE
+#define BIND_SDLTouchFingerEvent_type_FIELD_READER TRUE
 #define BIND_SDLTouchFingerEvent_type_FIELD_WRITER FALSE
-#define BIND_SDLTouchFingerEvent_x_FIELD_READER FALSE
+#define BIND_SDLTouchFingerEvent_x_FIELD_READER TRUE
 #define BIND_SDLTouchFingerEvent_x_FIELD_WRITER FALSE
-#define BIND_SDLTouchFingerEvent_y_FIELD_READER FALSE
+#define BIND_SDLTouchFingerEvent_y_FIELD_READER TRUE
 #define BIND_SDLTouchFingerEvent_y_FIELD_WRITER FALSE
 
 #define BIND_SDLUserEvent_TYPE TRUE
 #define BIND_SDLUserEvent_INITIALIZE FALSE
-#define BIND_SDLUserEvent_code_FIELD_READER FALSE
+#define BIND_SDLUserEvent_code_FIELD_READER TRUE
 #define BIND_SDLUserEvent_code_FIELD_WRITER FALSE
 #define BIND_SDLUserEvent_data1_FIELD_READER FALSE
 #define BIND_SDLUserEvent_data1_FIELD_WRITER FALSE
 #define BIND_SDLUserEvent_data2_FIELD_READER FALSE
 #define BIND_SDLUserEvent_data2_FIELD_WRITER FALSE
-#define BIND_SDLUserEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLUserEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLUserEvent_timestamp_FIELD_WRITER FALSE
-#define BIND_SDLUserEvent_type_FIELD_READER FALSE
+#define BIND_SDLUserEvent_type_FIELD_READER TRUE
 #define BIND_SDLUserEvent_type_FIELD_WRITER FALSE
-#define BIND_SDLUserEvent_windowID_FIELD_READER FALSE
+#define BIND_SDLUserEvent_windowID_FIELD_READER TRUE
 #define BIND_SDLUserEvent_windowID_FIELD_WRITER FALSE
 
 #define BIND_SDLVersion_TYPE TRUE
@@ -5810,23 +5810,23 @@
 
 #define BIND_SDLWindowEvent_TYPE TRUE
 #define BIND_SDLWindowEvent_INITIALIZE FALSE
-#define BIND_SDLWindowEvent_data1_FIELD_READER FALSE
+#define BIND_SDLWindowEvent_data1_FIELD_READER TRUE
 #define BIND_SDLWindowEvent_data1_FIELD_WRITER FALSE
-#define BIND_SDLWindowEvent_data2_FIELD_READER FALSE
+#define BIND_SDLWindowEvent_data2_FIELD_READER TRUE
 #define BIND_SDLWindowEvent_data2_FIELD_WRITER FALSE
-#define BIND_SDLWindowEvent_event_FIELD_READER FALSE
+#define BIND_SDLWindowEvent_Event_FIELD_READER TRUE
 #define BIND_SDLWindowEvent_event_FIELD_WRITER FALSE
-#define BIND_SDLWindowEvent_padding1_FIELD_READER FALSE
+#define BIND_SDLWindowEvent_padding1_FIELD_READER TRUE
 #define BIND_SDLWindowEvent_padding1_FIELD_WRITER FALSE
-#define BIND_SDLWindowEvent_padding2_FIELD_READER FALSE
+#define BIND_SDLWindowEvent_padding2_FIELD_READER TRUE
 #define BIND_SDLWindowEvent_padding2_FIELD_WRITER FALSE
-#define BIND_SDLWindowEvent_padding3_FIELD_READER FALSE
+#define BIND_SDLWindowEvent_padding3_FIELD_READER TRUE
 #define BIND_SDLWindowEvent_padding3_FIELD_WRITER FALSE
-#define BIND_SDLWindowEvent_timestamp_FIELD_READER FALSE
+#define BIND_SDLWindowEvent_timestamp_FIELD_READER TRUE
 #define BIND_SDLWindowEvent_timestamp_FIELD_WRITER FALSE
-#define BIND_SDLWindowEvent_type_FIELD_READER FALSE
+#define BIND_SDLWindowEvent_type_FIELD_READER TRUE
 #define BIND_SDLWindowEvent_type_FIELD_WRITER FALSE
-#define BIND_SDLWindowEvent_windowID_FIELD_READER FALSE
+#define BIND_SDLWindowEvent_windowID_FIELD_READER TRUE
 #define BIND_SDLWindowEvent_windowID_FIELD_WRITER FALSE
 
 #define BIND_SDLWindowShapeMode_TYPE TRUE

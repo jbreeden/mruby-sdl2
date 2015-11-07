@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLCursor_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_Cursor* native_object = (struct SDL_Cursor*)malloc(sizeof(struct SDL_Cursor));
-  mruby_gift_struct SDL_Cursor_data_ptr(self, native_object);
+  mruby_gift_SDL_Cursor_data_ptr(self, native_object);
   return self;
 }
 #endif

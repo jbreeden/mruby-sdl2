@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLWindowShapeMode_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_WindowShapeMode* native_object = (struct SDL_WindowShapeMode*)malloc(sizeof(struct SDL_WindowShapeMode));
-  mruby_gift_struct SDL_WindowShapeMode_data_ptr(self, native_object);
+  mruby_gift_SDL_WindowShapeMode_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLWindowShapeMode_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLWindowShapeMode_get_mode(mrb_state* mrb, mrb_value self) {
-  struct SDL_WindowShapeMode * native_self = mruby_unbox_struct SDL_WindowShapeMode(self);
+  struct SDL_WindowShapeMode * native_self = mruby_unbox_SDL_WindowShapeMode(self);
 
   WindowShapeMode native_field = native_self->mode;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLWindowShapeMode_get_mode(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLWindowShapeMode_set_mode(mrb_state* mrb, mrb_value self) {
-  struct SDL_WindowShapeMode * native_self = mruby_unbox_struct SDL_WindowShapeMode(self);
+  struct SDL_WindowShapeMode * native_self = mruby_unbox_SDL_WindowShapeMode(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLWindowShapeMode_set_mode(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLWindowShapeMode_get_parameters(mrb_state* mrb, mrb_value self) {
-  struct SDL_WindowShapeMode * native_self = mruby_unbox_struct SDL_WindowShapeMode(self);
+  struct SDL_WindowShapeMode * native_self = mruby_unbox_SDL_WindowShapeMode(self);
 
   SDL_WindowShapeParams native_field = native_self->parameters;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLWindowShapeMode_get_parameters(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLWindowShapeMode_set_parameters(mrb_state* mrb, mrb_value self) {
-  struct SDL_WindowShapeMode * native_self = mruby_unbox_struct SDL_WindowShapeMode(self);
+  struct SDL_WindowShapeMode * native_self = mruby_unbox_SDL_WindowShapeMode(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

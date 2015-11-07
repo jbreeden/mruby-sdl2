@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLPalette_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_Palette* native_object = (struct SDL_Palette*)malloc(sizeof(struct SDL_Palette));
-  mruby_gift_struct SDL_Palette_data_ptr(self, native_object);
+  mruby_gift_SDL_Palette_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLPalette_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPalette_get_ncolors(mrb_state* mrb, mrb_value self) {
-  struct SDL_Palette * native_self = mruby_unbox_struct SDL_Palette(self);
+  struct SDL_Palette * native_self = mruby_unbox_SDL_Palette(self);
 
   int native_field = native_self->ncolors;
 
@@ -89,7 +89,7 @@ mrb_SDL_SDLPalette_get_ncolors(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPalette_set_ncolors(mrb_state* mrb, mrb_value self) {
-  struct SDL_Palette * native_self = mruby_unbox_struct SDL_Palette(self);
+  struct SDL_Palette * native_self = mruby_unbox_SDL_Palette(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -115,7 +115,7 @@ mrb_SDL_SDLPalette_set_ncolors(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPalette_get_colors(mrb_state* mrb, mrb_value self) {
-  struct SDL_Palette * native_self = mruby_unbox_struct SDL_Palette(self);
+  struct SDL_Palette * native_self = mruby_unbox_SDL_Palette(self);
 
   SDL_Color * native_field = native_self->colors;
 
@@ -133,7 +133,7 @@ mrb_SDL_SDLPalette_get_colors(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPalette_set_colors(mrb_state* mrb, mrb_value self) {
-  struct SDL_Palette * native_self = mruby_unbox_struct SDL_Palette(self);
+  struct SDL_Palette * native_self = mruby_unbox_SDL_Palette(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -159,7 +159,7 @@ mrb_SDL_SDLPalette_set_colors(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPalette_get_version(mrb_state* mrb, mrb_value self) {
-  struct SDL_Palette * native_self = mruby_unbox_struct SDL_Palette(self);
+  struct SDL_Palette * native_self = mruby_unbox_SDL_Palette(self);
 
   Uint32 native_field = native_self->version;
 
@@ -177,7 +177,7 @@ mrb_SDL_SDLPalette_get_version(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPalette_set_version(mrb_state* mrb, mrb_value self) {
-  struct SDL_Palette * native_self = mruby_unbox_struct SDL_Palette(self);
+  struct SDL_Palette * native_self = mruby_unbox_SDL_Palette(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -200,7 +200,7 @@ mrb_SDL_SDLPalette_set_version(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPalette_get_refcount(mrb_state* mrb, mrb_value self) {
-  struct SDL_Palette * native_self = mruby_unbox_struct SDL_Palette(self);
+  struct SDL_Palette * native_self = mruby_unbox_SDL_Palette(self);
 
   int native_field = native_self->refcount;
 
@@ -222,7 +222,7 @@ mrb_SDL_SDLPalette_get_refcount(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLPalette_set_refcount(mrb_state* mrb, mrb_value self) {
-  struct SDL_Palette * native_self = mruby_unbox_struct SDL_Palette(self);
+  struct SDL_Palette * native_self = mruby_unbox_SDL_Palette(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

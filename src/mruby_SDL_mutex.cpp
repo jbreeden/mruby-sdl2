@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLMutex_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_mutex* native_object = (struct SDL_mutex*)malloc(sizeof(struct SDL_mutex));
-  mruby_gift_struct SDL_mutex_data_ptr(self, native_object);
+  mruby_gift_SDL_mutex_data_ptr(self, native_object);
   return self;
 }
 #endif

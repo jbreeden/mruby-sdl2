@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLHapticCondition_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_HapticCondition* native_object = (struct SDL_HapticCondition*)malloc(sizeof(struct SDL_HapticCondition));
-  mruby_gift_struct SDL_HapticCondition_data_ptr(self, native_object);
+  mruby_gift_SDL_HapticCondition_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLHapticCondition_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_get_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
 
   Uint16 native_field = native_self->type;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLHapticCondition_get_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_set_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLHapticCondition_set_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_get_direction(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
 
   SDL_HapticDirection native_field = native_self->direction;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLHapticCondition_get_direction(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_set_direction(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -149,7 +149,7 @@ mrb_SDL_SDLHapticCondition_set_direction(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_get_length(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
 
   Uint32 native_field = native_self->length;
 
@@ -167,7 +167,7 @@ mrb_SDL_SDLHapticCondition_get_length(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_set_length(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -190,7 +190,7 @@ mrb_SDL_SDLHapticCondition_set_length(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_get_delay(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
 
   Uint16 native_field = native_self->delay;
 
@@ -208,7 +208,7 @@ mrb_SDL_SDLHapticCondition_get_delay(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_set_delay(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -231,7 +231,7 @@ mrb_SDL_SDLHapticCondition_set_delay(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_get_button(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
 
   Uint16 native_field = native_self->button;
 
@@ -249,7 +249,7 @@ mrb_SDL_SDLHapticCondition_get_button(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_set_button(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -272,7 +272,7 @@ mrb_SDL_SDLHapticCondition_set_button(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_get_interval(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
 
   Uint16 native_field = native_self->interval;
 
@@ -290,7 +290,7 @@ mrb_SDL_SDLHapticCondition_get_interval(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_set_interval(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -313,7 +313,7 @@ mrb_SDL_SDLHapticCondition_set_interval(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_get_right_sat(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
 
   Uint16 [3] native_field = native_self->right_sat;
 
@@ -331,7 +331,7 @@ mrb_SDL_SDLHapticCondition_get_right_sat(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_set_right_sat(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -354,7 +354,7 @@ mrb_SDL_SDLHapticCondition_set_right_sat(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_get_left_sat(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
 
   Uint16 [3] native_field = native_self->left_sat;
 
@@ -372,7 +372,7 @@ mrb_SDL_SDLHapticCondition_get_left_sat(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_set_left_sat(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -395,7 +395,7 @@ mrb_SDL_SDLHapticCondition_set_left_sat(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_get_right_coeff(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
 
   Sint16 [3] native_field = native_self->right_coeff;
 
@@ -413,7 +413,7 @@ mrb_SDL_SDLHapticCondition_get_right_coeff(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_set_right_coeff(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -436,7 +436,7 @@ mrb_SDL_SDLHapticCondition_set_right_coeff(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_get_left_coeff(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
 
   Sint16 [3] native_field = native_self->left_coeff;
 
@@ -454,7 +454,7 @@ mrb_SDL_SDLHapticCondition_get_left_coeff(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_set_left_coeff(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -477,7 +477,7 @@ mrb_SDL_SDLHapticCondition_set_left_coeff(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_get_deadband(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
 
   Uint16 [3] native_field = native_self->deadband;
 
@@ -495,7 +495,7 @@ mrb_SDL_SDLHapticCondition_get_deadband(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_set_deadband(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -518,7 +518,7 @@ mrb_SDL_SDLHapticCondition_set_deadband(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_get_center(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
 
   Sint16 [3] native_field = native_self->center;
 
@@ -536,7 +536,7 @@ mrb_SDL_SDLHapticCondition_get_center(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticCondition_set_center(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticCondition * native_self = mruby_unbox_struct SDL_HapticCondition(self);
+  struct SDL_HapticCondition * native_self = mruby_unbox_SDL_HapticCondition(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

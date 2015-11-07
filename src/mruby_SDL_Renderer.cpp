@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLRenderer_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_Renderer* native_object = (struct SDL_Renderer*)malloc(sizeof(struct SDL_Renderer));
-  mruby_gift_struct SDL_Renderer_data_ptr(self, native_object);
+  mruby_gift_SDL_Renderer_data_ptr(self, native_object);
   return self;
 }
 #endif

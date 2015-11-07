@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLBlitMap_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_BlitMap* native_object = (struct SDL_BlitMap*)malloc(sizeof(struct SDL_BlitMap));
-  mruby_gift_struct SDL_BlitMap_data_ptr(self, native_object);
+  mruby_gift_SDL_BlitMap_data_ptr(self, native_object);
   return self;
 }
 #endif

@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLKeysym_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_Keysym* native_object = (struct SDL_Keysym*)malloc(sizeof(struct SDL_Keysym));
-  mruby_gift_struct SDL_Keysym_data_ptr(self, native_object);
+  mruby_gift_SDL_Keysym_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,11 +67,11 @@ mrb_SDL_SDLKeysym_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeysym_get_scancode(mrb_state* mrb, mrb_value self) {
-  struct SDL_Keysym * native_self = mruby_unbox_struct SDL_Keysym(self);
+  struct SDL_Keysym * native_self = mruby_unbox_SDL_Keysym(self);
 
   SDL_Scancode native_field = native_self->scancode;
 
-  mrb_value ruby_field = TODO_mruby_box_SDL_Scancode(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -85,7 +85,7 @@ mrb_SDL_SDLKeysym_get_scancode(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeysym_set_scancode(mrb_state* mrb, mrb_value self) {
-  struct SDL_Keysym * native_self = mruby_unbox_struct SDL_Keysym(self);
+  struct SDL_Keysym * native_self = mruby_unbox_SDL_Keysym(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -93,7 +93,7 @@ mrb_SDL_SDLKeysym_set_scancode(mrb_state* mrb, mrb_value self) {
   /* type checking */
   TODO_type_check_SDL_Scancode(ruby_field);
 
-  SDL_Scancode native_field = TODO_mruby_unbox_SDL_Scancode(ruby_field);
+  SDL_Scancode native_field = (SDL_Scancode)mrb_fixnum(ruby_field);
 
   native_self->scancode = native_field;
 
@@ -108,7 +108,7 @@ mrb_SDL_SDLKeysym_set_scancode(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeysym_get_sym(mrb_state* mrb, mrb_value self) {
-  struct SDL_Keysym * native_self = mruby_unbox_struct SDL_Keysym(self);
+  struct SDL_Keysym * native_self = mruby_unbox_SDL_Keysym(self);
 
   SDL_Keycode native_field = native_self->sym;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLKeysym_get_sym(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeysym_set_sym(mrb_state* mrb, mrb_value self) {
-  struct SDL_Keysym * native_self = mruby_unbox_struct SDL_Keysym(self);
+  struct SDL_Keysym * native_self = mruby_unbox_SDL_Keysym(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -149,7 +149,7 @@ mrb_SDL_SDLKeysym_set_sym(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeysym_get_mod(mrb_state* mrb, mrb_value self) {
-  struct SDL_Keysym * native_self = mruby_unbox_struct SDL_Keysym(self);
+  struct SDL_Keysym * native_self = mruby_unbox_SDL_Keysym(self);
 
   Uint16 native_field = native_self->mod;
 
@@ -167,7 +167,7 @@ mrb_SDL_SDLKeysym_get_mod(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeysym_set_mod(mrb_state* mrb, mrb_value self) {
-  struct SDL_Keysym * native_self = mruby_unbox_struct SDL_Keysym(self);
+  struct SDL_Keysym * native_self = mruby_unbox_SDL_Keysym(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -190,7 +190,7 @@ mrb_SDL_SDLKeysym_set_mod(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeysym_get_unused(mrb_state* mrb, mrb_value self) {
-  struct SDL_Keysym * native_self = mruby_unbox_struct SDL_Keysym(self);
+  struct SDL_Keysym * native_self = mruby_unbox_SDL_Keysym(self);
 
   Uint32 native_field = native_self->unused;
 
@@ -208,7 +208,7 @@ mrb_SDL_SDLKeysym_get_unused(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLKeysym_set_unused(mrb_state* mrb, mrb_value self) {
-  struct SDL_Keysym * native_self = mruby_unbox_struct SDL_Keysym(self);
+  struct SDL_Keysym * native_self = mruby_unbox_SDL_Keysym(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

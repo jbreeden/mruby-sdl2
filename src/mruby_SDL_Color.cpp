@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLColor_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_Color* native_object = (struct SDL_Color*)malloc(sizeof(struct SDL_Color));
-  mruby_gift_struct SDL_Color_data_ptr(self, native_object);
+  mruby_gift_SDL_Color_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLColor_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLColor_get_r(mrb_state* mrb, mrb_value self) {
-  struct SDL_Color * native_self = mruby_unbox_struct SDL_Color(self);
+  struct SDL_Color * native_self = mruby_unbox_SDL_Color(self);
 
   Uint8 native_field = native_self->r;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLColor_get_r(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLColor_set_r(mrb_state* mrb, mrb_value self) {
-  struct SDL_Color * native_self = mruby_unbox_struct SDL_Color(self);
+  struct SDL_Color * native_self = mruby_unbox_SDL_Color(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLColor_set_r(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLColor_get_g(mrb_state* mrb, mrb_value self) {
-  struct SDL_Color * native_self = mruby_unbox_struct SDL_Color(self);
+  struct SDL_Color * native_self = mruby_unbox_SDL_Color(self);
 
   Uint8 native_field = native_self->g;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLColor_get_g(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLColor_set_g(mrb_state* mrb, mrb_value self) {
-  struct SDL_Color * native_self = mruby_unbox_struct SDL_Color(self);
+  struct SDL_Color * native_self = mruby_unbox_SDL_Color(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -149,7 +149,7 @@ mrb_SDL_SDLColor_set_g(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLColor_get_b(mrb_state* mrb, mrb_value self) {
-  struct SDL_Color * native_self = mruby_unbox_struct SDL_Color(self);
+  struct SDL_Color * native_self = mruby_unbox_SDL_Color(self);
 
   Uint8 native_field = native_self->b;
 
@@ -167,7 +167,7 @@ mrb_SDL_SDLColor_get_b(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLColor_set_b(mrb_state* mrb, mrb_value self) {
-  struct SDL_Color * native_self = mruby_unbox_struct SDL_Color(self);
+  struct SDL_Color * native_self = mruby_unbox_SDL_Color(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -190,7 +190,7 @@ mrb_SDL_SDLColor_set_b(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLColor_get_a(mrb_state* mrb, mrb_value self) {
-  struct SDL_Color * native_self = mruby_unbox_struct SDL_Color(self);
+  struct SDL_Color * native_self = mruby_unbox_SDL_Color(self);
 
   Uint8 native_field = native_self->a;
 
@@ -208,7 +208,7 @@ mrb_SDL_SDLColor_get_a(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLColor_set_a(mrb_state* mrb, mrb_value self) {
-  struct SDL_Color * native_self = mruby_unbox_struct SDL_Color(self);
+  struct SDL_Color * native_self = mruby_unbox_SDL_Color(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

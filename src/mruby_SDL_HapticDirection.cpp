@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLHapticDirection_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_HapticDirection* native_object = (struct SDL_HapticDirection*)malloc(sizeof(struct SDL_HapticDirection));
-  mruby_gift_struct SDL_HapticDirection_data_ptr(self, native_object);
+  mruby_gift_SDL_HapticDirection_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLHapticDirection_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticDirection_get_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticDirection * native_self = mruby_unbox_struct SDL_HapticDirection(self);
+  struct SDL_HapticDirection * native_self = mruby_unbox_SDL_HapticDirection(self);
 
   Uint8 native_field = native_self->type;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLHapticDirection_get_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticDirection_set_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticDirection * native_self = mruby_unbox_struct SDL_HapticDirection(self);
+  struct SDL_HapticDirection * native_self = mruby_unbox_SDL_HapticDirection(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLHapticDirection_set_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticDirection_get_dir(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticDirection * native_self = mruby_unbox_struct SDL_HapticDirection(self);
+  struct SDL_HapticDirection * native_self = mruby_unbox_SDL_HapticDirection(self);
 
   Sint32 [3] native_field = native_self->dir;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLHapticDirection_get_dir(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLHapticDirection_set_dir(mrb_state* mrb, mrb_value self) {
-  struct SDL_HapticDirection * native_self = mruby_unbox_struct SDL_HapticDirection(self);
+  struct SDL_HapticDirection * native_self = mruby_unbox_SDL_HapticDirection(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

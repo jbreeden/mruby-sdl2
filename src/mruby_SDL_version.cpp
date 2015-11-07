@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLVersion_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_version* native_object = (struct SDL_version*)malloc(sizeof(struct SDL_version));
-  mruby_gift_struct SDL_version_data_ptr(self, native_object);
+  mruby_gift_SDL_version_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLVersion_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLVersion_get_major(mrb_state* mrb, mrb_value self) {
-  struct SDL_version * native_self = mruby_unbox_struct SDL_version(self);
+  struct SDL_version * native_self = mruby_unbox_SDL_version(self);
 
   Uint8 native_field = native_self->major;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLVersion_get_major(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLVersion_set_major(mrb_state* mrb, mrb_value self) {
-  struct SDL_version * native_self = mruby_unbox_struct SDL_version(self);
+  struct SDL_version * native_self = mruby_unbox_SDL_version(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLVersion_set_major(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLVersion_get_minor(mrb_state* mrb, mrb_value self) {
-  struct SDL_version * native_self = mruby_unbox_struct SDL_version(self);
+  struct SDL_version * native_self = mruby_unbox_SDL_version(self);
 
   Uint8 native_field = native_self->minor;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLVersion_get_minor(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLVersion_set_minor(mrb_state* mrb, mrb_value self) {
-  struct SDL_version * native_self = mruby_unbox_struct SDL_version(self);
+  struct SDL_version * native_self = mruby_unbox_SDL_version(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -149,7 +149,7 @@ mrb_SDL_SDLVersion_set_minor(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLVersion_get_patch(mrb_state* mrb, mrb_value self) {
-  struct SDL_version * native_self = mruby_unbox_struct SDL_version(self);
+  struct SDL_version * native_self = mruby_unbox_SDL_version(self);
 
   Uint8 native_field = native_self->patch;
 
@@ -167,7 +167,7 @@ mrb_SDL_SDLVersion_get_patch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLVersion_set_patch(mrb_state* mrb, mrb_value self) {
-  struct SDL_version * native_self = mruby_unbox_struct SDL_version(self);
+  struct SDL_version * native_self = mruby_unbox_SDL_version(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

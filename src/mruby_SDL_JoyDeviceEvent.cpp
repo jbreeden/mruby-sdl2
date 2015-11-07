@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLJoyDeviceEvent_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_JoyDeviceEvent* native_object = (struct SDL_JoyDeviceEvent*)malloc(sizeof(struct SDL_JoyDeviceEvent));
-  mruby_gift_struct SDL_JoyDeviceEvent_data_ptr(self, native_object);
+  mruby_gift_SDL_JoyDeviceEvent_data_ptr(self, native_object);
   return self;
 }
 #endif
@@ -67,7 +67,7 @@ mrb_SDL_SDLJoyDeviceEvent_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyDeviceEvent_get_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyDeviceEvent * native_self = mruby_unbox_struct SDL_JoyDeviceEvent(self);
+  struct SDL_JoyDeviceEvent * native_self = mruby_unbox_SDL_JoyDeviceEvent(self);
 
   Uint32 native_field = native_self->type;
 
@@ -85,7 +85,7 @@ mrb_SDL_SDLJoyDeviceEvent_get_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyDeviceEvent_set_type(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyDeviceEvent * native_self = mruby_unbox_struct SDL_JoyDeviceEvent(self);
+  struct SDL_JoyDeviceEvent * native_self = mruby_unbox_SDL_JoyDeviceEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -108,7 +108,7 @@ mrb_SDL_SDLJoyDeviceEvent_set_type(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyDeviceEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyDeviceEvent * native_self = mruby_unbox_struct SDL_JoyDeviceEvent(self);
+  struct SDL_JoyDeviceEvent * native_self = mruby_unbox_SDL_JoyDeviceEvent(self);
 
   Uint32 native_field = native_self->timestamp;
 
@@ -126,7 +126,7 @@ mrb_SDL_SDLJoyDeviceEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyDeviceEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyDeviceEvent * native_self = mruby_unbox_struct SDL_JoyDeviceEvent(self);
+  struct SDL_JoyDeviceEvent * native_self = mruby_unbox_SDL_JoyDeviceEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -149,7 +149,7 @@ mrb_SDL_SDLJoyDeviceEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyDeviceEvent_get_which(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyDeviceEvent * native_self = mruby_unbox_struct SDL_JoyDeviceEvent(self);
+  struct SDL_JoyDeviceEvent * native_self = mruby_unbox_SDL_JoyDeviceEvent(self);
 
   Sint32 native_field = native_self->which;
 
@@ -167,7 +167,7 @@ mrb_SDL_SDLJoyDeviceEvent_get_which(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_SDL_SDLJoyDeviceEvent_set_which(mrb_state* mrb, mrb_value self) {
-  struct SDL_JoyDeviceEvent * native_self = mruby_unbox_struct SDL_JoyDeviceEvent(self);
+  struct SDL_JoyDeviceEvent * native_self = mruby_unbox_SDL_JoyDeviceEvent(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);

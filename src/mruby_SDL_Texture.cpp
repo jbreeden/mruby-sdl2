@@ -19,7 +19,7 @@
 mrb_value
 mrb_SDL_SDLTexture_initialize(mrb_state* mrb, mrb_value self) {
   struct SDL_Texture* native_object = (struct SDL_Texture*)malloc(sizeof(struct SDL_Texture));
-  mruby_gift_struct SDL_Texture_data_ptr(self, native_object);
+  mruby_gift_SDL_Texture_data_ptr(self, native_object);
   return self;
 }
 #endif
