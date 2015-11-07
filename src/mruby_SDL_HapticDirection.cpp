@@ -71,7 +71,7 @@ mrb_SDL_SDLHapticDirection_get_type(mrb_state* mrb, mrb_value self) {
 
   Uint8 native_field = native_self->type;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint8(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -91,9 +91,9 @@ mrb_SDL_SDLHapticDirection_set_type(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint8(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint8 native_field = TODO_mruby_unbox_Uint8(ruby_field);
+  Uint8 native_field = mrb_fixnum(ruby_field);
 
   native_self->type = native_field;
 
@@ -134,7 +134,7 @@ mrb_SDL_SDLHapticDirection_set_dir(mrb_state* mrb, mrb_value self) {
   /* type checking */
   TODO_type_check_Sint32_[3](ruby_field);
 
-  Sint32 [3] native_field = TODO_mruby_unbox_Sint32_[3](ruby_field);
+  Sint32 [3] native_field = mrb_fixnum_[3](ruby_field);
 
   native_self->dir = native_field;
 

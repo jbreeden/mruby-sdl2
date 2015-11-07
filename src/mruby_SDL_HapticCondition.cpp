@@ -71,7 +71,7 @@ mrb_SDL_SDLHapticCondition_get_type(mrb_state* mrb, mrb_value self) {
 
   Uint16 native_field = native_self->type;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint16(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -91,9 +91,9 @@ mrb_SDL_SDLHapticCondition_set_type(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint16(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint16 native_field = TODO_mruby_unbox_Uint16(ruby_field);
+  Uint16 native_field = mrb_fixnum(ruby_field);
 
   native_self->type = native_field;
 
@@ -153,7 +153,7 @@ mrb_SDL_SDLHapticCondition_get_length(mrb_state* mrb, mrb_value self) {
 
   Uint32 native_field = native_self->length;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint32(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -173,9 +173,9 @@ mrb_SDL_SDLHapticCondition_set_length(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint32(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint32 native_field = TODO_mruby_unbox_Uint32(ruby_field);
+  Uint32 native_field = mrb_fixnum(ruby_field);
 
   native_self->length = native_field;
 
@@ -194,7 +194,7 @@ mrb_SDL_SDLHapticCondition_get_delay(mrb_state* mrb, mrb_value self) {
 
   Uint16 native_field = native_self->delay;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint16(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -214,9 +214,9 @@ mrb_SDL_SDLHapticCondition_set_delay(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint16(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint16 native_field = TODO_mruby_unbox_Uint16(ruby_field);
+  Uint16 native_field = mrb_fixnum(ruby_field);
 
   native_self->delay = native_field;
 
@@ -235,7 +235,7 @@ mrb_SDL_SDLHapticCondition_get_button(mrb_state* mrb, mrb_value self) {
 
   Uint16 native_field = native_self->button;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint16(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -255,9 +255,9 @@ mrb_SDL_SDLHapticCondition_set_button(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint16(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint16 native_field = TODO_mruby_unbox_Uint16(ruby_field);
+  Uint16 native_field = mrb_fixnum(ruby_field);
 
   native_self->button = native_field;
 
@@ -276,7 +276,7 @@ mrb_SDL_SDLHapticCondition_get_interval(mrb_state* mrb, mrb_value self) {
 
   Uint16 native_field = native_self->interval;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint16(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -296,9 +296,9 @@ mrb_SDL_SDLHapticCondition_set_interval(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint16(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint16 native_field = TODO_mruby_unbox_Uint16(ruby_field);
+  Uint16 native_field = mrb_fixnum(ruby_field);
 
   native_self->interval = native_field;
 
@@ -339,7 +339,7 @@ mrb_SDL_SDLHapticCondition_set_right_sat(mrb_state* mrb, mrb_value self) {
   /* type checking */
   TODO_type_check_Uint16_[3](ruby_field);
 
-  Uint16 [3] native_field = TODO_mruby_unbox_Uint16_[3](ruby_field);
+  Uint16 [3] native_field = mrb_fixnum_[3](ruby_field);
 
   native_self->right_sat = native_field;
 
@@ -380,7 +380,7 @@ mrb_SDL_SDLHapticCondition_set_left_sat(mrb_state* mrb, mrb_value self) {
   /* type checking */
   TODO_type_check_Uint16_[3](ruby_field);
 
-  Uint16 [3] native_field = TODO_mruby_unbox_Uint16_[3](ruby_field);
+  Uint16 [3] native_field = mrb_fixnum_[3](ruby_field);
 
   native_self->left_sat = native_field;
 
@@ -399,7 +399,7 @@ mrb_SDL_SDLHapticCondition_get_right_coeff(mrb_state* mrb, mrb_value self) {
 
   Sint16 [3] native_field = native_self->right_coeff;
 
-  mrb_value ruby_field = TODO_mruby_box_Sint16_[3](mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value_[3](mrb, native_field);
 
   return ruby_field;
 }
@@ -421,7 +421,7 @@ mrb_SDL_SDLHapticCondition_set_right_coeff(mrb_state* mrb, mrb_value self) {
   /* type checking */
   TODO_type_check_Sint16_[3](ruby_field);
 
-  Sint16 [3] native_field = TODO_mruby_unbox_Sint16_[3](ruby_field);
+  Sint16 [3] native_field = mrb_fixnum_[3](ruby_field);
 
   native_self->right_coeff = native_field;
 
@@ -440,7 +440,7 @@ mrb_SDL_SDLHapticCondition_get_left_coeff(mrb_state* mrb, mrb_value self) {
 
   Sint16 [3] native_field = native_self->left_coeff;
 
-  mrb_value ruby_field = TODO_mruby_box_Sint16_[3](mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value_[3](mrb, native_field);
 
   return ruby_field;
 }
@@ -462,7 +462,7 @@ mrb_SDL_SDLHapticCondition_set_left_coeff(mrb_state* mrb, mrb_value self) {
   /* type checking */
   TODO_type_check_Sint16_[3](ruby_field);
 
-  Sint16 [3] native_field = TODO_mruby_unbox_Sint16_[3](ruby_field);
+  Sint16 [3] native_field = mrb_fixnum_[3](ruby_field);
 
   native_self->left_coeff = native_field;
 
@@ -503,7 +503,7 @@ mrb_SDL_SDLHapticCondition_set_deadband(mrb_state* mrb, mrb_value self) {
   /* type checking */
   TODO_type_check_Uint16_[3](ruby_field);
 
-  Uint16 [3] native_field = TODO_mruby_unbox_Uint16_[3](ruby_field);
+  Uint16 [3] native_field = mrb_fixnum_[3](ruby_field);
 
   native_self->deadband = native_field;
 
@@ -522,7 +522,7 @@ mrb_SDL_SDLHapticCondition_get_center(mrb_state* mrb, mrb_value self) {
 
   Sint16 [3] native_field = native_self->center;
 
-  mrb_value ruby_field = TODO_mruby_box_Sint16_[3](mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value_[3](mrb, native_field);
 
   return ruby_field;
 }
@@ -544,7 +544,7 @@ mrb_SDL_SDLHapticCondition_set_center(mrb_state* mrb, mrb_value self) {
   /* type checking */
   TODO_type_check_Sint16_[3](ruby_field);
 
-  Sint16 [3] native_field = TODO_mruby_unbox_Sint16_[3](ruby_field);
+  Sint16 [3] native_field = mrb_fixnum_[3](ruby_field);
 
   native_self->center = native_field;
 

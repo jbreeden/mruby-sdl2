@@ -71,7 +71,7 @@ mrb_SDL_SDLMultiGestureEvent_get_type(mrb_state* mrb, mrb_value self) {
 
   Uint32 native_field = native_self->type;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint32(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -91,9 +91,9 @@ mrb_SDL_SDLMultiGestureEvent_set_type(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint32(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint32 native_field = TODO_mruby_unbox_Uint32(ruby_field);
+  Uint32 native_field = mrb_fixnum(ruby_field);
 
   native_self->type = native_field;
 
@@ -112,7 +112,7 @@ mrb_SDL_SDLMultiGestureEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
 
   Uint32 native_field = native_self->timestamp;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint32(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -132,9 +132,9 @@ mrb_SDL_SDLMultiGestureEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint32(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint32 native_field = TODO_mruby_unbox_Uint32(ruby_field);
+  Uint32 native_field = mrb_fixnum(ruby_field);
 
   native_self->timestamp = native_field;
 
@@ -370,7 +370,7 @@ mrb_SDL_SDLMultiGestureEvent_get_numFingers(mrb_state* mrb, mrb_value self) {
 
   Uint16 native_field = native_self->numFingers;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint16(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -390,9 +390,9 @@ mrb_SDL_SDLMultiGestureEvent_set_numFingers(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint16(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint16 native_field = TODO_mruby_unbox_Uint16(ruby_field);
+  Uint16 native_field = mrb_fixnum(ruby_field);
 
   native_self->numFingers = native_field;
 
@@ -411,7 +411,7 @@ mrb_SDL_SDLMultiGestureEvent_get_padding(mrb_state* mrb, mrb_value self) {
 
   Uint16 native_field = native_self->padding;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint16(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -431,9 +431,9 @@ mrb_SDL_SDLMultiGestureEvent_set_padding(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint16(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint16 native_field = TODO_mruby_unbox_Uint16(ruby_field);
+  Uint16 native_field = mrb_fixnum(ruby_field);
 
   native_self->padding = native_field;
 

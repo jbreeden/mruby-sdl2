@@ -71,7 +71,7 @@ mrb_SDL_SDLVersion_get_major(mrb_state* mrb, mrb_value self) {
 
   Uint8 native_field = native_self->major;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint8(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -91,9 +91,9 @@ mrb_SDL_SDLVersion_set_major(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint8(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint8 native_field = TODO_mruby_unbox_Uint8(ruby_field);
+  Uint8 native_field = mrb_fixnum(ruby_field);
 
   native_self->major = native_field;
 
@@ -112,7 +112,7 @@ mrb_SDL_SDLVersion_get_minor(mrb_state* mrb, mrb_value self) {
 
   Uint8 native_field = native_self->minor;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint8(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -132,9 +132,9 @@ mrb_SDL_SDLVersion_set_minor(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint8(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint8 native_field = TODO_mruby_unbox_Uint8(ruby_field);
+  Uint8 native_field = mrb_fixnum(ruby_field);
 
   native_self->minor = native_field;
 
@@ -153,7 +153,7 @@ mrb_SDL_SDLVersion_get_patch(mrb_state* mrb, mrb_value self) {
 
   Uint8 native_field = native_self->patch;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint8(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -173,9 +173,9 @@ mrb_SDL_SDLVersion_set_patch(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint8(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint8 native_field = TODO_mruby_unbox_Uint8(ruby_field);
+  Uint8 native_field = mrb_fixnum(ruby_field);
 
   native_self->patch = native_field;
 

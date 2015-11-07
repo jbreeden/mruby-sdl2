@@ -115,7 +115,7 @@ mrb_SDL_SDLRendererInfo_get_flags(mrb_state* mrb, mrb_value self) {
 
   Uint32 native_field = native_self->flags;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint32(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -135,9 +135,9 @@ mrb_SDL_SDLRendererInfo_set_flags(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint32(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint32 native_field = TODO_mruby_unbox_Uint32(ruby_field);
+  Uint32 native_field = mrb_fixnum(ruby_field);
 
   native_self->flags = native_field;
 
@@ -156,7 +156,7 @@ mrb_SDL_SDLRendererInfo_get_num_texture_formats(mrb_state* mrb, mrb_value self) 
 
   Uint32 native_field = native_self->num_texture_formats;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint32(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -176,9 +176,9 @@ mrb_SDL_SDLRendererInfo_set_num_texture_formats(mrb_state* mrb, mrb_value self) 
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint32(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint32 native_field = TODO_mruby_unbox_Uint32(ruby_field);
+  Uint32 native_field = mrb_fixnum(ruby_field);
 
   native_self->num_texture_formats = native_field;
 
@@ -219,7 +219,7 @@ mrb_SDL_SDLRendererInfo_set_texture_formats(mrb_state* mrb, mrb_value self) {
   /* type checking */
   TODO_type_check_Uint32_[16](ruby_field);
 
-  Uint32 [16] native_field = TODO_mruby_unbox_Uint32_[16](ruby_field);
+  Uint32 [16] native_field = mrb_fixnum_[16](ruby_field);
 
   native_self->texture_formats = native_field;
 

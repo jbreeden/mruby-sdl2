@@ -71,7 +71,7 @@ mrb_SDL_SDLHapticRamp_get_type(mrb_state* mrb, mrb_value self) {
 
   Uint16 native_field = native_self->type;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint16(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -91,9 +91,9 @@ mrb_SDL_SDLHapticRamp_set_type(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint16(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint16 native_field = TODO_mruby_unbox_Uint16(ruby_field);
+  Uint16 native_field = mrb_fixnum(ruby_field);
 
   native_self->type = native_field;
 
@@ -153,7 +153,7 @@ mrb_SDL_SDLHapticRamp_get_length(mrb_state* mrb, mrb_value self) {
 
   Uint32 native_field = native_self->length;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint32(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -173,9 +173,9 @@ mrb_SDL_SDLHapticRamp_set_length(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint32(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint32 native_field = TODO_mruby_unbox_Uint32(ruby_field);
+  Uint32 native_field = mrb_fixnum(ruby_field);
 
   native_self->length = native_field;
 
@@ -194,7 +194,7 @@ mrb_SDL_SDLHapticRamp_get_delay(mrb_state* mrb, mrb_value self) {
 
   Uint16 native_field = native_self->delay;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint16(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -214,9 +214,9 @@ mrb_SDL_SDLHapticRamp_set_delay(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint16(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint16 native_field = TODO_mruby_unbox_Uint16(ruby_field);
+  Uint16 native_field = mrb_fixnum(ruby_field);
 
   native_self->delay = native_field;
 
@@ -235,7 +235,7 @@ mrb_SDL_SDLHapticRamp_get_button(mrb_state* mrb, mrb_value self) {
 
   Uint16 native_field = native_self->button;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint16(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -255,9 +255,9 @@ mrb_SDL_SDLHapticRamp_set_button(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint16(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint16 native_field = TODO_mruby_unbox_Uint16(ruby_field);
+  Uint16 native_field = mrb_fixnum(ruby_field);
 
   native_self->button = native_field;
 
@@ -276,7 +276,7 @@ mrb_SDL_SDLHapticRamp_get_interval(mrb_state* mrb, mrb_value self) {
 
   Uint16 native_field = native_self->interval;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint16(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -296,9 +296,9 @@ mrb_SDL_SDLHapticRamp_set_interval(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint16(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint16 native_field = TODO_mruby_unbox_Uint16(ruby_field);
+  Uint16 native_field = mrb_fixnum(ruby_field);
 
   native_self->interval = native_field;
 
@@ -317,7 +317,7 @@ mrb_SDL_SDLHapticRamp_get_start(mrb_state* mrb, mrb_value self) {
 
   Sint16 native_field = native_self->start;
 
-  mrb_value ruby_field = TODO_mruby_box_Sint16(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(mrb, native_field);
 
   return ruby_field;
 }
@@ -337,9 +337,9 @@ mrb_SDL_SDLHapticRamp_set_start(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Sint16(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Sint16 native_field = TODO_mruby_unbox_Sint16(ruby_field);
+  Sint16 native_field = mrb_fixnum(ruby_field);
 
   native_self->start = native_field;
 
@@ -358,7 +358,7 @@ mrb_SDL_SDLHapticRamp_get_end(mrb_state* mrb, mrb_value self) {
 
   Sint16 native_field = native_self->end;
 
-  mrb_value ruby_field = TODO_mruby_box_Sint16(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(mrb, native_field);
 
   return ruby_field;
 }
@@ -378,9 +378,9 @@ mrb_SDL_SDLHapticRamp_set_end(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Sint16(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Sint16 native_field = TODO_mruby_unbox_Sint16(ruby_field);
+  Sint16 native_field = mrb_fixnum(ruby_field);
 
   native_self->end = native_field;
 
@@ -399,7 +399,7 @@ mrb_SDL_SDLHapticRamp_get_attack_length(mrb_state* mrb, mrb_value self) {
 
   Uint16 native_field = native_self->attack_length;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint16(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -419,9 +419,9 @@ mrb_SDL_SDLHapticRamp_set_attack_length(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint16(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint16 native_field = TODO_mruby_unbox_Uint16(ruby_field);
+  Uint16 native_field = mrb_fixnum(ruby_field);
 
   native_self->attack_length = native_field;
 
@@ -440,7 +440,7 @@ mrb_SDL_SDLHapticRamp_get_attack_level(mrb_state* mrb, mrb_value self) {
 
   Uint16 native_field = native_self->attack_level;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint16(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -460,9 +460,9 @@ mrb_SDL_SDLHapticRamp_set_attack_level(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint16(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint16 native_field = TODO_mruby_unbox_Uint16(ruby_field);
+  Uint16 native_field = mrb_fixnum(ruby_field);
 
   native_self->attack_level = native_field;
 
@@ -481,7 +481,7 @@ mrb_SDL_SDLHapticRamp_get_fade_length(mrb_state* mrb, mrb_value self) {
 
   Uint16 native_field = native_self->fade_length;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint16(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -501,9 +501,9 @@ mrb_SDL_SDLHapticRamp_set_fade_length(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint16(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint16 native_field = TODO_mruby_unbox_Uint16(ruby_field);
+  Uint16 native_field = mrb_fixnum(ruby_field);
 
   native_self->fade_length = native_field;
 
@@ -522,7 +522,7 @@ mrb_SDL_SDLHapticRamp_get_fade_level(mrb_state* mrb, mrb_value self) {
 
   Uint16 native_field = native_self->fade_level;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint16(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -542,9 +542,9 @@ mrb_SDL_SDLHapticRamp_set_fade_level(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint16(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint16 native_field = TODO_mruby_unbox_Uint16(ruby_field);
+  Uint16 native_field = mrb_fixnum(ruby_field);
 
   native_self->fade_level = native_field;
 

@@ -71,7 +71,7 @@ mrb_SDL_SDLMouseButtonEvent_get_type(mrb_state* mrb, mrb_value self) {
 
   Uint32 native_field = native_self->type;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint32(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -91,9 +91,9 @@ mrb_SDL_SDLMouseButtonEvent_set_type(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint32(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint32 native_field = TODO_mruby_unbox_Uint32(ruby_field);
+  Uint32 native_field = mrb_fixnum(ruby_field);
 
   native_self->type = native_field;
 
@@ -112,7 +112,7 @@ mrb_SDL_SDLMouseButtonEvent_get_timestamp(mrb_state* mrb, mrb_value self) {
 
   Uint32 native_field = native_self->timestamp;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint32(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -132,9 +132,9 @@ mrb_SDL_SDLMouseButtonEvent_set_timestamp(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint32(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint32 native_field = TODO_mruby_unbox_Uint32(ruby_field);
+  Uint32 native_field = mrb_fixnum(ruby_field);
 
   native_self->timestamp = native_field;
 
@@ -153,7 +153,7 @@ mrb_SDL_SDLMouseButtonEvent_get_windowID(mrb_state* mrb, mrb_value self) {
 
   Uint32 native_field = native_self->windowID;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint32(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -173,9 +173,9 @@ mrb_SDL_SDLMouseButtonEvent_set_windowID(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint32(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint32 native_field = TODO_mruby_unbox_Uint32(ruby_field);
+  Uint32 native_field = mrb_fixnum(ruby_field);
 
   native_self->windowID = native_field;
 
@@ -194,7 +194,7 @@ mrb_SDL_SDLMouseButtonEvent_get_which(mrb_state* mrb, mrb_value self) {
 
   Uint32 native_field = native_self->which;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint32(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -214,9 +214,9 @@ mrb_SDL_SDLMouseButtonEvent_set_which(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint32(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint32 native_field = TODO_mruby_unbox_Uint32(ruby_field);
+  Uint32 native_field = mrb_fixnum(ruby_field);
 
   native_self->which = native_field;
 
@@ -235,7 +235,7 @@ mrb_SDL_SDLMouseButtonEvent_get_button(mrb_state* mrb, mrb_value self) {
 
   Uint8 native_field = native_self->button;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint8(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -255,9 +255,9 @@ mrb_SDL_SDLMouseButtonEvent_set_button(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint8(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint8 native_field = TODO_mruby_unbox_Uint8(ruby_field);
+  Uint8 native_field = mrb_fixnum(ruby_field);
 
   native_self->button = native_field;
 
@@ -276,7 +276,7 @@ mrb_SDL_SDLMouseButtonEvent_get_state(mrb_state* mrb, mrb_value self) {
 
   Uint8 native_field = native_self->state;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint8(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -296,9 +296,9 @@ mrb_SDL_SDLMouseButtonEvent_set_state(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint8(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint8 native_field = TODO_mruby_unbox_Uint8(ruby_field);
+  Uint8 native_field = mrb_fixnum(ruby_field);
 
   native_self->state = native_field;
 
@@ -317,7 +317,7 @@ mrb_SDL_SDLMouseButtonEvent_get_clicks(mrb_state* mrb, mrb_value self) {
 
   Uint8 native_field = native_self->clicks;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint8(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -337,9 +337,9 @@ mrb_SDL_SDLMouseButtonEvent_set_clicks(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint8(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint8 native_field = TODO_mruby_unbox_Uint8(ruby_field);
+  Uint8 native_field = mrb_fixnum(ruby_field);
 
   native_self->clicks = native_field;
 
@@ -358,7 +358,7 @@ mrb_SDL_SDLMouseButtonEvent_get_padding1(mrb_state* mrb, mrb_value self) {
 
   Uint8 native_field = native_self->padding1;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint8(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -378,9 +378,9 @@ mrb_SDL_SDLMouseButtonEvent_set_padding1(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint8(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint8 native_field = TODO_mruby_unbox_Uint8(ruby_field);
+  Uint8 native_field = mrb_fixnum(ruby_field);
 
   native_self->padding1 = native_field;
 
@@ -399,7 +399,7 @@ mrb_SDL_SDLMouseButtonEvent_get_x(mrb_state* mrb, mrb_value self) {
 
   Sint32 native_field = native_self->x;
 
-  mrb_value ruby_field = TODO_mruby_box_Sint32(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -419,9 +419,9 @@ mrb_SDL_SDLMouseButtonEvent_set_x(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Sint32(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Sint32 native_field = TODO_mruby_unbox_Sint32(ruby_field);
+  Sint32 native_field = mrb_fixnum(ruby_field);
 
   native_self->x = native_field;
 
@@ -440,7 +440,7 @@ mrb_SDL_SDLMouseButtonEvent_get_y(mrb_state* mrb, mrb_value self) {
 
   Sint32 native_field = native_self->y;
 
-  mrb_value ruby_field = TODO_mruby_box_Sint32(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -460,9 +460,9 @@ mrb_SDL_SDLMouseButtonEvent_set_y(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Sint32(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Sint32 native_field = TODO_mruby_unbox_Sint32(ruby_field);
+  Sint32 native_field = mrb_fixnum(ruby_field);
 
   native_self->y = native_field;
 

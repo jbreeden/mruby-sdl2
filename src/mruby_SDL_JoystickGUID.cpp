@@ -93,7 +93,7 @@ mrb_SDL_SDLJoystickGUID_set_data(mrb_state* mrb, mrb_value self) {
   /* type checking */
   TODO_type_check_Uint8_[16](ruby_field);
 
-  Uint8 [16] native_field = TODO_mruby_unbox_Uint8_[16](ruby_field);
+  Uint8 [16] native_field = mrb_fixnum_[16](ruby_field);
 
   native_self->data = native_field;
 

@@ -71,7 +71,7 @@ mrb_SDL_SDLPixelFormat_get_format(mrb_state* mrb, mrb_value self) {
 
   Uint32 native_field = native_self->format;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint32(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -91,9 +91,9 @@ mrb_SDL_SDLPixelFormat_set_format(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint32(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint32 native_field = TODO_mruby_unbox_Uint32(ruby_field);
+  Uint32 native_field = mrb_fixnum(ruby_field);
 
   native_self->format = native_field;
 
@@ -156,7 +156,7 @@ mrb_SDL_SDLPixelFormat_get_BitsPerPixel(mrb_state* mrb, mrb_value self) {
 
   Uint8 native_field = native_self->BitsPerPixel;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint8(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -176,9 +176,9 @@ mrb_SDL_SDLPixelFormat_set_BitsPerPixel(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint8(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint8 native_field = TODO_mruby_unbox_Uint8(ruby_field);
+  Uint8 native_field = mrb_fixnum(ruby_field);
 
   native_self->BitsPerPixel = native_field;
 
@@ -197,7 +197,7 @@ mrb_SDL_SDLPixelFormat_get_BytesPerPixel(mrb_state* mrb, mrb_value self) {
 
   Uint8 native_field = native_self->BytesPerPixel;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint8(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -217,9 +217,9 @@ mrb_SDL_SDLPixelFormat_set_BytesPerPixel(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint8(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint8 native_field = TODO_mruby_unbox_Uint8(ruby_field);
+  Uint8 native_field = mrb_fixnum(ruby_field);
 
   native_self->BytesPerPixel = native_field;
 
@@ -260,7 +260,7 @@ mrb_SDL_SDLPixelFormat_set_padding(mrb_state* mrb, mrb_value self) {
   /* type checking */
   TODO_type_check_Uint8_[2](ruby_field);
 
-  Uint8 [2] native_field = TODO_mruby_unbox_Uint8_[2](ruby_field);
+  Uint8 [2] native_field = mrb_fixnum_[2](ruby_field);
 
   native_self->padding = native_field;
 
@@ -279,7 +279,7 @@ mrb_SDL_SDLPixelFormat_get_Rmask(mrb_state* mrb, mrb_value self) {
 
   Uint32 native_field = native_self->Rmask;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint32(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -299,9 +299,9 @@ mrb_SDL_SDLPixelFormat_set_Rmask(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint32(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint32 native_field = TODO_mruby_unbox_Uint32(ruby_field);
+  Uint32 native_field = mrb_fixnum(ruby_field);
 
   native_self->Rmask = native_field;
 
@@ -320,7 +320,7 @@ mrb_SDL_SDLPixelFormat_get_Gmask(mrb_state* mrb, mrb_value self) {
 
   Uint32 native_field = native_self->Gmask;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint32(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -340,9 +340,9 @@ mrb_SDL_SDLPixelFormat_set_Gmask(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint32(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint32 native_field = TODO_mruby_unbox_Uint32(ruby_field);
+  Uint32 native_field = mrb_fixnum(ruby_field);
 
   native_self->Gmask = native_field;
 
@@ -361,7 +361,7 @@ mrb_SDL_SDLPixelFormat_get_Bmask(mrb_state* mrb, mrb_value self) {
 
   Uint32 native_field = native_self->Bmask;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint32(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -381,9 +381,9 @@ mrb_SDL_SDLPixelFormat_set_Bmask(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint32(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint32 native_field = TODO_mruby_unbox_Uint32(ruby_field);
+  Uint32 native_field = mrb_fixnum(ruby_field);
 
   native_self->Bmask = native_field;
 
@@ -402,7 +402,7 @@ mrb_SDL_SDLPixelFormat_get_Amask(mrb_state* mrb, mrb_value self) {
 
   Uint32 native_field = native_self->Amask;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint32(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -422,9 +422,9 @@ mrb_SDL_SDLPixelFormat_set_Amask(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint32(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint32 native_field = TODO_mruby_unbox_Uint32(ruby_field);
+  Uint32 native_field = mrb_fixnum(ruby_field);
 
   native_self->Amask = native_field;
 
@@ -443,7 +443,7 @@ mrb_SDL_SDLPixelFormat_get_Rloss(mrb_state* mrb, mrb_value self) {
 
   Uint8 native_field = native_self->Rloss;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint8(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -463,9 +463,9 @@ mrb_SDL_SDLPixelFormat_set_Rloss(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint8(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint8 native_field = TODO_mruby_unbox_Uint8(ruby_field);
+  Uint8 native_field = mrb_fixnum(ruby_field);
 
   native_self->Rloss = native_field;
 
@@ -484,7 +484,7 @@ mrb_SDL_SDLPixelFormat_get_Gloss(mrb_state* mrb, mrb_value self) {
 
   Uint8 native_field = native_self->Gloss;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint8(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -504,9 +504,9 @@ mrb_SDL_SDLPixelFormat_set_Gloss(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint8(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint8 native_field = TODO_mruby_unbox_Uint8(ruby_field);
+  Uint8 native_field = mrb_fixnum(ruby_field);
 
   native_self->Gloss = native_field;
 
@@ -525,7 +525,7 @@ mrb_SDL_SDLPixelFormat_get_Bloss(mrb_state* mrb, mrb_value self) {
 
   Uint8 native_field = native_self->Bloss;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint8(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -545,9 +545,9 @@ mrb_SDL_SDLPixelFormat_set_Bloss(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint8(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint8 native_field = TODO_mruby_unbox_Uint8(ruby_field);
+  Uint8 native_field = mrb_fixnum(ruby_field);
 
   native_self->Bloss = native_field;
 
@@ -566,7 +566,7 @@ mrb_SDL_SDLPixelFormat_get_Aloss(mrb_state* mrb, mrb_value self) {
 
   Uint8 native_field = native_self->Aloss;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint8(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -586,9 +586,9 @@ mrb_SDL_SDLPixelFormat_set_Aloss(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint8(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint8 native_field = TODO_mruby_unbox_Uint8(ruby_field);
+  Uint8 native_field = mrb_fixnum(ruby_field);
 
   native_self->Aloss = native_field;
 
@@ -607,7 +607,7 @@ mrb_SDL_SDLPixelFormat_get_Rshift(mrb_state* mrb, mrb_value self) {
 
   Uint8 native_field = native_self->Rshift;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint8(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -627,9 +627,9 @@ mrb_SDL_SDLPixelFormat_set_Rshift(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint8(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint8 native_field = TODO_mruby_unbox_Uint8(ruby_field);
+  Uint8 native_field = mrb_fixnum(ruby_field);
 
   native_self->Rshift = native_field;
 
@@ -648,7 +648,7 @@ mrb_SDL_SDLPixelFormat_get_Gshift(mrb_state* mrb, mrb_value self) {
 
   Uint8 native_field = native_self->Gshift;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint8(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -668,9 +668,9 @@ mrb_SDL_SDLPixelFormat_set_Gshift(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint8(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint8 native_field = TODO_mruby_unbox_Uint8(ruby_field);
+  Uint8 native_field = mrb_fixnum(ruby_field);
 
   native_self->Gshift = native_field;
 
@@ -689,7 +689,7 @@ mrb_SDL_SDLPixelFormat_get_Bshift(mrb_state* mrb, mrb_value self) {
 
   Uint8 native_field = native_self->Bshift;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint8(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -709,9 +709,9 @@ mrb_SDL_SDLPixelFormat_set_Bshift(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint8(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint8 native_field = TODO_mruby_unbox_Uint8(ruby_field);
+  Uint8 native_field = mrb_fixnum(ruby_field);
 
   native_self->Bshift = native_field;
 
@@ -730,7 +730,7 @@ mrb_SDL_SDLPixelFormat_get_Ashift(mrb_state* mrb, mrb_value self) {
 
   Uint8 native_field = native_self->Ashift;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint8(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -750,9 +750,9 @@ mrb_SDL_SDLPixelFormat_set_Ashift(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint8(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint8 native_field = TODO_mruby_unbox_Uint8(ruby_field);
+  Uint8 native_field = mrb_fixnum(ruby_field);
 
   native_self->Ashift = native_field;
 

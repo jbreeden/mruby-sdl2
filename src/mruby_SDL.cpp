@@ -5692,7 +5692,7 @@ mrb_SDL_SDL_GameControllerGetAxis(mrb_state* mrb, mrb_value self) {
   Sint16 result = SDL_GameControllerGetAxis(native_gamecontroller, native_axis);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Sint16(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(mrb, result);
 
   return return_value;
 }
@@ -5855,7 +5855,7 @@ mrb_SDL_SDL_GameControllerGetButton(mrb_state* mrb, mrb_value self) {
   Uint8 result = SDL_GameControllerGetButton(native_gamecontroller, native_button);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint8(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -7182,7 +7182,7 @@ mrb_SDL_SDL_GetKeyFromName(mrb_state* mrb, mrb_value self) {
   SDL_Keycode result = SDL_GetKeyFromName(native_name);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Sint32(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -7216,7 +7216,7 @@ mrb_SDL_SDL_GetKeyFromScancode(mrb_state* mrb, mrb_value self) {
   SDL_Keycode result = SDL_GetKeyFromScancode(native_scancode);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Sint32(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -7332,7 +7332,7 @@ mrb_SDL_SDL_GetMouseState(mrb_state* mrb, mrb_value self) {
   Uint32 result = SDL_GetMouseState(native_x, native_y);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint32(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -7815,7 +7815,7 @@ mrb_SDL_SDL_GetRelativeMouseState(mrb_state* mrb, mrb_value self) {
   Uint32 result = SDL_GetRelativeMouseState(native_x, native_y);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint32(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -8883,7 +8883,7 @@ mrb_SDL_SDL_GetTicks(mrb_state* mrb, mrb_value self) {
   Uint32 result = SDL_GetTicks();
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint32(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -9245,7 +9245,7 @@ mrb_SDL_SDL_GetWindowFlags(mrb_state* mrb, mrb_value self) {
   Uint32 result = SDL_GetWindowFlags(native_window);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint32(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -9412,7 +9412,7 @@ mrb_SDL_SDL_GetWindowID(mrb_state* mrb, mrb_value self) {
   Uint32 result = SDL_GetWindowID(native_window);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint32(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -9537,7 +9537,7 @@ mrb_SDL_SDL_GetWindowPixelFormat(mrb_state* mrb, mrb_value self) {
   Uint32 result = SDL_GetWindowPixelFormat(native_window);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint32(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -12779,7 +12779,7 @@ mrb_SDL_SDL_JoystickGetAxis(mrb_state* mrb, mrb_value self) {
   Sint16 result = SDL_JoystickGetAxis(native_joystick, native_axis);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Sint16(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(mrb, result);
 
   return return_value;
 }
@@ -12883,7 +12883,7 @@ mrb_SDL_SDL_JoystickGetButton(mrb_state* mrb, mrb_value self) {
   Uint8 result = SDL_JoystickGetButton(native_joystick, native_button);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint8(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -13117,7 +13117,7 @@ mrb_SDL_SDL_JoystickGetHat(mrb_state* mrb, mrb_value self) {
   Uint8 result = SDL_JoystickGetHat(native_joystick, native_hat);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint8(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -13154,7 +13154,7 @@ mrb_SDL_SDL_JoystickInstanceID(mrb_state* mrb, mrb_value self) {
   SDL_JoystickID result = SDL_JoystickInstanceID(native_joystick);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Sint32(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -14939,7 +14939,7 @@ mrb_SDL_SDL_MapRGB(mrb_state* mrb, mrb_value self) {
   Uint32 result = SDL_MapRGB(native_format, native_r, native_g, native_b);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint32(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -15008,7 +15008,7 @@ mrb_SDL_SDL_MapRGBA(mrb_state* mrb, mrb_value self) {
   Uint32 result = SDL_MapRGBA(native_format, native_r, native_g, native_b, native_a);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint32(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -15077,7 +15077,7 @@ mrb_SDL_SDL_MasksToPixelFormatEnum(mrb_state* mrb, mrb_value self) {
   Uint32 result = SDL_MasksToPixelFormatEnum(native_bpp, native_Rmask, native_Gmask, native_Bmask, native_Amask);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint32(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -15777,7 +15777,7 @@ mrb_SDL_SDL_OpenAudioDevice(mrb_state* mrb, mrb_value self) {
   SDL_AudioDeviceID result = SDL_OpenAudioDevice(native_device, native_iscapture, native_desired, native_obtained, native_allowed_changes);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint32(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -16484,7 +16484,7 @@ mrb_SDL_SDL_ReadBE16(mrb_state* mrb, mrb_value self) {
   Uint16 result = SDL_ReadBE16(native_src);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint16(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -16521,7 +16521,7 @@ mrb_SDL_SDL_ReadBE32(mrb_state* mrb, mrb_value self) {
   Uint32 result = SDL_ReadBE32(native_src);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint32(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -16595,7 +16595,7 @@ mrb_SDL_SDL_ReadLE16(mrb_state* mrb, mrb_value self) {
   Uint16 result = SDL_ReadLE16(native_src);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint16(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -16632,7 +16632,7 @@ mrb_SDL_SDL_ReadLE32(mrb_state* mrb, mrb_value self) {
   Uint32 result = SDL_ReadLE32(native_src);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint32(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -16706,7 +16706,7 @@ mrb_SDL_SDL_ReadU8(mrb_state* mrb, mrb_value self) {
   Uint8 result = SDL_ReadU8(native_src);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint8(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -16908,7 +16908,7 @@ mrb_SDL_SDL_RegisterEvents(mrb_state* mrb, mrb_value self) {
   Uint32 result = SDL_RegisterEvents(native_numevents);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint32(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -18709,7 +18709,7 @@ mrb_SDL_SDL_SemValue(mrb_state* mrb, mrb_value self) {
   Uint32 result = SDL_SemValue(native_sem);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint32(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -22275,7 +22275,7 @@ mrb_SDL_SDL_Swap16(mrb_state* mrb, mrb_value self) {
   Uint16 result = SDL_Swap16(native_x);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint16(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -22312,7 +22312,7 @@ mrb_SDL_SDL_Swap32(mrb_state* mrb, mrb_value self) {
   Uint32 result = SDL_Swap32(native_x);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint32(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }
@@ -23925,7 +23925,7 @@ mrb_SDL_SDL_WasInit(mrb_state* mrb, mrb_value self) {
   Uint32 result = SDL_WasInit(native_flags);
 
   /* Box the return value */
-  mrb_value return_value = TODO_mruby_box_Uint32(mrb, result);
+  mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
 }

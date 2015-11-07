@@ -119,7 +119,7 @@ mrb_SDL_SDLAudioSpec_get_format(mrb_state* mrb, mrb_value self) {
 
   SDL_AudioFormat native_field = native_self->format;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint16(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -139,9 +139,9 @@ mrb_SDL_SDLAudioSpec_set_format(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint16(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint16 native_field = TODO_mruby_unbox_Uint16(ruby_field);
+  Uint16 native_field = mrb_fixnum(ruby_field);
 
   native_self->format = native_field;
 
@@ -160,7 +160,7 @@ mrb_SDL_SDLAudioSpec_get_channels(mrb_state* mrb, mrb_value self) {
 
   Uint8 native_field = native_self->channels;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint8(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -180,9 +180,9 @@ mrb_SDL_SDLAudioSpec_set_channels(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint8(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint8 native_field = TODO_mruby_unbox_Uint8(ruby_field);
+  Uint8 native_field = mrb_fixnum(ruby_field);
 
   native_self->channels = native_field;
 
@@ -201,7 +201,7 @@ mrb_SDL_SDLAudioSpec_get_silence(mrb_state* mrb, mrb_value self) {
 
   Uint8 native_field = native_self->silence;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint8(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -221,9 +221,9 @@ mrb_SDL_SDLAudioSpec_set_silence(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint8(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint8 native_field = TODO_mruby_unbox_Uint8(ruby_field);
+  Uint8 native_field = mrb_fixnum(ruby_field);
 
   native_self->silence = native_field;
 
@@ -242,7 +242,7 @@ mrb_SDL_SDLAudioSpec_get_samples(mrb_state* mrb, mrb_value self) {
 
   Uint16 native_field = native_self->samples;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint16(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -262,9 +262,9 @@ mrb_SDL_SDLAudioSpec_set_samples(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint16(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint16 native_field = TODO_mruby_unbox_Uint16(ruby_field);
+  Uint16 native_field = mrb_fixnum(ruby_field);
 
   native_self->samples = native_field;
 
@@ -283,7 +283,7 @@ mrb_SDL_SDLAudioSpec_get_padding(mrb_state* mrb, mrb_value self) {
 
   Uint16 native_field = native_self->padding;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint16(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -303,9 +303,9 @@ mrb_SDL_SDLAudioSpec_set_padding(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint16(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint16 native_field = TODO_mruby_unbox_Uint16(ruby_field);
+  Uint16 native_field = mrb_fixnum(ruby_field);
 
   native_self->padding = native_field;
 
@@ -324,7 +324,7 @@ mrb_SDL_SDLAudioSpec_get_size(mrb_state* mrb, mrb_value self) {
 
   Uint32 native_field = native_self->size;
 
-  mrb_value ruby_field = TODO_mruby_box_Uint32(mrb, native_field);
+  mrb_value ruby_field = mrb_fixnum_value(native_field);
 
   return ruby_field;
 }
@@ -344,9 +344,9 @@ mrb_SDL_SDLAudioSpec_set_size(mrb_state* mrb, mrb_value self) {
   mrb_get_args(mrb, "o", &ruby_field);
 
   /* type checking */
-  TODO_type_check_Uint32(ruby_field);
+  if (!mrb_obj_is_kind_of(mrb, ruby_field, mrb->fixnum_class)) { mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected"); return mrb_nil_value(); }
 
-  Uint32 native_field = TODO_mruby_unbox_Uint32(ruby_field);
+  Uint32 native_field = mrb_fixnum(ruby_field);
 
   native_self->size = native_field;
 
