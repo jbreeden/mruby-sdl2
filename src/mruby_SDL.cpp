@@ -20117,10 +20117,10 @@ mrb_SDL_SDL_SetThreadPriority(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_SDL_SDL_SetWindowBordered(mrb_state* mrb, mrb_value self) {
   mrb_value window;
-  mrb_value bordered;
+  mrb_bool bordered;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oo", &window, &bordered);
+  mrb_get_args(mrb, "ob", &window, &bordered);
 
 
   /* Type checking */
@@ -20128,13 +20128,11 @@ mrb_SDL_SDL_SetWindowBordered(mrb_state* mrb, mrb_value self) {
     mrb_raise(mrb, E_TYPE_ERROR, "SDLWindow expected");
     return mrb_nil_value();
   }
-  TODO_type_check_SDL_bool(bordered);
-
 
   /* Unbox parameters */
   struct SDL_Window * native_window = (mrb_nil_p(window) ? NULL : mruby_unbox_SDL_Window(window));
 
-  SDL_bool native_bordered = TODO_mruby_unbox_SDL_bool(bordered);
+  SDL_bool native_bordered = (SDL_bool)bordered;
 
   /* Invocation */
   SDL_SetWindowBordered(native_window, native_bordered);

@@ -187,6 +187,7 @@ SDL_GetShapedWindowMode
 SDL_GetSystemRAM
 SDL_GetThreadID
 SDL_GetThreadName
+SDL_GetTicks
 SDL_GetTouchFinger
 SDL_GetVersion
 SDL_GetVideoDriver
@@ -287,6 +288,7 @@ SDL_NumJoysticks
 SDL_OpenAudio
 SDL_PauseAudio
 SDL_PauseAudioDevice
+SDL_PollEvent
 SDL_PumpEvents
 SDL_Quit
 SDL_QuitSubSystem
@@ -341,6 +343,7 @@ SDL_SetSurfaceRLE
 SDL_SetTextInputRect
 SDL_SetTextureAlphaMod
 SDL_SetTextureColorMod
+SDL_SetWindowBordered
 SDL_SetWindowBrightness
 SDL_SetWindowDisplayMode
 SDL_SetWindowFullscreen

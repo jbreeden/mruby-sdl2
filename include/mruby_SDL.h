@@ -9623,7 +9623,7 @@
 #define BIND_SDL_GetTextureColorMod_FUNCTION FALSE
 #define BIND_SDL_GetThreadID_FUNCTION TRUE
 #define BIND_SDL_GetThreadName_FUNCTION TRUE
-#define BIND_SDL_GetTicks_FUNCTION FALSE
+#define BIND_SDL_GetTicks_FUNCTION TRUE
 #define BIND_SDL_GetTouchDevice_FUNCTION FALSE
 #define BIND_SDL_GetTouchFinger_FUNCTION TRUE
 #define BIND_SDL_GetVersion_FUNCTION TRUE
@@ -9845,7 +9845,7 @@
 #define BIND_SDL_SetTextureBlendMode_FUNCTION FALSE
 #define BIND_SDL_SetTextureColorMod_FUNCTION TRUE
 #define BIND_SDL_SetThreadPriority_FUNCTION FALSE
-#define BIND_SDL_SetWindowBordered_FUNCTION FALSE
+#define BIND_SDL_SetWindowBordered_FUNCTION TRUE
 #define BIND_SDL_SetWindowBrightness_FUNCTION TRUE
 #define BIND_SDL_SetWindowData_FUNCTION FALSE
 #define BIND_SDL_SetWindowDisplayMode_FUNCTION TRUE
