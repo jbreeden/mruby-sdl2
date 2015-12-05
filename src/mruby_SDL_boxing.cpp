@@ -20,6 +20,7 @@ static void free_SDLTest_CommonState(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDLTest_CommonState_data_type = {
@@ -80,6 +81,7 @@ static void free_SDLTest_Crc32Context(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDLTest_Crc32Context_data_type = {
@@ -140,6 +142,7 @@ static void free_SDLTest_Md5Context(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDLTest_Md5Context_data_type = {
@@ -200,6 +203,7 @@ static void free_SDLTest_RandomContext(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDLTest_RandomContext_data_type = {
@@ -260,6 +264,7 @@ static void free_SDL_DisplayMode(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_DisplayMode_data_type = {
@@ -320,6 +325,7 @@ static void free_SDL_JoystickGUID(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_JoystickGUID_data_type = {
@@ -380,6 +386,7 @@ static void free_SDL_MessageBoxButtonData(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_MessageBoxButtonData_data_type = {
@@ -440,6 +447,7 @@ static void free_SDL_MessageBoxColor(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_MessageBoxColor_data_type = {
@@ -500,6 +508,7 @@ static void free_SDL_MessageBoxColorScheme(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_MessageBoxColorScheme_data_type = {
@@ -560,6 +569,7 @@ static void free_SDL_MessageBoxData(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_MessageBoxData_data_type = {
@@ -620,6 +630,7 @@ static void free_SDL_atomic_t(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_atomic_t_data_type = {
@@ -680,6 +691,7 @@ static void free_SDLTest_SurfaceImage_s(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDLTest_SurfaceImage_s_data_type = {
@@ -740,6 +752,7 @@ static void free_SDLTest_TestCaseReference(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDLTest_TestCaseReference_data_type = {
@@ -800,6 +813,7 @@ static void free_SDLTest_TestSuiteReference(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDLTest_TestSuiteReference_data_type = {
@@ -860,6 +874,7 @@ static void free_SDL_AudioCVT(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_AudioCVT_data_type = {
@@ -920,6 +935,7 @@ static void free_SDL_AudioSpec(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_AudioSpec_data_type = {
@@ -980,6 +996,7 @@ static void free_SDL_BlitMap(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_BlitMap_data_type = {
@@ -1040,6 +1057,7 @@ static void free_SDL_Color(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_Color_data_type = {
@@ -1100,6 +1118,7 @@ static void free_SDL_CommonEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_CommonEvent_data_type = {
@@ -1160,6 +1179,7 @@ static void free_SDL_ControllerAxisEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_ControllerAxisEvent_data_type = {
@@ -1220,6 +1240,7 @@ static void free_SDL_ControllerButtonEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_ControllerButtonEvent_data_type = {
@@ -1280,6 +1301,7 @@ static void free_SDL_ControllerDeviceEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_ControllerDeviceEvent_data_type = {
@@ -1340,6 +1362,7 @@ static void free_SDL_Cursor(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_Cursor_data_type = {
@@ -1400,6 +1423,7 @@ static void free_SDL_DollarGestureEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_DollarGestureEvent_data_type = {
@@ -1460,6 +1484,7 @@ static void free_SDL_DropEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_DropEvent_data_type = {
@@ -1520,6 +1545,7 @@ static void free_SDL_Finger(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_Finger_data_type = {
@@ -1580,6 +1606,7 @@ static void free_SDL_GameControllerButtonBind(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_GameControllerButtonBind_data_type = {
@@ -1640,6 +1667,7 @@ static void free_SDL_HapticCondition(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_HapticCondition_data_type = {
@@ -1700,6 +1728,7 @@ static void free_SDL_HapticConstant(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_HapticConstant_data_type = {
@@ -1760,6 +1789,7 @@ static void free_SDL_HapticCustom(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_HapticCustom_data_type = {
@@ -1820,6 +1850,7 @@ static void free_SDL_HapticDirection(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_HapticDirection_data_type = {
@@ -1880,6 +1911,7 @@ static void free_SDL_HapticLeftRight(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_HapticLeftRight_data_type = {
@@ -1940,6 +1972,7 @@ static void free_SDL_HapticPeriodic(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_HapticPeriodic_data_type = {
@@ -2000,6 +2033,7 @@ static void free_SDL_HapticRamp(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_HapticRamp_data_type = {
@@ -2060,6 +2094,7 @@ static void free_SDL_JoyAxisEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_JoyAxisEvent_data_type = {
@@ -2120,6 +2155,7 @@ static void free_SDL_JoyBallEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_JoyBallEvent_data_type = {
@@ -2180,6 +2216,7 @@ static void free_SDL_JoyButtonEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_JoyButtonEvent_data_type = {
@@ -2240,6 +2277,7 @@ static void free_SDL_JoyDeviceEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_JoyDeviceEvent_data_type = {
@@ -2300,6 +2338,7 @@ static void free_SDL_JoyHatEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_JoyHatEvent_data_type = {
@@ -2360,6 +2399,7 @@ static void free_SDL_KeyboardEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_KeyboardEvent_data_type = {
@@ -2420,6 +2460,7 @@ static void free_SDL_Keysym(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_Keysym_data_type = {
@@ -2480,6 +2521,7 @@ static void free_SDL_MouseButtonEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_MouseButtonEvent_data_type = {
@@ -2540,6 +2582,7 @@ static void free_SDL_MouseMotionEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_MouseMotionEvent_data_type = {
@@ -2600,6 +2643,7 @@ static void free_SDL_MouseWheelEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_MouseWheelEvent_data_type = {
@@ -2660,6 +2704,7 @@ static void free_SDL_MultiGestureEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_MultiGestureEvent_data_type = {
@@ -2720,6 +2765,7 @@ static void free_SDL_OSEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_OSEvent_data_type = {
@@ -2780,6 +2826,7 @@ static void free_SDL_Palette(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_Palette_data_type = {
@@ -2840,6 +2887,7 @@ static void free_SDL_PixelFormat(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_PixelFormat_data_type = {
@@ -2900,6 +2948,7 @@ static void free_SDL_Point(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_Point_data_type = {
@@ -2960,6 +3009,7 @@ static void free_SDL_QuitEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_QuitEvent_data_type = {
@@ -3020,6 +3070,7 @@ static void free_SDL_RWops(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_RWops_data_type = {
@@ -3080,6 +3131,7 @@ static void free_SDL_Rect(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_Rect_data_type = {
@@ -3140,6 +3192,7 @@ static void free_SDL_Renderer(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_Renderer_data_type = {
@@ -3200,6 +3253,7 @@ static void free_SDL_RendererInfo(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_RendererInfo_data_type = {
@@ -3260,6 +3314,7 @@ static void free_SDL_Surface(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_Surface_data_type = {
@@ -3320,6 +3375,7 @@ static void free_SDL_SysWMEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_SysWMEvent_data_type = {
@@ -3380,6 +3436,7 @@ static void free_SDL_SysWMinfo(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_SysWMinfo_data_type = {
@@ -3440,6 +3497,7 @@ static void free_SDL_SysWMmsg(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_SysWMmsg_data_type = {
@@ -3500,6 +3558,7 @@ static void free_SDL_TextEditingEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_TextEditingEvent_data_type = {
@@ -3560,6 +3619,7 @@ static void free_SDL_TextInputEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_TextInputEvent_data_type = {
@@ -3620,6 +3680,7 @@ static void free_SDL_Texture(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_Texture_data_type = {
@@ -3680,6 +3741,7 @@ static void free_SDL_Thread(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_Thread_data_type = {
@@ -3740,6 +3802,7 @@ static void free_SDL_TouchFingerEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_TouchFingerEvent_data_type = {
@@ -3800,6 +3863,7 @@ static void free_SDL_UserEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_UserEvent_data_type = {
@@ -3860,6 +3924,7 @@ static void free_SDL_Window(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_Window_data_type = {
@@ -3920,6 +3985,7 @@ static void free_SDL_WindowEvent(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_WindowEvent_data_type = {
@@ -3980,6 +4046,7 @@ static void free_SDL_WindowShapeMode(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_WindowShapeMode_data_type = {
@@ -4040,6 +4107,7 @@ static void free_SDL_assert_data(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_assert_data_data_type = {
@@ -4100,6 +4168,7 @@ static void free_SDL_cond(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_cond_data_type = {
@@ -4160,6 +4229,7 @@ static void free_SDL_mutex(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_mutex_data_type = {
@@ -4220,6 +4290,7 @@ static void free_SDL_semaphore(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_semaphore_data_type = {
@@ -4280,6 +4351,7 @@ static void free_SDL_version(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SDL_version_data_type = {
@@ -4340,6 +4412,7 @@ static void free__NSWindow(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type _NSWindow_data_type = {
@@ -4400,6 +4473,7 @@ static void free__SDL_GameController(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type _SDL_GameController_data_type = {
@@ -4460,6 +4534,7 @@ static void free__SDL_Haptic(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type _SDL_Haptic_data_type = {
@@ -4520,6 +4595,7 @@ static void free__SDL_Joystick(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type _SDL_Joystick_data_type = {
@@ -4580,6 +4656,7 @@ static void free__SDL_iconv_t(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type _SDL_iconv_t_data_type = {
@@ -4640,6 +4717,7 @@ static void free__cl_context(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type _cl_context_data_type = {
@@ -4700,6 +4778,7 @@ static void free__cl_event(mrb_state* mrb, void* ptr) {
       box->data = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type _cl_event_data_type = {
